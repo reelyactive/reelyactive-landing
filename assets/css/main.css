@@ -3269,6 +3269,7 @@
 			-webkit-transition: opacity 0.2s ease;
 			-ms-transition: opacity 0.2s ease;
 			transition: opacity 0.2s ease;
+      text-transform: none;
 			height: inherit;
 			left: 1.25em;
 			line-height: inherit;
@@ -3407,6 +3408,7 @@
 			transition: transform 0.5s ease, opacity 0.5s ease;
 			display: inline-block;
 			font-size: 1.75em;
+      text-transform: none;
 			opacity: 1;
 			padding: 0.35em 1em;
 			position: relative;
