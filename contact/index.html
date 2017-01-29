@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../assets/css/main.css" />
     <!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
+    <script type="text/javascript" src="http://champagne.reelyactive.com/champagne.js"></script>
+		<script type="text/javascript" src="../assets/js/contact.js"></script>
   </head>
   <body>
 
@@ -68,9 +70,16 @@
             </section>
             <section>
               <header>
-                <h3> Digital </h3>
+                <h3> Digital Forever </h3>
               </header>
               <p> What happens on the Internet stays on the Internet, and we've been making things happen since 2012.  You can find our digital brand across the web. </p>
+              <div ng-controller="InteractionCtrl" id="bubbles"
+                   style="min-height:480px; background:#0770a2">
+                <bubble size="240px" json="story" motion="true" fade="true"
+                        visible="Organization">
+                </bubble>
+              </div>
+              <br>
               <p> If none of the above apply, consider the familiar e-mail channels of <a href="mailto:sales@reelyactive.com">sales@reelyactive.com</a>, <a href="mailto:support@reelyactive.com">support@reelyactive.com</a> and <a href="mailto:info@reelyactive.com">info@reelyactive.com</a>. </p>
             </section>
           </div>
