@@ -62,10 +62,10 @@
               <p> Our vision is ubiquitous machine-contextual-awareness at the service of humanity.  Sounds ambitious?  <i>It is!</i> &nbsp; From a technical standpoint, however, we believe the underlying framework is in place and consists of the following three layers: </p>
               <ol>
                 <li> real-time location on a human scale
-                <li> the web of things <i>(and people!)</i>
-                <li> the semantic web
+                <li> the Web of Things <i>(and People!)</i>
+                <li> the Semantic Web
               </ol>
-              <p> If a tiny team at the University of Cambridge was able to <a href="https://www.cl.cam.ac.uk/coffee/qsf/coffee.html" target="_blank">connect a coffee pot to the Internet in 1991</a>, and soon thereafter <a href="http://www.cl.cam.ac.uk/coffee/coffee.html" target="_blank">leverage the standards of the nascent World Wide Web</a> for anyone anywhere to view in their browser, surely our ambition is justifiable! </p>
+              <p> If a tiny team at the University of Cambridge was able to <a href="https://www.cl.cam.ac.uk/coffee/qsf/coffee.html" target="_blank">connect a coffee pot to the Internet in 1991</a>, and soon thereafter <a href="http://www.cl.cam.ac.uk/coffee/coffee.html" target="_blank">leverage the standards of the nascent World Wide Web</a> for anyone anywhere to observe the amount of coffee in the pot via their browser, surely our ambition is justifiable! </p>
             </section>
             <section>
               <header>
@@ -75,22 +75,22 @@
               <p> The illustration below shows four common products detected by two sensors listening for their Bluetooth Low Energy (BLE) advertising packets. </p>
               <span class="image fit"><img src="../images/hlc-location.jpg" /></span>
               <p> Here, machines understand that two BLE devices (wearable and smartphone) are currently closest to the sensor on the left, and two others (beacon and webcam) are currently closest to the sensor on the right.  Moreover, given that the range of the radios effectively limits them to a human scale, machines can infer with "good enough" chances that all four devices are relatively close to one another. </p>
-              <p> As there are now <i>billions</i> of BLE devices across the planet, and an order of magnitude more RFID tags with similar range, the ability to identify and locate almost anything on a human scale becomes plausible, if not likely. </p>
+              <p> As there are now <i>billions</i> of BLE devices across the planet, and an order of magnitude more RFID tags with similar range, the ability to identify and locate <i>almost anything</i> on a human scale becomes plausible, if not likely. </p>
             </section>
             <section>
               <header>
-                <h3> Association with the Web of Things </h3>
+                <h3> Association with the Web of Things (and People!) </h3>
               </header>
               <p> If machines are to better serve humans through contextual awareness, they must be able to represent people, products and places in a way <i>they</i> can understand.  Fortunately, the <a href="https://www.w3.org/WoT/" target="_blank">Web of Things (WoT)</a> has been designed for this purpose, using existing Web standards to provide <b>the ability for real-world objects to exist on the Web</b>. </p>
               <p> Paying homage to the Trojan Room Coffee Pot, the illustration below shows how the wearable has been associated with Quentin, the smartphone with Paul, the beacon with the coffee pot and the webcam with its latest image capture.  The sensors too have been associated with real-world places, namely the Trojan Room and the adjoining corridor. </p>
               <span class="image fit"><img src="../images/hlc-association.jpg" /></span>
-              <p> Here, machines understand that Quentin and Paul are currently in the Trojan Room and the coffee pot and coffee cam and are in the nearby corridor.  Such understanding was achieved by <i>associating</i> the data advertised by each device (ex: Paul's smartphone) with the corresponding URL of their existing profile on the Web.  This association can be made using a variety of mechanisms: </p>
+              <p> Here, machines understand that Quentin and Paul are currently in the Trojan Room, while the coffee pot and coffee cam are in the nearby corridor.  Such understanding was achieved by <i>associating</i> the data advertised by each device (ex: Paul's smartphone) with the corresponding URL of their existing profile on the Web.  This association can be made using a variety of mechanisms: </p>
               <ul>
                 <li> inclusion of the URL in the advertising packet (ex: <a href="https://github.com/google/eddystone#eddystone" target="_blank">Eddystone</a>)
                 <li> lookup via an implicit identifier association (ex: <a href="https://sniffypedia.org" target="_blank">Sniffypedia</a>)
                 <li> lookup via an explicit identifier association
               </ul>
-              <p> We maintain an open source library for the decoding of advertising packets called <a href="https://github.com/reelyactive/advlib#advlib" target="_blank">advlib</a> (<a href="http://ieeexplore.ieee.org/document/7389121/" target="_blank">presented at IEEE WF-IoT 2015</a>), and an open source associations index and profile database called <a href="https://sniffypedia.org" target="_blank">Sniffypedia</a>.  Together, these already provide the ability for machines to identify and associate most BLE devices with an existing profile on the Web. </p>
+              <p> We maintain an open source library for the decoding of advertising packets called <a href="https://github.com/reelyactive/advlib#advlib" target="_blank">advlib</a> (<a href="http://ieeexplore.ieee.org/document/7389121/" target="_blank">presented at IEEE WF-IoT 2015</a>), and an open source associations index and profile database called <a href="https://sniffypedia.org" target="_blank">Sniffypedia</a>.  Together, these provide the ability for machines to identify and associate most BLE devices with an existing profile on the Web. </p>
             </section>
             <section>
               <header>
