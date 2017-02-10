@@ -44,6 +44,10 @@
 		border-spacing: 0;
 	}
 
+  section {
+    clear: both;
+  }
+
 	body {
 		-webkit-text-size-adjust: none;
 	}
