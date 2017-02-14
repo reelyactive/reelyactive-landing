@@ -17,6 +17,30 @@
       ga('create', 'UA-39535156-4', 'auto');
       ga('send', 'pageview');
     </script>
+    <script type="text/javascript" src='https://www.google.com/jsapi?autoload={"modules":[{"name":"visualization","version":"1"}]}'>
+    </script>
+    <script type="text/javascript">
+      google.setOnLoadCallback(drawVisualization);
+      function drawVisualization() {
+        var wrapper = new google.visualization.ChartWrapper({
+          "containerId": "advertisers",
+          "dataSourceUrl": "https://pareto-ga-super-proxy-dot-pareto-pro.appspot.com/query?id=agxzfnBhcmV0by1wcm9yFQsSCEFwaVF1ZXJ5GICAgICdipYKDA&format=data-table-response",
+          "refreshInterval": 60,
+          "chartType": "PieChart",
+          "options": {
+            "width": 950,
+            "height": 480,
+            "pieHole": 0.5,
+            "title": "ADVERTISING DEVICES DETECTED BY PARETO OVER THE LAST HOUR",
+            "titleTextStyle": { "color": "#5A5A5A" },
+            "pieSliceTextStyle": { "bold": true },
+            "pieResidueSliceLabel": "Other advertising devices",
+            "colors": [ "#076FA2", "#FF6A00", "#AFC844", "#5A5A5A", "#70BBD3", "#FEBE1D", "#8B0700", "#4896BC", "#FFA464", "#91AB25", "#8A8A8A", "#CD3C34", "#034463", "#9B4000", "#6F860B", "#040303", "#2C809C", "#A77800", "#3C0300", "#03597C", "#CC5400", "#90A61E", "#263238", "#F15C60" ]
+          }
+        });
+      wrapper.draw();
+    }
+  </script>
   </head>
   <body>
 
@@ -61,8 +85,9 @@
               <header>
                 <h2> What's Advertising? </h2>
               </header>
-              <p> Recent Bluetooth devices can spontaneously transmit "advertising" packets (yes, that's exactly what they're called).  Any listener can discover "advertisers" within about a ten meter range. </p>
-              <p> While this concept has existed for decades, only recently have people started carrying and wearing such devices en masse in the form of smartphones and wearables.  Whether you're a business or an individual, the choice is yours: </p>
+              <p> Recent Bluetooth devices can spontaneously transmit "advertising" packets (yes, that's exactly what they're called).  Any listener can discover "advertisers" within about a ten meter range.  Here's the latest breakdown of what our Pareto platform is hearing: </p>
+              <div id="advertisers"></div>
+              <p> While this concept has existed for decades, only recently have people started carrying and wearing such devices <i>en masse</i> in the form of smartphones and wearables.  Whether you're a business or an individual, the choice is yours: </p>
               <ul>
                 <li> <b> Be invisible. </b>
                 <li> <b> Be anonymous. </b>
