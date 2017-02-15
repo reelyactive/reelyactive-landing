@@ -74,6 +74,33 @@
       ga('create', 'UA-39535156-4', 'auto');
       ga('send', 'pageview');
     </script>
+    <script type="text/javascript" src='https://www.google.com/jsapi?autoload={"modules":[{"name":"visualization","version":"1"}]}'>
+    </script>
+    <script type="text/javascript">
+      google.setOnLoadCallback(drawVisualization);
+      function drawVisualization() {
+        var wrapper = new google.visualization.ChartWrapper({
+          "containerId": "advertisers",
+          "dataSourceUrl": "https://pareto-ga-super-proxy-dot-pareto-pro.appspot.com/query?id=agxzfnBhcmV0by1wcm9yFQsSCEFwaVF1ZXJ5GICAgICdipYKDA&format=data-table-response",
+          "refreshInterval": 60,
+          "chartType": "BarChart",
+          "options": {
+            "backgroundColor": "#033851",
+            "chartArea": { "left": "40%", "top": 40, width:"40%", height:"80%" },
+            "height": 480,
+            "title": "ADVERTISING DEVICES DETECTED SINCE MIDNIGHT GMT",
+            "titleTextStyle": { "color": "#FFFFFF" },
+            "axisTitlesPosition": "in",
+            "hAxis": { "title": "log scale", "scaleType": "mirrorLog", "textStyle": { "color": "#FFFFFF"}, "titleTextStyle": { "color": "#FFFFFF"}, "textPosition": "none" },
+            "vAxis": { "textStyle": { "color": "#FFFFFF" } },
+            "legend": { "position": "none" },
+            "tooltip": { "textStyle": { "color": "#0770A2" } },
+            "colors": [ "#0770A2", "#FF6900" ]
+          }
+        });
+      wrapper.draw();
+    }
+  </script>
   </head>
   <body class="landing">
 
@@ -172,6 +199,17 @@
                  <a href="contact/">Reach out</a></p>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <!-- Advertisers -->
+      <section id="stats" class="wrapper style3">
+        <div class="inner">
+          <header>
+            <h2>Our platform is listening</h2>
+            <p>Here's what Pareto has heard today:</p>
+          </header>
+          <div id="advertisers" style="height:360px"></div>
         </div>
       </section>
 
