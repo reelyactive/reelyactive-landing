@@ -1601,6 +1601,10 @@
 		text-align: right;
 	}
 
+	.align-justify {
+		text-align: justify;
+	}
+
 /* Section/Article */
 
 	section.special, article.special {
