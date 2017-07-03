@@ -7,3 +7,5 @@ http://www.reelyactive.com/contact/index.html
 http://www.reelyactive.com/context/index.html
 http://www.reelyactive.com/reelyapp/index.html
 http://www.reelyactive.com/science/index.html
+http://www.reelyactive.com/directory/index.html
+http://www.reelyactive.com/faq/index.html
