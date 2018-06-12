@@ -29,7 +29,7 @@ angular.module('landing', [ 'ui.bootstrap' ])
       {
         image: "images/partners-ambiarc-landing.jpg",
         name: "Ambiarc",
-        description: "Quickly generate a beautiful 3D map of your space.",
+        description: "Visualise real time data with a 3D map of your space.",
         id: 1
       }
     ];
