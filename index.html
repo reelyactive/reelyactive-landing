@@ -7,9 +7,13 @@
     <meta name="description" content="Observe the real world like the web. World-leaders in BYOD Real-Time Location Systems, advancing machine-contextual-awareness at the service of humanity." />
     <meta name="msvalidate.01" content="290718595E7C106146EE4DF28E941869" />
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/ui-bootstrap.min.js"></script>
+    <script src="assets/js/landing.js"></script>
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -121,7 +125,7 @@
     }
   </script>
   </head>
-  <body class="landing">
+  <body class="landing" ng-app="landing">
 
     <!-- Page Wrapper -->
     <div id="page-wrapper">
@@ -167,11 +171,17 @@
             <h2>Observe who/what is where/how.</h2>
             <p><b>In real-time. &nbsp; In any space.</b></p>
           </header>
-          <div class="image fit">
-            <img src="images/landing-who-what-where-how.gif"
-                 alt="Observe who/what is where/how" />
+          <div ng-controller="QuestionsCtrl">
+              <div uib-carousel active="activeQuestion" interval="2400"
+                                template-url="assets/carousel.html">
+                <div uib-slide template-url="assets/slide.html"
+                     ng-repeat="question in questions track by question.id"
+                     index="question.id">
+                  <img ng-src="{{question.image}}" class="slide-image">
+                </div>
+              </div>
           </div>
-          <p>Our platform translates real-world state<br>
+          <p><br>Our platform translates real-world state<br>
              into the universal language of the web.</p>
         </div>
       </section>

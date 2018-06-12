@@ -1989,6 +1989,12 @@
 				width: 100%;
 			}
 
+/* Slide image */
+	.slide-image {
+		max-width: 100%;
+		margin: auto;
+	}
+
 /* List */
 
 	ol {
