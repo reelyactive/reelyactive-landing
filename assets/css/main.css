@@ -1995,6 +1995,13 @@
 		margin: auto;
 	}
 
+/* No medium or less */
+	@media screen and (max-width: 980px) {
+		.no-medium-or-less {
+			display: none;
+		}
+	}
+
 /* List */
 
 	ol {
