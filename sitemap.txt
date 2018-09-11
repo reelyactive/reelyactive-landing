@@ -1,6 +1,10 @@
 https://www.reelyactive.com/
 https://www.reelyactive.com/advertise/
-https://www.reelyactive.com/applications/
+https://www.reelyactive.com/industries/
+https://www.reelyactive.com/industries/dooh/
+https://www.reelyactive.com/industries/events/
+https://www.reelyactive.com/industries/healthcare/
+https://www.reelyactive.com/industries/workplace/
 https://www.reelyactive.com/technology/
 https://www.reelyactive.com/about/
 https://www.reelyactive.com/contact/
