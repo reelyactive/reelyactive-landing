@@ -35,23 +35,23 @@ angular.module('landing', [ 'ui.bootstrap' ])
     ];
   })
 
-  // Applications controller
-  .controller('ApplicationsCtrl', function($scope) {
-    $scope.activeApplication = 0;
-    $scope.applications = [
+  // Industries controller
+  .controller('IndustriesCtrl', function($scope) {
+    $scope.activeIndustry = 0;
+    $scope.industries = [
       {
         image: "images/applications-workplace.jpg",
-        url: "applications/workplace/",
+        url: "industries/workplace/",
         id: 0
       },
       {
         image: "images/applications-healthcare.jpg",
-        url: "applications/healthcare/",
+        url: "industries/healthcare/",
         id: 1
       },
       {
         image: "images/applications-events.jpg",
-        url: "applications/events/",
+        url: "industries/events/",
         id: 2
       }
     ];

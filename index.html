@@ -264,28 +264,28 @@
         </div>
       </section>
 
-      <!-- Applications -->
+      <!-- Industries -->
       <section id="oneliner" class="wrapper style1 special">
-        <div class="inner" ng-controller="ApplicationsCtrl">
+        <div class="inner" ng-controller="IndustriesCtrl">
           <header class="major">
-            <h2>Applications</h2>
+            <h2>Industries</h2>
           </header>
           <div class="row">
             <div class="6u 12u$(small)">
-              <div uib-carousel active="activeApplication" interval="2400"
+              <div uib-carousel active="activeIndustry" interval="2400"
                                 template-url="assets/carousel.html">
                 <div uib-slide template-url="assets/slide.html"
-                     ng-repeat="application in applications
-                                track by application.id"
-                     index="application.id">
-                  <img ng-src="{{application.image}}" class="slide-image">
+                     ng-repeat="industry in industries
+                                track by industry.id"
+                     index="industry.id">
+                  <img ng-src="{{industry.image}}" class="slide-image">
                 </div>
               </div>
             </div>
             <div class="6u$ 12u$(small)">
               <h4>Observe <i>any</i> space like the web</h4>
-              <p>The movements and interactions of people and assets in a physical space become analogous to browsing a website.</p>
-              <a href="applications/" class="button">Browse Applications</a>
+              <p>The movements and interactions of people and assets in <i>any</i> physical space become analogous to browsing a website.</p>
+              <a href="industries/" class="button">Browse Industries</a>
             </div>
           </div>
         </div>
