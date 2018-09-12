@@ -31,6 +31,24 @@ angular.module('landing', [ 'ui.bootstrap' ])
         name: "Ambiarc",
         description: "Visualise real time data with a 3D map of your space.",
         id: 1
+      },
+      {
+        image: "images/partners-indoors-landing.jpg",
+        name: "indoo.rs",
+        description: "Add the leading Indoor Positioning system to your app.",
+        id: 2
+      },
+      {
+        image: "images/partners-logient-landing.jpg",
+        name: "Logient",
+        description: "Drive your digital transformation to the next level, all in one place.",
+        id: 3
+      },
+      {
+        image: "images/partners-jogogo-landing.jpg",
+        name: "Jogogo",
+        description: "Digitize the physical store. Measure in-store activity and provide mobile engagement solutions.",
+        id: 4
       }
     ];
   })
