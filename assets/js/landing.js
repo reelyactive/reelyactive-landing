@@ -50,9 +50,14 @@ angular.module('landing', [ 'ui.bootstrap' ])
         id: 1
       },
       {
+        image: "images/applications-retail.jpg",
+        url: "industries/retail/",
+        id: 2
+      },
+      {
         image: "images/applications-events.jpg",
         url: "industries/events/",
-        id: 2
+        id: 3
       }
     ];
   });
