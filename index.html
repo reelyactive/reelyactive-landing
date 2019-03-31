@@ -131,15 +131,68 @@
         <div class="inner">
           <h2>reelyActive</h2>
           <p>Observe the physical world<br>
-             like the web.</p>
+             with a digital edge.</p>
           <ul class="actions">
-            <!--<li><a href="https://getpareto.com" class="button special">You had me at "measure"</a></li>-->
+            <!--<li><a href="" class="button special"> </a></li>-->
           </ul>
         </div>
-        <a href="#oneliner" class="more scrolly">Learn More</a>
+        <a href="#oneliner" class="more scrolly">Learn Why</a>
       </section>
 
       <!-- One-liner -->
+      <section id="oneliner" class="wrapper style1 special">
+        <div class="inner">
+          <header class="major">
+            <h2>Maximise efficiency. Maximise the human experience.</h2>
+            <p>Our technology platform establishes a digital understanding of physical spaces and the dynamics of the people and assets within.  A continuous source of data for continuous improvement.</p>
+          </header>
+          <div class="row" ng-controller="TestimonialsCtrl">
+            <div class="6u 12u$(small)">
+              <div uib-carousel active="activeTestimonial" interval="4800"
+                                template-url="assets/carousel.html">
+                <div uib-slide template-url="assets/slide.html"
+                     ng-repeat="testimonial in testimonials track by testimonial.id"
+                     index="testimonial.id">
+                  <img ng-src="{{testimonial.image}}" class="slide-image">
+                </div>
+              </div>
+            </div>
+            <div class="6u$ 12u$(small)">
+              <p>&nbsp;</p>
+              <blockquote class="text-left">
+                {{testimonials[activeTestimonial].quote}}
+              </blockquote>
+              <div class="text-right">
+                <p>
+                  &mdash; {{testimonials[activeTestimonial].reference}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Solution Providers & End Users -->
+      <section id="oneliner" class="wrapper style3 special">
+        <div class="inner">
+          <div class="row">
+            <div class="6u 12u$(small)">
+              <header class="major">
+                <h3>For Solution Providers</h3>
+              </header>
+              <p>Integrate real-time location and context by leveraging our open source software, modular hardware and extensive expertise.</p>
+            </div>
+            <div class="6u$ 12u$(small)">
+              <header class="major">
+                <h3>For End Users</h3>
+              </header>
+              <p>Observe <i>your</i> physical spaces using familiar web platforms. Develop custom applications with nothing more than a Web skillset!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Who What Where How -->
       <section id="oneliner" class="wrapper style1 special">
         <div class="inner">
           <header class="major">
@@ -156,8 +209,6 @@
                 </div>
               </div>
           </div>
-          <p><br>Our technology platform translates real-world state<br>
-             into the universal language of the web.</p>
         </div>
       </section>
 

@@ -5,6 +5,37 @@
 
 angular.module('landing', [ 'ui.bootstrap' ])
 
+  // Testimonials controller
+  .controller('TestimonialsCtrl', function($scope) {
+    $scope.activeTestimonial = 0;
+    $scope.testimonials = [
+      {
+        image: "images/testimonial-workspaces-kfs.jpg",
+        quote: "We’re now able to automatically collect personnel journeys in challenging environments, even for studies as short as a few days.",
+        reference: "Max Jones, KFS",
+        id: 0
+      },
+      {
+        image: "images/testimonial-hospitals-usc.jpg",
+        quote: "Real-time location data proved to be a key indicator of workplace stress factors, providing a competitive edge for us to extend our study.",
+        reference: "Brandon Booth, USC",
+        id: 1
+      },
+      {
+        image: "images/testimonial-clients-logient.jpg",
+        quote: "reelyActive's expertise, combined with their open source platform, greatly facilitates the development of real-time location features for our clients.",
+        reference: "Luc Filion, Logient",
+        id: 2
+      },
+      {
+        image: "images/testimonial-events-elevent.jpg",
+        quote: "The freedom to access visitor traffic data at any level allows us to develop tailored event analysis tools for our clients.",
+        reference: "Jay Hébert, Elevent",
+        id: 3
+      }
+    ];
+  })
+
   // Questions controller
   .controller('QuestionsCtrl', function($scope) {
     $scope.activeQuestion = 0;
