@@ -172,8 +172,28 @@
         </div>
       </section>
 
-      <!-- Solution Providers & End Users -->
+      <!-- Who What Where How -->
       <section id="oneliner" class="wrapper style3 special">
+        <div class="inner">
+          <header class="major">
+            <h2>Observe who/what is where/how.</h2>
+            <p><b>In real-time. &nbsp; In any space.</b></p>
+          </header>
+          <div ng-controller="QuestionsCtrl">
+              <div uib-carousel active="activeQuestion" interval="2400"
+                                template-url="assets/carousel.html">
+                <div uib-slide template-url="assets/slide.html"
+                     ng-repeat="question in questions track by question.id"
+                     index="question.id">
+                  <img ng-src="{{question.image}}" class="slide-image">
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Solution Providers & End Users -->
+      <section id="oneliner" class="wrapper style2 special">
         <div class="inner">
           <div class="row">
             <div class="6u 12u$(small)">
@@ -190,26 +210,6 @@
               <p>Optimise what matters for <i>your</i> business, realising actionable insights through real-time location and context.</p>
               <p><a href="for-adopters/" class="button">Learn More</a></p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Who What Where How -->
-      <section id="oneliner" class="wrapper style1 special">
-        <div class="inner">
-          <header class="major">
-            <h2>Observe who/what is where/how.</h2>
-            <p><b>In real-time. &nbsp; In any space.</b></p>
-          </header>
-          <div ng-controller="QuestionsCtrl">
-              <div uib-carousel active="activeQuestion" interval="2400"
-                                template-url="assets/carousel.html">
-                <div uib-slide template-url="assets/slide.html"
-                     ng-repeat="question in questions track by question.id"
-                     index="question.id">
-                  <img ng-src="{{question.image}}" class="slide-image">
-                </div>
-              </div>
           </div>
         </div>
       </section>
