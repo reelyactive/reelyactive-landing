@@ -1,52 +1,9 @@
 /**
- * Copyright reelyActive 2018
+ * Copyright reelyActive 2018-2019
  * We believe in an open Internet of Things
  */
 
 angular.module('landing', [ 'ui.bootstrap' ])
-
-  // Testimonials controller
-  .controller('TestimonialsCtrl', function($scope) {
-    $scope.activeTestimonial = 0;
-    $scope.testimonials = [
-      {
-        image: "images/testimonial-office-desjardins.jpg",
-        quote: "The data we collected confirmed that we could reduce our office space by 15% and continue to meet our top-notch employee experience targets.",
-        reference: "Serge Bendahan, Desjardins",
-        id: 0
-      },
-      {
-        image: "images/testimonial-workspaces-kfs.jpg",
-        quote: "We’re now able to automatically collect personnel journeys in challenging environments, even for studies as short as a few days.",
-        reference: "Max Jones, KFS",
-        id: 1
-      },
-      {
-        image: "images/testimonial-hospitals-usc.jpg",
-        quote: "Real-time location data proved to be a key indicator of workplace stress factors, providing a competitive edge for us to extend our study.",
-        reference: "Brandon Booth, USC",
-        id: 2
-      },
-      {
-        image: "images/testimonial-clients-logient.jpg",
-        quote: "reelyActive's expertise, combined with their open source platform, greatly facilitates the development of real-time location features for our clients.",
-        reference: "Luc Filion, Logient",
-        id: 3
-      },
-      {
-        image: "images/testimonial-events-elevent.jpg",
-        quote: "The freedom to access visitor traffic data at any level allows us to develop tailored event analysis tools for our clients.",
-        reference: "Jay Hébert, Elevent",
-        id: 4
-      },
-      {
-        image: "images/testimonial-logistics-restorationco.jpg",
-        quote: "We’re continuously refining our operations by observing our asset flows from warehouse to truck to deployment site and back again.",
-        reference: "Kevin Dooley, Restoration Co.",
-        id: 5
-      }
-    ];
-  })
 
   // Questions controller
   .controller('QuestionsCtrl', function($scope) {

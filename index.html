@@ -146,29 +146,6 @@
             <h2>Maximise efficiency. Maximise the human experience.</h2>
             <p>Our technology platform establishes a digital understanding of physical spaces and the dynamics of the people and assets within.  A continuous source of data for continuous improvement.</p>
           </header>
-          <div class="row" ng-controller="TestimonialsCtrl">
-            <div class="6u 12u$(small)">
-              <div uib-carousel active="activeTestimonial" interval="4800"
-                                template-url="assets/carousel.html">
-                <div uib-slide template-url="assets/slide.html"
-                     ng-repeat="testimonial in testimonials track by testimonial.id"
-                     index="testimonial.id">
-                  <img ng-src="{{testimonial.image}}" class="slide-image">
-                </div>
-              </div>
-            </div>
-            <div class="6u$ 12u$(small)">
-              <p>&nbsp;</p>
-              <blockquote class="text-left">
-                {{testimonials[activeTestimonial].quote}}
-              </blockquote>
-              <div class="text-right">
-                <p>
-                  &mdash; {{testimonials[activeTestimonial].reference}}
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
