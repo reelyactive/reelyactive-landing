@@ -3,15 +3,25 @@
  * We believe in an open Internet of Things
  */
 
-angular.module('landing', [ 'ui.bootstrap' ])
 
-  // Questions controller
-  .controller('QuestionsCtrl', function($scope) {
-    $scope.activeQuestion = 0;
-    $scope.questions = [
-      { image: "images/landing-who.jpg", id: 0 },
-      { image: "images/landing-what.jpg", id: 1 },
-      { image: "images/landing-where.jpg", id: 2 },
-      { image: "images/landing-how.jpg", id: 3 }
-    ];
-  });
+const SLIDE_PERIOD_MILLISECONDS = 2400;
+const INITIAL_SLIDE_INDEX = 0;
+
+
+let questions = document.getElementById('questions');
+let questionSlides = questions.getElementsByClassName('slideshow-slide');
+
+
+function slideshow(slides, currentIndex, period) {
+  for(let slideIndex = 0; slideIndex < slides.length; slideIndex++) {
+    slides[slideIndex].style.display = 'none'; 
+  }
+  slides[currentIndex].style.display = 'block';
+
+  let nextIndex = (currentIndex + 1) % slides.length;
+  setTimeout(slideshow, period, slides, nextIndex, period);
+}
+
+
+// Start the slideshow
+slideshow(questionSlides, INITIAL_SLIDE_INDEX, SLIDE_PERIOD_MILLISECONDS);

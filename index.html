@@ -11,9 +11,6 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-    <script src="assets/js/angular.min.js"></script>
-    <script src="assets/js/ui-bootstrap.min.js"></script>
-    <script src="assets/js/landing.js"></script>
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -98,7 +95,7 @@
       ga('send', 'pageview');
     </script>
   </head>
-  <body class="landing" ng-app="landing">
+  <body class="landing">
 
     <!-- Page Wrapper -->
     <div id="page-wrapper">
@@ -156,15 +153,19 @@
             <h2>Observe who/what is where/how.</h2>
             <p><b>In real-time. &nbsp; In any space.</b></p>
           </header>
-          <div ng-controller="QuestionsCtrl">
-              <div uib-carousel active="activeQuestion" interval="2400"
-                                template-url="assets/carousel.html">
-                <div uib-slide template-url="assets/slide.html"
-                     ng-repeat="question in questions track by question.id"
-                     index="question.id">
-                  <img ng-src="{{question.image}}" class="slide-image">
-                </div>
-              </div>
+          <div id="questions" class="slideshow">
+            <div class="slideshow-slide">
+              <img src="images/landing-who.jpg" class="image">
+            </div>
+            <div class="slideshow-slide">
+              <img src="images/landing-what.jpg" class="image">
+            </div>
+            <div class="slideshow-slide">
+              <img src="images/landing-where.jpg" class="image">
+            </div>
+            <div class="slideshow-slide">
+              <img src="images/landing-how.jpg" class="image">
+            </div>
           </div>
         </div>
       </section>
@@ -295,6 +296,6 @@
     <script src="assets/js/util.js"></script>
     <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
     <script src="assets/js/main.js"></script>
-
+    <script src="assets/js/landing.js"></script>
   </body>
 </html>
