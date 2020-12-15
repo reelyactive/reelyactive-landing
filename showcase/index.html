@@ -346,6 +346,18 @@
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
 
+          <div class="card my-4">
+            <h5 class="card-header bg-primary text-white">
+              <i class="fas fa-shopping-cart"></i> &nbsp;
+              Purchase from our online store
+            </h5>
+            <div class="card-body">
+              <!-- Shopify Buy Button -->
+              <div id="product-component-1608053722923"
+                   class="d-block m-auto p-4"></div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -377,5 +389,155 @@
     <!-- Optional JavaScript -->
     <script defer src="../js/fontawesome-reelyactive.min.js"></script>
     <script src="../js/bootstrappyactive.bundle.min.js"></script>
+
+<!-- Begin Shopify Buy Button -->
+<script type="text/javascript">
+/*<![CDATA[*/
+(function () {
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      ShopifyBuyInit();
+    } else {
+      loadScript();
+    }
+  } else {
+    loadScript();
+  }
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+  }
+  function ShopifyBuyInit() {
+    var client = ShopifyBuy.buildClient({
+      domain: 'reelyactive.myshopify.com',
+      storefrontAccessToken: 'f053f01b051c155acd4d72e97faeb90b',
+    });
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('product', {
+        id: '78282260497',
+        node: document.getElementById('product-component-1608053722923'),
+        moneyFormat: '%24%7B%7Bamount%7D%7D',
+        options: {
+  "product": {
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "calc(25% - 20px)",
+          "margin-left": "20px",
+          "margin-bottom": "50px"
+        }
+      },
+      "title": {
+        "color": "#5a5a5a"
+      },
+      "button": {
+        "font-weight": "bold",
+        ":hover": {
+          "background-color": "#e65f00"
+        },
+        "background-color": "#ff6900",
+        ":focus": {
+          "background-color": "#e65f00"
+        }
+      },
+      "price": {
+        "color": "#5a5a5a"
+      },
+      "compareAt": {
+        "color": "#5a5a5a"
+      },
+      "unitPrice": {
+        "color": "#5a5a5a"
+      }
+    },
+    "buttonDestination": "checkout",
+    "text": {
+      "button": "Buy now"
+    }
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-20px"
+        }
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "button": false,
+      "buttonWithQuantity": true
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "button": {
+        "font-weight": "bold",
+        ":hover": {
+          "background-color": "#e65f00"
+        },
+        "background-color": "#ff6900",
+        ":focus": {
+          "background-color": "#e65f00"
+        }
+      }
+    },
+    "text": {
+      "button": "Add to cart"
+    }
+  },
+  "cart": {
+    "styles": {
+      "button": {
+        "font-weight": "bold",
+        ":hover": {
+          "background-color": "#e65f00"
+        },
+        "background-color": "#ff6900",
+        ":focus": {
+          "background-color": "#e65f00"
+        }
+      }
+    },
+    "text": {
+      "total": "Subtotal",
+      "button": "Checkout"
+    }
+  },
+  "toggle": {
+    "styles": {
+      "toggle": {
+        "font-weight": "bold",
+        "background-color": "#ff6900",
+        ":hover": {
+          "background-color": "#e65f00"
+        },
+        ":focus": {
+          "background-color": "#e65f00"
+        }
+      }
+    }
+  }
+},
+      });
+    });
+  }
+})();
+/*]]>*/
+</script>
+<!-- End Shopify Buy Button -->
+
   </body>
 </html>
