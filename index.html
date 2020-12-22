@@ -1,16 +1,28 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>reelyActive</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Our technology platform makes it possible to observe who/what is where/how, in real-time, in any physical space." />
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+          content="Embrace the ambient data in your space.">
     <meta name="msvalidate.01" content="290718595E7C106146EE4DF28E941869" />
-    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <link rel="stylesheet" href="style/bootstrappyactive.min.css">
+    <title> reelyActive </title>
+    <!----- Structured, linked metadata (JSON-LD & Schema.org) ----->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org", 
+      "@type": "WebPage",
+      "name": "reelyActive",
+      "description": "Embrace the ambient data in your space.",
+      "image": "https://www.reelyactive.com/images/reelyActive-logo-square.png",
+      "creator": {
+        "@type": "Organization",
+        "url": "https://www.reelyactive.com"
+      }
+    }
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -30,7 +42,7 @@
         "award": "World's Best Startup 2013",
         "brand": {
           "@type": "Brand",
-          "name": "Pareto by reelyActive",
+          "name": "Pareto Anywhere by reelyActive",
           "url": "https://getpareto.com"
         },
         "founders": [
@@ -66,246 +78,570 @@
         "legalName": "9266-5777 Quebec inc.",
         "mainEntityOfPage": {
           "@type": "WebPage",
+          "name": "reelyActive Developers",
           "url": "https://reelyactive.github.io"
         },
         "sameAs": [
-          "https://www.facebook.com/reelyActive",
-          "https://www.twitter.com/reelyActive",
-          "https://plus.google.com/+reelyActive",
           "https://www.linkedin.com/company/reelyactive",
+          "https://www.twitter.com/reelyActive",
           "https://www.instagram.com/reelyactive/",
           "https://www.youtube.com/reelyActive",
           "https://www.slideshare.net/reelyActive",
           "https://soundcloud.com/reelyactive",
           "https://github.com/reelyactive",
           "https://www.npmjs.com/~reelyactive",
+          "https://upverter.com/reelyactive/",
           "https://angel.co/reelyactive",
-          "https://www.crunchbase.com/organization/reelyactive",
-          "http://www.rfidconnect.com/VendorDetails.aspx?id=be01c91a-cf6f-4463-98d4-479373616794",
-          "https://www.proximity.directory/companies/reelyactive"
+          "https://www.crunchbase.com/organization/reelyactive"
         ]
       }
     </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39535156-4"></script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-39535156-4', 'auto');
-      ga('send', 'pageview');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-39535156-4');
     </script>
   </head>
-  <body class="landing">
-
-    <!-- Page Wrapper -->
-    <div id="page-wrapper">
-
-      <!-- Header -->
-      <header id="header" class="alt">
-        <h1><a href="/">reelyActive</a></h1>
-        <nav id="nav">
-          <ul>
-            <li class="special">
-              <a href="#menu" class="menuToggle"><span>Menu</span></a>
-              <div id="menu">
+  <body id="top">
+    <!-- Navigation -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white
+                shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="https://www.reelyactive.com/">
+          <img src="images/reelyactive-logo-nav.png" width="165" height="30"
+               alt="reelyActive">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarItems" aria-controls="navbarItems"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarItems">
+          <!-- Left-aligned navigation items -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+          <!-- Right-aligned navigation items -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/clients/"> Clients </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarProducts"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> Products </a>
+              <!-- Products dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarProducts">
+                <li>
+                  <a class="dropdown-item" href="https://getpareto.com">
+                    Pareto Anywhere
+                  </a>
+                </li>
                 <ul>
-                  <li><a href="/">Home</a></li>
-                  <li><a href="technology/">Technology</a></li>
-                  <li><a href="https://getpareto.com/" target="_blank"><span class="fa fa-search">&nbsp;</span>Pareto Anywhere</a></li>
-                  <li><a href="https://reelyactive.github.io/" target="_blank"><span class="fa fa-code">&nbsp;</span>Developers</a></li>
-                  <li><a href="https://shop.reelyactive.com/" target="_blank"><span class="fa fa-shopping-cart">&nbsp;</span>Order a Kit</a></li>
-                  <li><a href="directory/">Directory</a></li>
-                  <li><a href="about/">About Us</a></li>
-                  <li><a href="contact/">Contact</a></li>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/platform/integrations/">
+                    Integrations
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/platform/infrastructure/">
+                    Infrastructure
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/platform/devices/">
+                    Devices
+                  </a>
                 </ul>
-              </div>
+                <li>
+                  <a class="dropdown-item" href="https://shop.reelyactive.com/collections/infrastructure/">
+                    Ambient Data Gateways
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://reelyactive.github.io/diract/">
+                    DirAct
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://shop.reelyactive.com/products/showcase-kit">
+                    Showcase Kit
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="https://getpareto.com/pricing/">
+                    Pricing / Model
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarApplications"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> Applications </a>
+              <!-- Applications dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarApplications">
+                <li>
+                  <a class="dropdown-item" href="https://getpareto.com/use-cases/">
+                    Use Cases
+                  </a>
+                </li>
+                <ul>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/occupancy-analytics/">
+                    Occupancy Analytics
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/asset-tracking/">
+                    Asset Tracking
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/personnel-tracking/">
+                    Personnel Tracking
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/environmental-sensing/">
+                    Environmental Sensing
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/interaction-detection/">
+                    Interaction Detection
+                  </a>
+                </ul>
+                <li>
+                  <a class="dropdown-item" href="/science/">
+                    Science & Research
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/art/">
+                    Arts & Culture
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="/covid-19/">
+                    COVID-19
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDiscover"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> Discover </a>
+              <!-- Discover dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarDiscover">
+                <li>
+                  <a class="dropdown-item" href="/ambient-data/">
+                    Ambient Data
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/context/">
+                    Hyperlocal Context
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/technology/">
+                    Technology
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/parc/">
+                    reelyActive Parc
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/bibliography/">
+                    Bibliography
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/owlidays/">
+                    Owl-iday Specials
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="https://reelyactive.github.io"
+                     target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Developers
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://reelyactive.com/blog"
+                     target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Blog
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="/directory/">
+                    Directory
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarAboutUs"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> About us </a>
+              <!-- About us dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarAboutUs">
+                <li>
+                  <a class="dropdown-item" href="/about/">
+                    About us
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/brand/">
+                    Brand
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/history/">
+                    History
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/awards/">
+                    Awards
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/press/">
+                    Press
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/made-in-montreal/">
+                    Made in Montr&eacute;al
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="/contact/">
+                    Contact us
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-secondary text-white"
+                 href="/get-started/" role="button"> Get Started </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarInfoDropdown"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false">
+                <i class="fas fa-question-circle"></i>
+              </a>
+              <!-- Info about tracking and open source software/licenses -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarInfoDropdown">
+                <li>
+                  <a class="dropdown-item"
+                     href="https://www.reelyactive.com/how-we-observe/#digital">
+                    <i class="fas fa-mouse-pointer"></i>
+                    Page view tracking (gtag.js) &nbsp;
+                    <span class="badge bg-warning">
+                      <i class="fas fa-user-tag"></i>
+                    </span>
+                  </a>
+                </li>
+                <li class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://v5.getbootstrap.com" >
+                    <i class="fab fa-bootstrap"></i>
+                    Bootstrap 5 &nbsp;
+                    <span class="badge bg-light text-dark">
+                      <i class="fab fa-osi"></i> MIT
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://fontawesome.com" >
+                    <i class="fab fa-font-awesome"></i>
+                    Font Awesome (Free) &nbsp;
+                    <span class="badge bg-light text-dark">
+                      <i class="fab fa-creative-commons"></i>
+                      <i class="fab fa-osi"></i> MIT
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://github.com/reelyactive/web-style-guide/" >
+                    <i class="fas fa-code"></i>
+                    Web Style Guide &nbsp;
+                    <span class="badge bg-light text-dark">
+                      <i class="fab fa-osi"></i> MIT
+                   </span>
+                  </a>
+                </li>
+                <li class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://www.reelyactive.com/made-in-montreal/" >
+                    <i class="fab fa-canadian-maple-leaf"></i>
+                    Made in Montr&eacute;al &nbsp;
+                    <i class="fas fa-city"></i>
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
-        </nav>
-      </header>
-
-      <!-- Banner -->
-      <section id="banner">
-        <div class="inner">
-          <h2>reelyActive</h2>
-          <p>Embrace the ambient data<br>
-             in <em>your</em> space.</p>
-          <ul class="actions">
-            <!--<li><a href="" class="button special"> </a></li>-->
-          </ul>
         </div>
-        <a href="#oneliner" class="more scrolly">Learn More</a>
-      </section>
+      </div>
+    </nav>
 
-      <!-- One-liner -->
-      <section id="oneliner" class="wrapper style2 special">
-        <div class="inner">
-          <header class="major">
-            <h3>We are a foundational technology company.</h3>
-            <p>And we believe in technology at the service of humanity.</p>
-          </header>
-        </div>
-      </section>
-
-      <!-- COVID-19 -->
-      <section id="oneliner" class="wrapper style3 special">
-        <div class="inner">
-          <header class="major">
-            <h4>Real-time location and physical search in the context of COVID-19</h4>
-            <p>Learn how our open source technology can be applied to mitigate the impact of the pandemic.</p>
-          </header>
-          <p class="align-center">
-            <a href="covid-19/" class="button special">
-              COVID-19 Applications & Solutions
-            </a>
-          </p>
-        </div>
-      </section>
-
-      <section id="valueprops" class="wrapper alt style1">
-
-        <!-- The Vision -->
-        <section class="spotlight">
-          <div class="image">
-            <img src="images/landing-vision-hospital.jpg"
-                 alt="reelyActive's Vision" />
-          </div>
-          <div class="content">
-            <h2>The Vision</h2>
-            <p>We envisage a world in which people, products and places freely and independently interact <em>digitally</em> in complement to their <em>physical</em> interaction <b>at a human scale</b>.</p>
-            <p>Interactions are mutually beneficial <b>microtransactions</b>, enabled by calm, <em>invisible</em> technology.  We're cultivating and sharing this vision in our living lab: <b>reelyActive Parc</b>.</p>
-            <ul class="actions horizontal">
-              <li><a href="about/"
-                     class="button">About Us</a></li>
-              <li><a href="parc/"
-                     class="button">reelyActive Parc</a></li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- The Product -->
-        <section class="spotlight">
-          <div class="image">
-            <img src="images/landing-product.png"
-                 alt="Pareto Anywhere by reelyActive" />
-          </div>
-          <div class="content">
-            <h2>The Product</h2>
-            <p><b>Pareto Anywhere</b> establishes a digital understanding of physical spaces and the dynamics of the people and assets within: a real-time data stream of <em>who/what</em> is <em>where/how</em> in any physical space.</p>
-            <p><b>Pareto Anywhere</b> is permissively-licensed open source software, continuously evolving alongside the industries it is revolutionising.</p>
-            <ul class="actions horizontal">
-              <li><a href="https://getpareto.com/" target="_blank"
-                     class="button special">Pareto Anywhere</a></li>
-              <li><a href="https://getpareto.com/use-cases/" target="_blank"
-                     class="button">Use Cases</a></li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- The Insight -->
-        <section class="spotlight">
-          <div class="image">
-            <img src="images/landing-insight.jpg" alt="reelyActive's Insight" />
-          </div>
-          <div class="content">
-            <h2>The Insight</h2>
-            <p>Over 20 billion standard <b>radio-identifiable</b> devices<em>&mdash;detectable at a human scale&mdash;</em>are shipping annually.  And the people, products and places they represent have <b>digital twins</b> on the web.</p>
-            <p><b>Connected infrastructure</b><em>&mdash;in physical spaces&mdash;</em>is the catalyst for microtransactions among the digital twins of the identified occupants.</p>
-            <ul class="actions horizontal">
-              <li><a href="advertise/"
-                     class="button">What's Advertising?</a></li>
-              <li><a href="how-we-observe/"
-                     class="button">How We Observe</a></li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- The Technology -->
-        <section class="spotlight">
-          <div class="image">
-            <img src="images/landing-technology.jpg"
-                 alt="reelyActive Technology" />
-          </div>
-          <div class="content">
-            <h2>The Technology</h2>
-            <p>Pareto Anywhere is at the core of an <b>open technology architecture</b> which observes current and emerging standards to maximise <em>interoperability</em> and <em>extensibility</em>.  And our <b>novel connected infrastructure</b> acts as a catalyst to embrace the ambient data in <em>your</em> space today.</p>
-            <p>Published not patented.  By developers for developers.</p>
-            <ul class="actions horizontal">
-              <li><a href="technology/"
-                     class="button">Technology</a></li>
-              <li><a href="https://reelyactive.github.io" target="_blank"
-                     class="button">Developers</a></li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- The Impact -->
-        <section class="spotlight">
-          <div class="image">
-            <img src="images/landing-impact.jpg" alt="reelyActive's Impact" />
-          </div>
-          <div class="content">
-            <h2>The Impact</h2>
-            <p>We're proud to see our platform consistently applied to elevate <b>efficiency</b> and <b>occupant experience</b>, especially in spaces we never imagined.</p>
-            <blockquote>The data we collected confirmed that we could reduce our office space by 15% and continue to meet our top-notch employee experience targets.</blockquote>
-            <p class="align-right">&mdash;Serge Bendahan, Desjardins</p>
-          </div>
-        </section>
-
-      </section>
-
-      <!-- Customers -->
-      <section id="oneliner" class="wrapper style2 special">
-        <div class="inner">
-          <header class="major">
-            <p>Users of the reelyActive platform include:</p>
-          </header>
-          <div class="image fit">
-            <img src="images/landing-users.png" alt="Businesses who use reelyActive" />
+    <!----- Herowl ----->
+    <div class="herowl">
+      <div class="col-xs-12 col-sm-10 col-lg-6 offset-lg-4 col-xl-6
+                  offset-xl-2">
+        <div class="card">
+          <div class="card-body">
+            <img src="images/reelyactive-logo-text-480x91.png"
+                 class="img-fluid mb-2" alt="reelyActive">
+            <p class="card-text lead"> Embrace the ambient data in <em>your</em> space </p>
           </div>
         </div>
-      </section>
-
-      <!-- CTA -->
-      <section id="cta" class="wrapper style4">
-        <div class="inner">
-          <header>
-            <h2>Reenvision <i>your</i> Space</h2>
-            <p>Get <b>Pareto Anywhere</b> to embrace the ambient data in <em>your</em> space.</p>
-          </header>
-          <ul class="actions vertical">
-            <li><a href="contact/" class="button fit">Contact us</a></li>
-            <li><a href="https://getpareto.com" class="button fit special"
-                   target="_blank">Get Pareto</a></li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <footer id="footer">
-        <ul class="icons">
-          <li><a href="https://twitter.com/reelyActive" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-          <li><a href="https://www.facebook.com/reelyActive" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-          <li><a href="https://instagram.com/reelyactive/" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-          <li><a href="https://www.linkedin.com/company/reelyactive" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-          <li><a href="https://www.youtube.com/reelyactive" target="_blank" class="icon fa-youtube-play"><span class="label">YouTube</span></a></li>
-          <li><a href="https://reelyactive.github.io/" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
-        </ul>
-        <ul class="copyright">
-          <li>&copy; reelyActive 2016-2020</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
-        </ul>
-      </footer>
-
+        <a href="#content">
+          <img src="images/barnarrow-down.png" alt="Learn More"
+               class="mx-auto d-block barnarrow animate-breathing">
+        </a>
+      </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/skel.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/landing.js"></script>
+    <!-- Content -->
+    <div id="content" class="container-fluid">
+      <a href="#top">
+        <img src="images/barnarrow-up.png" alt="Top of Page"
+             class="mx-auto mb-4 d-block barnarrow animate-breathing">
+      </a>
+      <!-- Clients -->
+      <div class="row justify-content-center bg-light text-center">
+        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+          <h2 class="text-uppercase mt-5 mb-4"> Our clients </h2>
+          <p> Our clients put ambient data to work to better serve their customer and employee experiences. </p>
+          <div class="row row-cols-2 row-cols-md-3 row-cols-xl-4 row-cols-xxl-5 g-4 mb-3">
+            <div class="col">
+              <div class="card">
+                <div id="carouselClientsA" class="carousel slide"
+                     data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2400">
+                      <img src="images/clients-desjardins-logo-square.png"
+                           class="card-img-top" alt="Desjardins">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2400">
+                      <img src="images/clients-lorealcanada-logo-square.jpg"
+                           class="card-img-top" alt="L'Oreal Canada">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div id="carouselClientsB" class="carousel slide"
+                     data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2400">
+                      <img src="images/clients-cirquedusoleil-logo-square.jpg"
+                           class="card-img-top" alt="Cirque du Soleil">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2400">
+                      <img src="images/clients-canarie-logo-square.png"
+                           class="card-img-top" alt="Canarie">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col d-none d-md-block">
+              <div class="card">
+                <div id="carouselClientsC" class="carousel slide"
+                     data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2400">
+                      <img src="images/clients-usc-logo-square.png"
+                           class="card-img-top" alt="USC">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2400">
+                      <img src="images/clients-esguqam-logo-square.png"
+                           class="card-img-top" alt="ESG UQAM">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col d-none d-xl-block">
+              <div class="card">
+                <div id="carouselClientsD" class="carousel slide"
+                     data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2400">
+                      <img src="images/clients-usarmy-logo-square.png"
+                           class="card-img-top" alt="US Army">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2400">
+                      <img src="images/clients-jgh-logo-square.png"
+                           class="card-img-top" alt="JGH">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col d-none d-xxl-block">
+              <div class="card">
+                <div id="carouselClientsD" class="carousel slide"
+                     data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2400">
+                      <img src="images/clients-mcq-logo-square.png"
+                           class="card-img-top" alt="MCQ">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2400">
+                      <img src="images/clients-videotron-logo-square.png"
+                           class="card-img-top" alt="Videotron Affaires">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="clients/" class="btn btn-outline-primary mb-5"
+             role="button"> Learn More </a>
+        </div>
+      </div>
+      <!-- Products -->
+      <div class="row justify-content-center text-center">
+        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+          <h2 class="text-uppercase mt-5 mb-4"> Our products </h2>
+          <div class="row mb-3">
+            <div class="col-md-12 col-lg-6 mb-2">
+              <div id="carouselProducts" class="carousel slide carousel-fade"
+                   data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="3600">
+                    <img src="images/landing-product-paretoanywhere.png"
+                         class="d-block w-100"
+                         alt="Pareto Anywhere by reelyActive">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2400">
+                    <img src="images/landing-product-showcasekit.jpg"
+                         class="d-block w-100" alt="Showcase Kit 2.0">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-6 mb-2">
+              <p class="text-lg-start"> Pareto Anywhere establishes a digital understanding of physical spaces and the dynamics of the people and assets within: a real-time stream of <em>who/what</em> is <em>where/how</em>. </p>
+              <a href="get-started/" class="btn btn-secondary"
+                 role="button"> Get Started </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Applications -->
+      <div class="row justify-content-center bg-light text-center">
+        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+          <h2 class="text-uppercase mt-5 mb-4"> Applications </h2>
+          <ul class="inline">
+            <li class="list-inline-item mb-2">
+              <span class="badge bg-dark">
+                <i class="fas fa-shoe-prints"></i>
+              </span>
+              Anonymous occupancy analytics
+            </li>
+            <li class="list-inline-item mb-2">
+              <span class="badge bg-dark">
+                <i class="fas fa-user-tag"></i>
+              </span>
+              Personnel tracking
+            </li>
+            <li class="list-inline-item mb-2">
+              <span class="badge bg-dark">
+                <i class="fas fa-tag"></i>
+              </span>
+              Asset tracking
+            </li>
+            <li class="list-inline-item mb-2">
+              <span class="badge bg-dark">
+                <i class="fas fa-thermometer-half"></i>
+              </span>
+              Environmental sensing
+            </li>
+            <li class="list-inline-item mb-2">
+              <span class="badge bg-dark">
+                <i class="fas fa-people-arrows"></i>
+              </span>
+              Interaction detection
+            </li>
+            <li class="list-inline-item text-muted">
+              and more...
+            </li>
+          </ul>
+          <a href="https://getpareto.com/use-cases/" target="_blank"
+             class="btn btn-outline-primary mb-5"
+             role="button"> Learn More </a>
+        </div>
+      </div>
+      <!-- Discover -->
+      <div class="row justify-content-center text-center">
+        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+          <h2 class="text-uppercase mt-5 mb-4"> Discover </h2>
+          <p class="mb-3"> Pareto Anywhere is continuously evolving, community-driven, permissively licensed open source software. </p>
+          <a href="technology/" class="btn btn-outline-primary mb-5"
+             role="button"> Learn More </a>
+        </div>
+      </div>
+      <!-- About us -->
+      <div class="row justify-content-center bg-light text-center">
+        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+          <h2 class="text-uppercase mt-5 mb-4"> About us </h2>
+          <div class="row mb-3">
+            <div class="col-md-12 col-lg-6 mb-2">
+              <img src="images/landing-team.jpg" class="img-fluid img-rounded"
+                   alt="reelyActive Core Team">
+            </div>
+            <div class="col-md-12 col-lg-6 mb-2">
+              <p class="text-lg-start"> Find out who we are, what we care about and how to get in touch with us. </p>
+              <a href="about/" class="btn btn-outline-primary"
+                 role="button"> Learn More </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!----- Owl-to-Action ----->
+    <div class="owl-to-action">
+      <div class="col-xs-12 col-sm-10 col-lg-6 offset-lg-4 col-xl-6
+                  offset-xl-2 py-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-grid gap-3 d-md-block">
+              <span class="lead pr-4">
+                Embrace the ambient data in <em>your</em> space
+              </span>
+              <a class="btn btn-secondary" role="button"
+                 href="/get-started/"> Get Started </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer bg-dark bg-gradient">
+      <a href="./"> Home </a>
+      &nbsp; | &nbsp;
+      <a href="https://www.reelyactive.com"> &copy; reelyActive 2020 </a>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <script defer src="js/fontawesome-reelyactive.min.js"></script>
+    <script src="js/bootstrappyactive.bundle.min.js"></script>
   </body>
 </html>
