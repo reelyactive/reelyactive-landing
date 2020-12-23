@@ -1,282 +1,602 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>reelyActive Technology</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Our technology represents who/what is where/how in a web-standard format by observing physical spaces through radio frequencies." />
-    <!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+          content="Our technology transforms ambient data into a real-time stream of who/what is where/how in any physical space.">
+    <link rel="stylesheet" href="../style/bootstrappyactive.min.css">
+    <title> Technology </title>
+    <!----- Structured, linked metadata (JSON-LD & Schema.org) ----->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org", 
+      "@type": "WebPage",
+      "name": "Technology",
+      "description": "Our technology transforms ambient data into a real-time stream of who/what is where/how in any physical space.",
+      "image": "https://www.reelyactive.com/images/reelyActive-logo-square.png",
+      "creator": {
+        "@type": "Organization",
+        "url": "https://www.reelyactive.com"
+      }
+    }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39535156-4"></script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-39535156-4', 'auto');
-      ga('send', 'pageview');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-39535156-4');
     </script>
   </head>
-  <body>
-
-    <!-- Page Wrapper -->
-    <div id="page-wrapper">
-
-      <!-- Header -->
-      <header id="header">
-        <h1><a href="../">reelyActive</a></h1>
-        <nav id="nav">
-          <ul>
-            <li class="special">
-              <a href="#menu" class="menuToggle"><span>Menu</span></a>
-              <div id="menu">
+  <body id="top">
+    <!-- Navigation -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white
+                shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="https://www.reelyactive.com/">
+          <img src="../images/reelyactive-logo-nav.png" width="165" height="30"
+               alt="reelyActive">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarItems" aria-controls="navbarItems"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarItems">
+          <!-- Left-aligned navigation items -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+          <!-- Right-aligned navigation items -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/clients/"> Clients </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarProducts"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> Products </a>
+              <!-- Products dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarProducts">
+                <li>
+                  <a class="dropdown-item" href="https://getpareto.com">
+                    Pareto Anywhere
+                  </a>
+                </li>
                 <ul>
-                  <li><a href="../">Home</a></li>
-                  <li><a href="../directory/">Directory</a></li>
-                  <li><a href="../technology/">Technology</a></li>
-                  <li><a href="https://getpareto.com/" target="_blank"><span class="fa fa-search">&nbsp;</span>Pareto Anywhere</a></li>
-                  <li><a href="https://reelyactive.github.io/" target="_blank"><span class="fa fa-code">&nbsp;</span>Developers</a></li>
-                  <li><a href="https://shop.reelyactive.com/" target="_blank"><span class="fa fa-shopping-cart">&nbsp;</span>Order a Kit</a></li>
-                  <li><a href="../about/">About Us</a></li>
-                  <li><a href="../contact/">Contact</a></li>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/platform/integrations/">
+                    Integrations
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/platform/infrastructure/">
+                    Infrastructure
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/platform/devices/">
+                    Devices
+                  </a>
                 </ul>
-              </div>
+                <li>
+                  <a class="dropdown-item" href="https://shop.reelyactive.com/collections/infrastructure/">
+                    Ambient Data Gateways
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://reelyactive.github.io/diract/">
+                    DirAct
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://shop.reelyactive.com/products/showcase-kit">
+                    Showcase Kit
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="https://getpareto.com/pricing/">
+                    Pricing / Model
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarApplications"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> Applications </a>
+              <!-- Applications dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarApplications">
+                <li>
+                  <a class="dropdown-item" href="https://getpareto.com/use-cases/">
+                    Use Cases
+                  </a>
+                </li>
+                <ul>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/occupancy-analytics/">
+                    Occupancy Analytics
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/asset-tracking/">
+                    Asset Tracking
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/personnel-tracking/">
+                    Personnel Tracking
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/environmental-sensing/">
+                    Environmental Sensing
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/interaction-detection/">
+                    Interaction Detection
+                  </a>
+                </ul>
+                <li>
+                  <a class="dropdown-item" href="/science/">
+                    Science & Research
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/art/">
+                    Arts & Culture
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="/covid-19/">
+                    COVID-19
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDiscover"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> Discover </a>
+              <!-- Discover dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarDiscover">
+                <li>
+                  <a class="dropdown-item" href="/ambient-data/">
+                    Ambient Data
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/context/">
+                    Hyperlocal Context
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/technology/">
+                    Technology
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/parc/">
+                    reelyActive Parc
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/bibliography/">
+                    Bibliography
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/owlidays/">
+                    Owl-iday Specials
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="https://reelyactive.github.io"
+                     target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Developers
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://reelyactive.com/blog"
+                     target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Blog
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="/directory/">
+                    Directory
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarAboutUs"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> About us </a>
+              <!-- About us dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarAboutUs">
+                <li>
+                  <a class="dropdown-item" href="/about/">
+                    About us
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/brand/">
+                    Brand
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/history/">
+                    History
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/awards/">
+                    Awards
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/press/">
+                    Press
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/made-in-montreal/">
+                    Made in Montr&eacute;al
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="/contact/">
+                    Contact us
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-secondary text-white"
+                 href="/get-started/" role="button"> Get Started </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarInfoDropdown"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false">
+                <i class="fas fa-question-circle"></i>
+              </a>
+              <!-- Info about tracking and open source software/licenses -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarInfoDropdown">
+                <li>
+                  <a class="dropdown-item"
+                     href="https://www.reelyactive.com/how-we-observe/#digital">
+                    <i class="fas fa-mouse-pointer"></i>
+                    Page view tracking (gtag.js) &nbsp;
+                    <span class="badge bg-warning">
+                      <i class="fas fa-user-tag"></i>
+                    </span>
+                  </a>
+                </li>
+                <li class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://v5.getbootstrap.com" >
+                    <i class="fab fa-bootstrap"></i>
+                    Bootstrap 5 &nbsp;
+                    <span class="badge bg-light text-dark">
+                      <i class="fab fa-osi"></i> MIT
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://fontawesome.com" >
+                    <i class="fab fa-font-awesome"></i>
+                    Font Awesome (Free) &nbsp;
+                    <span class="badge bg-light text-dark">
+                      <i class="fab fa-creative-commons"></i>
+                      <i class="fab fa-osi"></i> MIT
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://github.com/reelyactive/web-style-guide/" >
+                    <i class="fas fa-code"></i>
+                    Web Style Guide &nbsp;
+                    <span class="badge bg-light text-dark">
+                      <i class="fab fa-osi"></i> MIT
+                   </span>
+                  </a>
+                </li>
+                <li class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://www.reelyactive.com/made-in-montreal/" >
+                    <i class="fab fa-canadian-maple-leaf"></i>
+                    Made in Montr&eacute;al &nbsp;
+                    <i class="fas fa-city"></i>
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
-        </nav>
-      </header>
-
-      <!-- Main -->
-      <article id="main">
-        <header>
-          <h2>Technology</h2>
-          <p>Web meets Physical World.</p>
-        </header>
-        <section class="wrapper style5">
-          <div class="inner">
-            <header>
-              <h2>Observe any Physical Space</h2>
-              <p>Our technology enables <i>computers</i> to observe in real-time <b>who/what is where/how</b>, in any physical space, and in a language that <i>they</i> understand.</p>
-            </header>
-            <div class="row">
-              <div class="4u 12u$(medium)">
-                <header>
-                  <h3>The TL;DR*</h3>
-                  <p>Essentially, it's <b>RF packets in</b> and <b>JSON out</b>.  A real-time data stream.</p>
-                  <p>*too long; didn't read</p>
-                </header>
-              </div>
-              <div class="8u 12u$(medium)">
-                <span class="image fit"><img src="../images/technology-rf-to-json.png" /></span>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="6u 12u$(small)">
-                <header>
-                  <h4>Universal</h4>
-                  <ul>
-                    <li>radio protocol agnostic</li>
-                    <li>infrastructure agnostic</li>
-                    <li>built on web standards</li>
-                  </ul>
-                </header>
-              </div>
-              <div class="6u 12u$(small)">
-                <header>
-                  <h4>Versatile</h4>
-                  <ul>
-                    <li>open source</li>
-                    <li>run edge, local or cloud</li>
-                    <li>integrations galore</li>
-                  </ul>
-                </header>
-              </div>
-            </div>
-            <hr>
-            <header>
-              <h2>From ambient wireless traffic to hyperlocal context</h2>
-              <p>How our technology processes continuous data streams, in five steps.</p>
-            </header>
-            <div class="row">
-              <div class="8u 12u$(medium)">
-                <span class="image fit"><img src="../images/technology-observation.jpg" /></span>
-              </div>
-              <div class="4u 12u$(medium) important(medium)">
-                <header>
-                  <h3>Observation</h3>
-                  <p>Our software <i>observes</i> the occupants of a physical space through <b>radio frequencies</b>.</p>
-                </header>
-              </div>
-            </div>
-            <div class="row">
-              <div class="4u 12u$(medium)">
-                <header>
-                  <h3>Interpretation</h3>
-                  <p>Our software <b>identifies</b> and <b>locates</b> each device by <i>interpreting</i> the ambient wireless traffic.</p>
-                </header>
-              </div>
-              <div class="8u 12u$(medium)">
-                <span class="image fit"><img src="../images/technology-interpretation.jpg" /></span>
-              </div>
-            </div>
-            <div class="row">
-              <div class="8u 12u$(medium)">
-                <span class="image fit"><img src="../images/technology-translation.jpg" /></span>
-              </div>
-              <div class="4u 12u$(medium) important(medium)">
-                <header>
-                  <h3>Translation</h3>
-                  <p>Our software <i>translates</i> the data stream into a <b>standard data format</b> for efficient distribution and storage.</p>
-                </header>
-              </div>
-            </div>
-            <div class="row">
-              <div class="4u 12u$(medium)">
-                <header>
-                  <h3>Association</h3>
-                  <p>Our software <i>associates</i> every identifiable person, product and place with its digital twin via a <b>URL</b>.</p>
-                </header>
-              </div>
-              <div class="8u 12u$(medium)">
-                <span class="image fit"><img src="../images/technology-association.jpg" /></span>
-              </div>
-            </div>
-            <div class="row">
-              <div class="8u 12u$(medium)">
-                <span class="image fit"><img src="../images/technology-representation.jpg" /></span>
-              </div>
-              <div class="4u 12u$(medium) important(medium)">
-                <header>
-                  <h3>Representation</h3>
-                  <p>Our software combines both location and context into a web-standard <i>representation</i> in the form of <b>linked data</b>.</p>
-                </header>
-              </div>
-            </div>
-            <hr>
-            <header class="align-center">
-              <h2>A Primary Data Source</h2>
-              <p>Our technology supplies a continuous, primary source of data, which is readily consumed by any real-time, analytic or machine-learning application.</p>
-            </header>
-            <hr>
-            <header>
-              <h2>Infrastructure Innovation</h2>
-              <p>Collect RF packets with our hardware, use existing in-building infrastructure, or bring-your-own (BYOI).</p>
-            </header>
-            <div class="row">
-              <div class="8u 12u$(medium)">
-                <span class="image fit"><img src="../images/technology-reel.jpg" /></span>
-              </div>
-              <div class="4u 12u$(medium) important(medium)">
-                <header>
-                  <h3>The Reel</h3>
-                  <p>Our founding innovation <i>(and namesake!)</i> is a novel daisy-chain architecture that facilitates coverage and provides flexible granularity.</p>
-                </header>
-              </div>
-            </div>
-            <div class="row">
-              <div class="4u 12u$(medium)">
-                <header>
-                  <h3>Owl-in-One</h3>
-                  <p>Plug-and-play simplicity facilitates coverage where and when it is needed.  Our Showcase Kit includes three!</p>
-                </header>
-              </div>
-              <div class="8u 12u$(medium)">
-                <span class="image fit"><img src="../images/technology-oio.jpg" /></span>
-              </div>
-            </div>
-            <div class="row">
-              <div class="8u 12u$(medium)">
-                <span class="image fit"><img src="../images/technology-byoi.jpg" /></span>
-              </div>
-              <div class="4u 12u$(medium) important(medium)">
-                <header>
-                  <h3>Bring-Your-Own</h3>
-                  <p>Use the right hardware for the job <i>(especially for proprietary or passive RFID)</i>.  Our software will ingest the stream of RF packets.</p>
-                </header>
-              </div>
-            </div>
-            <div class="row">
-              <div class="4u 12u$(medium)">
-                <header>
-                  <h3>Look above you!</h3>
-                  <p>Electric light is the <i>ubiquitous</i> in-building infrastructure.  We're working with major vendors towards a bright future.</p>
-                </header>
-              </div>
-              <div class="8u 12u$(medium)">
-                <span class="image fit"><img src="../images/technology-lighting.jpg" /></span>
-              </div>
-            </div>
-            <hr>
-            <header class="align-center">
-              <h2>Pareto Anywhere by reelyActive</h2>
-              <p>Pareto Anywhere is our open source software which is at the centre of an open technology architecture.</p>
-            </header>
-            <div class="row">
-              <div class="6u -3u 12u$(medium)">
-                <span class="image fit"><img src="../images/technology-pareto-anywhere.png" /></span>
-                <a href="https://getpareto.com" target="_blank"
-                   class="button fit special">Get Pareto</a>
-              </div>
-            </div>
-            <hr>
-            <br><br>
-            <h3>Inspired Innovation</h3>
-            <p>Since 2012, our team and collaborators have proudly innovated with the mission to advance machine-contextual-awareness at the service of humanity.  In this pursuit, among other things, we have published several scientific articles, defined the concept of "hyperlocal context", developed a wealth of open source code, and invented & commercialised a novel sensor architecture.  We invite you to follow the links below to learn more: </p>
-            <p class="align-center">
-              <a href="../about/" class="button">About Us</a>
-              <a href="../history/" class="button">History</a>
-              <a href="../science/" class="button">Science</a>
-              <a href="../context/" class="button">Context</a>
-              <a href="https://shop.reelyactive.com" target="_blank"
-                 class="button">Store</a>
-            </p>
-          </div>
-        </section>
-      </article>
-
-      <!-- CTA -->
-      <section id="cta" class="wrapper style4">
-        <div class="inner">
-          <header>
-            <h2>Reenvision <i>your</i> Space</h2>
-            <p>Get <b>Pareto Anywhere</b> to embrace the ambient data in <em>your</em> space.</p>
-          </header>
-          <ul class="actions vertical">
-            <li><a href="https://reelyactive.github.io" target="_blank"
-                   class="button fit">Developers</a></li>
-            <li><a href="https://getpareto.com" class="button fit special"
-                   target="_blank">Get Pareto</a></li>
-          </ul>
         </div>
-      </section>
+      </div>
+    </nav>
 
-      <!-- Footer -->
-      <footer id="footer">
-        <ul class="icons">
-          <li><a href="https://twitter.com/reelyActive" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-          <li><a href="https://www.facebook.com/reelyActive" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-          <li><a href="https://instagram.com/reelyactive/" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-          <li><a href="https://www.linkedin.com/company/reelyactive" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-          <li><a href="https://www.youtube.com/reelyactive" target="_blank" class="icon fa-youtube-play"><span class="label">YouTube</span></a></li>
-          <li><a href="https://reelyactive.github.io/" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
-        </ul>
-        <ul class="copyright">
-          <li>&copy; reelyActive 2016-2020</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
-        </ul>
-      </footer>
-
+    <!----- Herowl ----->
+    <div class="herowl">
+      <div class="col-xs-12 col-sm-10 col-lg-6 offset-lg-4 col-xl-6
+                  offset-xl-2">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="card-title"> Technology </h1>
+            <p class="card-text"> Ambient data made actionable </p>
+          </div>
+        </div>
+        <a href="#content">
+          <img src="../images/barnarrow-down.png" alt="Learn More"
+               class="mx-auto d-block barnarrow animate-breathing">
+        </a>
+      </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/js/jquery.scrollex.min.js"></script>
-    <script src="../assets/js/jquery.scrolly.min.js"></script>
-    <script src="../assets/js/skel.min.js"></script>
-    <script src="../assets/js/util.js"></script>
-    <!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
-    <script src="../assets/js/main.js"></script>
+    <!-- Content -->
+    <div id="content" class="container-fluid">
+      <a href="#top">
+        <img src="../images/barnarrow-up.png" alt="Top of Page"
+             class="mx-auto d-block barnarrow animate-breathing">
+      </a>
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+          <div class="row mt-5">
+            <div class="col-lg-6 order-lg-last mb-3">
+              <div id="carouselAmbientData" class="carousel slide carousel-fade"
+                   data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="2400">
+                    <img src="../images/technology-ambientdata-physical.png"
+                         class="d-block w-100" alt="Physical Ambient Data">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2400">
+                    <img src="../images/technology-ambientdata-digital.png"
+                         class="d-block w-100" alt="Digital Ambient Data">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <h2> Ambient data </h2>
+              <p> Ambient data is an abundant, continuous and underutilised source of machine-readable information present at a human scale. </p>
+              <p> Our technology stack collects and processes ambient data, distributing the resulting contextual, actionable information. </p>
+              <p class="text-center">
+                <a href="../ambient-data/" class="btn btn-outline-primary"
+                   role="button"> Ambient Data </a>
+              </p>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-lg-6 mb-3">
+              <div id="carouselDevices" class="carousel slide carousel-fade"
+                   data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="2400">
+                    <img src="../images/technology-diract.png"
+                         class="d-block w-100" alt="DirAct">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <h2> Devices / DirAct </h2>
+              <p> Products, people and places are machine-identifiable by the devices they carry/wear.  Our technology stack is protocol-agnostic. </p>
+              <p> DirAct is our embedded software which enables compatible devices to detect proximity interactions between people, places and products. </p>
+              <p class="text-center">
+                <a href="https://getpareto.com/platform/devices/"
+                   class="btn btn-outline-primary" role="button">
+                  Identifiable devices
+                </a>
+                <a href="https://reelyactive.github.io/diract/"
+                   class="btn btn-outline-primary" role="button">
+                  <i class="fas fa-external-link-alt"></i> DirAct
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-lg-6 order-lg-last mb-3">
+              <div id="carouselGateways" class="carousel slide carousel-fade"
+                   data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="2400">
+                    <img src="../images/technology-gateways-reel.jpg"
+                         class="d-block w-100" alt="Reel of reelceivers">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2400">
+                    <img src="../images/technology-gateways-oio.jpg"
+                         class="d-block w-100" alt="Owl-in-One">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <h2> Ambient data gateways </h2>
+              <p> Gateway infrastructure collects and relays real-time ambient data for processing.  Our technology stack is hardware-agnostic. </p>
+              <p> Our reel architecture provides daisy-chained dependability and our Owl-in-One provides open source hardware/software flexibility. </p>
+              <p class="text-center">
+                <a href="https://getpareto.com/platform/infrastructure/"
+                   class="btn btn-outline-primary" role="button">
+                  Infrastructure
+                </a>
+                <a href="https://shop.reelyactive.com/collections/infrastructure/"
+                   class="btn btn-outline-primary" role="button">
+                  <i class="fas fa-external-link-alt"></i> Shop
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-lg-6 mb-3">
+              <div id="carouselRaddec" class="carousel slide carousel-fade"
+                   data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="2400">
+                    <img src="../images/technology-raddec-json.png"
+                         class="d-block w-100" alt="JSON raddec">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2400">
+                    <img src="../images/technology-raddec-binary.png"
+                         class="d-block w-100" alt="Binary raddec">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <h2> raddec </h2>
+              <p> A raddec is an open-standard representation of a radio decoding. </p>
+              <p> We developed the raddec standard to provide a protocol-agnostic means of representing and efficiently transferring ambient data across networks. </p>
+              <p class="text-center">
+                <a href="https://github.com/reelyactive/raddec"
+                   class="btn btn-outline-primary" role="button">
+                  <i class="fab fa-github"></i> raddec
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-lg-6 order-lg-last mb-3">
+              <div id="carouselPareto" class="carousel slide carousel-fade"
+                   data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="2400">
+                    <img src="../images/technology-paretoanywhere-hlc.png"
+                         class="d-block w-100"
+                         alt="Pareto Anywhere Hyperlocal Context">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2400">
+                    <img src="../images/technology-paretoanywhere-wwwh.png"
+                         class="d-block w-100"
+                         alt="Pareto Anywhere Who/What is Where/How">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <h2> Pareto Anywhere </h2>
+              <p> Pareto Anywhere is our current flagship technology which processes ambient data as raddecs into actionable information in the form of hyperlocal context. </p> 
+              <p> Pareto Anywhere is continuously evolving, community-driven, permissively licensed open source software written in <i class="fab fa-node-js"></i> Node.js that runs <em>anywhere</em>: edge, local or cloud. </p>
+              <p class="text-center">
+                <a href="https://getpareto.com" class="btn btn-outline-primary"
+                   role="button"> Pareto Anywhere </a>
+              </p>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-lg-6 mb-3">
+              <div id="carouselHLC" class="carousel slide carousel-fade"
+                   data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="2400">
+                    <img src="../images/technology-hlc-publication.png"
+                         class="d-block w-100" alt="IEEE IoP Paper 2017">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <h2> Hyperlocal Context / API </h2>
+              <p> Hyperlocal context is a machine-readable real-time representation of the real-world on a human scale: a digital snapshot of who/what is where/how. </p>
+              <p> Hyperlocal context is consumed through a socket.io or REST API. </p>
+              <p class="text-center">
+                <a href="../context/" class="btn btn-outline-primary"
+                   role="button"> Hyperlocal Context </a>
+              </p>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-lg-6 order-lg-last mb-3">
+              <div id="carouselParetoApps" class="carousel slide carousel-fade"
+                   data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="2400">
+                    <img src="../images/technology-paretoapps-hellocytoscape.png"
+                         class="d-block w-100"
+                         alt="Pareto Apps Hello Cytoscape">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2400">
+                    <img src="../images/technology-paretoapps-hellosensors.png"
+                         class="d-block w-100" alt="Pareto Apps Hello Sensors">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <h2> Pareto Apps </h2>
+              <p> Pareto Apps are a suite of web applications built on the hyperlocal context API. </p>
+              <p> Pareto Apps are open source, permissively-licensed and written in simple vanilla <i class="fab fa-js"></i> JavaScript to facilitate experimentation and extensibility. </p>
+              <p class="text-center">
+                <a href="../pareto/anywhere/apps"
+                   class="btn btn-outline-primary disabled"
+                   role="button"> Pareto Apps </a>
+              </p>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-lg-6 mb-3">
+              <div id="carouselElastic" class="carousel slide carousel-fade"
+                   data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="2400">
+                    <img src="../images/technology-kibana-dashboard.png"
+                         class="d-block w-100" alt="Kibana dashboard">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2400">
+                    <img src="../images/technology-elastic-award.jpg"
+                         class="d-block w-100" alt="Elastic Search Award">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <h2> Elastic integration </h2>
+              <p> Pareto Anywhere integrates seamlessly with the open source Elastic Stack, facilitating storage in Elasticsearch with search and analysis of data in Kibana. </p>
+              <p> In fact, we won an Elastic Search Award for this integration! </p>
+              <p class="text-center">
+                <a href="https://reelyactive.github.io/diy/kibana/"
+                   class="btn btn-outline-primary" role="button">
+                  <i class="fas fa-external-link-alt"></i> Integration
+                </a>
+                <a href="../awards/" class="btn btn-outline-primary"
+                   role="button"> Awards </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!----- Owl-to-Action ----->
+    <div class="owl-to-action">
+      <div class="col-xs-12 col-sm-10 col-lg-6 offset-lg-4 col-xl-6
+                  offset-xl-2 py-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-grid gap-3 d-md-block">
+              <span class="lead pr-4">
+                Embrace the ambient data in <em>your</em> space
+              </span>
+              <a class="btn btn-secondary" role="button"
+                 href="/get-started/"> Get Started </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer bg-dark bg-gradient">
+      <a href="./"> Technology </a>
+      &nbsp; | &nbsp;
+      <a href="https://www.reelyactive.com"> &copy; reelyActive 2020 </a>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <script defer src="../js/fontawesome-reelyactive.min.js"></script>
+    <script src="../js/bootstrappyactive.bundle.min.js"></script>
   </body>
 </html>
