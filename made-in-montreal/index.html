@@ -1,153 +1,425 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>reelyActive: Made in Montr&eacute;al</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Made in Montreal with its innovative architecture, open innovation, diversity in communication and history of industrial revolution." />
-    <!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+          content="Made in Montreal with its innovative architecture, open innovation, diversity in communication and history of industrial revolution.">
+    <link rel="stylesheet" href="../style/bootstrappyactive.min.css">
+    <title> Made in Montreal </title>
+    <!----- Structured, linked metadata (JSON-LD & Schema.org) ----->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org", 
+      "@type": "WebPage",
+      "name": "reelyActive: Made in Montreal",
+      "description": "Made in Montreal with its innovative architecture, open innovation, diversity in communication and history of industrial revolution.",
+      "image": "https://www.reelyactive.com/images/montreal-communication.png",
+      "creator": {
+        "@type": "Organization",
+        "url": "https://www.reelyactive.com"
+      }
+    }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39535156-4"></script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-39535156-4', 'auto');
-      ga('send', 'pageview');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-39535156-4');
     </script>
   </head>
-  <body>
-
-    <!-- Page Wrapper -->
-    <div id="page-wrapper">
-
-      <!-- Header -->
-      <header id="header">
-        <h1><a href="../">reelyActive</a></h1>
-        <nav id="nav">
-          <ul>
-            <li class="special">
-              <a href="#menu" class="menuToggle"><span>Menu</span></a>
-              <div id="menu">
+  <body id="top">
+    <!-- Navigation -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white
+                shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="https://www.reelyactive.com/">
+          <img src="../images/reelyactive-logo-nav.png" width="165" height="30"
+               alt="reelyActive">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarItems" aria-controls="navbarItems"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarItems">
+          <!-- Left-aligned navigation items -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+          <!-- Right-aligned navigation items -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/clients/"> Clients </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarProducts"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> Products </a>
+              <!-- Products dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarProducts">
+                <li>
+                  <a class="dropdown-item" href="https://getpareto.com">
+                    Pareto Anywhere
+                  </a>
+                </li>
                 <ul>
-                  <li><a href="../">Home</a></li>
-                  <li><a href="../directory/">Directory</a></li>
-                  <li><a href="../technology/">Technology</a></li>
-                  <li><a href="https://getpareto.com/" target="_blank"><span class="fa fa-search">&nbsp;</span>Pareto Anywhere</a></li>
-                  <li><a href="https://reelyactive.github.io/" target="_blank"><span class="fa fa-code">&nbsp;</span>Developers</a></li>
-                  <li><a href="https://shop.reelyactive.com/" target="_blank"><span class="fa fa-shopping-cart">&nbsp;</span>Order a Kit</a></li>
-                  <li><a href="../about/">About Us</a></li>
-                  <li><a href="../contact/">Contact</a></li>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/platform/integrations/">
+                    Integrations
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/platform/infrastructure/">
+                    Infrastructure
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/platform/devices/">
+                    Devices
+                  </a>
                 </ul>
-              </div>
+                <li>
+                  <a class="dropdown-item" href="https://shop.reelyactive.com/collections/infrastructure/">
+                    Ambient Data Gateways
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://reelyactive.github.io/diract/">
+                    DirAct
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://shop.reelyactive.com/products/showcase-kit">
+                    Showcase Kit
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="https://getpareto.com/pricing/">
+                    Pricing / Model
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarApplications"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> Applications </a>
+              <!-- Applications dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarApplications">
+                <li>
+                  <a class="dropdown-item" href="https://getpareto.com/use-cases/">
+                    Use Cases
+                  </a>
+                </li>
+                <ul>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/occupancy-analytics/">
+                    Occupancy Analytics
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/asset-tracking/">
+                    Asset Tracking
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/personnel-tracking/">
+                    Personnel Tracking
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/environmental-sensing/">
+                    Environmental Sensing
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/interaction-detection/">
+                    Interaction Detection
+                  </a>
+                </ul>
+                <li>
+                  <a class="dropdown-item" href="/science/">
+                    Science & Research
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/art/">
+                    Arts & Culture
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="/covid-19/">
+                    COVID-19
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDiscover"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> Discover </a>
+              <!-- Discover dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarDiscover">
+                <li>
+                  <a class="dropdown-item" href="/ambient-data/">
+                    Ambient Data
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/context/">
+                    Hyperlocal Context
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/technology/">
+                    Technology
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/parc/">
+                    reelyActive Parc
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/bibliography/">
+                    Bibliography
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/owlidays/">
+                    Owl-iday Specials
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="https://reelyactive.github.io"
+                     target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Developers
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://reelyactive.com/blog"
+                     target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Blog
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="/directory/">
+                    Directory
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarAboutUs"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> About us </a>
+              <!-- About us dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarAboutUs">
+                <li>
+                  <a class="dropdown-item" href="/about/">
+                    About us
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/brand/">
+                    Brand
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/history/">
+                    History
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/awards/">
+                    Awards
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/press/">
+                    Press
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/made-in-montreal/">
+                    Made in Montr&eacute;al
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="/contact/">
+                    Contact us
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-secondary text-white"
+                 href="/get-started/" role="button"> Get Started </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarInfoDropdown"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false">
+                <i class="fas fa-question-circle"></i>
+              </a>
+              <!-- Info about tracking and open source software/licenses -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarInfoDropdown">
+                <li>
+                  <a class="dropdown-item"
+                     href="https://www.reelyactive.com/how-we-observe/#digital">
+                    <i class="fas fa-mouse-pointer"></i>
+                    Page view tracking (gtag.js) &nbsp;
+                    <span class="badge bg-warning">
+                      <i class="fas fa-user-tag"></i>
+                    </span>
+                  </a>
+                </li>
+                <li class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://v5.getbootstrap.com" >
+                    <i class="fab fa-bootstrap"></i>
+                    Bootstrap 5 &nbsp;
+                    <span class="badge bg-light text-dark">
+                      <i class="fab fa-osi"></i> MIT
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://fontawesome.com" >
+                    <i class="fab fa-font-awesome"></i>
+                    Font Awesome (Free) &nbsp;
+                    <span class="badge bg-light text-dark">
+                      <i class="fab fa-creative-commons"></i>
+                      <i class="fab fa-osi"></i> MIT
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://github.com/reelyactive/web-style-guide/" >
+                    <i class="fas fa-code"></i>
+                    Web Style Guide &nbsp;
+                    <span class="badge bg-light text-dark">
+                      <i class="fab fa-osi"></i> MIT
+                   </span>
+                  </a>
+                </li>
+                <li class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://www.reelyactive.com/made-in-montreal/" >
+                    <i class="fab fa-canadian-maple-leaf"></i>
+                    Made in Montr&eacute;al &nbsp;
+                    <i class="fas fa-city"></i>
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
-        </nav>
-      </header>
-
-      <!-- Main -->
-      <article id="main">
-        <header>
-          <h2>Made in Montr&eacute;al</h2>
-          <p>Avec fiert&eacute;</p>
-        </header>
-        <section class="wrapper style5">
-          <div class="inner">
-            <div class="row">
-              <div class="8u 12u$(medium)">
-                <header>
-                  <h3> Montr&eacute;al on Architecture </h3>
-                  <p> Where might you find the world's tallest inclined tower? </p>
-                </header>
-                <p> <i>In Montr&eacute;al</i>, a city that's not afraid to innovate on architecture.  Nor were we afraid to innovate on architecture when we developed <a href="https://reelyactive.github.io/reel-overview.html" target="_blank">the reel</a>, a novel daisy-chain sensor infrastructure.  And wouldn't you know, our innovative architecture <a href="../industries/workplace/">is installed throughout the world's tallest inclined tower</a>! </p>
-              </div>
-              <div class="4u 12u$(medium)">
-                <span class="image fit"><img src="../images/montreal-architecture.jpg" /></span>
-              </div>
-            </div>
-            <div class="row">
-              <div class="4u 12u$(medium)">
-                <span class="image fit"><img src="../images/montreal-open-innovation.jpg" /></span>
-              </div>
-              <div class="8u 12u$(medium) important(medium)">
-                <header>
-                  <h3> Montr&eacute;al on Open Innovation </h3>
-                  <p> Where might you find the world's largest open innovation challenge? </p>
-                </header>
-                <p> <i>In Montr&eacute;al</i>, a city whose companies aren't afraid to approach innovation differently.  Nor were we afraid to approach innovation differently when we chose to <a href="https://github.com/reelyactive" target="_blank">open source</a> and <a href="../science/">publish not patent</a>.  And wouldn't you know, our open innovations will be present at the <a href="https://cooperathon.com" target="_blank">Coop&eacute;rathon</a> which in 2019 will be <a href="https://cooperathon.ca/#lancement" target="_blank">hosted in our Olympic Stadium</a> whose roof is supported by the inclined tower! </p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="8u 12u$(medium)">
-                <header>
-                  <h3> Montr&eacute;al on Communication </h3>
-                  <p> Where might you find one of the world's most linguistically diverse neighbourhoods? </p>
-                </header>
-                <p> <i>In Montr&eacute;al</i>, a city where, <a href="https://www.cbc.ca/news/canada/montreal/cote-des-neiges-non-official-languages-1.4247331" target="_blank">in an enclave of just 6600 residents you can find 48 different languages spoken at home</a>, and well over half the population speak both French and English (even in the same sentence, as is often the case in our office!)  It should come as no surprise then that <a href="../technology/">our technology platform</a> is communication-protocol-agnostic, interpreting whatever "languages" wireless devices choose to speak! </p>
-              </div>
-              <div class="4u 12u$(medium)">
-                <span class="image fit"><img src="../images/montreal-communication.png" /></span>
-              </div>
-            </div>
-            <div class="row">
-              <div class="4u 12u$(medium)">
-                <span class="image fit"><img src="../images/montreal-industrial-revolution.jpg" /></span>
-              </div>
-              <div class="8u 12u$(medium) important(medium)">
-              <header>
-                <h3> Montr&eacute;al on Industrial Revolutions </h3>
-                <p> Where might you find the birthplace of the industrial revolution in Canada? </p>
-              </header>
-              <p> <i>In Montr&eacute;al</i>, specifically in the neighbourhood of Griffintown.  And wouldn't you know, Griffintown happens to be both the birthplace and headquarters of reelyActive!  Could we have chosen a more symbolic place to lead <a href="../about/">the advance towards Industry 4.0</a>?  <i>No!</i> </p>
-              <p> Moreover, we build our hardware in Montr&eacute;al too! </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </article>
-
-      <!-- CTA -->
-      <section id="cta" class="wrapper style4">
-        <div class="inner">
-          <header>
-            <h2>Reenvision <i>your</i> Space</h2>
-            <p>Get <b>Pareto Anywhere</b> to embrace the ambient data in <em>your</em> space.</p>
-          </header>
-          <ul class="actions vertical">
-            <li><a href="../history/" class="button fit">Our History</a></li>
-            <li><a href="https://getpareto.com" class="button fit special"
-                   target="_blank">Get Pareto</a></li>
-          </ul>
         </div>
-      </section>
+      </div>
+    </nav>
 
-      <!-- Footer -->
-      <footer id="footer">
-        <ul class="icons">
-          <li><a href="https://twitter.com/reelyActive" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-          <li><a href="https://www.facebook.com/reelyActive" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-          <li><a href="https://instagram.com/reelyactive/" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-          <li><a href="https://www.linkedin.com/company/reelyactive" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-          <li><a href="https://www.youtube.com/reelyactive" target="_blank" class="icon fa-youtube-play"><span class="label">YouTube</span></a></li>
-          <li><a href="https://reelyactive.github.io/" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
-        </ul>
-        <ul class="copyright">
-          <li>&copy; reelyActive 2019-2020</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
-        </ul>
-      </footer>
-
+    <!----- Herowl ----->
+    <div class="herowl">
+      <div class="col-xs-12 col-sm-10 col-lg-6 offset-lg-4 col-xl-6
+                  offset-xl-2">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="card-title"> Made in Montr&eacute;al </h1>
+            <p class="card-text"> Avec fiert&eacute; </p>
+          </div>
+        </div>
+        <a href="#content">
+          <img src="../images/barnarrow-down.png" alt="Learn More"
+               class="mx-auto d-block barnarrow animate-breathing">
+        </a>
+      </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/js/jquery.scrollex.min.js"></script>
-    <script src="../assets/js/jquery.scrolly.min.js"></script>
-    <script src="../assets/js/skel.min.js"></script>
-    <script src="../assets/js/util.js"></script>
-    <!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
-    <script src="../assets/js/main.js"></script>
+    <!-- Content -->
+    <div id="content" class="container-fluid">
+      <a href="#top">
+        <img src="../images/barnarrow-up.png" alt="Top of Page"
+             class="mx-auto d-block barnarrow animate-breathing">
+      </a>
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+          <div class="row mt-5">
+            <div class="col-lg-4 order-lg-last mb-3">
+              <img src="../images/montreal-architecture.jpg" class="img-fluid"
+                   alt="Innovation on architecture">
+            </div>
+            <div class="col-lg-8">
+              <h2> Montr&eacute;al on Architecture </h2>
+              <p class="lead"> Where might you find the world's tallest inclined tower? </p>
+              <p> <em>In Montr&eacute;al</em>, a city that's not afraid to innovate on architecture.  Nor were we afraid to innovate on architecture when we developed <a href="https://reelyactive.github.io/reel-overview.html" target="_blank">the reel</a>, a novel daisy-chain sensor infrastructure.  And wouldn't you know, our innovative architecture <a href="../clients/">is installed throughout the world's tallest inclined tower</a>! </p>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-lg-4 mb-3">
+              <img src="../images/montreal-open-innovation.jpg"
+                   class="img-fluid" alt="Open innovation">
+            </div>
+            <div class="col-lg-8">
+              <h2> Montr&eacute;al on Open Innovation </h2>
+              <p class="lead"> Where might you find the world's largest open innovation challenge? </p>
+              <p> <em>In Montr&eacute;al</em>, a city whose companies aren't afraid to approach innovation differently.  Nor were we afraid to approach innovation differently when we chose to <a href="https://github.com/reelyactive" target="_blank">open source</a> and to <a href="../science/">publish not patent</a>.  And wouldn't you know, our open innovations were present at the 2019 <a href="https://cooperathon.com" target="_blank">Coop&eacute;rathon</a>, <a href="https://cooperathon.ca/#lancement" target="_blank">hosted in our Olympic Stadium</a>, whose roof is supported by the inclined tower! </p>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-lg-4 order-lg-last mb-3">
+              <img src="../images/montreal-communication.png" class="img-fluid"
+                   alt="Montreal flag with radio communication">
+            </div>
+            <div class="col-lg-8">
+              <h2> Montr&eacute;al on Communication </h2>
+              <p class="lead"> Where might you find one of the world's most linguistically diverse neighbourhoods? </p>
+              <p> <em>In Montr&eacute;al</em>, a city where, <a href="https://www.cbc.ca/news/canada/montreal/cote-des-neiges-non-official-languages-1.4247331" target="_blank">in an enclave of just 6600 residents you can find 48 different languages spoken at home</a>, and well over half the population speak both French and English (even in the same sentence, as is often the case in our office!)  It should come as no surprise then that <a href="../technology/">our technology platform</a> is communication-protocol-agnostic, interpreting whatever "languages" wireless devices choose to speak! </p>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-lg-4 mb-3">
+              <img src="../images/montreal-industrial-revolution.jpg"
+                   class="img-fluid" alt="Montreal Industry 4.0">
+            </div>
+            <div class="col-lg-8">
+              <h2> Montr&eacute;al on Industrial Revolutions </h2>
+              <p class="lead"> Where might you find the birthplace of the industrial revolution in Canada? </p>
+              <p> <em>In Montr&eacute;al</em>, specifically in the neighbourhood of Griffintown.  And wouldn't you know, Griffintown happens to be both the birthplace and headquarters of reelyActive!  Could we have chosen a more symbolic place to lead <a href="../about/">the advance towards Industry 4.0</a>?  <i>No!</i> </p>
+              <p> Moreover, we build our hardware in Montr&eacute;al too! </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!----- Owl-to-Action ----->
+    <div class="owl-to-action">
+      <div class="col-xs-12 col-sm-10 col-lg-6 offset-lg-4 col-xl-6
+                  offset-xl-2 py-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-grid gap-3 d-md-block">
+              <span class="lead pr-4">
+                Embrace the ambient data in <em>your</em> space
+              </span>
+              <a class="btn btn-secondary" role="button"
+                 href="/get-started/"> Get Started </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer bg-dark bg-gradient">
+      <a href="./"> Made in Montr&eacute;al </a>
+      &nbsp; | &nbsp;
+      <a href="https://www.reelyactive.com"> &copy; reelyActive 2020 </a>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <script defer src="../js/fontawesome-reelyactive.min.js"></script>
+    <script src="../js/bootstrappyactive.bundle.min.js"></script>
   </body>
 </html>
