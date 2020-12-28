@@ -1,183 +1,543 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>reelyActive Scientific Publications</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="We chose to publish, not patent, so that our work may contribute indefinitely to an open, connected world." />
-    <!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+          content="Case studies of ambient data being put to work towards positive business outcomes.">
+    <link rel="stylesheet" href="../style/bootstrappyactive.min.css">
+    <title> Scientific Publications </title>
+    <!----- Structured, linked metadata (JSON-LD & Schema.org) ----->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org", 
+      "@type": "WebPage",
+      "name": "reelyActive Scientific Publications",
+      "description": "Case studies of ambient data being put to work towards positive business outcomes.",
+      "image": "https://www.reelyactive.com/images/reelyActive-logo-square.png",
+      "creator": {
+        "@type": "Organization",
+        "url": "https://www.reelyactive.com"
+      }
+    }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39535156-4"></script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-39535156-4', 'auto');
-      ga('send', 'pageview');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-39535156-4');
     </script>
   </head>
-  <body>
-
-    <!-- Page Wrapper -->
-    <div id="page-wrapper">
-
-      <!-- Header -->
-      <header id="header">
-        <h1><a href="../">reelyActive</a></h1>
-        <nav id="nav">
-          <ul>
-            <li class="special">
-              <a href="#menu" class="menuToggle"><span>Menu</span></a>
-              <div id="menu">
+  <body id="top">
+    <!-- Navigation -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white
+                shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="https://www.reelyactive.com/">
+          <img src="../images/reelyactive-logo-nav.png" width="165" height="30"
+               alt="reelyActive">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarItems" aria-controls="navbarItems"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarItems">
+          <!-- Left-aligned navigation items -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+          <!-- Right-aligned navigation items -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/clients/"> Clients </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarProducts"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> Products </a>
+              <!-- Products dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarProducts">
+                <li>
+                  <a class="dropdown-item" href="https://getpareto.com">
+                    Pareto Anywhere
+                  </a>
+                </li>
                 <ul>
-                  <li><a href="../">Home</a></li>
-                  <li><a href="../directory/">Directory</a></li>
-                  <li><a href="../technology/">Technology</a></li>
-                  <li><a href="https://getpareto.com/" target="_blank"><span class="fa fa-search">&nbsp;</span>Pareto Anywhere</a></li>
-                  <li><a href="https://reelyactive.github.io/" target="_blank"><span class="fa fa-code">&nbsp;</span>Developers</a></li>
-                  <li><a href="https://shop.reelyactive.com/" target="_blank"><span class="fa fa-shopping-cart">&nbsp;</span>Order a Kit</a></li>
-                  <li><a href="../about/">About Us</a></li>
-                  <li><a href="../contact/">Contact</a></li>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/platform/integrations/">
+                    Integrations
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/platform/infrastructure/">
+                    Infrastructure
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/platform/devices/">
+                    Devices
+                  </a>
                 </ul>
-              </div>
+                <li>
+                  <a class="dropdown-item" href="https://shop.reelyactive.com/collections/infrastructure/">
+                    Ambient Data Gateways
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://reelyactive.github.io/diract/">
+                    DirAct
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://shop.reelyactive.com/products/showcase-kit">
+                    Showcase Kit
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="https://getpareto.com/pricing/">
+                    Pricing / Model
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarApplications"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> Applications </a>
+              <!-- Applications dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarApplications">
+                <li>
+                  <a class="dropdown-item" href="https://getpareto.com/use-cases/">
+                    Use Cases
+                  </a>
+                </li>
+                <ul>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/occupancy-analytics/">
+                    Occupancy Analytics
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/asset-tracking/">
+                    Asset Tracking
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/personnel-tracking/">
+                    Personnel Tracking
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/environmental-sensing/">
+                    Environmental Sensing
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/interaction-detection/">
+                    Interaction Detection
+                  </a>
+                </ul>
+                <li>
+                  <a class="dropdown-item" href="/science/">
+                    Science & Research
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/art/">
+                    Arts & Culture
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="/covid-19/">
+                    COVID-19
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDiscover"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> Discover </a>
+              <!-- Discover dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarDiscover">
+                <li>
+                  <a class="dropdown-item" href="/ambient-data/">
+                    Ambient Data
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/context/">
+                    Hyperlocal Context
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/technology/">
+                    Technology
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/parc/">
+                    reelyActive Parc
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/bibliography/">
+                    Bibliography
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/owlidays/">
+                    Owl-iday Specials
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="https://reelyactive.github.io"
+                     target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Developers
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://reelyactive.com/blog"
+                     target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Blog
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="/directory/">
+                    Directory
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarAboutUs"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> About us </a>
+              <!-- About us dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarAboutUs">
+                <li>
+                  <a class="dropdown-item" href="/about/">
+                    About us
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/brand/">
+                    Brand
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/history/">
+                    History
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/awards/">
+                    Awards
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/press/">
+                    Press
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/made-in-montreal/">
+                    Made in Montr&eacute;al
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="/contact/">
+                    Contact us
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-secondary text-white"
+                 href="/get-started/" role="button"> Get Started </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarInfoDropdown"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false">
+                <i class="fas fa-question-circle"></i>
+              </a>
+              <!-- Info about tracking and open source software/licenses -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarInfoDropdown">
+                <li>
+                  <a class="dropdown-item"
+                     href="https://www.reelyactive.com/how-we-observe/#digital">
+                    <i class="fas fa-mouse-pointer"></i>
+                    Page view tracking (gtag.js) &nbsp;
+                    <span class="badge bg-warning">
+                      <i class="fas fa-user-tag"></i>
+                    </span>
+                  </a>
+                </li>
+                <li class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://v5.getbootstrap.com" >
+                    <i class="fab fa-bootstrap"></i>
+                    Bootstrap 5 &nbsp;
+                    <span class="badge bg-light text-dark">
+                      <i class="fab fa-osi"></i> MIT
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://fontawesome.com" >
+                    <i class="fab fa-font-awesome"></i>
+                    Font Awesome (Free) &nbsp;
+                    <span class="badge bg-light text-dark">
+                      <i class="fab fa-creative-commons"></i>
+                      <i class="fab fa-osi"></i> MIT
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://github.com/reelyactive/web-style-guide/" >
+                    <i class="fas fa-code"></i>
+                    Web Style Guide &nbsp;
+                    <span class="badge bg-light text-dark">
+                      <i class="fab fa-osi"></i> MIT
+                   </span>
+                  </a>
+                </li>
+                <li class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://www.reelyactive.com/made-in-montreal/" >
+                    <i class="fab fa-canadian-maple-leaf"></i>
+                    Made in Montr&eacute;al &nbsp;
+                    <i class="fas fa-city"></i>
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
-        </nav>
-      </header>
-
-      <!-- Main -->
-      <article id="main">
-        <header>
-          <h2>Scientific Publications</h2>
-          <p>We chose to publish, not patent</p>
-        </header>
-        <section class="wrapper style5">
-          <div class="inner">
-            <section>
-              <header>
-                <h4> Towards collective hyperlocal contextual awareness
-among heterogeneous RFID systems </h4>
-                <p> Jeffrey Dungen, Juan Pinazo Neto </p>
-              </header>
-              <p class="align-justify"> <b> Abstract &mdash; </b> Until recently, cases of independently operated radio frequency identification (RFID) deployments occupying a common space could be considered rare.  However, the recent emergence of the RAIN Alliance and Bluetooth Low Energy (BLE) is resulting in the proliferation of fixed and mobile infrastructure for the radio-identification of both things and people through standardised passive and active RFID technologies, respectively.  Consequently, today, there are everyday situations where independently operated RFID systems are likely to co-exist, both ephemerally and indefinitely.  In this paper, we present a mechanism for mutual discovery and the subsequent exchange of structured data among such colocated, and often heterogeneous, systems.  The resulting machine-readable real-time representation of the real-world on a human scale is what we call hyperlocal context, an open, standards-based language for the Internet of Things.  We argue that hyperlocal context and the presented mechanisms foster efficient crowd-sensing which combines the complementary characteristics of both active and UHF passive RFID systems.  The underlying framework has been successfully implemented in open source software with BLE supported and UHF passive RFID integration in progress.  Collaboration among the scientific and industrial communities to advance standards for collective context will only become more critical as the proliferation of RFID infrastructure accelerates. </p>
-              <div class="embed-container">
-                <iframe src="//www.slideshare.net/slideshow/embed_code/key/qgWQMW7I2PhY70" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/reelyActive/towards-collective-hyperlocal-contextual-awareness-among-heterogeneous-rfid-systems" title="Towards collective hyperlocal contextual awareness among heterogeneous RFID systems" target="_blank">Towards collective hyperlocal contextual awareness among heterogeneous RFID systems</a> </strong> from <strong><a target="_blank" href="https://www.slideshare.net/reelyActive">reelyActive</a></strong> </div>
-              </div>
-              <br>
-              <p class="align-center">
-                <a href="https://reelyactive.com/science/reelyActive-IoP2017.pdf" target="_blank" class="button special small">PDF</a>
-                <a href="https://ieeexplore.ieee.org/document/8397665/" target="_blank" class="button small">IEEE Xplore</a>
-              </p>
-              <p> 3rd IEEE Conference on Internet of People (IoP 2017) | Fremont, CA. August 4-8, 2017. </p>
-            </section>
-            <hr>
-            <section>
-              <header>
-                <h4> Towards a ubiquitous, real-time machine-contextual-awareness based on active RFID and semantic web technologies </h4>
-                <p> Jeffrey Dungen, George Koulouris, Imran Zaidi, Juan Pinazo Neto </p>
-              </header>
-              <a href="https://reelyactive.com/science/reelyActive-RFID2016.pdf" target="_blank" class="image fit">
-                <img src="../images/science-poster-ieeerfid2016.jpg">
-              </a>
-              <p> 10th IEEE International Conference on RFID | Orlando, FL. May 3-5, 2016. </p>
-            </section>
-            <hr>
-            <section>
-              <header>
-                <h4> Low-Power Wireless Advertising Software Library for Distributed M2M and Contextual IoT </h4>
-                <p> Mohamed Imran Jameel, Jeffrey Dungen </p>
-              </header>
-              <p class="align-justify"> <b> Abstract &mdash; </b> Bluetooth Smart is emerging as arguably the first global low-power wireless standard for the Internet of Things, bringing with it billions of devices, or "Things", capable of spontaneously broadcasting short messages to any potential receiving devices in range. If a widespread infrastructure of such receiving devices were to exist, these broadcast messages could be reliably captured, parsed, and forwarded in IP packets via the Internet to any and all concerned parties, enabling connectionless, distributed low-power M2M networks. In this paper we present advlib, a software library for parsing low-power wireless broadcast (also known as advertising) packets, with this objective. Experimental results indicate that, coupled with the necessary receiver infrastructure, in many cases at least the device vendor can be identified, validating the potential for M2M forwarding. Moreover, results suggest that sufficient semantically-meaningful information may be extracted by the library to support contextual IoT applications even at a local scale. Development continues on extending the support of known protocols and establishing the necessary relationships with device vendors. </p>
-              <p class="align-center">
-                <a href="https://reelyactive.com/science/reelyActive-IoT2015.pdf" target="_blank" class="button special small">PDF</a>
-                <a href="https://ieeexplore.ieee.org/document/7389121/" target="_blank" class="button small">IEEE Xplore</a>
-              </p>
-              <p> 2nd IEEE World Forum on Internet of Things (WF-IoT) | Milan, Italy. December 16, 2015. </p>
-            </section>
-            <hr>
-            <section>
-              <header>
-                <h4> Towards a Simple, Versatile, Distributed Low-Power Wireless M2M Infrastructure </h4>
-                <p> Jeffrey Dungen, Traian Antonescu, Pier-Olivier Genest </p>
-              </header>
-              <p class="align-justify"> <b> Abstract &mdash; </b> Existing wireless M2M infrastructure based on cellular and WiFi networks is often unsuitable for the growing number of simple, inexpensive, low-power connected devices. Low-power wireless technologies are examined in order to identify the considerations for a suitable low-power wireless M2M area network infrastructure. A novel design with the versatility to support multiple technologies and to easily extend coverage is presented and its implementation detailed. Results, including real-time location capability, are promising and development continues to support emerging applications and wireless technologies. </p>
-              <p class="align-center">
-                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6758528" target="_blank" class="button special small">PDF</a>
-                <a href="https://ieeexplore.ieee.org/document/6758528/" target="_blank" class="button small">IEEE Xplore</a>
-              </p>
-              <p> 1st IEEE Workshop on Machine to Machine Communications Interfaces and Platforms (M2MCIP) | Sydney, Australia. October 24, 2013. </p>
-            </section>
-            <hr>
-            <section>
-              <header>
-                <h4> Demonstration of a Simple, Versatile, Distributed Low-Power Wireless M2M Infrastructure </h4>
-                <p> Pier-Olivier Genest, Jeffrey Dungen </p>
-              </header>
-              <p class="align-justify"> <b> Abstract &mdash; </b> Existing wireless M2M infrastructure based on cellular and WiFi networks is often unsuitable for the growing number of simple, inexpensive, low-power connected devices. We demonstrate an infrastructure architecture capable of simultaneously supporting a variety of low-power wireless technologies, with plug-and-play extensibility of coverage. The demonstration highlights the simplicity and versatility of the architecture, which we call a reel. Real-time connectivity with the Internet and realtime location capability are presented. We conclude with a brief discussion of the potential for and advantages of crowdsourced deployments. </p>
-              <p class="align-center">
-                <a href="https://reelyactive.com/science/reelyActive-LCN2013.pdf" target="_blank" class="button special small">PDF</a>
-              </p>
-              <p> 38th IEEE Conference on Local Computer Networks (LCN) | Sydney, Australia. October 22, 2013. </p>
-            </section>
-            <hr>
-            <section>
-              <header>
-                <h4> Hyperlocal Context to Facilitate an Internet of Things Understanding of the World </h4>
-                <p> Jeffrey Dungen, Pier-Olivier Genest </p>
-              </header>
-              <p class="align-justify"> <b> Abstract &mdash; </b> The Internet of Things (IoT) holds the promise for computers to understand our world by means of technology.  Today, computers observe and identify the world, but unless they interact to optimally share all relevant information, their understanding remains incomplete.  We argue that location-based device discovery is a prerequisite
-for the required IoT interactions. Based on this, we introduce the concept of hyperlocal context, a combination of device identity, location and information resources, which represents a digital understanding of the world at a human scale. The considerations for the implementation of hyperlocal context as well as current and future applications are presented. </p>
-              <p class="align-center">
-                <a href="https://reelyactive.com/science/reelyActive-IIKI2013.pdf" target="_blank" class="button special small">PDF</a>
-              </p>
-              <p> International Workshop on Identification, Information and Knowledge in the Internet of Things (IIKI) | Beijing, China. October 18-20, 2013. </p>
-            </section>
-          </div>
-        </section>
-      </article>
-
-      <!-- CTA -->
-      <section id="cta" class="wrapper style4">
-        <div class="inner">
-          <header>
-            <h2>Reenvision <i>your</i> Space</h2>
-            <p>Get <b>Pareto Anywhere</b> to embrace the ambient data in <em>your</em> space.</p>
-          </header>
-          <ul class="actions vertical">
-            <li><a href="../context/" class="button fit">Our Vision</a></li>
-            <li><a href="https://getpareto.com" class="button fit special"
-                   target="_blank">Get Pareto</a></li>
-          </ul>
         </div>
-      </section>
+      </div>
+    </nav>
 
-      <!-- Footer -->
-      <footer id="footer">
-        <ul class="icons">
-          <li><a href="https://twitter.com/reelyActive" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-          <li><a href="https://www.facebook.com/reelyActive" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-          <li><a href="https://instagram.com/reelyactive/" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-          <li><a href="https://www.linkedin.com/company/reelyactive" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-          <li><a href="https://www.youtube.com/reelyactive" target="_blank" class="icon fa-youtube-play"><span class="label">YouTube</span></a></li>
-          <li><a href="https://reelyactive.github.io/" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
-        </ul>
-        <ul class="copyright">
-          <li>&copy; reelyActive 2016-2020</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
-        </ul>
-      </footer>
-
+    <!----- Herowl ----->
+    <div class="herowl">
+      <div class="col-xs-12 col-sm-10 col-lg-6 offset-lg-4 col-xl-6
+                  offset-xl-2">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="card-title"> Scientific Publications </h1>
+            <p class="card-text"> We chose to publish, not patent </p>
+          </div>
+        </div>
+        <a href="#content">
+          <img src="../images/barnarrow-down.png" alt="Learn More"
+               class="mx-auto d-block barnarrow animate-breathing">
+        </a>
+      </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/js/jquery.scrollex.min.js"></script>
-    <script src="../assets/js/jquery.scrolly.min.js"></script>
-    <script src="../assets/js/skel.min.js"></script>
-    <script src="../assets/js/util.js"></script>
-    <!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
-    <script src="../assets/js/main.js"></script>
+    <!-- Content -->
+    <div id="content" class="container-fluid">
+      <a href="#top">
+        <img src="../images/barnarrow-up.png" alt="Top of Page"
+             class="mx-auto d-block barnarrow animate-breathing">
+      </a>
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+          <h2 class="mt-5"> Publications by reelyActive </h2>
+          <p class="lead"> Scientific contributions initiated by our team. </p>
+          <div class="row row-cols-1 row-cols-xl-2 g-4 my-4">
+            <div class="col">
+              <div class="card">
+                <img src="../images/science-paper-ieeeiop2017.jpg"
+                     class="card-img-top" alt="IEEE IoP 2017">
+                <div class="card-body">
+                  <h5 class="card-title"> Towards collective hyperlocal contextual awareness among heterogeneous RFID systems </h5>
+                  <p class="card-text text-muted">
+                    Jeffrey Dungen, Juan Pinazo (reelyActive)
+                  </p>
+                  <p class="card-text text-center">
+                    <a href="https://www.reelyactive.com/science/reelyActive-IoP2017.pdf"
+                       target="_blank" class="btn btn-sm btn-primary"
+                       role="button"> PDF </a>
+                    <a href="https://ieeexplore.ieee.org/document/8397665/"
+                       target="_blank" class="btn btn-sm btn-outline-primary"
+                       role="button"> IEEE Xplore </a>
+                  </p>
+                </div>
+                <div class="card-footer text-muted small">
+                  3rd IEEE Conference on Internet of People (IoP 2017) | Fremont, CA. August 4-8, 2017.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="../images/science-poster-ieeerfid2016.jpg"
+                     class="card-img-top" alt="IEEE RFID 2016">
+                <div class="card-body">
+                  <h5 class="card-title"> Towards a ubiquitous, real-time machine-contextual-awareness based on active RFID and semantic web technologies </h5>
+                  <p class="card-text text-muted">
+                    Jeffrey Dungen, George Koulouris, Imran Zaidi, Juan Pinazo (reelyActive)
+                  </p>
+                  <p class="card-text text-center">
+                    <a href="https://www.reelyactive.com/science/reelyActive-RFID2016.pdf"
+                       target="_blank" class="btn btn-sm btn-primary"
+                       role="button"> Poster </a>
+                  </p>
+                </div>
+                <div class="card-footer text-muted small">
+                  10th IEEE International Conference on RFID | Orlando, FL. May 3-5, 2016.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="../images/science-paper-ieeeiot2015.jpg"
+                     class="card-img-top" alt="IEEE IoT 2015">
+                <div class="card-body">
+                  <h5 class="card-title"> Low-Power Wireless Advertising Software Library for Distributed M2M and Contextual IoT </h5>
+                  <p class="card-text text-muted">
+                    Mohamed Imran Jameel, Jeffrey Dungen (reelyActive)
+                  </p>
+                  <p class="card-text text-center">
+                    <a href="https://www.reelyactive.com/science/reelyActive-IoT2015.pdf"
+                       target="_blank" class="btn btn-sm btn-primary"
+                       role="button"> PDF </a>
+                    <a href="https://ieeexplore.ieee.org/document/7389121/"
+                       target="_blank" class="btn btn-sm btn-outline-primary"
+                       role="button"> IEEE Xplore </a>
+                    <a href="https://github.com/reelyactive/advlib/"
+                       target="_blank" class="btn btn-sm btn-outline-dark"
+                       role="button"> <i class="fab fa-github"></i> </a>
+                  </p>
+                </div>
+                <div class="card-footer text-muted small">
+                  2nd IEEE World Forum on Internet of Things (WF-IoT) | Milan, Italy. December 16, 2015.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="../images/science-paper-ieeem2mcip2013.jpg"
+                     class="card-img-top" alt="IEEE M2MCIP 2013">
+                <div class="card-body">
+                  <h5 class="card-title"> Towards a Simple, Versatile, Distributed Low-Power Wireless M2M Infrastructure </h5>
+                  <p class="card-text text-muted">
+                    Jeffrey Dungen, Traian Antonescu, Pier-Olivier Genest (reelyActive)
+                  </p>
+                  <p class="card-text text-center">
+                    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6758528"
+                       target="_blank" class="btn btn-sm btn-primary"
+                       role="button"> PDF </a>
+                    <a href="https://ieeexplore.ieee.org/document/6758528/"
+                       target="_blank" class="btn btn-sm btn-outline-primary"
+                       role="button"> IEEE Xplore </a>
+                  </p>
+                </div>
+                <div class="card-footer text-muted small">
+                  1st IEEE Workshop on Machine to Machine Communications Interfaces and Platforms (M2MCIP) | Sydney, Australia. October 24, 2013.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="../images/science-demo-lcn2013.jpg"
+                     class="card-img-top" alt="IEEE LCN 2013">
+                <div class="card-body">
+                  <h5 class="card-title"> Demonstration of a Simple, Versatile, Distributed Low-Power Wireless M2M Infrastructure </h5>
+                  <p class="card-text text-muted">
+                    Pier-Olivier Genest, Jeffrey Dungen (reelyActive)
+                  </p>
+                  <p class="card-text text-center">
+                    <a href="https://www.reelyactive.com/science/reelyActive-LCN2013.pdf"
+                       target="_blank" class="btn btn-sm btn-primary"
+                       role="button"> PDF </a>
+                  </p>
+                </div>
+                <div class="card-footer text-muted small">
+                  38th IEEE Conference on Local Computer Networks (LCN) | Sydney, Australia. October 22, 2013.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="../images/science-paper-iiki2013.jpg"
+                     class="card-img-top" alt="IIKI 2013">
+                <div class="card-body">
+                  <h5 class="card-title"> Hyperlocal Context to Facilitate an Internet of Things Understanding of the World </h5>
+                  <p class="card-text text-muted">
+                    Jeffrey Dungen, Pier-Olivier Genest (reelyActive)
+                  </p>
+                  <p class="card-text text-center">
+                    <a href="https://www.reelyactive.com/science/reelyActive-IIKI2013.pdf"
+                       target="_blank" class="btn btn-sm btn-primary"
+                       role="button"> PDF </a>
+                  </p>
+                </div>
+                <div class="card-footer text-muted small">
+                  International Workshop on Identification, Information and Knowledge in the Internet of Things (IIKI) | Beijing, China. October 18-20, 2013.
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2 class="mt-5"> Additional publications </h2>
+          <p class="lead"> Scientific contributions based on our technology and/or research. </p>
+          <div class="row row-cols-1 row-cols-xl-2 g-4 my-4">
+            <div class="col">
+              <div class="card">
+                <img src="../images/science-dataset-tiles2018.png"
+                     class="card-img-top" alt="TILES 2018">
+                <div class="card-body">
+                  <h5 class="card-title"> TILES-2018, a longitudinal physiologic and behavioral data set of hospital workers </h5>
+                  <p class="card-text text-muted">
+                    Mundnich, K., Booth, B.M., L'Hommedieu, M. et al. (USC)
+                  </p>
+                  <p class="card-text text-center">
+                    <a href="https://doi.org/10.1038/s41597-020-00655-3"
+                       target="_blank" class="btn btn-sm btn-outline-primary"
+                       role="button"> Paper </a>
+                    <a href="https://tiles-data.isi.edu/"
+                       target="_blank" class="btn btn-sm btn-outline-primary"
+                       role="button"> Data Set </a>
+                  </p>
+                </div>
+                <div class="card-footer text-muted small">
+                  Sci Data 7, 354 (2020).
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!----- Owl-to-Action ----->
+    <div class="owl-to-action">
+      <div class="col-xs-12 col-sm-10 col-lg-6 offset-lg-4 col-xl-6
+                  offset-xl-2 py-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-grid gap-3 d-md-block">
+              <span class="lead pr-4">
+                Embrace the ambient data in <em>your</em> space
+              </span>
+              <a class="btn btn-secondary" role="button"
+                 href="/get-started/"> Get Started </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer bg-dark bg-gradient">
+      <a href="./"> Scientific Publications </a>
+      &nbsp; | &nbsp;
+      <a href="https://www.reelyactive.com"> &copy; reelyActive 2016-2020 </a>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <script defer src="../js/fontawesome-reelyactive.min.js"></script>
+    <script src="../js/bootstrappyactive.bundle.min.js"></script>
   </body>
 </html>
