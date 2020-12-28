@@ -10,7 +10,7 @@
     <title> Parc </title>
     <!----- Structured, linked metadata (JSON-LD & Schema.org) ----->
     <script type="application/ld+json">
-    {
+    [{
       "@context": "https://schema.org", 
       "@type": "WebPage",
       "name": "reelyActive Parc",
@@ -33,7 +33,21 @@
         },
         "logo": "https://www.reelyactive.com/images/parc-sign.png"
       }
-    }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "reelyActive",
+        "item": "https://www.reelyactive.com"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Parc"
+      }]
+    }]
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39535156-4"></script>
     <script>
