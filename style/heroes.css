@@ -22,6 +22,10 @@
   background-image: url('/images/herowl-bibliography.png');
 }
 
+.herowl-brand {
+  background-image: url('/images/herowl-brand.png');
+}
+
 .herowl-contact {
   background-image: url('/images/herowl-contact.png');
 }
