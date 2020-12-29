@@ -26,6 +26,26 @@
   background-image: url('/images/herowl-contact.png');
 }
 
+.herowl-history {
+  background-image: url('/images/herowl-history.png');
+}
+
 .herowl-montreal {
   background-image: url('/images/herowl-montreal.png');
+}
+
+.herowl-observe {
+  background-image: url('/images/herowl-observe.png');
+}
+
+.herowl-press {
+  background-image: url('/images/herowl-press.png');
+}
+
+.herowl-science {
+  background-image: url('/images/herowl-science.png');
+}
+
+.herowl-technology {
+  background-image: url('/images/herowl-technology.png');
 }
