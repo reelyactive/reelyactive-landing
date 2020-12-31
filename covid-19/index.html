@@ -1,228 +1,461 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>reelyActive COVID-19 Solutions</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Open source technology solutions applicable to the COVID-19 pandemic fostering an understanding of who/what is where/how in any physical space." />
-    <!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+          content="Open source technology solutions applicable to the COVID-19 pandemic fostering an understanding of who/what is where/how in any physical space.">
+    <link rel="stylesheet" href="../style/bootstrappyactive.min.css">
+    <title> COVID-19 Solutions </title>
+    <!----- Structured, linked metadata (JSON-LD & Schema.org) ----->
+    <script type="application/ld+json">
+    [{
+      "@context": "https://schema.org", 
+      "@type": "WebPage",
+      "name": "reelyActive COVID-19 Solutions",
+      "description": "Open source technology solutions applicable to the COVID-19 pandemic fostering an understanding of who/what is where/how in any physical space.",
+      "image": "https://www.reelyactive.com/images/reelyactive-logo-square.png",
+      "creator": {
+        "@type": "Organization",
+        "url": "https://www.reelyactive.com"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "reelyActive",
+        "item": "https://www.reelyactive.com"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "COVID-19 Solutions"
+      }]
+    }]
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39535156-4"></script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-39535156-4', 'auto');
-      ga('send', 'pageview');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-39535156-4');
     </script>
   </head>
-  <body>
-
-    <!-- Page Wrapper -->
-    <div id="page-wrapper">
-
-      <!-- Header -->
-      <header id="header">
-        <h1><a href="../">reelyActive</a></h1>
-        <nav id="nav">
-          <ul>
-            <li class="special">
-              <a href="#menu" class="menuToggle"><span>Menu</span></a>
-              <div id="menu">
+  <body id="top">
+    <!-- Navigation -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white
+                shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="https://www.reelyactive.com/">
+          <img src="../images/reelyactive-logo-nav.png" width="165" height="30"
+               alt="reelyActive">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarItems" aria-controls="navbarItems"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarItems">
+          <!-- Left-aligned navigation items -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+          <!-- Right-aligned navigation items -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/clients/"> Clients </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarProducts"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> Products </a>
+              <!-- Products dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarProducts">
+                <li>
+                  <a class="dropdown-item" href="https://getpareto.com">
+                    Pareto Anywhere
+                  </a>
+                </li>
                 <ul>
-                  <li><a href="../">Home</a></li>
-                  <li><a href="../directory/">Directory</a></li>
-                  <li><a href="../technology/">Technology</a></li>
-                  <li><a href="https://getpareto.com/" target="_blank"><span class="fa fa-search">&nbsp;</span>Pareto Anywhere</a></li>
-                  <li><a href="https://reelyactive.github.io/" target="_blank"><span class="fa fa-code">&nbsp;</span>Developers</a></li>
-                  <li><a href="https://shop.reelyactive.com/" target="_blank"><span class="fa fa-shopping-cart">&nbsp;</span>Order a Kit</a></li>
-                  <li><a href="../about/">About Us</a></li>
-                  <li><a href="../contact/">Contact</a></li>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/platform/integrations/">
+                    Integrations
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/platform/infrastructure/">
+                    Infrastructure
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/platform/devices/">
+                    Devices
+                  </a>
                 </ul>
-              </div>
+                <li>
+                  <a class="dropdown-item" href="https://shop.reelyactive.com/collections/infrastructure/">
+                    Ambient Data Gateways
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://reelyactive.github.io/diract/">
+                    DirAct
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://shop.reelyactive.com/products/showcase-kit">
+                    Showcase Kit
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="https://getpareto.com/pricing/">
+                    Pricing / Model
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarApplications"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> Applications </a>
+              <!-- Applications dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarApplications">
+                <li>
+                  <a class="dropdown-item" href="https://getpareto.com/use-cases/">
+                    Use Cases
+                  </a>
+                </li>
+                <ul>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/occupancy-analytics/">
+                    Occupancy Analytics
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/asset-tracking/">
+                    Asset Tracking
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/personnel-tracking/">
+                    Personnel Tracking
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/environmental-sensing/">
+                    Environmental Sensing
+                  </a>
+                  <a class="dropdown-item text-muted" href="https://getpareto.com/use-cases/interaction-detection/">
+                    Interaction Detection
+                  </a>
+                </ul>
+                <li>
+                  <a class="dropdown-item" href="/science/">
+                    Science & Research
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/art/">
+                    Arts & Culture
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="/covid-19/">
+                    COVID-19
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDiscover"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> Discover </a>
+              <!-- Discover dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarDiscover">
+                <li>
+                  <a class="dropdown-item" href="/ambient-data/">
+                    Ambient Data
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/context/">
+                    Hyperlocal Context
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/technology/">
+                    Technology
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/parc/">
+                    reelyActive Parc
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/bibliography/">
+                    Bibliography
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/owlidays/">
+                    Owl-iday Specials
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="https://reelyactive.github.io"
+                     target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Developers
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://reelyactive.com/blog"
+                     target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Blog
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="/directory/">
+                    Directory
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarAboutUs"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> About us </a>
+              <!-- About us dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarAboutUs">
+                <li>
+                  <a class="dropdown-item" href="/about/">
+                    About us
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/brand/">
+                    Brand
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/history/">
+                    History
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/awards/">
+                    Awards
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/press/">
+                    Press
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/made-in-montreal/">
+                    Made in Montr&eacute;al
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="/contact/">
+                    Contact us
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-secondary text-white"
+                 href="/get-started/" role="button"> Get Started </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarInfoDropdown"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false">
+                <i class="fas fa-question-circle"></i>
+              </a>
+              <!-- Info about tracking and open source software/licenses -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarInfoDropdown">
+                <li>
+                  <a class="dropdown-item"
+                     href="https://www.reelyactive.com/how-we-observe/#digital">
+                    <i class="fas fa-mouse-pointer"></i>
+                    Page view tracking (gtag.js) &nbsp;
+                    <span class="badge bg-warning">
+                      <i class="fas fa-user-tag"></i>
+                    </span>
+                  </a>
+                </li>
+                <li class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://v5.getbootstrap.com" >
+                    <i class="fab fa-bootstrap"></i>
+                    Bootstrap 5 &nbsp;
+                    <span class="badge bg-light text-dark">
+                      <i class="fab fa-osi"></i> MIT
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://fontawesome.com" >
+                    <i class="fab fa-font-awesome"></i>
+                    Font Awesome (Free) &nbsp;
+                    <span class="badge bg-light text-dark">
+                      <i class="fab fa-creative-commons"></i>
+                      <i class="fab fa-osi"></i> MIT
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://github.com/reelyactive/web-style-guide/" >
+                    <i class="fas fa-code"></i>
+                    Web Style Guide &nbsp;
+                    <span class="badge bg-light text-dark">
+                      <i class="fab fa-osi"></i> MIT
+                   </span>
+                  </a>
+                </li>
+                <li class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://www.reelyactive.com/made-in-montreal/" >
+                    <i class="fab fa-canadian-maple-leaf"></i>
+                    Made in Montr&eacute;al &nbsp;
+                    <i class="fas fa-city"></i>
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
-        </nav>
-      </header>
-
-      <!-- Main -->
-      <article id="main">
-        <header>
-          <h2>COVID-19 Solutions</h2>
-          <p>Open source and readily deployable</p>
-        </header>
-        <section class="wrapper style5">
-          <div class="inner">
-            <section>
-              <h2>The time for innovation is now</h2>
-              <p>We have mature technology solutions ready to tackle crisis challenges <b>today</b>, which are nonetheless designed to provide an edge in the world of <b>tomorrow</b>. We're in this <i>together</i>.  We'll emerge from this stronger <i>together</i>.</p>
-              <header>
-                <h3>Digital Contact Tracing</h3>
-                <p>Who interacted with whom?</p>
-              </header>
-              <p>Digital Contact Tracing is an automated means of detecting and recording close physical interactions between people, providing traceability of contact with any individual who tests positive for an infectious disease, and offering peace-of-mind to evaluate and respond to risk effectively.</p>
-              <div class="row">
-                <div class="4u 12u$(medium)">
-                  <h4 class="align-center">Proximity Detection</h4>
-                  <span class="image fit">
-                    <img src="../images/covid-19-dct-detection.png" />
-                  </span>
-                  <p class="align-center">Device-agnostic</p>
-                </div>
-                <div class="4u 12u$(medium)">
-                  <h4 class="align-center">Data Collection</h4>
-                  <span class="image fit">
-                    <img src="../images/covid-19-dct-collection.png" />
-                  </span>
-                  <p class="align-center">Infrastructure-agnostic</p>
-                </div>
-                <div class="4u 12u$(medium)">
-                  <h4 class="align-center">Interaction Tracing</h4>
-                  <span class="image fit">
-                    <img src="../images/covid-19-dct-tracing.png" />
-                  </span>
-                  <p class="align-center">Database-agnostic</p>
-                </div>
-              </div>
-              <br>
-              <div class="row">
-                <div class="6u 12u$(medium)">
-                  <h4>Case Study: USC</h4>
-                  <p>Researchers at the University of Southern California are using this architecture for an unrelated study since late 2019, in their case with:</p>
-                  <ul>
-                    <li>Minew E8 beacons programmed with DirAct&trade;</li>
-                    <li>reelyActive Owl-in-Ones</li>
-                    <li>Hosted Elasticsearch Service</li>
-                  </ul>
-                </div>
-                <div class="6u 12u$(medium)">
-                  <span class="image fit">
-                    <img src="../images/covid-19-e8-oio-es.jpg" />
-                  </span>
-                </div>
-              </div>
-              <br>
-              <div class="row">
-                <div class="6u 12u$(medium)">
-                  <h4>Privacy & Perception</h4>
-                  <p><i>Wear it when and where you need it</i>&mdash;unlike a mobile phone/app that is with you everywhere you go.  Only device identifiers and exposure durations are stored:</p>
-                  <ul>
-                    <li>no personal data</li>
-                    <li>no geolocation</li>
-                    <li>no timestamps</li>
-                  </ul>
-                </div>
-                <div class="6u 12u$(medium)">
-                  <h4>Key Differentiation</h4>
-                  <p>Our unique software-based approach offers freedom of choice (and a backup plan should the pandemic impact product supply chains!)</p>
-                  <ul>
-                    <li>choice of device (<a href="https://getpareto.com/platform/devices/" target="_blank">learn more</a>)</li>
-                    <li>choice of infrastructure (<a href="https://getpareto.com/platform/infrastructure/" target="_blank">learn more</a>)</li>
-                    <li>choice of database/hosting</li>
-                  </ul>
-                </div>
-              </div>
-              <p class="align-center">
-                <a href="https://getpareto.com/use-cases/interaction-detection/"
-                   target="_blank" class="button">Use Case</a>
-                <a href="https://reelyactive.github.io/diy/showcase-interaction-detection/"
-                   target="_blank" class="button">For Developers</a>
-              </p>
-            </section>
-            <hr>
-            <section>
-              <header>
-                <h2>One infrastructure, multiple use cases</h2>
-                <p>COVID-19 spreads through the <b>physical spaces</b> in which people work, live, visit and interact.  <b>Infrastructure</b> enables these physical spaces to sense their occupants so that this real-time and historic information can be distributed wherever and whenever required.</p>
-                <p>Using the wireless infrastructure already present in physical spaces, or rapidly deploying reelyActive hardware either <b>temporarily</b> or <b>permanently</b>, enables countless use cases which, especially when combined, catalyse pandemic mitigation initiatives.</p>
-                <p>Our founding innovation <i>is</i> infrastructure, which has been <b>rapidly deployed</b> in hospitals, airports, workplaces, retail spaces and even military bases for any and all of the following use cases.</p>
-              </header>
-              <p class="align-center">
-                <a href="https://getpareto.com/use-cases/occupancy-analytics/"
-                   target="_blank" class="button">Occupancy Analytics</a>
-                <a href="https://getpareto.com/use-cases/personnel-tracking/"
-                   target="_blank" class="button">Personnel Tracking</a>
-                <a href="https://getpareto.com/use-cases/asset-tracking/"
-                   target="_blank" class="button">Asset Tracking</a>
-                <a href="https://getpareto.com/use-cases/environmental-sensing/"
-                   target="_blank" class="button">Environmental Sensing</a>
-                <a href="https://getpareto.com/use-cases/interaction-detection/"
-                   target="_blank" class="button">Interaction Detection</a>
-              </p>
-            </section>
-            <hr>
-            <section>
-              <header>
-                <h2>Open source for permissionless innovation</h2>
-                <p>Both our <b>Pareto Anywhere</b> software and the <b>Elastic Stack</b> with which it is tightly coupled are <i>open source</i>.</p>
-              </header>
-              <div class="row">
-                <div class="6u 12u$(medium)">
-                  <h3>Start Developing</h3>
-                  <p>Make an impact in your community: rapidly prototype solutions with whatever is readily available, for instance using Raspberry Pis, which we've documented in detail.</p>
-                  <p class="align-center">
-                    <a href="https://reelyactive.github.io/diy/hello-pareto-anywhere/"
-                       target="_blank" class="button">Hello Pareto Anywhere</a>
-                  </p>
-                </div>
-                <div class="6u 12u$(medium)">
-                  <h3>Take Action</h3>
-                  <p>Transform your space: deploy a specific solution to tackle crisis challenges <i>today</i>, emerging with a digital transformation edge in anticipation of the world of <i>tomorrow</i>.</p>
-                  <p class="align-center">
-                    <a href="https://getpareto.com/take-action/" target="_blank"
-                       class="button">Take Action</a>
-                  </p>
-                </div>
-              </div>
-              <p class="align-center">Wherever you find yourself, we're here to help.</p>
-              <p class="align-center">Stay healthy. &nbsp; Stay innovative.</p>
-            </section>
-          </div>
-        </section>
-      </article>
-
-      <!-- CTA -->
-      <section id="cta" class="wrapper style4">
-        <div class="inner">
-          <header>
-            <h2>Reenvision <i>your</i> Space</h2>
-            <p>Get <b>Pareto Anywhere</b> to embrace the ambient data in <em>your</em> space.</p>
-          </header>
-          <ul class="actions vertical">
-            <li><a href="../contact/" class="button fit">Contact Us</a></li>
-            <li><a href="https://getpareto.com" class="button fit special"
-                   target="_blank">Get Pareto</a></li>
-          </ul>
         </div>
-      </section>
+      </div>
+    </nav>
 
-      <!-- Footer -->
-      <footer id="footer">
-        <ul class="icons">
-          <li><a href="https://twitter.com/reelyActive" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-          <li><a href="https://www.facebook.com/reelyActive" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-          <li><a href="https://instagram.com/reelyactive/" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-          <li><a href="https://www.linkedin.com/company/reelyactive" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-          <li><a href="https://www.youtube.com/reelyactive" target="_blank" class="icon fa-youtube-play"><span class="label">YouTube</span></a></li>
-          <li><a href="https://reelyactive.github.io/" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
-        </ul>
-        <ul class="copyright">
-          <li>&copy; reelyActive 2016-2020</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
-        </ul>
-      </footer>
-
+    <!----- Herowl ----->
+    <div class="herowl">
+      <div class="col-xs-12 col-sm-10 col-lg-6 offset-lg-4 col-xl-6
+                  offset-xl-2">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="card-title"> COVID-19 Solutions </h1>
+            <p class="card-text"> Open source and readily deployable </p>
+          </div>
+        </div>
+        <a href="#content">
+          <img src="../images/barnarrow-down.png" alt="Learn More"
+               class="mx-auto d-block barnarrow animate-breathing">
+        </a>
+      </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/js/jquery.scrollex.min.js"></script>
-    <script src="../assets/js/jquery.scrolly.min.js"></script>
-    <script src="../assets/js/skel.min.js"></script>
-    <script src="../assets/js/util.js"></script>
-    <!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
-    <script src="../assets/js/main.js"></script>
+    <!-- Content -->
+    <div id="content" class="container-fluid">
+      <a href="#top">
+        <img src="../images/barnarrow-up.png" alt="Top of Page"
+             class="mx-auto d-block barnarrow animate-breathing">
+      </a>
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+          <h2 class="mt-5"> The time for innovation is now </h2>
+          <p> We have mature technology solutions ready to tackle crisis challenges <b>today</b>, which are nonetheless designed to provide an edge in the world of <b>tomorrow</b>. We're in this <em>together</em>.  We'll emerge from this stronger <em>together</em>. </p>
+          <h2 class="mt-5"> Digital Contact Tracing </h2>
+          <p class="lead"> Who interacted with whom? </p>
+          <p> Digital Contact Tracing is an automated means of detecting and recording close physical interactions between people, providing traceability of contact with any individual who tests positive for an infectious disease, and offering peace-of-mind to evaluate and respond to risk effectively. </p>
+          <div class="row mt-5">
+            <div class="col-lg-4 text-center">
+              <h5> Proximity Detection </h5>
+              <img src="../images/covid-19-dct-detection.png" class="img-fluid">
+              <p class="text-muted my-3"> Device-agnostic </p>
+            </div>
+            <div class="col-lg-4 text-center">
+              <h5> Data Collection </h5>
+              <img src="../images/covid-19-dct-collection.png"
+                   class="img-fluid">
+              <p class="text-muted my-3"> Infrastructure-agnostic </p>
+            </div>
+            <div class="col-lg-4 text-center">
+              <h5> Interaction Tracing </h5>
+              <img src="../images/covid-19-dct-tracing.png" class="img-fluid">
+              <p class="text-muted my-3"> Database-agnostic </p>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-lg-6 order-lg-last mb-3">
+              <img src="../images/covid-19-e8-oio-es.jpg" class="img-fluid">
+            </div>
+            <div class="col-lg-6">
+              <h3> Case Study: USC </h3>
+              <p> Researchers at the University of Southern California used this architecture for an unrelated study beginning in late 2019, in their case with: </p>
+              <ul>
+                <li> Minew E8 beacons programmed with DirAct&trade; </li>
+                <li> reelyActive Owl-in-Ones </li>
+                <li> Hosted Elasticsearch Service </li>
+              </ul>
+              <p class="text-center my-3">
+                <a href="../clients/" class="btn btn-outline-primary"
+                   role="button"> Clients </a>
+              </p>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-lg-6">
+              <h3> Privacy & Perception </h3>
+              <p> <em>Wear it when and where you need it</em>&mdash;unlike a mobile phone/app that is with you everywhere you go.  Only device identifiers and exposure durations are stored: </p>
+              <ul>
+                <li> <em>no</em> personal data </li>
+                <li> <em>no</em> geolocation </li>
+                <li> <em>no</em> timestamps </li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <h3> Key Differentiation </h3>
+              <p> Our unique software-based approach offers freedom of choice (and a backup plan should the pandemic impact product supply chains!) </p>
+              <ul>
+                <li> choice of device (<a href="https://getpareto.com/platform/devices/" target="_blank">learn more</a>) </li>
+                <li> choice of infrastructure (<a href="https://getpareto.com/platform/infrastructure/" target="_blank">learn more</a>) </li>
+                <li> choice of database/hosting </li>
+              </ul>
+            </div>
+          </div>
+          <p class="text-center lead mt-5"> Wherever you find yourself, we're here to help. </p>
+          <p class="text-center"> Stay healthy. &nbsp; Stay innovative. </p>
+          <p class="text-center my-3">
+            <a href="../contact/" class="btn btn-outline-primary"
+               role="button"> Contact us </a>
+          </p>
+        </div>
+      </div>
+    </div>
 
+    <!----- Owl-to-Action ----->
+    <div class="owl-to-action">
+      <div class="col-xs-12 col-sm-10 col-lg-6 offset-lg-4 col-xl-6
+                  offset-xl-2 py-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-grid gap-3 d-md-block">
+              <span class="lead pr-4">
+                Embrace the ambient data in <em>your</em> space
+              </span>
+              <a class="btn btn-secondary" role="button"
+                 href="/get-started/"> Get Started </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer bg-dark bg-gradient">
+      <a href="./"> COVID-19 Solutions </a>
+      &nbsp; | &nbsp;
+      <a href="https://www.reelyactive.com"> &copy; reelyActive 2020 </a>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <script defer src="../js/fontawesome-reelyactive.min.js"></script>
+    <script src="../js/bootstrappyactive.bundle.min.js"></script>
   </body>
 </html>
