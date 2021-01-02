@@ -31,3 +31,9 @@ https://www.reelyactive.com/reelyapp/
 https://www.reelyactive.com/science/
 https://www.reelyactive.com/showcase/
 https://www.reelyactive.com/technology/
+https://www.reelyactive.com/use-cases/
+https://www.reelyactive.com/use-cases/asset-tracking/
+https://www.reelyactive.com/use-cases/environmental-sensing/
+https://www.reelyactive.com/use-cases/interaction-detection/
+https://www.reelyactive.com/use-cases/occupancy-analytics/
+https://www.reelyactive.com/use-cases/personnel-tracking/
