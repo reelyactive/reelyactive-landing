@@ -11,6 +11,7 @@ https://www.reelyactive.com/clients/
 https://www.reelyactive.com/contact/
 https://www.reelyactive.com/context/
 https://www.reelyactive.com/covid-19/
+https://www.reelyactive.com/diract/
 https://www.reelyactive.com/directory/
 https://www.reelyactive.com/discover/
 https://www.reelyactive.com/get-started/
@@ -32,9 +33,11 @@ https://www.reelyactive.com/pareto/anywhere/infrastructure/
 https://www.reelyactive.com/pareto/anywhere/integrations/
 https://www.reelyactive.com/press/
 https://www.reelyactive.com/products/
+https://www.reelyactive.com/products/gateways/
 https://www.reelyactive.com/reelyapp/
 https://www.reelyactive.com/science/
 https://www.reelyactive.com/showcase/
+https://www.reelyactive.com/team/
 https://www.reelyactive.com/technology/
 https://www.reelyactive.com/use-cases/
 https://www.reelyactive.com/use-cases/asset-tracking/
