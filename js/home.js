@@ -1,6 +1,8 @@
 // Constants
-const USECASE_ITERATION_MILLISECONDS = 2400;
+const USECASE_ITERATION_MILLISECONDS = 1200;
 const HLC_ITERATION_MILLISECONDS = 4800;
+const ACTIVE_USE_CASE_CLASS = 'bg-success text-white align-middle display-6';
+const USE_CASE_CLASS = 'bg-dark text-white align-middle display-6';
 const COSE_LAYOUT_OPTIONS = {
     name: "cose",
     animate: false,
@@ -87,8 +89,12 @@ function nextUsecase() {
   let numberOfUsecases = trs.length;
 
   trs.item(currentUsecaseIndex).setAttribute('class', '');
+  trs.item(currentUsecaseIndex).firstElementChild.setAttribute('class',
+                                                               USE_CASE_CLASS);
   currentUsecaseIndex = (currentUsecaseIndex + 1) % numberOfUsecases;
   trs.item(currentUsecaseIndex).setAttribute('class', 'table-active');
+  trs.item(currentUsecaseIndex).firstElementChild.setAttribute('class',
+                                                        ACTIVE_USE_CASE_CLASS);
 }
 
 setInterval(nextUsecase, USECASE_ITERATION_MILLISECONDS);
