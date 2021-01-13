@@ -5,7 +5,8 @@ const COSE_LAYOUT_OPTIONS = {
     name: "cose",
     animate: false,
     randomize: true,
-    initialTemp: 40
+    gravity: 3,
+    componentSpacing: 120
 };
 const GRAPH_STYLE = [
     { selector: "node[type='transmitter']",
@@ -20,7 +21,7 @@ const GRAPH_STYLE = [
     { selector: "edge", style: { "curve-style": "haystack",
                                  "line-color": "#ddd" } },
 ];
-const TRANSMITTER_SIGNATURES = [ '1', '2', '3', '4', '5', '6', '7', '8' ];
+const TRANSMITTER_SIGNATURES = [ '1', '2', '3', '4', '5', '6', '7', '8', '9' ];
 const RECEIVER_SIGNATURES = [ 'a', 'b', 'c' ];
 const TRANSMITTER_IMAGES = [
     'https://www.reelyactive.com/images/transmitter-bicycle.png',
@@ -110,6 +111,7 @@ cy.add({ group: "nodes", data: { id: "5", type: "transmitter" } });
 cy.add({ group: "nodes", data: { id: "6", type: "transmitter" } });
 cy.add({ group: "nodes", data: { id: "7", type: "transmitter" } });
 cy.add({ group: "nodes", data: { id: "8", type: "transmitter" } });
+cy.add({ group: "nodes", data: { id: "9", type: "transmitter" } });
 cy.add({ group: "nodes", data: { id: "a", type: "receiver" } });
 cy.add({ group: "nodes", data: { id: "b", type: "receiver" } });
 cy.add({ group: "nodes", data: { id: "c", type: "receiver" } });
@@ -122,6 +124,7 @@ cy.add({ group: "edges", data: { id: "5b", source: "5", target: "b" } });
 cy.add({ group: "edges", data: { id: "6b", source: "6", target: "b" } });
 cy.add({ group: "edges", data: { id: "7c", source: "7", target: "c" } });
 cy.add({ group: "edges", data: { id: "8c", source: "8", target: "c" } });
+cy.add({ group: "edges", data: { id: "9c", source: "9", target: "c" } });
 
 // Animate the hyperlocal context graph
 animateHyperlocalContext();
