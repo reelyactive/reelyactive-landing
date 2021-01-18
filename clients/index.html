@@ -395,8 +395,82 @@
       </a>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 g-4 my-4">
-            <div class="col">
+          <div class="row mt-5">
+            <div class="col-md-6 mb-3">
+              <h3> Browse clients by use case </h3>
+            </div>
+            <div class="col-md-6">
+              <table class="table table-hover text-center">
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="form-switch">
+                        <input class="form-check-input align-middle" checked
+                               type="checkbox" id="filterOccupancyAnalytics">
+                      </div>
+                    </td>
+                    <th class="bg-dark text-white align-middle lead">
+                      <i class="fas fa-shoe-prints"></i>
+                    </th>
+                    <td class="align-middle"> Occupancy analytics </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-switch">
+                        <input class="form-check-input align-middle" checked
+                               type="checkbox" id="filterAssetTracking">
+                      </div>
+                    </td>
+                    <th class="bg-dark text-white align-middle lead">
+                      <i class="fas fa-tag"></i>
+                    </th>
+                    <td class="align-middle"> Asset tracking </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-switch">
+                        <input class="form-check-input align-middle" checked
+                               type="checkbox" id="filterPersonnelTracking">
+                      </div>
+                    </td>
+                    <th class="bg-dark text-white align-middle lead">
+                      <i class="fas fa-user-tag"></i>
+                    </th>
+                    <td class="align-middle"> Personnel tracking </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-switch">
+                        <input class="form-check-input align-middle" checked
+                               type="checkbox" id="filterEnvironmentalSensing">
+                      </div>
+                    </td>
+                    <th class="bg-dark text-white align-middle lead">
+                      <i class="fas fa-thermometer-half"></i>
+                    </th>
+                    <td class="align-middle"> Environmental sensing </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-switch">
+                        <input class="form-check-input align-middle" checked
+                               type="checkbox" id="filterInteractionDetection">
+                      </div>
+                    </td>
+                    <th class="bg-dark text-white align-middle lead">
+                      <i class="fas fa-people-arrows"></i>
+                    </th>
+                    <td class="align-middle"> Interaction detection </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 g-4 my-4"
+               id="clientcards">
+            <!-- Desjardins -->
+            <div class="col" use-cases="oa,pt">
               <div class="card hover-shadow">
                 <img src="../images/clients-desjardins-logo-square.png"
                      class="card-img-top" alt="Desjardins">
@@ -425,11 +499,12 @@
                   </div>
                 </div>
                 <div class="card-footer text-muted small">
-                  Bank
+                  Financial cooperative
                 </div>
               </div>
             </div>
-            <div class="col">
+            <!-- Cirque du Soleil -->
+            <div class="col" use-cases="oa,pt,id">
               <div class="card hover-shadow">
                 <img src="../images/clients-cirquedusoleil-logo-square.jpg"
                      class="card-img-top" alt="Cirque du Soleil">
@@ -449,7 +524,8 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <!-- USC -->
+            <div class="col" use-cases="pt,es,id">
               <div class="card hover-shadow">
                 <img src="../images/clients-usc-logo-square.png"
                      class="card-img-top" alt="USC">
@@ -483,7 +559,8 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <!-- CANARIE -->
+            <div class="col" use-cases="oa">
               <div class="card hover-shadow">
                 <img src="../images/clients-canarie-logo-square.png"
                      class="card-img-top" alt="CANARIE">
@@ -501,7 +578,8 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <!-- L'Oreal Canada -->
+            <div class="col" use-cases="oa">
               <div class="card hover-shadow">
                 <img src="../images/clients-lorealcanada-logo-square.jpg"
                      class="card-img-top" alt="L'Oreal Canada">
@@ -519,7 +597,8 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <!-- US Army -->
+            <div class="col" use-cases="pt">
               <div class="card hover-shadow">
                 <img src="../images/clients-usarmy-logo-square.png"
                      class="card-img-top" alt="US Army">
@@ -551,7 +630,8 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <!-- Videotron Affaires -->
+            <div class="col" use-cases="id">
               <div class="card hover-shadow">
                 <img src="../images/clients-videotron-logo-square.png"
                      class="card-img-top" alt="Videotron Affaires">
@@ -569,7 +649,8 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <!-- Teamwork Commerce -->
+            <div class="col" use-cases="oa">
               <div class="card hover-shadow">
                 <img src="../images/clients-teamworkcommerce-logo-square.png"
                      class="card-img-top" alt="Teamwork Commerce">
@@ -587,7 +668,8 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <!-- ESG UQAM -->
+            <div class="col" use-cases="oa,at,pt,es">
               <div class="card hover-shadow">
                 <img src="../images/clients-esguqam-logo-square.png"
                      class="card-img-top" alt="ESG UQAM">
@@ -608,7 +690,8 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <!-- JGH -->
+            <div class="col" use-cases="oa,at,es">
               <div class="card hover-shadow">
                 <img src="../images/clients-jgh-logo-square.png"
                      class="card-img-top"
@@ -629,7 +712,8 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <!-- MeH -->
+            <div class="col" use-cases="oa">
               <div class="card hover-shadow">
                 <img src="../images/clients-montrealenhistoires-logo-square.png"
                      class="card-img-top" alt="Montreal en Histoires">
@@ -647,7 +731,8 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <!-- Jogogo -->
+            <div class="col" use-cases="oa">
               <div class="card hover-shadow">
                 <img src="../images/clients-jogogo-logo-square.png"
                      class="card-img-top" alt="Jogogo">
@@ -665,7 +750,8 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <!-- Event Presence -->
+            <div class="col" use-cases="oa,pt">
               <div class="card hover-shadow">
                 <img src="../images/clients-eventpresence-logo-square.png"
                      class="card-img-top" alt="Event Presence">
@@ -684,7 +770,8 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <!-- Solution BI -->
+            <div class="col" use-cases="oa,pt">
               <div class="card hover-shadow">
                 <img src="../images/clients-solutionbi-logo-square.png"
                      class="card-img-top" alt="Solution BI">
@@ -703,7 +790,8 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <!-- MCQ -->
+            <div class="col" use-cases="oa,es,id">
               <div class="card hover-shadow">
                 <img src="../images/clients-mcq-logo-square.png"
                      class="card-img-top"
@@ -756,5 +844,6 @@
     <!-- Optional JavaScript -->
     <script defer src="../js/fontawesome-reelyactive.min.js"></script>
     <script src="../js/bootstrappyactive.bundle.min.js"></script>
+    <script src="../js/clients.js"></script>
   </body>
 </html>
