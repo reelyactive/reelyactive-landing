@@ -405,9 +405,82 @@
       </a>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
-          <div class="row row-cols-1 row-cols-md-2 row-cols-xxl-3 g-4 my-4">
+          <div class="row mt-5">
+            <div class="col-md-6 mb-3">
+              <h3> Browse devices by use case </h3>
+              <p class="text-muted"> <small> <sup>*</sup>All ambient devices contribute to occupancy analytics. </small> </p>
+            </div>
+            <div class="col-md-6">
+              <table class="table table-hover text-center">
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="form-switch">
+                        <input class="form-check-input align-middle" disabled
+                               type="checkbox" id="filterOccupancyAnalytics">
+                      </div>
+                    </td>
+                    <th class="bg-light align-middle lead">
+                      <i class="fas fa-shoe-prints"></i>
+                    </th>
+                    <td class="align-middle text-muted"> Occupancy analytics<sup>*</sup> </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-switch">
+                        <input class="form-check-input align-middle" checked
+                               type="checkbox" id="filterAssetTracking">
+                      </div>
+                    </td>
+                    <th class="bg-dark text-white align-middle lead">
+                      <i class="fas fa-tag"></i>
+                    </th>
+                    <td class="align-middle"> Asset tracking </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-switch">
+                        <input class="form-check-input align-middle" checked
+                               type="checkbox" id="filterPersonnelTracking">
+                      </div>
+                    </td>
+                    <th class="bg-dark text-white align-middle lead">
+                      <i class="fas fa-user-tag"></i>
+                    </th>
+                    <td class="align-middle"> Personnel tracking </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-switch">
+                        <input class="form-check-input align-middle" checked
+                               type="checkbox" id="filterEnvironmentalSensing">
+                      </div>
+                    </td>
+                    <th class="bg-dark text-white align-middle lead">
+                      <i class="fas fa-thermometer-half"></i>
+                    </th>
+                    <td class="align-middle"> Environmental sensing </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-switch">
+                        <input class="form-check-input align-middle" checked
+                               type="checkbox" id="filterInteractionDetection">
+                      </div>
+                    </td>
+                    <th class="bg-dark text-white align-middle lead">
+                      <i class="fas fa-people-arrows"></i>
+                    </th>
+                    <td class="align-middle"> Interaction detection </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-xxl-3 g-4 my-4"
+               id="devicecards">
             <!-- Minew E8 -->
-            <div class="col" id="minew-e8">
+            <div class="col" id="minew-e8" use-cases="at,pt,es">
               <div class="card hover-shadow">
                 <img src="../../../images/devices-minew-e8.jpg"
                      class="card-img-top" alt="Minew E8">
@@ -455,7 +528,7 @@
               </div>
             </div>
             <!-- Puck.js -->
-            <div class="col" id="puckjs">
+            <div class="col" id="puckjs" use-cases="es,id">
               <div class="card hover-shadow">
                 <img src="../../../images/devices-puckjs.jpg"
                      class="card-img-top" alt="Puck.js">
@@ -506,7 +579,7 @@
               </div>
             </div>
             <!-- Minew S1 -->
-            <div class="col" id="minew-s1">
+            <div class="col" id="minew-s1" use-cases="es">
               <div class="card hover-shadow">
                 <img src="../../../images/devices-minew-s1.jpg"
                      class="card-img-top" alt="Minew S1">
@@ -553,7 +626,7 @@
               </div>
             </div>
             <!-- Minew C6 -->
-            <div class="col" id="minew-c6">
+            <div class="col" id="minew-c6" use-cases="pt">
               <div class="card hover-shadow">
                 <img src="../../../images/devices-minew-c6.jpg"
                      class="card-img-top" alt="Minew C6">
@@ -596,7 +669,7 @@
               </div>
             </div>
             <!-- Minew E9 -->
-            <div class="col" id="minew-e9">
+            <div class="col" id="minew-e9" use-cases="at">
               <div class="card hover-shadow">
                 <img src="../../../images/devices-minew-e9.jpg"
                      class="card-img-top" alt="Minew E9">
@@ -643,7 +716,7 @@
               </div>
             </div>
             <!-- Minew B8 -->
-            <div class="col" id="minew-b8">
+            <div class="col" id="minew-b8" use-cases="pt,id">
               <div class="card hover-shadow">
                 <img src="../../../images/devices-minew-b8.jpg"
                      class="card-img-top" alt="Minew B8">
@@ -693,7 +766,7 @@
               </div>
             </div>
             <!-- Laird BT710 -->
-            <div class="col" id="laird-bt710">
+            <div class="col" id="laird-bt710" use-cases="pt,id">
               <div class="card hover-shadow">
                 <img src="../../../images/devices-laird-bt710.jpg"
                      class="card-img-top" alt="Laird BT710">
@@ -745,7 +818,7 @@
               </div>
             </div>
             <!-- Laird BT510 -->
-            <div class="col" id="laird-bt510">
+            <div class="col" id="laird-bt510" use-cases="at,es">
               <div class="card hover-shadow">
                 <img src="../../../images/devices-laird-bt510.jpg"
                      class="card-img-top" alt="Laird BT510">
@@ -796,7 +869,7 @@
               </div>
             </div>
             <!-- Phenomena VPX -->
-            <div class="col" id="phenomena-vpx">
+            <div class="col" id="phenomena-vpx" use-cases="pt,id">
               <div class="card hover-shadow">
                 <img src="../../../images/devices-phenomena-vpx.jpg"
                      class="card-img-top" alt="Phenomena VPX">
@@ -889,5 +962,6 @@
     <!-- Optional JavaScript -->
     <script defer src="../../../js/fontawesome-reelyactive.min.js"></script>
     <script src="../../../js/bootstrappyactive.bundle.min.js"></script>
+    <script src="../../../js/devices.js"></script>
   </body>
 </html>
