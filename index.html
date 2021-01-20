@@ -641,40 +641,60 @@
           <h2 class="text-uppercase mt-5 mb-4"> Applications </h2>
           <div class="row mb-3">
             <div class="col-md-12 col-lg-6 order-lg-last mb-2">
-              <table id="usecasestable" class="table">
-                <tbody>
-                  <tr class="table-active">
-                    <th class="bg-success text-white align-middle display-6">
-                      <i class="fas fa-shoe-prints"></i>
-                    </th>
-                    <td class="lead align-middle"> Occupancy analytics </td>
-                  </tr>
-                  <tr>
-                    <th class="bg-dark text-white align-middle display-6">
-                      <i class="fas fa-tag"></i>
-                    </th>
-                    <td class="lead align-middle"> Asset tracking </td>
-                  </tr>
-                  <tr>
-                    <th class="bg-dark text-white align-middle display-6">
-                      <i class="fas fa-user-tag"></i>
-                    </th>
-                    <td class="lead align-middle"> Personnel tracking </td>
-                  </tr>
-                  <tr>
-                    <th class="bg-dark text-white align-middle display-6">
-                      <i class="fas fa-thermometer-half"></i>
-                    </th>
-                    <td class="lead align-middle"> Environmental sensing </td>
-                  </tr>
-                  <tr>
-                    <th class="bg-dark text-white align-middle display-6">
-                      <i class="fas fa-people-arrows"></i>
-                    </th>
-                    <td class="lead align-middle"> Interaction detection </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div id="carouselApplications"
+                   class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-bs-target="#carouselApplications"
+                      data-bs-slide-to="0" class="active"></li>
+                  <li data-bs-target="#carouselApplications"
+                      data-bs-slide-to="1"></li>
+                  <li data-bs-target="#carouselApplications"
+                      data-bs-slide-to="2"></li>
+                  <li data-bs-target="#carouselApplications"
+                      data-bs-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="4800">
+                    <img src="images/landing-applications-use-cases.png"
+                         class="d-block w-100 pb-5 mb-4" alt="Use Cases">
+                    <div class="carousel-caption d-none d-md-block">
+                      <small class="text-muted user-select-none">
+                        Complementary use cases
+                      </small>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="4800">
+                    <img src="images/landing-applications-science.png"
+                         class="d-block w-100 pb-5 mb-4"
+                         alt="Science & Research">
+                    <div class="carousel-caption d-none d-md-block">
+                      <small class="text-muted user-select-none">
+                        Science & Research
+                      </small>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="4800">
+                    <img src="images/landing-applications-culture.jpg"
+                         class="d-block w-100 rounded pb-5 mb-4"
+                         alt="Arts & Culture">
+                    <div class="carousel-caption d-none d-md-block">
+                      <small class="text-muted user-select-none pt-5">
+                        Arts & Culture
+                      </small>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="4800">
+                    <img src="images/landing-applications-covid19.png"
+                         class="d-block w-100 pb-5 mb-4"
+                         alt="COVID-19 response">
+                    <div class="carousel-caption d-none d-md-block">
+                      <small class="text-muted user-select-none">
+                        COVID-19 response
+                      </small>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="col-md-12 col-lg-6 mb-2">
               <p class="text-start"> Begin with <em>any</em> use case in <em>any</em> space and scale to <em>many</em> use cases in <em>many</em> spaces. </p>
