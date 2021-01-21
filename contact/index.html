@@ -396,15 +396,17 @@
       </a>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
-          <h2 class="mt-4"> Via e-mail </h2>
+          <h2 class="mt-5"> Via e-mail </h2>
           <div class="card-group my-4">
             <div class="card hover-shadow">
               <h5 class="card-header bg-primary text-light">
                 <i class="fas fa-shopping-cart"></i> &nbsp; Sales
               </h5>
               <div class="card-body">
-                <p class="card-text text-center font-monospace user-select-all">
-                  sales@reelyactive.com
+                <p class="card-text text-center font-monospace">
+                  <i class="fas fa-star text-secondary animate-breathing"
+                     id="email-sales" hidden></i>
+                  <span class="user-select-all"> sales@reelyactive.com </span>
                 </p>
               </div>
               <div class="card-footer">
@@ -416,8 +418,10 @@
                 <i class="fas fa-code"></i> &nbsp; Support
               </h5>
               <div class="card-body">
-                <p class="card-text text-center font-monospace user-select-all">
-                  support@reelyactive.com
+                <p class="card-text text-center font-monospace">
+                  <i class="fas fa-star text-secondary animate-breathing"
+                     id="email-support" hidden></i>
+                  <span class="user-select-all"> support@reelyactive.com </span>
                 </p>
               </div>
               <div class="card-footer">
@@ -429,8 +433,10 @@
                 <i class="fas fa-info"></i> &nbsp; Info
               </h5>
               <div class="card-body">
-                <p class="card-text text-center font-monospace user-select-all">
-                  info@reelyactive.com
+                <p class="card-text text-center font-monospace">
+                  <i class="fas fa-star text-secondary animate-breathing"
+                     id="email-info" hidden></i>
+                  <span class="user-select-all"> info@reelyactive.com </span>
                 </p>
               </div>
               <div class="card-footer">
@@ -438,7 +444,33 @@
               </div>
             </div>
           </div>
-          <h2 class="mt-4"> Via social media </h2>
+          <div id="email-sample" class="row justify-content-center" hidden>
+            <div class="col-md-10 col-xxl-8 d-none d-md-block">
+              <div class="card shadow-lg">
+                <h5 class="card-header bg-info text-white">
+                  <i class="fas fa-star text-secondary animate-breathing"></i>
+                  &nbsp;Sample message
+                </h5>
+                <div class="card-body">
+                  <p class="card-text">
+                    <b>Subject:</b>&nbsp;
+                    <span id="email-subject" class="user-select-all">
+                      Inquiry
+                    </span>
+                  </p>
+                  <span class="user-select-all">
+                    <p class="card-text"> Hi reelyActive team, </p>
+                    <p class="card-text">
+                      I'm reaching out about the
+                      <span id="email-topic">topic</span>
+                      on your website, can we schedule an intro call?
+                    </p>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2 class="mt-5"> Via social media </h2>
           <div class="card-group my-4">
             <div class="card hover-shadow">
               <h5 class="card-header bg-dark text-light">
@@ -486,9 +518,9 @@
               </div>
             </div>
           </div>
-          <h2 class="mt-4"> Via GitHub </h2>
+          <h2 class="mt-5"> Via GitHub </h2>
           <p class="lead text-muted"> Raise an issue or make a pull request. </p>
-          <h2 class="mt-4"> In person<sup>*</sup> or by mail </h2>
+          <h2 class="mt-5"> In person<sup>*</sup> or by mail </h2>
           <div class="card hover-shadow my-4">
               <h5 class="card-header bg-success text-light">
                 <i class="fas fa-building"></i> &nbsp; reelyActive Parc
@@ -534,5 +566,6 @@
     <!-- Optional JavaScript -->
     <script defer src="../js/fontawesome-reelyactive.min.js"></script>
     <script src="../js/bootstrappyactive.bundle.min.js"></script>
+    <script src="../js/contact.js"></script>
   </body>
 </html>
