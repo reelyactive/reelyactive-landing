@@ -7,19 +7,11 @@ const COSE_LAYOUT_OPTIONS = {
     gravity: 3,
     componentSpacing: 120
 };
-const GRAPH_STYLE = [
-    { selector: "node[type='transmitter']",
-      style: { "background-color": "#83b7d0", "border-color": "#83b7d0",
-               "border-width": "2px" } },
-    { selector: "node[type='receiver']",
-      style: { "background-color": "#aec844", "border-color": "#aec844",
-               "border-width": "2px" } },
-    { selector: "node[image]",
-      style: { "background-image": "data(image)",
-               "background-fit": "cover cover" } },
-    { selector: "edge", style: { "curve-style": "haystack",
-                                 "line-color": "#ddd" } },
-];
+const RECEIVER_SIZE_DIVISOR = 8;
+const TRANSMITTER_SIZE_DIVISOR = 16;
+const PAN_DIVISOR = 32;
+const DEFAULT_TRANSMITTER_IMAGE = 
+                  "https://www.reelyactive.com/images/transmitter-default.png";
 const TRANSMITTER_SIGNATURES = [ '1', '2', '3', '4', '5', '6', '7', '8', '9' ];
 const RECEIVER_SIGNATURES = [ 'a', 'b', 'c' ];
 const TRANSMITTER_IMAGES = [
@@ -73,6 +65,29 @@ const RECEIVER_IMAGES = [
 ];
 
 
+// Other variables
+let animatedTransmitterIndex = 0;
+let receiverNodeSize = window.innerWidth / RECEIVER_SIZE_DIVISOR;
+let transmitterNodeSize = window.innerWidth / TRANSMITTER_SIZE_DIVISOR;
+let GRAPH_STYLE = [
+    { selector: "node[type='transmitter']",
+      style: { "background-color": "#83b7d0", "border-color": "#83b7d0",
+               "border-width": "2px", "width": transmitterNodeSize,
+               "height": transmitterNodeSize,
+               "background-fit": "cover cover",
+               "background-image": DEFAULT_TRANSMITTER_IMAGE } },
+    { selector: "node[type='receiver']",
+      style: { "background-color": "#aec844", "border-color": "#aec844",
+               "border-width": "2px", "width": receiverNodeSize,
+               "height": receiverNodeSize } },
+    { selector: "node[image]",
+      style: { "background-image": "data(image)",
+               "background-fit": "cover cover" } },
+    { selector: "edge", style: { "curve-style": "haystack",
+                                 "line-color": "#ddd" } },
+];
+
+
 // Initialise Cytoscape
 let cy = cytoscape({
     container: document.getElementById('cy-hero'),
@@ -106,11 +121,12 @@ cy.add({ group: "edges", data: { id: "8c", source: "8", target: "c" } });
 cy.add({ group: "edges", data: { id: "9c", source: "9", target: "c" } });
 
 // Animate the hyperlocal context graph
-animateHyperlocalContext();
+assignNodeImages();
+updateLayout();
 
 
-// Update the images of the graph nodes
-function updateGraph() {
+// Assign the images of the graph nodes
+function assignNodeImages() {
   let usedReceiverImageIndices = [];
 
   RECEIVER_SIGNATURES.forEach(function(signature) {
@@ -126,22 +142,59 @@ function updateGraph() {
   TRANSMITTER_SIGNATURES.forEach(function(signature) {
     let node = cy.getElementById(signature);
     let index = Math.floor(Math.random() * TRANSMITTER_IMAGES.length);
-    node.data('image', TRANSMITTER_IMAGES[index]);
+    node.data('imageReveal', TRANSMITTER_IMAGES[index]);
   });
 }
 
 
-// Update the graph layout
+// Update the graph layoutcy.getElementById(signature)
 function updateLayout() {
+  let minContainerDimension = Math.min(cy.width(), cy.height());
+  receiverNodeSize = minContainerDimension / RECEIVER_SIZE_DIVISOR;
+  transmitterNodeSize = minContainerDimension / TRANSMITTER_SIZE_DIVISOR;
+
+  cy.stop();
   layout.stop();
   layout = cy.elements().makeLayout(COSE_LAYOUT_OPTIONS);
   layout.run();
+  animateTransmitter();
 }
 
 
-// Update the hyperlocal context display
-function animateHyperlocalContext() {
-  updateGraph();
-  updateLayout();
-  setTimeout(animateHyperlocalContext, HLC_ITERATION_MILLISECONDS);
+// Animate the next random transmitter and repeat after timeout
+function animateTransmitter() {
+  let signature = TRANSMITTER_SIGNATURES[animatedTransmitterIndex];
+  let currentTransmitter = cy.getElementById(signature);
+  let nextTransmitter;
+  let nextIndex = animatedTransmitterIndex;
+
+  while(nextIndex === animatedTransmitterIndex) {
+    nextIndex = Math.floor(Math.random() * TRANSMITTER_SIGNATURES.length);
+  }
+  signature = TRANSMITTER_SIGNATURES[nextIndex];
+  nextTransmitter = cy.getElementById(signature);
+  animatedTransmitterIndex = nextIndex;
+
+  currentTransmitter.animate({
+    style: { backgroundImage: DEFAULT_TRANSMITTER_IMAGE },
+    duration: 1
+  });
+  nextTransmitter.animate({
+    style: { backgroundImage: nextTransmitter.data('imageReveal') },
+    duration: 1
+  });
+
+  let panX = (Math.random() - 0.5) * cy.width() / PAN_DIVISOR;
+  let panY = (Math.random() - 0.5) * cy.height() / PAN_DIVISOR;
+
+  cy.animate({
+    panBy: { x: panX, y: panY },
+    duration: HLC_ITERATION_MILLISECONDS,
+    easing: 'ease-in-out',
+    complete: animateTransmitter
+  });
 }
+
+
+// Re-animate on resize
+cy.on('resize', updateLayout);
