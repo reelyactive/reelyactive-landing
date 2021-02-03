@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
-          content="Proximity interaction detection embedded software for Bluetooth beacons, badges and wearables.">
+          content="DirAct is pioneering open source embedded software for real-time interaction detection.  Make sense of who is interacting with whom or what in any physical space.">
     <link rel="stylesheet" href="../style/bootstrappyactive.min.css">
     <title> DirAct </title>
     <!----- Structured, linked metadata (JSON-LD & Schema.org) ----->
@@ -14,8 +14,8 @@
       "@context": "https://schema.org", 
       "@type": "WebPage",
       "name": "DirAct by reelyActive",
-      "description": "Proximity interaction detection embedded software for Bluetooth beacons, badges and wearables.",
-      "image": "https://www.reelyactive.com/images/reelyactive-logo-square.png",
+      "description": "DirAct is pioneering open source embedded software for real-time interaction detection.  Make sense of who is interacting with whom or what in any physical space.",
+      "image": "https://www.reelyactive.com/images/diract-logo.png",
       "creator": {
         "@type": "Organization",
         "url": "https://www.reelyactive.com"
@@ -377,7 +377,7 @@
         <div class="card">
           <div class="card-body">
             <h1 class="card-title"> DirAct </h1>
-            <p class="card-text"> Proximity interaction detection </p>
+            <p class="card-text"> Real-time interaction detection </p>
           </div>
         </div>
         <a href="#content">
@@ -395,19 +395,140 @@
       </a>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
-          <table class="table table-bordered my-5">
-            <tbody>
-              <tr>
-                <th class="bg-success text-white text-center align-middle display-4">
-                  <i class="fas fa-exclamation-triangle"></i>
-                </th>
-                <td class="align-middle">
-                  <p class="lead"> This page is the <em>future</em> home of DirAct. </p>
-                  Developer information can currently be found at <a href="https://reelyactive.github.io/diract/">reelyactive.github.io/diract</a>.
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="ratio ratio-16x9 mt-5">
+            <iframe src="https://www.youtube.com/embed/9iyQP-6noyQ?rel=0&controls=0&showinfo=0&modestbranding" title="DirAct proximity interaction detection" allowfullscreen></iframe>
+          </div>
+          <p class="lead mt-5"> DirAct is pioneering open source software for real-time interaction detection. Make sense of <em>who is interacting with whom or what</em> in any physical space. </p>
+          <h2 class="mt-5"> DirAct: answer the question that matters </h2>
+          <p class="text-lg-center mt-3"> A real-time location system <span class="lead"> (RTLS) </span> answers the question <span class="lead"> "who is where?" </span> </p>
+          <p class="text-lg-center"> An indoor positioning system <span class="lead"> (IPS) </span> answers the question <span class="lead"> "where am I?" </span> </p>
+          <p class="text-lg-center"> <span class="lead"> DirAct </span> answers the question <span class="lead"> "who is interacting with whom or what?" </span> </p>
+          <div class="row mt-5">
+            <div class="col-md-12 col-lg-4 mb-3">
+              <div id="carouselInteractions"
+                   class="carousel slide carousel-fade"
+                   data-bs-ride="carousel" data-bs-pause="false">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="2400">
+                    <img src="../images/diract-interaction-1.png"
+                         class="d-block w-100" alt="Person-to-Person">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2400">
+                    <img src="../images/diract-interaction-2.png"
+                         class="d-block w-100" alt="Person-to-Product">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2400">
+                    <img src="../images/diract-interaction-3.png"
+                         class="d-block w-100" alt="Person-to-Place">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-8">
+              <h3> Location made meaningful </h3>
+              <p> Whereas a RTLS or IPS typically represents location as <em>x,y</em> or <em>x,y,z</em> coordinates, DirAct represents location as <em>meaningful interactions</em> between people, products and places: </p>
+              <ul>
+                <li> <span class="lead"> Person A </span> is interacting with <span class="lead"> Person B </span> </li>
+                <li> <span class="lead"> Person A </span> is interacting with <span class="lead"> Cart C </span> </li>
+                <li> <span class="lead"> Person A </span> is interacting with <span class="lead"> Door D </span> </li>
+              </ul>
+              <p class="text-center">
+                <a href="../use-cases/interaction-detection/#content"
+                   class="btn btn-outline-primary" role="button">
+                  <i class="fas fa-people-arrows"></i> Use Case
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-12 col-lg-4 col-xxl-3 order-lg-last mb-3">
+              <div id="carouselDevices" class="carousel slide"
+                   data-bs-ride="carousel" data-bs-pause="false">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="1200">
+                    <img src="../images/devices-puckjs.jpg"
+                         class="d-block w-100" alt="Puck.js">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="1200">
+                    <img src="../images/devices-laird-bt710.jpg"
+                         class="d-block w-100" alt="Laird BT710">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="1200">
+                    <img src="../images/devices-phenomena-vpx.jpg"
+                         class="d-block w-100" alt="Phenomena VPX">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-8 col-xxl-9">
+              <h3> Device-agnostic </h3>
+              <p> Device-agnostic by design, DirAct embedded software can run on: </p>
+              <ul class="list-inline text-center lead">
+                <li class="list-inline-item">
+                  <i class="fas fa-check text-success"></i> &nbsp;
+                  <em>Any</em> Bluetooth beacon
+                </li>
+                <li class="list-inline-item">
+                  <i class="fas fa-check text-success"></i> &nbsp;
+                  <em>Any</em> Bluetooth wearable
+                </li>
+              </ul>
+              <p class="text-center">
+                <a href="../pareto/anywhere/devices/?use-cases=id#content"
+                   class="btn btn-outline-primary" role="button">
+                  <i class="fas fa-people-arrows"></i> Devices
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-lg-6 col-xxl-4 mb-4">
+            </div>
+            <div class="col-lg-6 col-xxl-8">
+              <h3> By developers, for developers </h3>
+              <p> Modular and extensible by design, DirAct is the ideal launch point for interactive application development. </p>
+              <ul class="list-unstyled lead">
+                <li>
+                  <i class="fab fa-github"></i> &nbsp;
+                  Source code on GitHub
+                </li>
+                <li>
+                  <i class="fab fa-js"></i> &nbsp;
+                  JavaScript <small class="text-muted"> (runs on Espruino) </small>
+                </li>
+                <li>
+                  <i class="fas fa-book-open"></i> &nbsp;
+                  Novice-friendly docs & tutorials
+                </li>
+              </ul>
+              <p class="text-center">
+                <a href="https://github.com/reelyactive/diract" target="_blank"
+                   class="btn btn-outline-primary" role="button">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://reelyactive.github.io/diract/" target="_blank"
+                   class="btn btn-outline-primary" role="button">
+                  <i class="fas fa-book-open"></i> Docs
+                </a>
+              </p>
+            </div>
+          </div>
+          <h3 class="mt-5"> Free as can be </h3>
+          <p> Permissively-licensed and open source, DirAct is continuously-evolving embedded software that guarantees: </p>
+          <ul class="list-inline text-center lead mb-5">
+            <li class="list-inline-item">
+              <i class="fas fa-check text-success"></i>&nbsp;
+              Freedom of access &nbsp;
+            </li>
+            <li class="list-inline-item">
+              <i class="fas fa-check text-success"></i>&nbsp;
+              Freedom to modify &nbsp;
+            </li>
+            <li class="list-inline-item">
+              <i class="fas fa-check text-success"></i>&nbsp;
+              Freedom from lock-in
+            </li>
+          </ul>
         </div>
       </div>
     </div>
