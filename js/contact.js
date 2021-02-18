@@ -2,9 +2,11 @@
 const GET_STARTED_SEARCH_PARAMETER = 'get-started';
 const CASE_STUDY_SEARCH_PARAMETER = 'case-study';
 const NEWSLETTER_SEARCH_PARAMETER = 'newsletter';
+const PARETO_ANYWHERE_SEARCH_PARAMETER = 'pareto-anywhere';
 const GET_STARTED_SUBJECT = 'Inquiry about getting started';
 const CASE_STUDY_SUBJECT = 'Case study inquiry';
 const NEWSLETTER_SUBJECT = 'Sign me up for reelyActive news!';
+const PARETO_ANYWHERE_SUBJECT = 'Pareto Anywhere inquiry';
 const ACTION_INTRO_CALL = 'can we set up an intro call?';
 const ACTION_SIGN_UP = 'kindly sign me up.';
 
@@ -24,6 +26,8 @@ let searchParams = new URLSearchParams(location.search);
 let hasGetStartedSearch = searchParams.has(GET_STARTED_SEARCH_PARAMETER);
 let hasCaseStudySearch = searchParams.has(CASE_STUDY_SEARCH_PARAMETER);
 let hasNewsletterSearch = searchParams.has(NEWSLETTER_SEARCH_PARAMETER);
+let hasParetoAnywhereSearch =
+                             searchParams.has(PARETO_ANYWHERE_SEARCH_PARAMETER);
 
 
 // Get Started
@@ -63,4 +67,21 @@ else if(hasNewsletterSearch) {
   emailSubject.textContent = NEWSLETTER_SUBJECT;
   emailTopic.textContent = 'your ' + newsletter + ' newsletter';
   emailAction.textContent = ACTION_SIGN_UP;
+}
+
+// Pareto Anywhere
+else if(hasParetoAnywhereSearch) {
+  let paretoAnywhere = searchParams.get(PARETO_ANYWHERE_SEARCH_PARAMETER);
+
+  emailSales.hidden = true;
+  emailSupport.hidden = true;
+  emailInfo.hidden = false;
+  emailSample.hidden = false;
+  emailSubject.textContent = PARETO_ANYWHERE_SUBJECT;
+  emailTopic.textContent = 'Pareto Anywhere';
+  emailAction.textContent = ACTION_INTRO_CALL;
+
+  if(paretoAnywhere) {
+    emailTopic.textContent += ' which I discovered via ' + paretoAnywhere;
+  }
 }
