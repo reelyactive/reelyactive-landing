@@ -395,271 +395,433 @@
       </a>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
-          <div class="mt-5"></div>
-          <!-- Desjardins DTM -->
-          <div class="card hover-shadow mb-3">
-            <div class="row g-0">
-              <div class="col-4 col-md-3 col-xxl-3 align-self-center">
-                <img src="../images/case-studies-desjardins-dtm-deployment.jpg"
-                     class="img-fluid" alt="Desjardins DTM">
-              </div>
-              <div class="col-8 col-md-9 col-xxl-5 align-self-center">
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <i class="fas fa-user-tie text-muted"></i>&nbsp;
-                    Desjardins DTM
-                  </h4>
-                  <p class="card-text"> A 15% savings on real estate with employee experience benefits. </p>
-                  <a href="desjardins-dtm/"
-                     class="btn btn-sm btn-outline-primary"> Case Study </a>
+          <div class="row mt-5">
+            <div class="col-md-6 mb-3">
+              <h3> Browse case studies by filters </h3>
+            </div>
+            <div class="col-md-6 d-grid">
+              <div class="btn-group-vertical">
+                <div class="btn-group dropdown">
+                  <button class="btn dropdown-toggle" type="button"
+                          id="usecasesDropdown" data-bs-toggle="dropdown"
+                          aria-expanded="false"> Use Cases </button>
+                  <div class="dropdown-menu">
+                    <form class="px-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value=""
+                               id="filterOccupancyAnalytics" checked>
+                        <label class="form-check-label"
+                               for="filterOccupancyAnalytics">
+                          <i class="fas fa-shoe-prints"></i>
+                          Occupancy analytics
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value=""
+                               id="filterAssetTracking" checked>
+                        <label class="form-check-label"
+                               for="filterAssetTracking">
+                          <i class="fas fa-tag"></i>
+                          Asset tracking
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value=""
+                               id="filterPersonnelTracking" checked>
+                        <label class="form-check-label"
+                               for="filterPersonnelTracking">
+                          <i class="fas fa-user-tag"></i>
+                          Personnel tracking
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value=""
+                               id="filterEnvironmentalSensing" checked>
+                        <label class="form-check-label"
+                               for="filterEnvironmentalSensing">
+                          <i class="fas fa-thermometer-half"></i>
+                          Environmental sensing
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value=""
+                               id="filterInteractionDetection" checked>
+                        <label class="form-check-label"
+                               for="filterInteractionDetection">
+                          <i class="fas fa-people-arrows"></i>
+                          Interaction detection
+                        </label>
+                      </div>
+                    </form>
+                  </div>
                 </div>
-              </div>
-              <div class="d-none d-xxl-block col-xxl-4 align-self-center">
-                <div class="card-body text-center text-white">
-                  <ul class="list-group list-group-flush lh-sm">
-                    <li class="list-group-item text-dark">
-                      <i class="fas fa-shoe-prints"></i> &nbsp;
-                      <i class="fas fa-user-tag"></i>
-                    </li>
-                    <li class="list-group-item bg-primary"> Elastic Stack </li>
-                    <li class="list-group-item bg-dark">
-                      <b> Pareto Anywhere </b>
-                    </li>
-                    <li class="list-group-item bg-success"> Reel </li>
-                    <li class="list-group-item text-ambient">
-                      <i class="fas fa-mobile-alt"></i>
-                    </li>
-                  </ul>
+                <div class="btn-group dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button"
+                          id="softwareDropdown" data-bs-toggle="dropdown"
+                          aria-expanded="false"> Software </button>
+                  <div class="dropdown-menu">
+                    <form class="px-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value=""
+                               id="filterElasticStack" checked>
+                        <label class="form-check-label"
+                               for="filterElasticStack">
+                          Elastic Stack
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value=""
+                               id="filterOtherSoftware" checked>
+                        <label class="form-check-label"
+                               for="filterOtherSoftware">
+                          All others
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="btn-group dropdown">
+                  <button class="btn btn-dark dropdown-toggle" type="button"
+                          id="middlewareDropdown" data-bs-toggle="dropdown"
+                          aria-expanded="false"> <b> Middleware </b> </button>
+                  <div class="dropdown-menu">
+                    <form class="px-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value=""
+                               id="filterParetoAnywhere" checked>
+                        <label class="form-check-label"
+                               for="filterParetoAnywhere">
+                          Pareto Anywhere
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="btn-group dropdown">
+                  <button class="btn btn-success dropdown-toggle" type="button"
+                          id="infrastructureDropdown" data-bs-toggle="dropdown"
+                          aria-expanded="false"> Infrastructure </button>
+                  <div class="dropdown-menu">
+                    <form class="px-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value=""
+                               id="filterOwlInOne" checked>
+                        <label class="form-check-label" for="filterOwlInOne">
+                          Owl-in-One
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value=""
+                               id="filterReel" checked>
+                        <label class="form-check-label" for="filterReel">
+                          Reel
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="btn-group dropdown">
+                  <button class="btn text-ambient dropdown-toggle" type="button"
+                          id="devicesDropdown" data-bs-toggle="dropdown"
+                          aria-expanded="false"> Devices </button>
+                  <div class="dropdown-menu">
+                    <form class="px-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value=""
+                               id="filterMobile" checked>
+                        <label class="form-check-label" for="filterMobile">
+                          Mobile
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value=""
+                               id="filterMinewE8" checked>
+                        <label class="form-check-label" for="filterMinewE8">
+                          Minew E8
+                        </label>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- GreenUXlab -->
-          <div class="card hover-shadow mb-3">
-            <div class="row g-0">
-              <div class="col-4 col-md-3 col-xxl-3 align-self-center">
-                <img src="../images/case-studies-esguqam-greenuxlab-deployment.jpg"
-                     class="img-fluid" alt="GreenUXlab">
-              </div>
-              <div class="col-8 col-md-9 col-xxl-5 align-self-center">
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <i class="fas fa-user-cog text-muted"></i>&nbsp;
-                    GreenUXlab
-                  </h4>
-                  <p class="card-text"> The freedom to model the future of retail without bounds. </p>
-                  <a href="esguqam-greenuxlab/"
-                     class="btn btn-sm btn-outline-primary"> Case Study </a>
+          <div class="mt-5" id="casestudycards">
+            <!-- Desjardins DTM -->
+            <div class="card hover-shadow mb-3" use-cases="oa,pt">
+              <div class="row g-0">
+                <div class="col-4 col-md-3 col-xxl-3 align-self-center">
+                  <img src="../images/case-studies-desjardins-dtm-deployment.jpg"
+                       class="img-fluid" alt="Desjardins DTM">
                 </div>
-              </div>
-              <div class="d-none d-xxl-block col-xxl-4 align-self-center">
-                <div class="card-body text-center text-white">
-                  <ul class="list-group list-group-flush lh-sm">
-                    <li class="list-group-item text-dark">
-                      <i class="fas fa-shoe-prints"></i> &nbsp;
-                      <i class="fas fa-people-arrows"></i>
-                    </li>
-                    <li class="list-group-item bg-primary"> Elastic Stack </li>
-                    <li class="list-group-item bg-dark">
-                      <b> Pareto Anywhere </b>
-                    </li>
-                    <li class="list-group-item bg-success"> Reel </li>
-                    <li class="list-group-item text-ambient">
-                      <i class="fas fa-mobile-alt"></i> &nbsp;
-                      <i class="fas fa-tag"></i>
-                    </li>
-                  </ul>
+                <div class="col-8 col-md-9 col-xxl-5 align-self-center">
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <i class="fas fa-user-tie text-muted"></i>&nbsp;
+                      Desjardins DTM
+                    </h4>
+                    <p class="card-text"> A 15% savings on real estate with employee experience benefits. </p>
+                    <a href="desjardins-dtm/"
+                       class="btn btn-sm btn-outline-primary"> Case Study </a>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- CLSC Metro -->
-          <div class="card hover-shadow mb-3">
-            <div class="row g-0">
-              <div class="col-4 col-md-3 col-xxl-3 align-self-center">
-                <img src="../images/case-studies-jgh-clsc-metro-deployment.jpg"
-                     class="img-fluid" alt="CLSC Metro">
-              </div>
-              <div class="col-8 col-md-9 col-xxl-5 align-self-center">
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <i class="fas fa-user-tie text-muted"></i>&nbsp;
-                    CLSC M&eacute;tro
-                  </h4>
-                  <p class="card-text"> A clinical pilot to better plan for deployment at scale. </p>
-                  <a href="jgh-clsc-metro/"
-                     class="btn btn-sm btn-outline-primary"> Case Study </a>
-                </div>
-              </div>
-              <div class="d-none d-xxl-block col-xxl-4 align-self-center">
-                <div class="card-body text-center text-white">
-                  <ul class="list-group list-group-flush lh-sm">
-                    <li class="list-group-item text-dark">
-                      <i class="fas fa-shoe-prints"></i> &nbsp;
-                      <i class="fas fa-tag"></i>
-                    </li>
-                    <li class="list-group-item bg-primary"> Elastic Stack </li>
-                    <li class="list-group-item bg-dark">
-                      <b> Pareto Anywhere </b>
-                    </li>
-                    <li class="list-group-item bg-success"> Reel </li>
-                    <li class="list-group-item text-ambient">
-                      <i class="fas fa-mobile-alt"></i> &nbsp;
-                      <i class="fas fa-tag"></i>
-                    </li>
-                  </ul>
+                <div class="d-none d-xxl-block col-xxl-4 align-self-center">
+                  <div class="card-body text-center text-white">
+                    <ul class="list-group list-group-flush lh-sm">
+                      <li class="list-group-item text-dark">
+                        <i class="fas fa-shoe-prints"></i> &nbsp;
+                        <i class="fas fa-user-tag"></i>
+                      </li>
+                      <li class="list-group-item bg-primary">
+                        Elastic Stack
+                      </li>
+                      <li class="list-group-item bg-dark">
+                        <b> Pareto Anywhere </b>
+                      </li>
+                      <li class="list-group-item bg-success"> Reel </li>
+                      <li class="list-group-item text-ambient">
+                        <i class="fas fa-mobile-alt"></i>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- MCQ Personas -->
-          <div class="card hover-shadow mb-3">
-            <div class="row g-0">
-              <div class="col-4 col-md-3 col-xxl-3 align-self-center">
-                <img src="../images/case-studies-mcq-personas-deployment.jpg"
-                     class="img-fluid" alt="MCQ Personas">
-              </div>
-              <div class="col-8 col-md-9 col-xxl-5 align-self-center">
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <i class="fas fa-user-tie text-muted"></i>&nbsp;
-                     MCQ Personas
-                  </h4>
-                  <p class="card-text"> Understanding visitor journeys to create better museum experiences. </p>
-                  <a href="mcq-personas/"
-                     class="btn btn-sm btn-outline-primary"> Case Study </a>
+            <!-- GreenUXlab -->
+            <div class="card hover-shadow mb-3" use-cases="oa,id">
+              <div class="row g-0">
+                <div class="col-4 col-md-3 col-xxl-3 align-self-center">
+                  <img src="../images/case-studies-esguqam-greenuxlab-deployment.jpg"
+                       class="img-fluid" alt="GreenUXlab">
                 </div>
-              </div>
-              <div class="d-none d-xxl-block col-xxl-4 align-self-center">
-                <div class="card-body text-center text-white">
-                  <ul class="list-group list-group-flush lh-sm">
-                    <li class="list-group-item text-dark">
-                      <i class="fas fa-people-arrows"></i> &nbsp;
-                      <i class="fas fa-shoe-prints"></i>
-                    </li>
-                    <li class="list-group-item bg-primary"> Elastic Stack </li>
-                    <li class="list-group-item bg-dark">
-                      <b> Pareto Anywhere </b>
-                    </li>
-                    <li class="list-group-item bg-success"> Owl-in-One </li>
-                    <li class="list-group-item text-ambient">
-                      <i class="fas fa-tag"></i> &nbsp;
-                      <i class="fas fa-mobile-alt"></i>
-                    </li>
-                  </ul>
+                <div class="col-8 col-md-9 col-xxl-5 align-self-center">
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <i class="fas fa-user-cog text-muted"></i>&nbsp;
+                      GreenUXlab
+                    </h4>
+                    <p class="card-text"> The freedom to model the future of retail without bounds. </p>
+                    <a href="esguqam-greenuxlab/"
+                       class="btn btn-sm btn-outline-primary"> Case Study </a>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- Fort Drum/Hood -->
-          <div class="card hover-shadow mb-3">
-            <div class="row g-0">
-              <div class="col-4 col-md-3 col-xxl-3 align-self-center">
-                <img src="../images/case-studies-usarmy-drum-hood-deployment.jpg"
-                     class="img-fluid" alt="Fort Drum/Hood">
-              </div>
-              <div class="col-8 col-md-9 col-xxl-5 align-self-center">
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <i class="fas fa-user-cog text-muted"></i>&nbsp;
-                     Fort Drum/Hood
-                  </h4>
-                  <p class="card-text"> Insights into operational efficiency in difficult data capture environments. </p>
-                  <a href="usarmy-drum-hood/"
-                     class="btn btn-sm btn-outline-primary"> Case Study </a>
-                </div>
-              </div>
-              <div class="d-none d-xxl-block col-xxl-4 align-self-center">
-                <div class="card-body text-center text-white">
-                  <ul class="list-group list-group-flush lh-sm">
-                    <li class="list-group-item text-dark">
-                      <i class="fas fa-user-tag"></i>
-                    </li>
-                    <li class="list-group-item bg-primary"> Elastic Stack </li>
-                    <li class="list-group-item bg-dark">
-                      <b> Pareto Anywhere </b>
-                    </li>
-                    <li class="list-group-item bg-success"> Owl-in-One </li>
-                    <li class="list-group-item text-ambient">
-                      <i class="fas fa-tag"></i>
-                    </li>
-                  </ul>
+                <div class="d-none d-xxl-block col-xxl-4 align-self-center">
+                  <div class="card-body text-center text-white">
+                    <ul class="list-group list-group-flush lh-sm">
+                      <li class="list-group-item text-dark">
+                        <i class="fas fa-shoe-prints"></i> &nbsp;
+                        <i class="fas fa-people-arrows"></i>
+                      </li>
+                      <li class="list-group-item bg-primary">
+                        Elastic Stack
+                      </li>
+                      <li class="list-group-item bg-dark">
+                        <b> Pareto Anywhere </b>
+                      </li>
+                      <li class="list-group-item bg-success"> Reel </li>
+                      <li class="list-group-item text-ambient">
+                        <i class="fas fa-mobile-alt"></i> &nbsp;
+                        <i class="fas fa-tag"></i>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- TILES-2018 -->
-          <div class="card hover-shadow mb-3">
-            <div class="row g-0">
-              <div class="col-4 col-md-3 col-xxl-3 align-self-center">
-                <img src="../images/case-studies-usc-tiles-2018-deployment.jpg"
-                     class="img-fluid" alt="TILES-2018">
-              </div>
-              <div class="col-8 col-md-9 col-xxl-5 align-self-center">
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <i class="fas fa-user-cog text-muted"></i>&nbsp;
-                    TILES-2018
-                  </h4>
-                  <p class="card-text"> Pioneering research in workplace stress and performance analysis. </p>
-                  <a href="usc-tiles-2018/"
-                     class="btn btn-sm btn-outline-primary"> Case Study </a>
+            <!-- CLSC Metro -->
+            <div class="card hover-shadow mb-3" use-cases="oa,at">
+              <div class="row g-0">
+                <div class="col-4 col-md-3 col-xxl-3 align-self-center">
+                  <img src="../images/case-studies-jgh-clsc-metro-deployment.jpg"
+                       class="img-fluid" alt="CLSC Metro">
                 </div>
-              </div>
-              <div class="d-none d-xxl-block col-xxl-4 align-self-center">
-                <div class="card-body text-center text-white">
-                  <ul class="list-group list-group-flush lh-sm">
-                    <li class="list-group-item text-dark">
-                      <i class="fas fa-user-tag"></i> &nbsp;
-                      <i class="fas fa-thermometer-half"></i>
-                    </li>
-                    <li class="list-group-item bg-primary"> Evidation </li>
-                    <li class="list-group-item bg-dark">
-                      <b> Pareto Classic </b>
-                    </li>
-                    <li class="list-group-item bg-success"> Owl-in-One </li>
-                    <li class="list-group-item text-ambient">
-                      <i class="fas fa-mobile-alt"></i> &nbsp;
-                      <i class="fas fa-tag"></i>
-                    </li>
-                  </ul>
+                <div class="col-8 col-md-9 col-xxl-5 align-self-center">
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <i class="fas fa-user-tie text-muted"></i>&nbsp;
+                      CLSC M&eacute;tro
+                    </h4>
+                    <p class="card-text"> A clinical pilot to better plan for deployment at scale. </p>
+                    <a href="jgh-clsc-metro/"
+                       class="btn btn-sm btn-outline-primary"> Case Study </a>
+                  </div>
+                </div>
+                <div class="d-none d-xxl-block col-xxl-4 align-self-center">
+                  <div class="card-body text-center text-white">
+                    <ul class="list-group list-group-flush lh-sm">
+                      <li class="list-group-item text-dark">
+                        <i class="fas fa-shoe-prints"></i> &nbsp;
+                        <i class="fas fa-tag"></i>
+                      </li>
+                      <li class="list-group-item bg-primary">
+                        Elastic Stack
+                      </li>
+                      <li class="list-group-item bg-dark">
+                        <b> Pareto Anywhere </b>
+                      </li>
+                      <li class="list-group-item bg-success"> Reel </li>
+                      <li class="list-group-item text-ambient">
+                        <i class="fas fa-mobile-alt"></i> &nbsp;
+                        <i class="fas fa-tag"></i>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- Radius -->
-          <div class="card hover-shadow mb-3">
-            <div class="row g-0">
-              <div class="col-4 col-md-3 col-xxl-3 align-self-center">
-                <img src="../images/case-studies-videotron-radius-deployment.jpg"
-                     class="img-fluid" alt="Radius">
-              </div>
-              <div class="col-8 col-md-9 col-xxl-5 align-self-center">
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <i class="fas fa-user-cog text-muted"></i>&nbsp;
-                    Radius
-                  </h4>
-                  <p class="card-text"> Achieving critical time-to-market for a return-to-work business solution in a pandemic. </p>
-                  <a href="videotron-radius/"
-                     class="btn btn-sm btn-outline-primary"> Case Study </a>
+            <!-- MCQ Personas -->
+            <div class="card hover-shadow mb-3" use-cases="oa,id">
+              <div class="row g-0">
+                <div class="col-4 col-md-3 col-xxl-3 align-self-center">
+                  <img src="../images/case-studies-mcq-personas-deployment.jpg"
+                       class="img-fluid" alt="MCQ Personas">
+                </div>
+                <div class="col-8 col-md-9 col-xxl-5 align-self-center">
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <i class="fas fa-user-tie text-muted"></i>&nbsp;
+                       MCQ Personas
+                    </h4>
+                    <p class="card-text"> Understanding visitor journeys to create better museum experiences. </p>
+                    <a href="mcq-personas/"
+                       class="btn btn-sm btn-outline-primary"> Case Study </a>
+                  </div>
+                </div>
+                <div class="d-none d-xxl-block col-xxl-4 align-self-center">
+                  <div class="card-body text-center text-white">
+                    <ul class="list-group list-group-flush lh-sm">
+                      <li class="list-group-item text-dark">
+                        <i class="fas fa-people-arrows"></i> &nbsp;
+                        <i class="fas fa-shoe-prints"></i>
+                      </li>
+                      <li class="list-group-item bg-primary">
+                        Elastic Stack
+                      </li>
+                      <li class="list-group-item bg-dark">
+                        <b> Pareto Anywhere </b>
+                      </li>
+                      <li class="list-group-item bg-success"> Owl-in-One </li>
+                      <li class="list-group-item text-ambient">
+                        <i class="fas fa-tag"></i> &nbsp;
+                        <i class="fas fa-mobile-alt"></i>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-              <div class="d-none d-xxl-block col-xxl-4 align-self-center">
-                <div class="card-body text-center text-white">
-                  <ul class="list-group list-group-flush lh-sm">
-                    <li class="list-group-item text-dark">
-                      <i class="fas fa-people-arrows"></i>
-                    </li>
-                    <li class="list-group-item bg-primary"> Pilot Things </li>
-                    <li class="list-group-item bg-dark">
-                      <b> Pareto Anywhere </b>
-                    </li>
-                    <li class="list-group-item bg-success"> Minew G1 </li>
-                    <li class="list-group-item text-ambient">
-                      <i class="fas fa-tag"></i> Radius
-                    </li>
-                  </ul>
+            </div>
+            <!-- Fort Drum/Hood -->
+            <div class="card hover-shadow mb-3" use-cases="pt">
+              <div class="row g-0">
+                <div class="col-4 col-md-3 col-xxl-3 align-self-center">
+                  <img src="../images/case-studies-usarmy-drum-hood-deployment.jpg"
+                       class="img-fluid" alt="Fort Drum/Hood">
+                </div>
+                <div class="col-8 col-md-9 col-xxl-5 align-self-center">
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <i class="fas fa-user-cog text-muted"></i>&nbsp;
+                       Fort Drum/Hood
+                    </h4>
+                    <p class="card-text"> Insights into operational efficiency in difficult data capture environments. </p>
+                    <a href="usarmy-drum-hood/"
+                       class="btn btn-sm btn-outline-primary"> Case Study </a>
+                  </div>
+                </div>
+                <div class="d-none d-xxl-block col-xxl-4 align-self-center">
+                  <div class="card-body text-center text-white">
+                    <ul class="list-group list-group-flush lh-sm">
+                      <li class="list-group-item text-dark">
+                        <i class="fas fa-user-tag"></i>
+                      </li>
+                      <li class="list-group-item bg-primary">
+                        Elastic Stack
+                      </li>
+                      <li class="list-group-item bg-dark">
+                        <b> Pareto Anywhere </b>
+                      </li>
+                      <li class="list-group-item bg-success"> Owl-in-One </li>
+                      <li class="list-group-item text-ambient">
+                        <i class="fas fa-tag"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- TILES-2018 -->
+            <div class="card hover-shadow mb-3" use-cases="pt,es">
+              <div class="row g-0">
+                <div class="col-4 col-md-3 col-xxl-3 align-self-center">
+                  <img src="../images/case-studies-usc-tiles-2018-deployment.jpg"
+                       class="img-fluid" alt="TILES-2018">
+                </div>
+                <div class="col-8 col-md-9 col-xxl-5 align-self-center">
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <i class="fas fa-user-cog text-muted"></i>&nbsp;
+                      TILES-2018
+                    </h4>
+                    <p class="card-text"> Pioneering research in workplace stress and performance analysis. </p>
+                    <a href="usc-tiles-2018/"
+                       class="btn btn-sm btn-outline-primary"> Case Study </a>
+                  </div>
+                </div>
+                <div class="d-none d-xxl-block col-xxl-4 align-self-center">
+                  <div class="card-body text-center text-white">
+                    <ul class="list-group list-group-flush lh-sm">
+                      <li class="list-group-item text-dark">
+                        <i class="fas fa-user-tag"></i> &nbsp;
+                        <i class="fas fa-thermometer-half"></i>
+                      </li>
+                      <li class="list-group-item bg-primary"> Evidation </li>
+                      <li class="list-group-item bg-dark">
+                        <b> Pareto Classic </b>
+                      </li>
+                      <li class="list-group-item bg-success"> Owl-in-One </li>
+                      <li class="list-group-item text-ambient">
+                        <i class="fas fa-mobile-alt"></i> &nbsp;
+                        <i class="fas fa-tag"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Radius -->
+            <div class="card hover-shadow mb-3" use-cases="id">
+              <div class="row g-0">
+                <div class="col-4 col-md-3 col-xxl-3 align-self-center">
+                  <img src="../images/case-studies-videotron-radius-deployment.jpg"
+                       class="img-fluid" alt="Radius">
+                </div>
+                <div class="col-8 col-md-9 col-xxl-5 align-self-center">
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <i class="fas fa-user-cog text-muted"></i>&nbsp;
+                      Radius
+                    </h4>
+                    <p class="card-text"> Achieving critical time-to-market for a return-to-work business solution in a pandemic. </p>
+                    <a href="videotron-radius/"
+                       class="btn btn-sm btn-outline-primary"> Case Study </a>
+                  </div>
+                </div>
+                <div class="d-none d-xxl-block col-xxl-4 align-self-center">
+                  <div class="card-body text-center text-white">
+                    <ul class="list-group list-group-flush lh-sm">
+                      <li class="list-group-item text-dark">
+                        <i class="fas fa-people-arrows"></i>
+                      </li>
+                      <li class="list-group-item bg-primary"> Pilot Things </li>
+                      <li class="list-group-item bg-dark">
+                        <b> Pareto Anywhere </b>
+                      </li>
+                      <li class="list-group-item bg-success"> Minew G1 </li>
+                      <li class="list-group-item text-ambient">
+                        <i class="fas fa-tag"></i> Radius
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -695,5 +857,6 @@
     <!-- Optional JavaScript -->
     <script defer src="../js/fontawesome-reelyactive.min.js"></script>
     <script src="../js/bootstrappyactive.bundle.min.js"></script>
+    <script src="../js/case-studies.js"></script>
   </body>
 </html>
