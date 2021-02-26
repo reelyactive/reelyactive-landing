@@ -119,7 +119,7 @@ if(hasInfrastructureSearch) {
   selectedInfrastructure =
                    searchParams.get(INFRASTRUCTURE_SEARCH_PARAMETER).split(',');
 
-  filterReel.checked = seletedInfrastructure.includes(REEL);
+  filterReel.checked = selectedInfrastructure.includes(REEL);
   filterOwlInOne.checked = selectedInfrastructure.includes(OWL_IN_ONE);
   filterMinewG1.checked = selectedInfrastructure.includes(MINEW_G1);
 }
