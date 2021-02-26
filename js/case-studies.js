@@ -11,6 +11,7 @@ const REEL = 'reel';
 const OWL_IN_ONE = 'oio';
 const MINEW_G1 = 'minew-g1';
 const MOBILE = 'mobile';
+const DIRACT = 'diract';
 const MINEW_E8 = 'minew-e8';
 const MINEW_S1 = 'minew-s1';
 const PUCKJS = 'puckjs';
@@ -24,7 +25,7 @@ const TOTAL_USE_CASES = 5;
 const TOTAL_SOFTWARE = 2;
 const TOTAL_MIDDLEWARE = 2;
 const TOTAL_INFRASTRUCTURE = 3;
-const TOTAL_DEVICES = 5;
+const TOTAL_DEVICES = 6;
 
 
 // DOM elements
@@ -42,6 +43,7 @@ let filterReel = document.querySelector('#filterReel');
 let filterOwlInOne = document.querySelector('#filterOwlInOne');
 let filterMinewG1 = document.querySelector('#filterMinewG1');
 let filterMobile = document.querySelector('#filterMobile');
+let filterDirAct = document.querySelector('#filterDirAct');
 let filterMinewE8 = document.querySelector('#filterMinewE8');
 let filterMinewS1 = document.querySelector('#filterMinewS1');
 let filterPuckJS = document.querySelector('#filterPuckJS');
@@ -67,6 +69,7 @@ filterReel.onchange = updateInfrastructure;
 filterOwlInOne.onchange = updateInfrastructure;
 filterMinewG1.onchange = updateInfrastructure;
 filterMobile.onchange = updateDevices;
+filterDirAct.onchange = updateDevices;
 filterMinewE8.onchange = updateDevices;
 filterMinewS1.onchange = updateDevices;
 filterPuckJS.onchange = updateDevices;
@@ -86,7 +89,7 @@ let selectedUseCases = [ OCCUPANCY_ANALYTICS, ASSET_TRACKING,
 let selectedSoftware = [ ELASTIC_STACK, BESPOKE ];
 let selectedMiddleware = [ PARETO_ANYWHERE, PARETO_CLASSIC ];
 let selectedInfrastructure = [ REEL, OWL_IN_ONE, MINEW_G1 ];
-let selectedDevices = [ MOBILE, MINEW_E8, MINEW_S1, PUCKJS, BESPOKE ];
+let selectedDevices = [ MOBILE, DIRACT, MINEW_E8, MINEW_S1, PUCKJS, BESPOKE ];
 
 if(hasUseCaseSearch) {
   selectedUseCases = searchParams.get(USE_CASES_SEARCH_PARAMETER).split(',');
@@ -125,6 +128,7 @@ if(hasDevicesSearch) {
   selectedDevices = searchParams.get(DEVICES_SEARCH_PARAMETER).split(',');
 
   filterMobile.checked = selectedDevices.includes(MOBILE);
+  filterDirAct.checked = selectedDevices.includes(DIRACT);
   filterMinewE8.checked = selectedDevices.includes(MINEW_E8);
   filterMinewS1.checked = selectedDevices.includes(MINEW_S1);
   filterPuckJS.checked = selectedDevices.includes(PUCKJS);
@@ -191,6 +195,7 @@ function updateDevices(event) {
   selectedDevices = [];
 
   if(filterMobile.checked) { selectedDevices.push(MOBILE); }
+  if(filterDirAct.checked) { selectedDevices.push(DIRACT); }
   if(filterMinewE8.checked) { selectedDevices.push(MINEW_E8); }
   if(filterMinewS1.checked) { selectedDevices.push(MINEW_S1); }
   if(filterPuckJS.checked) { selectedDevices.push(PUCKJS); }
