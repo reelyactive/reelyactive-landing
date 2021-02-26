@@ -404,7 +404,13 @@
                 <div class="btn-group dropdown">
                   <button class="btn dropdown-toggle" type="button"
                           id="usecasesDropdown" data-bs-toggle="dropdown"
-                          aria-expanded="false"> Use Cases </button>
+                          aria-expanded="false">
+                    <span class="badge bg-dark animate-breathing"
+                          id="usecasesSearch" hidden>
+                      <i class="fas fa-search"></i>
+                    </span>
+                    Use Cases
+                  </button>
                   <div class="dropdown-menu">
                     <form class="px-3">
                       <div class="form-check">
@@ -458,7 +464,13 @@
                 <div class="btn-group dropdown">
                   <button class="btn btn-primary dropdown-toggle" type="button"
                           id="softwareDropdown" data-bs-toggle="dropdown"
-                          aria-expanded="false"> Software </button>
+                          aria-expanded="false">                   
+                    <span class="badge bg-light text-primary animate-breathing"
+                          id="softwareSearch" hidden>
+                      <i class="fas fa-search"></i>
+                    </span>
+                    Software
+                  </button>
                   <div class="dropdown-menu">
                     <form class="px-3">
                       <div class="form-check">
@@ -471,10 +483,10 @@
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="checkbox" value=""
-                               id="filterOtherSoftware" checked>
+                               id="filterBespokeSoftware" checked>
                         <label class="form-check-label"
-                               for="filterOtherSoftware">
-                          All others
+                               for="filterBespokeSoftware">
+                          Bespoke
                         </label>
                       </div>
                     </form>
@@ -483,7 +495,13 @@
                 <div class="btn-group dropdown">
                   <button class="btn btn-dark dropdown-toggle" type="button"
                           id="middlewareDropdown" data-bs-toggle="dropdown"
-                          aria-expanded="false"> <b> Middleware </b> </button>
+                          aria-expanded="false">
+                    <span class="badge bg-light text-dark animate-breathing"
+                          id="middlewareSearch" hidden>
+                      <i class="fas fa-search"></i>
+                    </span>
+                    <b> Middleware </b>
+                  </button>
                   <div class="dropdown-menu">
                     <form class="px-3">
                       <div class="form-check">
@@ -494,13 +512,27 @@
                           Pareto Anywhere
                         </label>
                       </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value=""
+                               id="filterParetoClassic" checked>
+                        <label class="form-check-label"
+                               for="filterParetoClassic">
+                          Pareto Classic
+                        </label>
+                      </div>
                     </form>
                   </div>
                 </div>
                 <div class="btn-group dropdown">
-                  <button class="btn btn-success dropdown-toggle" type="button"
-                          id="infrastructureDropdown" data-bs-toggle="dropdown"
-                          aria-expanded="false"> Infrastructure </button>
+                  <button class="btn btn-success text-white dropdown-toggle"
+                          type="button" id="infrastructureDropdown"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="badge bg-light text-success animate-breathing"
+                          id="infrastructureSearch" hidden>
+                      <i class="fas fa-search"></i>
+                    </span>
+                    Infrastructure
+                  </button>
                   <div class="dropdown-menu">
                     <form class="px-3">
                       <div class="form-check">
@@ -517,13 +549,26 @@
                           Reel
                         </label>
                       </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value=""
+                               id="filterMinewG1" checked>
+                        <label class="form-check-label" for="filterMinewG1">
+                          Minew G1
+                        </label>
+                      </div>
                     </form>
                   </div>
                 </div>
                 <div class="btn-group dropdown">
                   <button class="btn text-ambient dropdown-toggle" type="button"
                           id="devicesDropdown" data-bs-toggle="dropdown"
-                          aria-expanded="false"> Devices </button>
+                          aria-expanded="false">
+                    <span class="badge bg-ambient animate-breathing"
+                          id="devicesSearch" hidden>
+                      <i class="fas fa-search"></i>
+                    </span>
+                    Devices
+                  </button>
                   <div class="dropdown-menu">
                     <form class="px-3">
                       <div class="form-check">
@@ -540,6 +585,28 @@
                           Minew E8
                         </label>
                       </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value=""
+                               id="filterMinewS1" checked>
+                        <label class="form-check-label" for="filterMinewS1">
+                          Minew S1
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value=""
+                               id="filterPuckJS" checked>
+                        <label class="form-check-label" for="filterPuckJS">
+                          Puck.js
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value=""
+                               id="filterBespokeDevice" checked>
+                        <label class="form-check-label"
+                               for="filterBespokeDevice">
+                          Bespoke
+                        </label>
+                      </div>
                     </form>
                   </div>
                 </div>
@@ -548,7 +615,9 @@
           </div>
           <div class="mt-5" id="casestudycards">
             <!-- Desjardins DTM -->
-            <div class="card hover-shadow mb-3" use-cases="oa,pt">
+            <div class="card hover-shadow mb-3" use-cases="oa,pt"
+                 software="elastic" middleware="pa" infrastructure="reel"
+                 devices="mobile">
               <div class="row g-0">
                 <div class="col-4 col-md-3 col-xxl-3 align-self-center">
                   <img src="../images/case-studies-desjardins-dtm-deployment.jpg"
@@ -588,7 +657,9 @@
               </div>
             </div>
             <!-- GreenUXlab -->
-            <div class="card hover-shadow mb-3" use-cases="oa,id">
+            <div class="card hover-shadow mb-3" use-cases="oa,id"
+                 software="elastic" middleware="pa" infrastructure="reel"
+                 devices="mobile,puckjs,minew-e8">
               <div class="row g-0">
                 <div class="col-4 col-md-3 col-xxl-3 align-self-center">
                   <img src="../images/case-studies-esguqam-greenuxlab-deployment.jpg"
@@ -629,7 +700,9 @@
               </div>
             </div>
             <!-- CLSC Metro -->
-            <div class="card hover-shadow mb-3" use-cases="oa,at">
+            <div class="card hover-shadow mb-3" use-cases="oa,at"
+                 software="elastic" middleware="pa" infrastructure="reel"
+                 devices="mobile,minew-e8">
               <div class="row g-0">
                 <div class="col-4 col-md-3 col-xxl-3 align-self-center">
                   <img src="../images/case-studies-jgh-clsc-metro-deployment.jpg"
@@ -670,7 +743,9 @@
               </div>
             </div>
             <!-- MCQ Personas -->
-            <div class="card hover-shadow mb-3" use-cases="oa,id">
+            <div class="card hover-shadow mb-3" use-cases="oa,id"
+                 software="elastic" middleware="pa" infrastructure="oio"
+                 devices="puckjs,minew-e8,mobile">
               <div class="row g-0">
                 <div class="col-4 col-md-3 col-xxl-3 align-self-center">
                   <img src="../images/case-studies-mcq-personas-deployment.jpg"
@@ -711,7 +786,9 @@
               </div>
             </div>
             <!-- Fort Drum/Hood -->
-            <div class="card hover-shadow mb-3" use-cases="pt">
+            <div class="card hover-shadow mb-3" use-cases="pt"
+                 software="elastic" middleware="pa" infrastructure="oio"
+                 devices="minew-e8">
               <div class="row g-0">
                 <div class="col-4 col-md-3 col-xxl-3 align-self-center">
                   <img src="../images/case-studies-usarmy-drum-hood-deployment.jpg"
@@ -750,7 +827,9 @@
               </div>
             </div>
             <!-- TILES-2018 -->
-            <div class="card hover-shadow mb-3" use-cases="pt,es">
+            <div class="card hover-shadow mb-3" use-cases="pt,es"
+                 software="bespoke" middleware="pc" infrastructure="oio"
+                 devices="mobile,minew-e8,minew-s1">
               <div class="row g-0">
                 <div class="col-4 col-md-3 col-xxl-3 align-self-center">
                   <img src="../images/case-studies-usc-tiles-2018-deployment.jpg"
@@ -789,7 +868,9 @@
               </div>
             </div>
             <!-- Radius -->
-            <div class="card hover-shadow mb-3" use-cases="id">
+            <div class="card hover-shadow mb-3" use-cases="id"
+                 software="bespoke" middleware="pa" infrastructure="minew-g1"
+                 devices="bespoke">
               <div class="row g-0">
                 <div class="col-4 col-md-3 col-xxl-3 align-self-center">
                   <img src="../images/case-studies-videotron-radius-deployment.jpg"
