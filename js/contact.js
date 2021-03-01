@@ -39,7 +39,10 @@ if(hasGetStartedSearch) {
   emailInfo.hidden = true;
   emailSample.hidden = false;
   emailSubject.textContent = GET_STARTED_SUBJECT;
-  emailTopic.textContent = 'getting started on a ' + getStarted + ' project';
+  emailTopic.textContent = 'getting started on a pilot project';
+  if(getStarted) {
+    emailTopic.textContent += ' based on [' + getStarted + ']';
+  }
   emailAction.textContent = ACTION_INTRO_CALL;
 }
 
