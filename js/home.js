@@ -81,7 +81,7 @@ const CASE_STUDIES = [
     quote: "How does where and with whom an individual spends their day affect their wellness and performance at work?",
     source: "Karel Mundnich, USC",
     image: "images/case-studies-usc-tiles-2018-deployment.jpg",
-    useCases: [ 'OA', 'ES', 'ID' ],
+    useCases: [ 'PT', 'ES', 'ID' ],
     url: "case-studies/usc-tiles-2018/"
   },
   {
