@@ -41,80 +41,174 @@ const DEVICES = {
   "i02": { position: [] },
   "i03": { position: [] }
 }
-const CONSOLE_TEXT = [
-    'npm install -g pareto-anywhere',
-    '+ pareto-anywhere@1.x.x',
-    'pareto-anywhere',
-    'Pareto Anywhere by reelyActive is running on port 3001'
+const CASE_STUDIES = [
+  {
+    quote: "How many square feet of office real estate do we need to accommodate our transition to non-assigned seating?",
+    source: "Serge Bendahan, Desjardins",
+    image: "images/case-studies-desjardins-dtm-deployment.jpg",
+    useCases: [ 'OA' ],
+    url: "case-studies/desjardins-dtm/"
+  },
+  {
+    quote: "How quickly can we pilot an asset tracking solution in one of our healthcare facilities?",
+    source: "Georges Bendavid, JGH",
+    image: "images/case-studies-jgh-clsc-metro-deployment.jpg",
+    useCases: [ 'AT' ],
+    url: "case-studies/jgh-clsc-metro/"
+  },
+  {
+    quote: "How can we improve our maintenance operations based on how soldiers actually spend their work day?",
+    source: "US Army",
+    image: "images/case-studies-usarmy-drum-hood-deployment.jpg",
+    useCases: [ 'PT' ],
+    url: "case-studies/usarmy-drum-hood/"
+  },
+  {
+    quote: "What is the volume, speed and composition of pedestrian, cyclist and motorist traffic along a specific route?",
+    source: "Xavier Prudent, Civilia",
+    image: "images/case-studies-civilia-traffic-investigation-deployment.jpg",
+    useCases: [ 'OA' ],
+    url: "case-studies/civilia-traffic-investigation/"
+  },
+  {
+    quote: "For how long do guests visit the museum and where do they spend their time?",
+    source: "Brigitte Belleville, MCQ",
+    image: "images/case-studies-mcq-personas-deployment.jpg",
+    useCases: [ 'ID' ],
+    url: "case-studies/mcq-personas/"
+  },
+  {
+    quote: "How does where and with whom an individual spends their day affect their wellness and performance at work?",
+    source: "Karel Mundnich, USC",
+    image: "images/case-studies-usc-tiles-2018-deployment.jpg",
+    useCases: [ 'OA', 'ES', 'ID' ],
+    url: "case-studies/usc-tiles-2018/"
+  },
+  {
+    quote: "What are the foot traffic patterns across our outdoor projection sites?",
+    source: "Montreal en Histoires",
+    image: "images/case-studies-montrealenhistoires-citememoire-deployment.jpg",
+    useCases: [ 'OA' ],
+    url: "case-studies/montrealenhistoires-citememoire/"
+  },
+  {
+    quote: "How can we create a social distancing and contact tracing business solution in time to meet market demand?",
+    source: "Videotron Affaires",
+    image: "images/case-studies-videotron-radius-deployment.jpg",
+    useCases: [ 'ID' ],
+    url: "case-studies/videotron-radius/"
+  }
 ];
-const INCLUDE_CONSOLE_PROMPT = [ true, false, true, false ];
-const DEFAULT_CONSOLE_UPDATE_MILLISECONDS = 100;
-const NEWLINE_CONSOLE_UPDATE_MILLISECONDS = 1200;
-const LOOPED_CONSOLE_UPDATE_MILLISECONDS = 4800;
+const CONTINUOUS_X = [ 'improvement', 'evolution', 'progress' ];
+const CASE_STUDY_TYPING_MILLISECONDS = 4800;
+const CASE_STUDY_HOLD_MILLISECONDS = 3600;
+const CONTINUOUS_X_UPDATE_MILLISECONDS = 2400;
 
 
 // DOM elements
-let terminal = document.querySelector('#terminal');
+let caseStudyImage = document.querySelector('#caseStudyImage');
+let quote = document.querySelector('#quote');
+let source = document.querySelector('#source');
+let badgeOA = document.querySelector('#badgeOA');
+let badgeAT = document.querySelector('#badgeAT');
+let badgePT = document.querySelector('#badgePT');
+let badgeES = document.querySelector('#badgeES');
+let badgeID = document.querySelector('#badgeID');
+let caseStudyButton = document.querySelector('#caseStudyButton');
+let continuousX = document.querySelector('#continuousX');
 
 
 // Other variables
-let currentConsoleLine = 0;
-let currentConsoleCharacter = -1;
+let currentCaseStudyIndex = 0;
+let currentQuoteCharacter = -1;
+let currentSourceCharacter = -1;
+let caseStudyIndexes = createRandomIndexList(CASE_STUDIES);
+let currentContinuousIndex = 0;
 
-
-// Spin the hyperlocal context web
+// Spin the hyperlocal context web and start the text rotations
 charlotte.init(document.getElementById('cy-hero'), DEVICE_PROPERTIES_MAP);
 charlotte.spin(DEVICES);
+updateCaseStudy();
+updateContinuousX();
 
 
-// Update the terminal one character or line at a time
-function updateTerminal() {
-  let line = terminal.children[currentConsoleLine];
-  let text = CONSOLE_TEXT[currentConsoleLine];
-  let nextUpdateMilliseconds = DEFAULT_CONSOLE_UPDATE_MILLISECONDS;
-  let isLastCharacter = (currentConsoleCharacter >= (text.length - 1));
-  let isLastLine = (currentConsoleLine >= (CONSOLE_TEXT.length - 1)); 
-  let isLooped = (currentConsoleLine === 0) &&
-                 (currentConsoleCharacter < 0);
-  let isConsoleInput = INCLUDE_CONSOLE_PROMPT[currentConsoleLine];
+// Update the case study one character at a time
+function updateCaseStudy() {
+  let caseStudy = CASE_STUDIES[caseStudyIndexes[currentCaseStudyIndex]];
+  let nextCharacterMilliseconds = Math.round(CASE_STUDY_TYPING_MILLISECONDS /
+                                             (caseStudy.quote.length + 1));
+  let isNewCaseStudy = (currentQuoteCharacter === -1) &&
+                       (currentSourceCharacter === -1);
+  let isQuoteComplete = (currentQuoteCharacter >= (caseStudy.quote.length - 1));
+  let isSourceComplete = (currentSourceCharacter >=
+                          (caseStudy.source.length - 1));
+  let isCaseStudyComplete = (isQuoteComplete && isSourceComplete);
 
-  if(isLooped) {
-    for(let index = 0; index < terminal.children.length; index++) {
-      terminal.children[index].textContent = '\u00a0';
-    }
+  if(isNewCaseStudy) {
+    quote.textContent = '';
+    source.textContent = '';
+    caseStudyImage.setAttribute('src', caseStudy.image);
+    badgeOA.hidden = true;
+    badgeAT.hidden = true;
+    badgePT.hidden = true;
+    badgeES.hidden = true;
+    badgeID.hidden = true;
+    caseStudyButton.hidden = true;
   }
 
-  if(isConsoleInput) {
-    let isConsoleInputStart = (currentConsoleCharacter === -1);
-
-    if(isConsoleInputStart) {
-      line.textContent = '> ';
+  if(isCaseStudyComplete) {
+    caseStudy.useCases.forEach(function(useCase) {
+      switch(useCase) {
+        case 'OA': badgeOA.hidden = false; break;
+        case 'AT': badgeAT.hidden = false; break;
+        case 'PT': badgePT.hidden = false; break;
+        case 'ES': badgeES.hidden = false; break;
+        case 'ID': badgeID.hidden = false; break;
+      }
+    });
+    if(caseStudy.url) {
+      caseStudyButton.setAttribute('href', caseStudy.url);
+      caseStudyButton.hidden = false;
     }
-    else {
-      let char = text.substring(currentConsoleCharacter,
-                                currentConsoleCharacter + 1);
-      line.textContent += char;
-    }
+    currentCaseStudyIndex = (currentCaseStudyIndex + 1) % CASE_STUDIES.length;
+    currentQuoteCharacter = -1;
+    currentSourceCharacter = -1;
 
-    currentConsoleCharacter++;
-  }
-  else {
-    line.textContent = text;
-    isLastCharacter = true;
-  }
-
-  if(isLastCharacter) {
-    currentConsoleCharacter = -1;
-    currentConsoleLine++;
-    nextUpdateMilliseconds = NEWLINE_CONSOLE_UPDATE_MILLISECONDS;
-
-    if(isLastLine) {
-      currentConsoleLine = 0;
-      nextUpdateMilliseconds = LOOPED_CONSOLE_UPDATE_MILLISECONDS;
-    }
+    return setTimeout(updateCaseStudy, CASE_STUDY_HOLD_MILLISECONDS);
   }
 
-  setTimeout(updateTerminal, nextUpdateMilliseconds);
+  if(!isQuoteComplete) {
+    quote.textContent += caseStudy.quote[++currentQuoteCharacter];
+  }
+  if(!isSourceComplete) {
+    source.textContent += caseStudy.source[++currentSourceCharacter];
+  }
+
+  setTimeout(updateCaseStudy, nextCharacterMilliseconds);
 }
 
-updateTerminal();
+
+// Update the continuous X phrase periodically
+function updateContinuousX() {
+  continuousX.textContent = CONTINUOUS_X[currentContinuousIndex];
+  currentContinuousIndex = (currentContinuousIndex + 1) % CONTINUOUS_X.length;
+  setTimeout(updateContinuousX, CONTINUOUS_X_UPDATE_MILLISECONDS);
+}
+
+
+// Create a random index list from the given array
+function createRandomIndexList(sourceArray) {
+  let indexList = [];
+  let randomIndex;
+
+  sourceArray.forEach(function(value, index) {
+    while(indexList.length <= index) {
+      randomIndex = Math.floor(Math.random() * sourceArray.length);
+      if(!indexList.includes(randomIndex)) {
+        indexList.push(randomIndex);
+      }
+    }
+  });
+
+  return indexList;
+}
