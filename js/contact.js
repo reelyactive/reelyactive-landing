@@ -40,7 +40,13 @@ if(hasGetStartedSearch) {
   emailSample.hidden = false;
   emailSubject.textContent = GET_STARTED_SUBJECT;
   emailTopic.textContent = 'getting started on a pilot project';
-  if(getStarted) {
+  if(getStarted === 'breakthrough') {
+    emailTopic.textContent = 'scoping a Breakthrough pilot project';
+  }
+  else if(getStarted === 'beyond') {
+    emailTopic.textContent = 'working together towards all we see as Beyond';
+  }
+  else if(getStarted) {
     emailTopic.textContent += ' based on [' + getStarted + ']';
   }
   emailAction.textContent = ACTION_INTRO_CALL;
