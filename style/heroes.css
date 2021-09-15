@@ -1,3 +1,7 @@
+.hero-home {
+  background-image: url('/images/landing-hero.gif');
+}
+
 .herowlidays {
   background-image: url('/images/herowlidays.png');
 }

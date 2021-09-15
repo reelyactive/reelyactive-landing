@@ -1,46 +1,4 @@
 // Constants
-const DEVICE_PROPERTIES_MAP = new Map([
-  [ "d01", { imageUrl: "../images/transmitter-mobile.png" } ],
-  [ "d02", { imageUrl: "../images/transmitter-mobile.png" } ],
-  [ "d03", { imageUrl: "../images/transmitter-laptop.png" } ],
-  [ "d04", { imageUrl: "../images/transmitter-mobile.png" } ],
-  [ "d05", { imageUrl: "../images/transmitter-display.png" } ],
-  [ "d06", { imageUrl: "../images/transmitter-display.png" } ],
-  [ "d07", { imageUrl: "../images/transmitter-tag.png" } ],
-  [ "d08", { imageUrl: "../images/transmitter-tag.png" } ],
-  [ "d09", { imageUrl: "../images/transmitter-thermometer.png" } ],
-  [ "d10", { imageUrl: "../images/transmitter-mobile.png" } ],
-  [ "d11", { imageUrl: "../images/transmitter-mobile.png" } ],
-  [ "d12", { imageUrl: "../images/transmitter-idbadge.png" } ],
-  [ "d13", { imageUrl: "../images/transmitter-idbadge.png" } ],
-  [ "d14", { imageUrl: "../images/transmitter-lightbulb.png" } ],
-  [ "d15", { imageUrl: "../images/transmitter-door.png" } ],
-  [ "i01", { imageUrl: "https://www.reelyactive.com/stories/office/nook/320x320.jpg" } ],
-  [ "i02", { imageUrl: "https://www.reelyactive.com/stories/office/conferenceroom/320x320.jpg" } ],
-  [ "i03", { imageUrl: "https://www.reelyactive.com/stories/office/elevators/320x320.jpg" } ]
-]);
-const DEVICES = {
-  "d01": { nearest: [ { device: "i01", rssi: -61 },
-                      { device: "i02", rssi: -84 } ] },
-  "d02": { nearest: [ { device: "i01", rssi: -69 } ] },
-  "d03": { nearest: [ { device: "i01", rssi: -59 } ] },
-  "d04": { nearest: [ { device: "i02", rssi: -61 },
-                      { device: "i03", rssi: -84 } ] },
-  "d05": { nearest: [ { device: "i03", rssi: -54 } ] },
-  "d06": { nearest: [ { device: "i03", rssi: -59 } ] },
-  "d07": { nearest: [ { device: "i02", rssi: -53 } ] },
-  "d08": { nearest: [ { device: "i03", rssi: -53 } ] },
-  "d09": { nearest: [ { device: "i03", rssi: -63 } ] },
-  "d10": { nearest: [ { device: "i03", rssi: -61 } ] },
-  "d11": { nearest: [ { device: "i03", rssi: -55 } ] },
-  "d12": { nearest: [ { device: "i02", rssi: -77 } ] },
-  "d13": { nearest: [ { device: "i02", rssi: -49 } ] },
-  "d14": { nearest: [ { device: "i01", rssi: -46 } ] },
-  "d15": { nearest: [ { device: "i02", rssi: -56 } ] },
-  "i01": { position: [] },
-  "i02": { position: [] },
-  "i03": { position: [] }
-}
 const CASE_STUDIES = [
   {
     quote: "How many square feet of office real estate do we need to accommodate our transition to non-assigned seating?",
@@ -125,9 +83,7 @@ let currentSourceCharacter = -1;
 let caseStudyIndexes = createRandomIndexList(CASE_STUDIES);
 let currentContinuousIndex = 0;
 
-// Spin the hyperlocal context web and start the text rotations
-charlotte.init(document.getElementById('cy-hero'), DEVICE_PROPERTIES_MAP);
-charlotte.spin(DEVICES);
+// Start the text rotations
 updateCaseStudy();
 updateContinuousX();
 
