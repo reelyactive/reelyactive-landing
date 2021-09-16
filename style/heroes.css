@@ -22,6 +22,10 @@
   background-image: url('/images/herowl-art.png');
 }
 
+.herowl-aruba {
+  background-image: url('/images/herowl-aruba.png');
+}
+
 .herowl-awards {
   background-image: url('/images/herowl-awards.png');
 }
@@ -36,6 +40,14 @@
 
 .herowl-contact {
   background-image: url('/images/herowl-contact.png');
+}
+
+.herowl-elastic {
+  background-image: url('/images/herowl-elastic.png');
+}
+
+.herowl-get-started {
+  background-image: url('/images/herowl-get-started.png');
 }
 
 .herowl-history {
@@ -60,6 +72,10 @@
 
 .herowl-science {
   background-image: url('/images/herowl-science.png');
+}
+
+.herowl-team {
+  background-image: url('/images/herowl-team.png');
 }
 
 .herowl-technology {
