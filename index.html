@@ -481,15 +481,26 @@
       <!-- Overview -->
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
-          <div id="carouselOverview" class="carousel slide my-5"
+          <div id="carouselOverview" class="carousel carousel-dark slide my-5"
                data-bs-ride="carousel" data-bs-interval="4800">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselOverview"
+                      data-bs-slide-to="0" class="active" aria-current="true"
+                      aria-label="Ambient Data"></button>
+              <button type="button" data-bs-target="#carouselOverview"
+                      data-bs-slide-to="1" aria-label="Hyperlocal Context">
+              </button>
+              <button type="button" data-bs-target="#carouselOverview"
+                      data-bs-slide-to="2" aria-label="Any application">
+              </button>
+            </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="row">
                   <div class="col-md-6 mb-4">
                     <img src="images/landing-overview-1.png" class="img-fluid">
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 pb-5">
                     <h3>
                       <span class="badge rounded-pill bg-ambient">
                         <i class="fas fa-wifi"></i>
@@ -506,7 +517,7 @@
                   <div class="col-md-6 mb-4">
                     <img src="images/landing-overview-2.png" class="img-fluid">
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 pb-5">
                     <h3>
                       <span class="badge rounded-pill bg-dark">
                         <i class="fas fa-share-alt"></i>
@@ -525,7 +536,7 @@
                   <div class="col-md-6 mb-4">
                     <img src="images/landing-overview-3.png" class="img-fluid">
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 pb-5">
                     <h3>
                       <span class="badge rounded-pill bg-success">
                         <i class="fas fa-check"></i>
