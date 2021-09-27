@@ -4,6 +4,7 @@ const CASE_STUDIES = [
     quote: "How many square feet of office real estate do we need to accommodate our transition to non-assigned seating?",
     source: "Serge Bendahan, Desjardins",
     image: "images/case-studies-desjardins-dtm-deployment.jpg",
+    plan: "Breakthrough",
     useCases: [ 'OA' ],
     url: "case-studies/desjardins-dtm/"
   },
@@ -11,6 +12,7 @@ const CASE_STUDIES = [
     quote: "How quickly can we pilot an asset tracking solution in one of our healthcare facilities?",
     source: "Georges Bendavid, JGH",
     image: "images/case-studies-jgh-clsc-metro-deployment.jpg",
+    plan: "Breakthrough",
     useCases: [ 'AT' ],
     url: "case-studies/jgh-clsc-metro/"
   },
@@ -18,6 +20,7 @@ const CASE_STUDIES = [
     quote: "How can we improve our maintenance operations based on how soldiers actually spend their work day?",
     source: "US Army",
     image: "images/case-studies-usarmy-drum-hood-deployment.jpg",
+    plan: "Breakthrough",
     useCases: [ 'PT' ],
     url: "case-studies/usarmy-drum-hood/"
   },
@@ -25,6 +28,7 @@ const CASE_STUDIES = [
     quote: "What is the volume, speed and composition of pedestrian, cyclist and motorist traffic along a specific route?",
     source: "Xavier Prudent, Civilia",
     image: "images/case-studies-civilia-traffic-investigation-deployment.jpg",
+    plan: "Community",
     useCases: [ 'OA' ],
     url: "case-studies/civilia-traffic-investigation/"
   },
@@ -32,6 +36,7 @@ const CASE_STUDIES = [
     quote: "For how long do guests visit the museum and where do they spend their time?",
     source: "Brigitte Belleville, MCQ",
     image: "images/case-studies-mcq-personas-deployment.jpg",
+    plan: "Community",
     useCases: [ 'ID' ],
     url: "case-studies/mcq-personas/"
   },
@@ -39,6 +44,7 @@ const CASE_STUDIES = [
     quote: "How does where and with whom an individual spends their day affect their wellness and performance at work?",
     source: "Karel Mundnich, USC",
     image: "images/case-studies-usc-tiles-2018-deployment.jpg",
+    plan: "Beyond",
     useCases: [ 'PT', 'ES', 'ID' ],
     url: "case-studies/usc-tiles-2018/"
   },
@@ -46,6 +52,7 @@ const CASE_STUDIES = [
     quote: "What are the foot traffic patterns across our outdoor projection sites?",
     source: "Montreal en Histoires",
     image: "images/case-studies-montrealenhistoires-citememoire-deployment.jpg",
+    plan: "Breakthrough",
     useCases: [ 'OA' ],
     url: "case-studies/montrealenhistoires-citememoire/"
   },
@@ -53,13 +60,14 @@ const CASE_STUDIES = [
     quote: "How can we create a social distancing and contact tracing business solution in time to meet market demand?",
     source: "Videotron Affaires",
     image: "images/case-studies-videotron-radius-deployment.jpg",
+    plan: "Breakthrough",
     useCases: [ 'ID' ],
     url: "case-studies/videotron-radius/"
   }
 ];
 const CONTINUOUS_X = [ 'improvement', 'evolution', 'progress' ];
 const CASE_STUDY_TYPING_MILLISECONDS = 4800;
-const CASE_STUDY_HOLD_MILLISECONDS = 3600;
+const CASE_STUDY_HOLD_MILLISECONDS = 4800;
 const CONTINUOUS_X_UPDATE_MILLISECONDS = 2400;
 
 
@@ -67,12 +75,16 @@ const CONTINUOUS_X_UPDATE_MILLISECONDS = 2400;
 let caseStudyImage = document.querySelector('#caseStudyImage');
 let quote = document.querySelector('#quote');
 let source = document.querySelector('#source');
+let badgeCommunity = document.querySelector('#badgeCommunity');
+let badgeBreakthrough = document.querySelector('#badgeBreakthrough');
+let badgeBeyond = document.querySelector('#badgeBeyond');
 let badgeOA = document.querySelector('#badgeOA');
 let badgeAT = document.querySelector('#badgeAT');
 let badgePT = document.querySelector('#badgePT');
 let badgeES = document.querySelector('#badgeES');
 let badgeID = document.querySelector('#badgeID');
 let caseStudyButton = document.querySelector('#caseStudyButton');
+let caseStudiesButton = document.querySelector('#caseStudiesButton');
 let continuousX = document.querySelector('#continuousX');
 
 
@@ -104,15 +116,24 @@ function updateCaseStudy() {
     quote.textContent = '';
     source.textContent = '';
     caseStudyImage.setAttribute('src', caseStudy.image);
+    badgeCommunity.hidden = true;
+    badgeBreakthrough.hidden = true;
+    badgeBeyond.hidden = true;
     badgeOA.hidden = true;
     badgeAT.hidden = true;
     badgePT.hidden = true;
     badgeES.hidden = true;
     badgeID.hidden = true;
     caseStudyButton.hidden = true;
+    caseStudiesButton.hidden = true;
   }
 
   if(isCaseStudyComplete) {
+    switch(caseStudy.plan) {
+      case 'Community': badgeCommunity.hidden = false; break;
+      case 'Breakthrough': badgeBreakthrough.hidden = false; break;
+      case 'Beyond': badgeBeyond.hidden = false; break;
+    }
     caseStudy.useCases.forEach(function(useCase) {
       switch(useCase) {
         case 'OA': badgeOA.hidden = false; break;
@@ -129,6 +150,7 @@ function updateCaseStudy() {
     currentCaseStudyIndex = (currentCaseStudyIndex + 1) % CASE_STUDIES.length;
     currentQuoteCharacter = -1;
     currentSourceCharacter = -1;
+    caseStudiesButton.hidden = false;
 
     return setTimeout(updateCaseStudy, CASE_STUDY_HOLD_MILLISECONDS);
   }
