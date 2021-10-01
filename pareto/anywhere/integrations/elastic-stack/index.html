@@ -407,11 +407,132 @@
     <div id="content" class="container-fluid">
       <a href="#top">
         <img src="../../../../images/barnarrow-up.png" alt="Top of Page"
-             class="mx-auto d-block barnarrow animate-breathing">
+             class="mx-auto mb-4 d-block barnarrow animate-breathing">
       </a>
+      <!-- Tagline -->
+      <div class="row justify-content-center bg-dark text-white text-center">
+        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+          <h2 class="my-5"> Analyse and act on what's <em>really</em> happening in context-aware physical spaces with the <span class="text-primary">Elastic Stack</span> and <span class="text-secondary">Pareto Anywhere</span>. </h2>
+        </div>
+      </div>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
-          <div class="row mt-5">
+          <!-- Architecture -->
+          <img src="../../../../images/integrations-elastic-stack-architecture.png"
+               class="img-fluid my-5" alt="Elastic Stack & Pareto Anywhere">
+          <!-- Use cases -->
+          <div class="accordion my-5" id="accordionUseCases">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="accordionHeadingOA">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" aria-expanded="false"
+                        data-bs-target="#accordionCollapseOA"
+                        aria-controls="accordionCollapseOA">
+                  <span class="badge rounded-pill bg-dark">
+                    <i class="fas fa-shoe-prints"></i>
+                  </span>
+                  &nbsp; Occupancy Analytics
+                </button>
+              </h2>
+              <div id="accordionCollapseOA" data-bs-parent="#accordionUseCases"
+                   class="accordion-collapse collapse show"
+                   aria-labelledby="accordionHeadingOA">
+                <div class="accordion-body">
+                  <img src="../../../../images/integrations-elastic-stack-occupancy-analytics.png"
+                       class="img-fluid my-2"
+                       alt="Occupancy Analytics in Kibana">
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="accordionHeadingAT">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" aria-expanded="false"
+                        data-bs-target="#accordionCollapseAT"
+                        aria-controls="accordionCollapseAT">
+                  <span class="badge rounded-pill bg-dark">
+                    <i class="fas fa-tag"></i>
+                  </span>
+                  &nbsp; Asset Tracking
+                </button>
+              </h2>
+              <div id="accordionCollapseAT" class="accordion-collapse collapse"
+                   aria-labelledby="accordionHeadingAT"
+                   data-bs-parent="#accordionUseCases">
+                <div class="accordion-body">
+                  <img src="../../../../images/integrations-elastic-stack-asset-tracking.png"
+                       class="img-fluid my-2" alt="Asset Tracking in Kibana">
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="accordionHeadingPT">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" aria-expanded="false"
+                        data-bs-target="#accordionCollapsePT"
+                        aria-controls="accordionCollapsePT">
+                  <span class="badge rounded-pill bg-dark">
+                    <i class="fas fa-user-tag"></i>
+                  </span>
+                  &nbsp; Personnel Tracking
+                </button>
+              </h2>
+              <div id="accordionCollapsePT" class="accordion-collapse collapse"
+                   aria-labelledby="accordionHeadingPT"
+                   data-bs-parent="#accordionUseCases">
+                <div class="accordion-body">
+                  <img src="../../../../images/integrations-elastic-stack-personnel-tracking.png"
+                       class="img-fluid my-2"
+                       alt="Personnel Tracking in Kibana">
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="accordionHeadingES">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" aria-expanded="false"
+                        data-bs-target="#accordionCollapseES"
+                        aria-controls="accordionCollapseES">
+                  <span class="badge rounded-pill bg-dark">
+                    <i class="fas fa-thermometer-half"></i>
+                  </span>
+                  &nbsp; Environmental Sensing
+                </button>
+              </h2>
+              <div id="accordionCollapseES" class="accordion-collapse collapse"
+                   aria-labelledby="accordionHeadingES"
+                   data-bs-parent="#accordionUseCases">
+                <div class="accordion-body">
+                  <img src="../../../../images/integrations-elastic-stack-environmental-sensing.png"
+                       class="img-fluid my-2"
+                       alt="Environmental Sensing in Kibana">
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="accordionHeadingID">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" aria-expanded="false"
+                        data-bs-target="#accordionCollapseID"
+                        aria-controls="accordionCollapseID">
+                  <span class="badge rounded-pill bg-dark">
+                    <i class="fas fa-user-tag"></i>
+                  </span>
+                  &nbsp; Interaction Detection
+                </button>
+              </h2>
+              <div id="accordionCollapseID" class="accordion-collapse collapse"
+                   aria-labelledby="accordionHeadingID"
+                   data-bs-parent="#accordionUseCases">
+                <div class="accordion-body">
+                  <img src="../../../../images/integrations-elastic-stack-interaction-detection.png"
+                       class="img-fluid my-2"
+                       alt="Interaction Detection in Kibana">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5 d-none">
             <div class="col-md-12 col-lg-6 order-lg-last mb-3">
               <div id="carouselCanvas" class="carousel carousel-dark slide"
                    data-bs-ride="carousel">
