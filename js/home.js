@@ -3,7 +3,7 @@ const CASE_STUDIES = [
   {
     quote: "How many square feet of office real estate do we need to accommodate our transition to non-assigned seating?",
     source: "Serge Bendahan, Desjardins",
-    image: "images/case-studies-desjardins-dtm-deployment.jpg",
+    image: "images/case-studies-desjardins-dtm-icon.jpg",
     plan: "Breakthrough",
     useCases: [ 'OA' ],
     url: "case-studies/desjardins-dtm/"
@@ -11,7 +11,7 @@ const CASE_STUDIES = [
   {
     quote: "How quickly can we pilot an asset tracking solution in one of our healthcare facilities?",
     source: "Georges Bendavid, JGH",
-    image: "images/case-studies-jgh-clsc-metro-deployment.jpg",
+    image: "images/case-studies-jgh-clsc-metro-icon.jpg",
     plan: "Breakthrough",
     useCases: [ 'AT' ],
     url: "case-studies/jgh-clsc-metro/"
@@ -19,7 +19,7 @@ const CASE_STUDIES = [
   {
     quote: "How can we improve our maintenance operations based on how soldiers actually spend their work day?",
     source: "US Army",
-    image: "images/case-studies-usarmy-drum-hood-deployment.jpg",
+    image: "images/case-studies-usarmy-drum-hood-icon.jpg",
     plan: "Breakthrough",
     useCases: [ 'PT' ],
     url: "case-studies/usarmy-drum-hood/"
@@ -27,7 +27,7 @@ const CASE_STUDIES = [
   {
     quote: "What is the volume, speed and composition of pedestrian, cyclist and motorist traffic along a specific route?",
     source: "Xavier Prudent, Civilia",
-    image: "images/case-studies-civilia-traffic-investigation-deployment.jpg",
+    image: "images/case-studies-civilia-traffic-investigation-icon.jpg",
     plan: "Community",
     useCases: [ 'OA' ],
     url: "case-studies/civilia-traffic-investigation/"
@@ -35,7 +35,7 @@ const CASE_STUDIES = [
   {
     quote: "For how long do guests visit the museum and where do they spend their time?",
     source: "Brigitte Belleville, MCQ",
-    image: "images/case-studies-mcq-personas-deployment.jpg",
+    image: "images/case-studies-mcq-personas-icon.jpg",
     plan: "Community",
     useCases: [ 'ID' ],
     url: "case-studies/mcq-personas/"
@@ -43,7 +43,7 @@ const CASE_STUDIES = [
   {
     quote: "How does where and with whom an individual spends their day affect their wellness and performance at work?",
     source: "Karel Mundnich, USC",
-    image: "images/case-studies-usc-tiles-2018-deployment.jpg",
+    image: "images/case-studies-usc-tiles-2018-icon.jpg",
     plan: "Beyond",
     useCases: [ 'PT', 'ES', 'ID' ],
     url: "case-studies/usc-tiles-2018/"
@@ -51,7 +51,7 @@ const CASE_STUDIES = [
   {
     quote: "What are the foot traffic patterns across our outdoor projection sites?",
     source: "Montreal en Histoires",
-    image: "images/case-studies-montrealenhistoires-citememoire-deployment.jpg",
+    image: "images/case-studies-montrealenhistoires-citememoire-icon.jpg",
     plan: "Breakthrough",
     useCases: [ 'OA' ],
     url: "case-studies/montrealenhistoires-citememoire/"
@@ -59,7 +59,7 @@ const CASE_STUDIES = [
   {
     quote: "How can we create a social distancing and contact tracing business solution in time to meet market demand?",
     source: "Videotron Affaires",
-    image: "images/case-studies-videotron-radius-deployment.jpg",
+    image: "images/case-studies-videotron-radius-icon.jpg",
     plan: "Breakthrough",
     useCases: [ 'ID' ],
     url: "case-studies/videotron-radius/"
