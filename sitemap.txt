@@ -2,7 +2,7 @@ https://www.reelyactive.com/
 https://www.reelyactive.com/about/
 https://www.reelyactive.com/advertise/
 https://www.reelyactive.com/ambient-data/
-https://www.reelyactive.com/applications/
+https://www.reelyactive.com/anniversary/
 https://www.reelyactive.com/art/
 https://www.reelyactive.com/awards/
 https://www.reelyactive.com/beyond/
@@ -20,6 +20,7 @@ https://www.reelyactive.com/case-studies/videotron-radius/
 https://www.reelyactive.com/clients/
 https://www.reelyactive.com/contact/
 https://www.reelyactive.com/context/
+https://www.reelyactive.com/context-aware-physical-spaces/
 https://www.reelyactive.com/covid-19/
 https://www.reelyactive.com/deem/
 https://www.reelyactive.com/diract/
@@ -29,6 +30,8 @@ https://www.reelyactive.com/get-started/
 https://www.reelyactive.com/history/
 https://www.reelyactive.com/how-we-observe/
 https://www.reelyactive.com/made-in-montreal/
+https://www.reelyactive.com/open-architecture/
+https://www.reelyactive.com/open-source/
 https://www.reelyactive.com/owlidays/
 https://www.reelyactive.com/owlidays/2017/
 https://www.reelyactive.com/owlidays/2017/fr/
@@ -36,6 +39,7 @@ https://www.reelyactive.com/owlidays/2018/
 https://www.reelyactive.com/owlidays/2018/fr/
 https://www.reelyactive.com/owlidays/2019/
 https://www.reelyactive.com/owlidays/2020/
+https://www.reelyactive.com/owlidays/2021/
 https://www.reelyactive.com/parc/
 https://www.reelyactive.com/pareto/
 https://www.reelyactive.com/pareto/anywhere/
@@ -53,6 +57,7 @@ https://www.reelyactive.com/science/
 https://www.reelyactive.com/showcase/
 https://www.reelyactive.com/team/
 https://www.reelyactive.com/technology/
+https://www.reelyactive.com/the-business-of-open-source/
 https://www.reelyactive.com/uni/
 https://www.reelyactive.com/use-cases/
 https://www.reelyactive.com/use-cases/asset-tracking/
