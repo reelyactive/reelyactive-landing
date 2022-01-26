@@ -386,11 +386,233 @@
       </a>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
-          <div class="min-vh-100 d-flex align-items-center justify-content-center">
-            <p class="text-center">
-              <span class="lead"> This page intentionally left blank... </span>
-              <br> <span class="text-muted"> ... we're working on it. </span>
-            </p>
+          <div class="row row-cols-2 row-cols-xxl-3 g-4 my-4"
+               id="devicecards">
+            <!-- Puck.js -->
+            <div class="col" id="puckjs">
+              <div class="card hover-shadow">
+                <img src="../../images/devices-puckjs.jpg"
+                     class="card-img-top" alt="Puck.js">
+                <div class="card-img-overlay">
+                  <h3 class="card-title">
+                    <span class="badge bg-light text-muted shadow">
+                      <i class="fas fa-people-arrows text-dark"></i>
+                      <i class="fas fa-thermometer-half"></i>
+                    </span>
+                  </h3>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title"> Puck.js </h5>
+                  <p class="card-text">
+                    <span class="badge bg-primary">
+                      <i class="fab fa-bluetooth"></i> NFC
+                    </span>
+                    <span class="badge bg-dark">
+                      <i class="fas fa-rocket"></i>
+                      <i class="fas fa-thermometer-half"></i>
+                      <i class="fas fa-magnet"></i>
+                      <i class="fas fa-hand-pointer"></i>
+                      <i class="fas fa-sun"></i>
+                    </span>
+                    <span class="badge bg-info">
+                      <i class="fas fa-battery-half"></i> CR2032
+                    </span>
+                  </p>
+                  <div class="dropdown d-grid">
+                    <button class="btn btn-sm btn-outline-primary dropdown-toggle"
+                            type="button" id="dropdownPuckJS"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                      Learn more
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownPuckJS">
+                      <li>
+                        <a href="../../../case-studies/?devices=puckjs#content"
+                           class="dropdown-item"> Case Studies </a>
+                      </li>
+                      <li> <hr class="dropdown-divider"> </li>
+                      <li>
+                        <a class="dropdown-item" target="_blank"
+                           href="https://reelyactive.github.io/diy/puckjs-dev/">
+                          <i class="fas fa-code"></i> &nbsp; Develop
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" target="_blank"
+                           href="https://github.com/reelyactive/diract/#puckjs">
+                          <i class="fab fa-github"></i> &nbsp; DirAct
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card-footer text-muted small">
+                  Embedded developers rejoice!
+                </div>
+              </div>
+            </div>
+            <!-- Bangle.js 2 -->
+            <div class="col" id="banglejs-v2">
+              <div class="card hover-shadow">
+                <img src="../../images/devices-banglejs-v2.jpg"
+                     class="card-img-top" alt="Bangle.js 2">
+                <div class="card-img-overlay">
+                  <h3 class="card-title">
+                    <span class="badge bg-light text-muted shadow">
+                      <i class="fas fa-people-arrows text-dark"></i>
+                      <i class="fas fa-user-tag"></i>
+                      <i class="fas fa-thermometer-half"></i>
+                    </span>
+                  </h3>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title"> Bangle.js 2 </h5>
+                  <p class="card-text">
+                    <span class="badge bg-primary">
+                      <i class="fab fa-bluetooth"></i>
+                    </span>
+                    <span class="badge bg-dark">
+                      <i class="fas fa-rocket"></i>
+                      <i class="fas fa-thermometer-half"></i>
+                      <i class="fas fa-magnet"></i>
+                      <i class="fas fa-hand-pointer"></i>
+                      <i class="fas fa-heartbeat"></i>
+                      <i class="fas fa-map-marked-alt"></i>
+                    </span>
+                    <span class="badge bg-info">
+                      <i class="fas fa-battery-half"></i> USB
+                    </span>
+                  </p>
+                  <div class="dropdown d-grid">
+                    <button class="btn btn-sm btn-outline-primary dropdown-toggle"
+                            type="button" id="dropdownBangleJS"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                      Learn more
+                    </button>
+                    <ul class="dropdown-menu"
+                        aria-labelledby="dropdownBangleJS">
+                      <li>
+                        <a class="dropdown-item" target="_blank"
+                           href="https://reelyactive.github.io/diy/banglejs-dev/">
+                          <i class="fas fa-code"></i> &nbsp; Develop
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" target="_blank"
+                           href="https://banglejs.com/apps/#DirAct">
+                          <i class="fab fa-github"></i> &nbsp; DirAct
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card-footer text-muted small">
+                  The truly open smartwatch.
+                </div>
+              </div>
+            </div>
+            <!-- BBC micro:bit v2 -->
+            <div class="col" id="microbit-v2">
+              <div class="card hover-shadow">
+                <img src="../../images/devices-microbit-v2.jpg"
+                     class="card-img-top" alt="micro:bit v2">
+                <div class="card-img-overlay">
+                  <h3 class="card-title">
+                    <span class="badge bg-light text-muted shadow">
+                      <i class="fas fa-people-arrows text-dark"></i>
+                      <i class="fas fa-user-tag"></i>
+                      <i class="fas fa-thermometer-half"></i>
+                    </span>
+                  </h3>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    BBC micro:bit
+                    <small class="text-muted"> (v2) </small>
+                  </h5>
+                  <p class="card-text">
+                    <span class="badge bg-primary">
+                      <i class="fab fa-bluetooth"></i>
+                    </span>
+                    <span class="badge bg-dark">
+                      <i class="fas fa-rocket"></i>
+                      <i class="fas fa-thermometer-half"></i>
+                      <i class="fas fa-magnet"></i>
+                    </span>
+                    <span class="badge bg-info">
+                      <i class="fas fa-battery-half"></i> USB
+                    </span>
+                  </p>
+                  <div class="dropdown d-grid">
+                    <button class="btn btn-sm btn-outline-primary dropdown-toggle"
+                            type="button" id="dropdownMicrobitV2"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                      Learn more
+                    </button>
+                    <ul class="dropdown-menu"
+                        aria-labelledby="dropdownMicrobitV2">
+                      <li>
+                        <a class="dropdown-item" target="_blank"
+                           href="https://github.com/reelyactive/diract/#microbit-v2">
+                          <i class="fab fa-github"></i> &nbsp; DirAct
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card-footer text-muted small">
+                  Education and beyond.
+                </div>
+              </div>
+            </div>
+            <!-- Phenomena VPX -->
+            <div class="col" id="phenomena-vpx">
+              <div class="card hover-shadow">
+                <img src="../../images/devices-phenomena-vpx.jpg"
+                     class="card-img-top" alt="Phenomena VPX">
+                <div class="card-img-overlay">
+                  <h3 class="card-title">
+                    <span class="badge bg-light text-muted shadow">
+                      <i class="fas fa-people-arrows text-dark"></i>
+                      <i class="fas fa-user-tag"></i>
+                    </span>
+                  </h3>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title"> Phenomena VPX </h5>
+                  <p class="card-text">
+                    <span class="badge bg-primary">
+                      <i class="fab fa-bluetooth"></i>
+                    </span>
+                    <span class="badge bg-dark">
+                      <i class="fas fa-rocket"></i>
+                      <i class="fas fa-lightbulb"></i>
+                    </span>
+                    <span class="badge bg-info">
+                      <i class="fas fa-battery-half"></i> USB
+                    </span>
+                  </p>
+                  <div class="dropdown d-grid">
+                    <button class="btn btn-sm btn-outline-primary dropdown-toggle disabled"
+                            type="button" id="dropdownPhenomenaVPX"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                      Learn more
+                    </button>
+                    <ul class="dropdown-menu"
+                        aria-labelledby="dropdownPhenomenaVPX">
+                      <li>
+                        <a class="dropdown-item" target="_blank"
+                           href="https://reelyactive.github.io/diy/phenomena-vpx-config/">
+                          <i class="fas fa-code"></i> &nbsp; Configure
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card-footer text-muted small">
+                  For interactive entertainment.
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
