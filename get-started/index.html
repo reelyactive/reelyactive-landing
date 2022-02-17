@@ -385,16 +385,28 @@
       <div class="row justify-content-center bg-dark text-white text-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
           <h2 class="my-5">
-            <i class="fas fa-user-tie text-primary"></i>&nbsp; Get in touch.<br>
+            <span id="firstheadlineicon0">
+              <i class="fas fa-user-tie text-primary"></i>
+            </span>
+            <span id="firstheadlineicon1" hidden>
+              <i class="fas fa-code text-ambient"></i>
+            </span>
+            &nbsp; <span id="firstheadlinemessage">Get in touch.</span><br>
             <span class="animate-breathing">&vellip;</span><br>
-            <i class="fas fa-code text-ambient"></i>&nbsp; Get up and running.
+            <span id="secondheadlineicon0">
+              <i class="fas fa-code text-ambient"></i>
+            </span>
+            <span id="secondheadlineicon1" hidden>
+              <i class="fas fa-user-tie text-primary"></i>
+            </span>
+            &nbsp; <span id="secondheadlinemessage">Get up and running.</span>
           </h2>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
           <div class="card hover-shadow mt-5">
-            <div class="card-header text-center bg-primary text-white">
+            <div class="card-header text-center bg-primary bg-gradient text-white">
               <h2 class="mt-2"> Start with a <b>business case</b> </h2>
               <p class="mb-2"> for context-aware physical spaces. </p>
             </div>
@@ -422,8 +434,11 @@
               <small> Free from artificial constraints. </small>
             </div>
           </div>
-          <div class="card hover-shadow mt-5">
-            <div class="card-header text-center bg-ambient text-white">
+          <p class="text-center text-muted animate-breathing display-6 my-4">
+            OR
+          </p>
+          <div class="card hover-shadow">
+            <div class="card-header text-center bg-ambient bg-gradient text-white">
               <h2 class="mt-2">
                 <i class="fas fa-code"></i>&nbsp;Start <b>developing</b>
               </h2>
@@ -436,7 +451,7 @@
               </h5>
               <div class="card-text row">
                 <div class="col-sm-6">
-                  <p> Begin developing with the freedom of <a href="../pareto/anywhere/#content">Pareto Anywhere</a> and an <a href="../open-architecture/#content">open architecture</a>.  Enjoy unconstrained access to <a href="../team/#content">our team</a> when you choose to go <a href="../beyond/#content" class="fw-bold fst-italic">Beyond</a>. </p>
+                  <p> Begin developing with the freedom of <a href="../pareto/anywhere/#content">Pareto Anywhere</a> and an <a href="../open-architecture/#content">open architecture</a>.  Enjoy unconstrained access to <a href="../team/#content">our team</a> when you proceed <a href="../beyond/#content" class="fw-bold fst-italic">Beyond</a>. </p>
                 </div>
                 <div class="col-sm-6 text-center">
                   <a href="https://reelyactive.github.io" target="_blank"
@@ -560,5 +575,6 @@
     <!-- Optional JavaScript -->
     <script defer src="../js/fontawesome-reelyactive.min.js"></script>
     <script src="../js/bootstrappyactive.bundle.min.js"></script>
+    <script src="../js/get-started.js"></script>
   </body>
 </html>
