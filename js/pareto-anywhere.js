@@ -3,7 +3,7 @@ const CONSOLE_TEXT = [
     'npm install -g pareto-anywhere',
     '+ pareto-anywhere@1.x.x',
     'pareto-anywhere',
-    'Pareto Anywhere by reelyActive is running on port 3001'
+    'Pareto Anywhere is running on port 3001'
 ];
 const INCLUDE_CONSOLE_PROMPT = [ true, false, true, false ];
 const DEFAULT_CONSOLE_UPDATE_MILLISECONDS = 100;
