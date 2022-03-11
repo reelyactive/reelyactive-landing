@@ -468,6 +468,298 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+          <h2 id="representation" class="mt-5"> Representing hyperlocal context </h2>
+          <p class="lead"> The graph is represented as a list of devices </p>
+          <div class="row mt-4">
+            <div class="col-lg-6 mb-3">
+              <pre class="text-dark">
+"devices": {
+    "{id}/{type}": { ... },
+
+    "{id}/{type}": {
+        "nearest": [ ... ],
+        "dynamb": { ... },
+        "statid": { ... },
+        "url": "https://...",
+        "tags": [ ... ],
+        "directory": "a:b:c",
+        "position": [ x, y, z ]
+    }
+
+    "{id}/{type}": { ... }
+}</pre>
+            </div>
+            <div class="col-lg-6">
+
+              <div class="accordion accordion-flush mb-5" id="accordionHLC">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="accordionHeaderNearest">
+                    <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#accordionBodyNearest"
+                            aria-expanded="false"
+                            aria-controls="accordionBodyNearest">
+                      <span class="font-monospace">
+                        <i class="fas fa-code text-muted"></i> nearest
+                      </span>
+                    </button>
+                  </h2>
+                  <div id="accordionBodyNearest"
+                       class="accordion-collapse collapse"
+                       aria-labelledby="accordionHeaderNearest"
+                       data-bs-parent="#accordionHLC">
+                    <div class="accordion-body">
+                      <p> Ordered list of peer devices by proximity, as estimated by signal strength (<i class="fas fa-signal"></i> rssi), represented as an array of objects, each with the following structure: </p>
+                      <pre class="ms-4">{
+    "device": "{id}/{type}",
+    "rssi": -72
+}</pre>
+                      <p> Each item in the list represents an edge in the graph, connecting device<sub>{id}/{type}</sub> to device<sub>{id}/{type}</sub> in the list of devices. </p>
+                      <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                          <i class="fas fa-check-circle text-success"></i>
+                          &nbsp;<b>where</b>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="accordionHeaderDynamb">
+                    <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#accordionBodyDynamb"
+                            aria-expanded="false"
+                            aria-controls="accordionBodyDynamb">
+                      <span class="font-monospace">
+                        <i class="fas fa-code text-ambient"></i> dynamb
+                      </span>
+                    </button>
+                  </h2>
+                  <div id="accordionBodyDynamb"
+                       class="accordion-collapse collapse"
+                       aria-labelledby="accordionHeaderDynamb"
+                       data-bs-parent="#accordionHLC">
+                    <div class="accordion-body">
+                      <p> <b>dyn</b>amic <b>amb</b>ient data represented as standard properties<sup>*</sup> including: </p>
+                      <table class="table table-sm table-borderless ms-4">
+                        <caption class="text-end"> <sup>*</sup>as processed by <a href="https://github.com/reelyactive/advlib#standard-properties" target="_blank"><i class="fas fa-external-link-alt"></i> advlib</a> </caption>
+                        <tbody>
+                          <tr>
+                            <th> <i class="fas fa-battery-half"></i> </th>
+                            <td> batteryPercentage </td>
+                          </tr>
+                          <tr>
+                            <th> <i class="fas fa-heartbeat"></i> </th>
+                            <td> heartRate </td>
+                          </tr>
+                          <tr>
+                            <th> <i class="fas fa-sun"></i> </th>
+                            <td> illuminance </td>
+                          </tr>
+                          <tr>
+                            <th> <i class="fas fa-hand-pointer"></i> </th>
+                            <td> isButtonPressed </td>
+                          </tr>
+                          <tr>
+                            <th> <i class="fas fa-thermometer-half"></i> </th>
+                            <td> temperature </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                          <i class="fas fa-check-circle text-success"></i>
+                          &nbsp;<b>how</b>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="accordionHeaderStatid">
+                    <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#accordionBodyStatid"
+                            aria-expanded="false"
+                            aria-controls="accordionBodyStatid">
+                      <span class="font-monospace">
+                        <i class="fas fa-code text-ambient"></i> statid
+                      </span>
+                    </button>
+                  </h2>
+                  <div id="accordionBodyStatid"
+                       class="accordion-collapse collapse"
+                       aria-labelledby="accordionHeaderStatid"
+                       data-bs-parent="#accordionHLC">
+                    <div class="accordion-body">
+                      <p> <b>stat</b>ic <b>id</b>entifier data represented as standard properties<sup>*</sup> including: </p>
+                      <table class="table table-sm table-borderless ms-4">
+                        <caption class="text-end"> <sup>*</sup>as processed by <a href="https://github.com/reelyactive/advlib#standard-properties" target="_blank"><i class="fas fa-external-link-alt"></i> advlib</a> </caption>
+                        <tbody>
+                          <tr>
+                            <th> <i class="fas fa-eye"></i> </th>
+                            <td> appearance </td>
+                          </tr>
+                          <tr>
+                            <th> <i class="fas fa-barcode"></i> </th>
+                            <td> deviceIds </td>
+                          </tr>
+                          <tr>
+                            <th> <i class="fas fa-id-card"></i> </th>
+                            <td> name </td>
+                          </tr>
+                          <tr>
+                            <th> <i class="fas fa-link"></i> </th>
+                            <td> uri </td>
+                          </tr>
+                          <tr>
+                            <th> <i class="fas fa-barcode"></i> </th>
+                            <td> uuids </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                          <i class="fas fa-check-circle text-success"></i>
+                          &nbsp;<b>what</b>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="accordionHeaderUrl">
+                    <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#accordionBodyUrl"
+                            aria-expanded="false"
+                            aria-controls="accordionBodyUrl">
+                      <span class="font-monospace">
+                        <i class="fas fa-link text-primary"></i> url
+                      </span>
+                    </button>
+                  </h2>
+                  <div id="accordionBodyUrl"
+                       class="accordion-collapse collapse"
+                       aria-labelledby="accordionHeaderUrl"
+                       data-bs-parent="#accordionHLC">
+                    <div class="accordion-body">
+                      <p> Hyperlink to a digital twin, expected to be represented in the form of JSON-LD & Schema.org. </p>
+                      <p> The <b>url</b> is either retrieved by looking up <em>statid</em> identifiers in the <a href="https://sniffypedia.org" target="_blank"><i class="fas fa-external-link-alt"></i> Sniffypedia</a> index, or associated with the specific device by <a href="https://github.com/reelyactive/chickadee" target="_blank"><i class="fas fa-external-link-alt"></i> chickadee</a>. </p>
+                      <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                          <i class="fas fa-check-circle text-success"></i>
+                          &nbsp;<b>what</b>
+                        </li>
+                        <li class="list-inline-item">
+                          <i class="fas fa-check-circle text-success"></i>
+                          &nbsp;<b>who</b>
+                        </li>
+                        <li class="list-inline-item">
+                          <i class="fas fa-check-circle text-success"></i>
+                          &nbsp;<b>where</b>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="accordionHeaderTags">
+                    <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#accordionBodyTags"
+                            aria-expanded="false"
+                            aria-controls="accordionBodyTags">
+                      <span class="font-monospace">
+                        <i class="fas fa-tag text-primary"></i> tags
+                      </span>
+                    </button>
+                  </h2>
+                  <div id="accordionBodyTags"
+                       class="accordion-collapse collapse"
+                       aria-labelledby="accordionHeaderTags"
+                       data-bs-parent="#accordionHLC">
+                    <div class="accordion-body">
+                      <p> List of semantic tags associated with the device, represented as an array of strings. </p>
+                      <p> The <b>tags</b> are associated with the specific device by <a href="https://github.com/reelyactive/chickadee" target="_blank"><i class="fas fa-external-link-alt"></i> chickadee</a>. </p>
+                      <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                          <i class="fas fa-check-circle text-success"></i>
+                          &nbsp;<b>what</b>
+                        </li>
+                        <li class="list-inline-item">
+                          <i class="fas fa-check-circle text-success"></i>
+                          &nbsp;<b>who</b>
+                        </li>
+                        <li class="list-inline-item">
+                          <i class="fas fa-check-circle text-success"></i>
+                          &nbsp;<b>where</b>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="accordionHeaderDirectory">
+                    <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#accordionBodyDirectory"
+                            aria-expanded="false"
+                            aria-controls="accordionBodyDirectory">
+                      <span class="font-monospace">
+                        <i class="fas fa-sitemap text-primary"></i> directory
+                      </span>
+                    </button>
+                  </h2>
+                  <div id="accordionBodyDirectory"
+                       class="accordion-collapse collapse"
+                       aria-labelledby="accordionHeaderDirectory"
+                       data-bs-parent="#accordionHLC">
+                    <div class="accordion-body">
+                      <p> Hierarchical semantic description of location, represented as a colon-separated string. </p>
+                      <p> The <b>directory</b> is associated with the specific device by <a href="https://github.com/reelyactive/chickadee" target="_blank"><i class="fas fa-external-link-alt"></i> chickadee</a>. </p>
+                      <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                          <i class="fas fa-check-circle text-success"></i>
+                          &nbsp;<b>where</b>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="accordionHeaderPosition">
+                    <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#accordionBodyPosition"
+                            aria-expanded="false"
+                            aria-controls="accordionBodyPosition">
+                      <span class="font-monospace">
+                        <i class="fas fa-map-marked-alt text-primary"></i>
+                        position
+                      </span>
+                    </button>
+                  </h2>
+                  <div id="accordionBodyPosition"
+                       class="accordion-collapse collapse"
+                       aria-labelledby="accordionHeaderPosition"
+                       data-bs-parent="#accordionHLC">
+                    <div class="accordion-body">
+                      <p> Coordinate-based position represented as an array in either the form [ x, y ] or [ x, y, z ]. </p>
+                      <p> The <b>position</b> is either retrieved from the device's payloads by <a href="https://github.com/reelyactive/advlib" target="_blank"><i class="fas fa-external-link-alt"></i> advlib</a>, or associated with the specific device by <a href="https://github.com/reelyactive/chickadee" target="_blank"><i class="fas fa-external-link-alt"></i> chickadee</a>. </p>
+                      <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                          <i class="fas fa-check-circle text-success"></i>
+                          &nbsp;<b>where</b>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <h2 class="mt-5"> Exchanging hyperlocal context </h2>
           <p> Hyperlocal context can be shared among the occupants of a space in either machine-readable or human-readable form, facilitating mutual discovery and information exchange.  As such, hyperlocal context augments real-time human-scale interactions as a spontaneous and collective source of contextual feedback. </p>
           <div id="ambientDataCycleCarousel" data-bs-ride="carousel"
