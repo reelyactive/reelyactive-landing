@@ -431,6 +431,174 @@
           </div>
         </div>
       </div>
+      <!-- Who, what, where, how, when? -->
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+          <div class="accordion accordion-flush mb-5" id="accordionW5">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="accordionQuestionWhat">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#accordionAnswerWhat"
+                        aria-expanded="false"
+                        aria-controls="accordionAnswerWhat">
+                  <i class="fas fa-question-circle text-secondary"></i>
+                  &nbsp; What?
+                </button>
+              </h2>
+              <div id="accordionAnswerWhat" class="accordion-collapse collapse"
+                   aria-labelledby="accordionQuestionWhat"
+                   data-bs-parent="#accordionW5">
+                <div class="accordion-body">
+                  <div class="row justify-content-end">
+                    <div class="col-2">
+                    </div>
+                    <div class="col-9">
+                      <p> <em>Every</em> radio-identifiable thing has a device identifier, allowing <b>Pareto Anywhere</b> to distinguish what's what. </p>
+                      <p> <em>Some</em> devices transmit additional identifiers, often allowing a lookup of the associated organisation or product from our <a href="https://sniffypedia.org/" target="_blank"><i class="fas fa-external-link-alt"></i> Sniffypedia</a> index. </p>
+                      <p> <em>Any</em> device can be explicitly associated with a digital twin of whatever the device represents. </p>
+                      <p> <b>Pareto Anywhere</b> represents <b class="text-secondary">what</b> as radio decoding (raddec) and static identifier (statid) data, with digital twins represented as web-standard JSON-LD & Schema.org. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="accordionQuestionWho">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#accordionAnswerWho"
+                        aria-expanded="false"
+                        aria-controls="accordionAnswerWho">
+                  <i class="fas fa-question-circle text-secondary"></i>
+                  &nbsp; Who?
+                </button>
+              </h2>
+              <div id="accordionAnswerWho" class="accordion-collapse collapse"
+                   aria-labelledby="accordionQuestionWho"
+                   data-bs-parent="#accordionW5">
+                <div class="accordion-body">
+                  <div class="row justify-content-end">
+                    <div class="col-2">
+                    </div>
+                    <div class="col-9">
+                      <p> <em>Most</em> mobile/wearable devices periodically rotate their radio-identifiers to preserve anonymity, preventing implicit association with a specific individual. </p>
+                      <p> <em>Many</em> devices can be explicitly associated with a digital twin of whomever carries/wears the device. </p>
+                      <p> <b>Pareto Anywhere</b> represents <b class="text-secondary">who</b><em>&mdash;provided explicit participant opt-in&mdash;</em>as digital twins in the form of web-standard JSON-LD & Schema.org. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="accordionQuestionWhere">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#accordionAnswerWhere"
+                        aria-expanded="false"
+                        aria-controls="accordionAnswerWhere">
+                  <i class="fas fa-question-circle text-secondary"></i>
+                  &nbsp; Where?
+                </button>
+              </h2>
+              <div id="accordionAnswerWhere" class="accordion-collapse collapse"
+                   aria-labelledby="accordionQuestionWhere"
+                   data-bs-parent="#accordionW5">
+                <div class="accordion-body">
+                  <div class="row justify-content-end">
+                    <div class="col-2">
+                    </div>
+                    <div class="col-9">
+                      <p> <em>Every</em> radio-receiver has a unique identifier, allowing <b>Pareto Anywhere</b> to keep track of what's in range of what. </p>
+                      <p> <em>Many</em> radio technologies have an operational range on the order of 10m, facilitating "good enough" location at a human scale in any physical space. </p>
+                      <p> <em>Any</em> device can be explicitly assigned a location, and/or associated with a digital twin of wherever it represents. </p>
+                      <p> <b>Pareto Anywhere</b> represents <b class="text-secondary">where</b> as radio decoding (raddec) data, coupled with semantic and/or coordinate-based location, with digital twins represented as web-standard JSON-LD & Schema.org. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="accordionQuestionHow">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#accordionAnswerHow"
+                        aria-expanded="false"
+                        aria-controls="accordionAnswerHow">
+                  <i class="fas fa-question-circle text-secondary"></i>
+                  &nbsp; How?
+                </button>
+              </h2>
+              <div id="accordionAnswerHow" class="accordion-collapse collapse"
+                   aria-labelledby="accordionQuestionHow"
+                   data-bs-parent="#accordionW5">
+                <div class="accordion-body">
+                  <div class="row justify-content-end">
+                    <div class="col-2">
+                    </div>
+                    <div class="col-9">
+                      <p> <em>Most</em> radio technologies support the transmission of data payloads, which may include information about a device's state. </p>
+                      <p> <em>Many</em> devices periodically transmit information about the state of their environment (<i class="fas fa-thermometer-half"></i> <i class="fas fa-hand-pointer"></i> <i class="fas fa-heartbeat"></i> <i class="fas fa-magnet"></i> <i class="fas fa-sun"></i> <i class="fas fa-walking"></i> <i class="fas fa-water"></i>) and themselves (<i class="fas fa-battery-half"></i> <i class="fas fa-stopwatch"></i>). </p>
+                      <p> <b>Pareto Anywhere</b> represents <b class="text-secondary">how</b> as dynamic ambient (dynamb) data using a set of standard properties interpreted by our device-agnostic <a href="https://github.com/reelyactive/advlib#advlib" target="_blank"><i class="fas fa-external-link-alt"></i> advlib</a> library. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="accordionQuestionWhen">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#accordionAnswerWhen"
+                        aria-expanded="false"
+                        aria-controls="accordionAnswerWhen">
+                  <i class="fas fa-question-circle text-primary"></i>
+                  &nbsp; When?
+                </button>
+              </h2>
+              <div id="accordionAnswerWhen" class="accordion-collapse collapse"
+                   aria-labelledby="accordionQuestionWhen"
+                   data-bs-parent="#accordionW5">
+                <div class="accordion-body">
+                  <div class="row justify-content-end">
+                    <div class="col-2">
+                    </div>
+                    <div class="col-9">
+                      <p> <b>Pareto Anywhere</b> represents <b class="text-primary">when</b> as <b>now</b>: it is a <em>real-time</em> stream-processing middleware. </p>
+                      <p> <em>Most</em> databases <i class="fas fa-database"></i> can store this data stream to facilitate queries over time. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="accordionQuestionWhy">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#accordionAnswerWhy"
+                        aria-expanded="false"
+                        aria-controls="accordionAnswerWhy">
+                  <i class="fas fa-question-circle text-success"></i>
+                  &nbsp; Why?
+                </button>
+              </h2>
+              <div id="accordionAnswerWhy" class="accordion-collapse collapse"
+                   aria-labelledby="accordionQuestionWhy"
+                   data-bs-parent="#accordionW5">
+                <div class="accordion-body">
+                  <div class="row justify-content-end">
+                    <div class="col-2">
+                    </div>
+                    <div class="col-9">
+                      <p> If <b>"why"</b> is indeed the question you're trying to answer, <b>Pareto Anywhere</b> provides the foundation of <b class="text-secondary">who/what</b> <small>is</small> <b class="text-secondary">where/how</b>&mdash;<b class="text-primary">when</b> to help you find that answer, anywhere and anytime. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- Run anywhere | Anything anywhere -->
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
