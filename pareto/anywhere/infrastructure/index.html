@@ -395,26 +395,83 @@
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
           <div class="row row-cols-2 row-cols-xxl-3 g-4 my-4">
-            <!-- Personal Computer -->
-            <div class="col" id="pc">
+            <!-- Aruba AP -->
+            <div class="col" id="aruba-ap">
               <div class="card hover-shadow">
-                <img src="../../../images/infrastructure-pc.jpg"
-                     class="card-img-top" alt="Personal Computer">
+                <img src="../../../images/infrastructure-aruba-303h.jpg"
+                     class="card-img-top" alt="Aruba 303H">
                 <div class="card-img-overlay">
                   <h3 class="card-title">
                     <span class="badge bg-light text-muted shadow">
-                      <i class="fas fa-cog"></i> Edge
+                      <i class="fas fa-exchange-alt"></i> Relay
                     </span>
                   </h3>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title"> Your PC </h5>
+                  <h5 class="card-title"> Aruba APs </h5>
                   <p class="card-text">
                     <span class="badge bg-primary">
                       <i class="fab fa-bluetooth"></i>
                     </span>
-                    <span class="badge bg-success">
-                      <i class="fab fa-node-js"></i>
+                    <span class="badge bg-dark">
+                      <i class="fas fa-wifi"></i>
+                    </span>
+                    <span class="badge bg-dark">
+                      <i class="fas fa-ethernet"></i>
+                    </span>
+                    <span class="badge bg-info">
+                      <i class="fas fa-plug"></i> 48VDC / PoE
+                    </span>
+                  </p>
+                  <div class="dropdown d-grid">
+                    <button class="btn btn-sm btn-outline-primary dropdown-toggle"
+                            type="button" id="dropdownArubaAP"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                      Learn more
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownArubaAP">
+                      <li>
+                        <a href="aruba/#content" class="dropdown-item">
+                          Overview
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://reelyactive.github.io/diy/aruba-instant-config/"
+                           class="dropdown-item" target="_blank">
+                          <i class="fas fa-code"></i> &nbsp; Configuration
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://github.com/reelyactive/barnowl-aruba/"
+                           class="dropdown-item" target="_blank">
+                          <i class="fab fa-github"></i> &nbsp; Interface code
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card-footer text-muted small">
+                  Beyond WiFi connectivity.
+                </div>
+              </div>
+            </div>
+            <!-- Impinj -->
+            <div class="col" id="impinj">
+              <div class="card hover-shadow">
+                <img src="../../../images/infrastructure-impinj.png"
+                     class="card-img-top" alt="Impinj">
+                <div class="card-img-overlay">
+                  <h3 class="card-title">
+                    <span class="badge bg-light text-muted shadow">
+                      <i class="fas fa-exchange-alt"></i> Relay
+                    </span>
+                  </h3>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title"> Impinj Readers </h5>
+                  <p class="card-text">
+                    <span class="badge bg-primary">
+                      <i class="fas fa-tag"></i>
                     </span>
                     <span class="badge bg-dark">
                       <i class="fas fa-wifi"></i>
@@ -428,174 +485,69 @@
                   </p>
                   <div class="dropdown d-grid">
                     <button class="btn btn-sm btn-outline-primary dropdown-toggle"
-                            type="button" id="dropdownPC"
+                            type="button" id="dropdownImpinj"
                             data-bs-toggle="dropdown" aria-expanded="false">
                       Learn more
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownPC">
+                    <ul class="dropdown-menu" aria-labelledby="dropdownImpinj">
                       <li>
-                        <a href="https://reelyactive.github.io/diy/pareto-anywhere-pc/"
+                        <a href="https://github.com/reelyactive/barnowl-impinj/"
                            class="dropdown-item" target="_blank">
-                          <i class="fas fa-code"></i> &nbsp; Run Pareto Anywhere
+                          <i class="fab fa-github"></i> &nbsp; Interface code
                         </a>
                       </li>
                     </ul>
                   </div>
                 </div>
                 <div class="card-footer text-muted small">
-                  Your personal computer.
+                  Leaders in RAIN RFID.
                 </div>
               </div>
             </div>
-            <!-- Raspberry Pi -->
-            <div class="col" id="raspberry-pi">
+            <!-- RF Controls -->
+            <div class="col" id="rfcontrols">
               <div class="card hover-shadow">
-                <img src="../../../images/infrastructure-raspberrypi.jpg"
-                     class="card-img-top" alt="Raspberry Pi">
+                <img src="../../../images/infrastructure-rfcontrols.png"
+                     class="card-img-top" alt="RF Controls">
                 <div class="card-img-overlay">
                   <h3 class="card-title">
                     <span class="badge bg-light text-muted shadow">
-                      <i class="fas fa-cog"></i> Edge
+                      <i class="fas fa-exchange-alt"></i> Relay
                     </span>
                   </h3>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title"> Raspberry Pi </h5>
+                  <h5 class="card-title"> CS Smart Antennae </h5>
                   <p class="card-text">
                     <span class="badge bg-primary">
-                      <i class="fab fa-bluetooth"></i>
-                    </span>
-                    <span class="badge bg-success">
-                      <i class="fab fa-node-js"></i>
-                    </span>
-                    <span class="badge bg-dark">
-                      <i class="fas fa-wifi"></i>
+                      <i class="fas fa-tag"></i>
                     </span>
                     <span class="badge bg-dark">
                       <i class="fas fa-ethernet"></i>
                     </span>
                     <span class="badge bg-info">
-                      <i class="fas fa-plug"></i> USB
+                      <i class="fas fa-plug"></i> PoE
                     </span>
                   </p>
                   <div class="dropdown d-grid">
                     <button class="btn btn-sm btn-outline-primary dropdown-toggle"
-                            type="button" id="dropdownPi"
+                            type="button" id="dropdownRFControls"
                             data-bs-toggle="dropdown" aria-expanded="false">
                       Learn more
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownPi">
+                    <ul class="dropdown-menu"
+                        aria-labelledby="dropdownRFControls">
                       <li>
-                        <a href="https://reelyactive.github.io/diy/pareto-anywhere-pi/"
+                        <a href="https://github.com/reelyactive/barnowl-rfcontrols/"
                            class="dropdown-item" target="_blank">
-                          <i class="fas fa-code"></i> &nbsp; Run Pareto Anywhere
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://reelyactive.github.io/diy/pi-prep/"
-                           class="dropdown-item" target="_blank">
-                          <i class="fas fa-code"></i> &nbsp; Preparation
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://reelyactive.github.io/diy/pi-kiosk/"
-                           class="dropdown-item" target="_blank">
-                          <i class="fas fa-code"></i> &nbsp; Kiosk mode
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/reelyactive/pi-suite/"
-                           class="dropdown-item" target="_blank">
-                          <i class="fab fa-github"></i> &nbsp; Source code
+                          <i class="fab fa-github"></i> &nbsp; Interface code
                         </a>
                       </li>
                     </ul>
                   </div>
                 </div>
                 <div class="card-footer text-muted small">
-                  The ubiquitous embedded computer.
-                </div>
-              </div>
-            </div>
-            <!-- reelyActive Owl-in-One -->
-            <div class="col" id="owl-in-one">
-              <div class="card hover-shadow">
-                <img src="../../../images/infrastructure-owl-in-one.jpg"
-                     class="card-img-top" alt="reelyActive Owl-in-One">
-                <div class="card-img-overlay">
-                  <h3 class="card-title">
-                    <span class="badge bg-light text-muted shadow">
-                      <i class="fas fa-cog"></i> Edge
-                    </span>
-                  </h3>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title"> reelyActive Owl-in-One </h5>
-                  <p class="card-text">
-                    <span class="badge bg-primary">
-                      <i class="fab fa-bluetooth"></i>
-                    </span>
-                    <span class="badge bg-success">
-                      <i class="fab fa-node-js"></i>
-                    </span>
-                    <span class="badge bg-dark">
-                      <i class="fas fa-wifi"></i>
-                    </span>
-                    <span class="badge bg-dark">
-                      <i class="fas fa-ethernet"></i>
-                    </span>
-                    <span class="badge bg-info">
-                      <i class="fas fa-plug"></i> USB
-                    </span>
-                  </p>
-                  <div class="dropdown d-grid">
-                    <button class="btn btn-sm btn-outline-primary dropdown-toggle"
-                            type="button" id="dropdownOiO"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                      Learn more
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownOiO">
-                      <li>
-                        <a href="../../../case-studies/?infrastructure=oio#content"
-                           class="dropdown-item"> Case Studies </a>
-                      </li>
-                      <li> <hr class="dropdown-divider"> </li>
-                      <li>
-                        <a href="../../../products/gateways/#owl-in-one"
-                           class="dropdown-item">
-                          <i class="fas fa-info"></i> &nbsp; Product
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://reelyactive.github.io/diy/oio-config/"
-                           class="dropdown-item" target="_blank">
-                          <i class="fas fa-code"></i> &nbsp; Configuration
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://reelyactive.github.io/diy/oio-wlan/"
-                           class="dropdown-item" target="_blank">
-                        <i class="fas fa-code"></i> &nbsp; WLAN tutorial
-                      </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/reelyactive/tessel-edge/"
-                           class="dropdown-item" target="_blank">
-                          <i class="fab fa-github"></i> &nbsp; Source code
-                        </a>
-                      </li>
-                      <li> <hr class="dropdown-divider"> </li>
-                      <li>
-                        <a href="https://shop.reelyactive.com/products/owl-in-one-ble"
-                           class="dropdown-item" target="_blank">
-                          <i class="fas fa-shopping-cart"></i> &nbsp; Buy
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="card-footer text-muted small">
-                  Develop and experiment freely.
+                  Long-range passive RTLS.
                 </div>
               </div>
             </div>
@@ -776,23 +728,26 @@
                 </div>
               </div>
             </div>
-            <!-- Aruba AP -->
-            <div class="col" id="aruba-ap">
+            <!-- reelyActive Owl-in-One -->
+            <div class="col" id="owl-in-one">
               <div class="card hover-shadow">
-                <img src="../../../images/infrastructure-aruba-303h.jpg"
-                     class="card-img-top" alt="Aruba 303H">
+                <img src="../../../images/infrastructure-owl-in-one.jpg"
+                     class="card-img-top" alt="reelyActive Owl-in-One">
                 <div class="card-img-overlay">
                   <h3 class="card-title">
                     <span class="badge bg-light text-muted shadow">
-                      <i class="fas fa-exchange-alt"></i> Relay
+                      <i class="fas fa-cog"></i> Edge
                     </span>
                   </h3>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title"> Aruba APs </h5>
+                  <h5 class="card-title"> reelyActive Owl-in-One </h5>
                   <p class="card-text">
                     <span class="badge bg-primary">
                       <i class="fab fa-bluetooth"></i>
+                    </span>
+                    <span class="badge bg-success">
+                      <i class="fab fa-node-js"></i>
                     </span>
                     <span class="badge bg-dark">
                       <i class="fas fa-wifi"></i>
@@ -801,58 +756,150 @@
                       <i class="fas fa-ethernet"></i>
                     </span>
                     <span class="badge bg-info">
-                      <i class="fas fa-plug"></i> 48VDC / PoE
+                      <i class="fas fa-plug"></i> USB
                     </span>
                   </p>
                   <div class="dropdown d-grid">
                     <button class="btn btn-sm btn-outline-primary dropdown-toggle"
-                            type="button" id="dropdownArubaAP"
+                            type="button" id="dropdownOiO"
                             data-bs-toggle="dropdown" aria-expanded="false">
                       Learn more
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownArubaAP">
+                    <ul class="dropdown-menu" aria-labelledby="dropdownOiO">
                       <li>
-                        <a href="aruba/#content" class="dropdown-item">
-                          Overview
+                        <a href="../../../case-studies/?infrastructure=oio#content"
+                           class="dropdown-item"> Case Studies </a>
+                      </li>
+                      <li> <hr class="dropdown-divider"> </li>
+                      <li>
+                        <a href="../../../products/gateways/#owl-in-one"
+                           class="dropdown-item">
+                          <i class="fas fa-info"></i> &nbsp; Product
                         </a>
                       </li>
                       <li>
-                        <a href="https://reelyactive.github.io/diy/aruba-instant-config/"
+                        <a href="https://reelyactive.github.io/diy/oio-config/"
                            class="dropdown-item" target="_blank">
                           <i class="fas fa-code"></i> &nbsp; Configuration
                         </a>
                       </li>
                       <li>
-                        <a href="https://github.com/reelyactive/barnowl-aruba/"
+                        <a href="https://reelyactive.github.io/diy/oio-wlan/"
                            class="dropdown-item" target="_blank">
-                          <i class="fab fa-github"></i> &nbsp; Interface code
+                        <i class="fas fa-code"></i> &nbsp; WLAN tutorial
+                      </a>
+                      </li>
+                      <li>
+                        <a href="https://github.com/reelyactive/tessel-edge/"
+                           class="dropdown-item" target="_blank">
+                          <i class="fab fa-github"></i> &nbsp; Source code
+                        </a>
+                      </li>
+                      <li> <hr class="dropdown-divider"> </li>
+                      <li>
+                        <a href="https://shop.reelyactive.com/products/owl-in-one-ble"
+                           class="dropdown-item" target="_blank">
+                          <i class="fas fa-shopping-cart"></i> &nbsp; Buy
                         </a>
                       </li>
                     </ul>
                   </div>
                 </div>
                 <div class="card-footer text-muted small">
-                  Beyond WiFi connectivity.
+                  Develop and experiment freely.
                 </div>
               </div>
             </div>
-            <!-- Impinj -->
-            <div class="col" id="impinj">
+            <!-- Raspberry Pi -->
+            <div class="col" id="raspberry-pi">
               <div class="card hover-shadow">
-                <img src="../../../images/infrastructure-impinj.png"
-                     class="card-img-top" alt="Impinj">
+                <img src="../../../images/infrastructure-raspberrypi.jpg"
+                     class="card-img-top" alt="Raspberry Pi">
                 <div class="card-img-overlay">
                   <h3 class="card-title">
                     <span class="badge bg-light text-muted shadow">
-                      <i class="fas fa-exchange-alt"></i> Relay
+                      <i class="fas fa-cog"></i> Edge
                     </span>
                   </h3>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title"> Impinj Readers </h5>
+                  <h5 class="card-title"> Raspberry Pi </h5>
                   <p class="card-text">
                     <span class="badge bg-primary">
-                      <i class="fas fa-tag"></i>
+                      <i class="fab fa-bluetooth"></i>
+                    </span>
+                    <span class="badge bg-success">
+                      <i class="fab fa-node-js"></i>
+                    </span>
+                    <span class="badge bg-dark">
+                      <i class="fas fa-wifi"></i>
+                    </span>
+                    <span class="badge bg-dark">
+                      <i class="fas fa-ethernet"></i>
+                    </span>
+                    <span class="badge bg-info">
+                      <i class="fas fa-plug"></i> USB
+                    </span>
+                  </p>
+                  <div class="dropdown d-grid">
+                    <button class="btn btn-sm btn-outline-primary dropdown-toggle"
+                            type="button" id="dropdownPi"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                      Learn more
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownPi">
+                      <li>
+                        <a href="https://reelyactive.github.io/diy/pareto-anywhere-pi/"
+                           class="dropdown-item" target="_blank">
+                          <i class="fas fa-code"></i> &nbsp; Run Pareto Anywhere
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://reelyactive.github.io/diy/pi-prep/"
+                           class="dropdown-item" target="_blank">
+                          <i class="fas fa-code"></i> &nbsp; Preparation
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://reelyactive.github.io/diy/pi-kiosk/"
+                           class="dropdown-item" target="_blank">
+                          <i class="fas fa-code"></i> &nbsp; Kiosk mode
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://github.com/reelyactive/pi-suite/"
+                           class="dropdown-item" target="_blank">
+                          <i class="fab fa-github"></i> &nbsp; Source code
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card-footer text-muted small">
+                  The ubiquitous embedded computer.
+                </div>
+              </div>
+            </div>
+            <!-- Personal Computer -->
+            <div class="col" id="pc">
+              <div class="card hover-shadow">
+                <img src="../../../images/infrastructure-pc.jpg"
+                     class="card-img-top" alt="Personal Computer">
+                <div class="card-img-overlay">
+                  <h3 class="card-title">
+                    <span class="badge bg-light text-muted shadow">
+                      <i class="fas fa-cog"></i> Edge
+                    </span>
+                  </h3>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title"> Your PC </h5>
+                  <p class="card-text">
+                    <span class="badge bg-primary">
+                      <i class="fab fa-bluetooth"></i>
+                    </span>
+                    <span class="badge bg-success">
+                      <i class="fab fa-node-js"></i>
                     </span>
                     <span class="badge bg-dark">
                       <i class="fas fa-wifi"></i>
@@ -866,69 +913,22 @@
                   </p>
                   <div class="dropdown d-grid">
                     <button class="btn btn-sm btn-outline-primary dropdown-toggle"
-                            type="button" id="dropdownImpinj"
+                            type="button" id="dropdownPC"
                             data-bs-toggle="dropdown" aria-expanded="false">
                       Learn more
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownImpinj">
+                    <ul class="dropdown-menu" aria-labelledby="dropdownPC">
                       <li>
-                        <a href="https://github.com/reelyactive/barnowl-impinj/"
+                        <a href="https://reelyactive.github.io/diy/pareto-anywhere-pc/"
                            class="dropdown-item" target="_blank">
-                          <i class="fab fa-github"></i> &nbsp; Interface code
+                          <i class="fas fa-code"></i> &nbsp; Run Pareto Anywhere
                         </a>
                       </li>
                     </ul>
                   </div>
                 </div>
                 <div class="card-footer text-muted small">
-                  Leaders in RAIN RFID.
-                </div>
-              </div>
-            </div>
-            <!-- RF Controls -->
-            <div class="col" id="rfcontrols">
-              <div class="card hover-shadow">
-                <img src="../../../images/infrastructure-rfcontrols.png"
-                     class="card-img-top" alt="RF Controls">
-                <div class="card-img-overlay">
-                  <h3 class="card-title">
-                    <span class="badge bg-light text-muted shadow">
-                      <i class="fas fa-exchange-alt"></i> Relay
-                    </span>
-                  </h3>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title"> CS Smart Antennae </h5>
-                  <p class="card-text">
-                    <span class="badge bg-primary">
-                      <i class="fas fa-tag"></i>
-                    </span>
-                    <span class="badge bg-dark">
-                      <i class="fas fa-ethernet"></i>
-                    </span>
-                    <span class="badge bg-info">
-                      <i class="fas fa-plug"></i> PoE
-                    </span>
-                  </p>
-                  <div class="dropdown d-grid">
-                    <button class="btn btn-sm btn-outline-primary dropdown-toggle"
-                            type="button" id="dropdownRFControls"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                      Learn more
-                    </button>
-                    <ul class="dropdown-menu"
-                        aria-labelledby="dropdownRFControls">
-                      <li>
-                        <a href="https://github.com/reelyactive/barnowl-rfcontrols/"
-                           class="dropdown-item" target="_blank">
-                          <i class="fab fa-github"></i> &nbsp; Interface code
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="card-footer text-muted small">
-                  Long-range passive RTLS.
+                  Your personal computer.
                 </div>
               </div>
             </div>
