@@ -5,10 +5,12 @@ https://www.reelyactive.com/ambient-data/
 https://www.reelyactive.com/anniversary/
 https://www.reelyactive.com/art/
 https://www.reelyactive.com/awards/
+https://www.reelyactive.com/behold/
 https://www.reelyactive.com/beyond/
 https://www.reelyactive.com/bibliography/
 https://www.reelyactive.com/brand/
 https://www.reelyactive.com/breakthrough/
+https://www.reelyactive.com/business/
 https://www.reelyactive.com/case-studies/desjardins-dtm/
 https://www.reelyactive.com/case-studies/esguqam-greenuxlab/
 https://www.reelyactive.com/case-studies/jgh-clsc-metro/
@@ -25,7 +27,6 @@ https://www.reelyactive.com/covid-19/
 https://www.reelyactive.com/deem/
 https://www.reelyactive.com/diract/
 https://www.reelyactive.com/directory/
-https://www.reelyactive.com/discover/
 https://www.reelyactive.com/get-started/
 https://www.reelyactive.com/history/
 https://www.reelyactive.com/how-we-observe/
@@ -40,6 +41,7 @@ https://www.reelyactive.com/owlidays/2018/fr/
 https://www.reelyactive.com/owlidays/2019/
 https://www.reelyactive.com/owlidays/2020/
 https://www.reelyactive.com/owlidays/2021/
+https://www.reelyactive.com/owlidays/2022/
 https://www.reelyactive.com/parc/
 https://www.reelyactive.com/pareto/
 https://www.reelyactive.com/pareto/anywhere/
@@ -47,6 +49,7 @@ https://www.reelyactive.com/pareto/anywhere/devices/
 https://www.reelyactive.com/pareto/anywhere/infrastructure/
 https://www.reelyactive.com/pareto/anywhere/infrastructure/aruba/
 https://www.reelyactive.com/pareto/anywhere/integrations/
+https://www.reelyactive.com/pareto/anywhere/integrations/azure/
 https://www.reelyactive.com/pareto/anywhere/integrations/elastic-stack/
 https://www.reelyactive.com/press/
 https://www.reelyactive.com/pricing/
@@ -57,7 +60,6 @@ https://www.reelyactive.com/science/
 https://www.reelyactive.com/showcase/
 https://www.reelyactive.com/team/
 https://www.reelyactive.com/technology/
-https://www.reelyactive.com/the-business-of-open-source/
 https://www.reelyactive.com/uni/
 https://www.reelyactive.com/use-cases/
 https://www.reelyactive.com/use-cases/asset-tracking/
