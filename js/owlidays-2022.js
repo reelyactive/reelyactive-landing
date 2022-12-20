@@ -7,116 +7,151 @@
 // The Owl-iday content
 const OWLIDAY_DEVICES = {
     "h0h0h0h0h0h0/0": {
-      statid: { uri: "https://www.reelyactive.com/owlidays/2022/treelyactive/", version: "2012" },
+      statid: { uri: "treelyactive", version: "2012" },
       dynamb: { unicodeCodePoints: [ 127876 ], illuminance: 1225 },
       position: [ 0, 0 ]
     },
     "reelyactivesubghz/0": {
-      statid: { uri: "https://www.reelyactive.com/owlidays/2022/reelyactive/" },
-      nearest: [ { device: "h0h0h0h0h0h0/0" } ]
+      statid: { uri: "reelyactive" },
+      nearest: [ { device: "h0h0h0h0h0h0/0" } ], position: [ -22, 22 ]
     },
     "bluetoothle5/0": {
-      statid: { uri: "https://www.reelyactive.com/owlidays/2022/bluetoothlowenergy/" },
-      nearest: [ { device: "h0h0h0h0h0h0/0" } ]
+      statid: { uri: "bluetoothlowenergy" },
+      nearest: [ { device: "h0h0h0h0h0h0/0" } ], position: [ 22, 22 ]
     },
     "rainrfid/0": {
-      statid: { uri: "https://www.reelyactive.com/owlidays/2022/rain-rfid/" },
-      nearest: [ { device: "h0h0h0h0h0h0/0" } ]
+      statid: { uri: "rain-rfid" },
+      nearest: [ { device: "h0h0h0h0h0h0/0" } ], position: [ -22, -22 ]
     },
     "enoceanalliance/0": {
-      statid: { uri: "https://www.reelyactive.com/owlidays/2022/enocean-alliance/" },
-      nearest: [ { device: "h0h0h0h0h0h0/0" } ]
+      statid: { uri: "enocean-alliance" },
+      nearest: [ { device: "h0h0h0h0h0h0/0" } ], position: [ 22, -22 ]
     },
     "001bc50940802022/1": {
-      statid: { uri: "https://www.reelyactive.com/owlidays/2022/ra-r432/", version: "RA-R432" },
+      statid: { uri: "ra-r432", version: "RA-R432" },
       dynamb: { unicodeCodePoints: [ 129417 ], temperature: 20.12 },
       nearest: [ { device: "reelyactivesubghz/0" } ]
     },
     "001bc50940812022/1": {
-      statid: { uri: "https://www.reelyactive.com/owlidays/2022/ra-r436/", version: "RA-R436" },
+      statid: { uri: "ra-r436", version: "RA-R436" },
       dynamb: { unicodeCodePoints: [ 129417 ], temperature: 20.14 },
       nearest: [ { device: "bluetoothle5/0" } ]
     },
     "001bc50940822022/1": {
-      statid: { uri: "https://www.reelyactive.com/owlidays/2022/owl-in-one/", version: "RA-H443" },
+      statid: { uri: "owl-in-one", version: "RA-H443" },
       dynamb: { unicodeCodePoints: [ 129417 ], temperature: 20.16 },
       nearest: [ { device: "bluetoothle5/0" } ]
     },
+    "aruba303ap22/2": {
+      statid: { uri: "aruba-ap", version: "303H" },
+      nearest: [ { device: "bluetoothle5/0" } ]
+    },
     "p1p1p1p1p1p1/2": {
-      statid: { uri: "https://www.reelyactive.com/owlidays/2022/raspberry-pi/", version: "3B+" },
+      statid: { uri: "raspberry-pi", version: "3B+" },
       dynamb: { unicodeCodePoints: [ 129383 ] },
       nearest: [ { device: "bluetoothle5/0" } ]
     },
     "001bc50940832022/1": {
-      statid: { uri: "https://www.reelyactive.com/owlidays/2022/pi-dual-ble113/" },
+      statid: { uri: "pi-dual-ble113" },
       dynamb: { unicodeCodePoints: [ 129417 ], temperature: 20.18 },
       nearest: [ { device: "p1p1p1p1p1p1/2" } ]
     },
+    "rfcontrolscs/2": {
+      statid: { uri: "rfcontrols-cs445b" },
+      nearest: [ { device: "rainrfid/0" } ]
+    },
+    "impinjreader/2": {
+      statid: { uri: "impinj-r700" },
+      nearest: [ { device: "rainrfid/0" } ]
+    },
+    "endongle/7": {
+      statid: { uri: "enocean-usb-500u" },
+      nearest: [ { device: "enoceanalliance/0" },
+                 { device: "p1p1p1p1p1p1/2" }, { device: "aruba303ap22/2" } ]
+    },
     "001bc50940102022/3": {
-      statid: { uri: "https://www.reelyactive.com/owlidays/2022/ra-t411/" },
+      statid: { uri: "ra-t411" },
       dynamb: { unicodeCodePoints: [ 129417 ], temperature: 20.12 },
       nearest: [ { device: "001bc50940802022/1" } ]
     },
     "banglejsv200/3": {
-      statid: { uri: "https://www.reelyactive.com/owlidays/2022/banglejs/", version: "2" },
+      statid: { uri: "banglejs", version: "2" },
       dynamb: { unicodeCodePoints: [ 128578 ], temperature: 20.21,
                 nearest: [ { deviceId: "cavabracelet", rssi: -72 } ],
                 heartRate: 60 },
-      nearest: [ { device: "001bc50940812022/1" },
+      nearest: [ { device: "001bc50940812022/1" }, { device: "aruba303ap22/2" },
                  { device: "001bc50940822022/1" }, { device: "p1p1p1p1p1p1/2" },
                  { device: "001bc50940832022/1" } ]
     },
     "cavabracelet/3": {
-      statid: { uri: "https://www.reelyactive.com/owlidays/2022/cavabracelet/" },
+      statid: { uri: "cavabracelet" },
       dynamb: { unicodeCodePoints: [ 128567 ], temperature: 20.20,
                 nearest: [ { deviceId: "banglejs", rssi: -66 } ] },
-      nearest: [ { device: "001bc50940812022/1" },
+      nearest: [ { device: "001bc50940812022/1" }, { device: "aruba303ap22/2" },
                  { device: "001bc50940822022/1" }, { device: "p1p1p1p1p1p1/2" },
                  { device: "001bc50940832022/1" } ]
     },
     "lairdbt71022/3": {
-      statid: { uri: "https://www.reelyactive.com/owlidays/2022/laird-bt710/" },
+      statid: { uri: "laird-bt710" },
       dynamb: { temperature: 20.20 },
-      nearest: [ { device: "001bc50940812022/1" },
+      nearest: [ { device: "001bc50940812022/1" }, { device: "aruba303ap22/2" },
                  { device: "001bc50940822022/1" }, { device: "p1p1p1p1p1p1/2" },
                  { device: "001bc50940832022/1" } ]
     },
     "minewb102022/3": {
-      statid: { uri: "https://www.reelyactive.com/owlidays/2022/minew-b10/" },
+      statid: { uri: "minew-b10" },
       dynamb: { unicodeCodePoints: [ 129301 ], temperature: 20.22,
                 isButtonPressed: [ true ] },
-      nearest: [ { device: "001bc50940812022/1" },
+      nearest: [ { device: "001bc50940812022/1" }, { device: "aruba303ap22/2" },
                  { device: "001bc50940822022/1" }, { device: "p1p1p1p1p1p1/2" },
                  { device: "001bc50940832022/1" } ]
     },
     "minewe8s2022/3": {
-      statid: { uri: "https://www.reelyactive.com/owlidays/2022/minew-e8/" },
+      statid: { uri: "minew-e8" },
       dynamb: { temperature: 20.16, acceleration: [ 0.12, -0.96, -0.21 ] },
-      nearest: [ { device: "001bc50940812022/1" },
+      nearest: [ { device: "001bc50940812022/1" }, { device: "aruba303ap22/2" },
                  { device: "001bc50940822022/1" }, { device: "p1p1p1p1p1p1/2" },
                  { device: "001bc50940832022/1" } ]
     },
     "minewmwl0122/3": {
-      statid: { uri: "https://www.reelyactive.com/owlidays/2022/minew-mwl01/" },
+      statid: { uri: "minew-mwl01" },
       dynamb: { temperature: 20.22 },
-      nearest: [ { device: "001bc50940812022/1" },
+      nearest: [ { device: "001bc50940812022/1" }, { device: "aruba303ap22/2" },
                  { device: "001bc50940822022/1" }, { device: "p1p1p1p1p1p1/2" },
                  { device: "001bc50940832022/1" } ]
     },
     "puckjsv22022/3": {
-      statid: { uri: "https://www.reelyactive.com/owlidays/2022/puckjs/" },
+      statid: { uri: "puckjs" },
       dynamb: { unicodeCodePoints: [ 129451 ], temperature: 20.16,
                 isButtonPressed: [ true ] },
-      nearest: [ { device: "001bc50940812022/1" },
+      nearest: [ { device: "001bc50940812022/1" }, { device: "aruba303ap22/2" },
                  { device: "001bc50940822022/1" }, { device: "p1p1p1p1p1p1/2" },
                  { device: "001bc50940832022/1" } ]
     },
     "wiliotpixel0/3": {
-      statid: { uri: "https://www.reelyactive.com/owlidays/2022/wiliot-pixel/" },
+      statid: { uri: "wiliot-pixel" },
       dynamb: { temperature: 20.22 },
-      nearest: [ { device: "001bc50940812022/1" },
+      nearest: [ { device: "001bc50940812022/1" }, { device: "aruba303ap22/2" },
                  { device: "001bc50940822022/1" }, { device: "p1p1p1p1p1p1/2" },
                  { device: "001bc50940832022/1" } ]
+    },
+    "enoemcsu/7": {
+      statid: { uri: "enocean-emcs" },
+      dynamb: { unicodeCodePoints: [ 128682 ], isContactDetected: [ true ] },
+      nearest: [ { device: "endongle/7" } ]
+    },
+    "enoemdcu/7": {
+      statid: { uri: "enocean-emdc" },
+      dynamb: { unicodeCodePoints: [ 128694 ], isMotionDetected: [ true ],
+                illuminance: 915, txCount: 82041 },
+      nearest: [ { device: "endongle/7" } ]
+    },
+    "enoemsiu/7": {
+      statid: { uri: "enocean-emsi" },
+      dynamb: { unicodeCodePoints: [ 129695 ], temperature: 20.21,
+                relativeHumidity: 52, illuminance: 915, txCount: 84093,
+                isMotionDetected: [ true ], isContactDetected: [ true ] },
+      nearest: [ { device: "endongle/7" } ]
     }
 };
 const OWLIDAY_EDGE_NAME = 'o~o~o~o~o';
@@ -129,9 +164,12 @@ const HLC_MIN_HEIGHT_PX = 480;
 const HLC_UNUSABLE_HEIGHT_PX = 120;
 const COSE_LAYOUT_OPTIONS = {
     name: "cose",
-    animate: false,
+    animate: true,
+    animationThreshold: 125,
+    refresh: 24,
+    nodeOverlap: 16,
     randomize: false,
-    initialTemp: 40
+    initialTemp: 400
 };
 const GRAPH_STYLE = [
     { selector: "node",
