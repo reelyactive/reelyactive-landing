@@ -579,7 +579,7 @@
           </div>
           <!-- Ambient data in, standard data out -->
           <h3 class="text-center mt-5"> <b>Pareto Anywhere for Azure</b> provides a <span class="text-secondary">single standard stream</span> of real-time data, <span class="text-info">regardless of the underlying devices & technologies.</span> </h3>
-          <div class="card-group  mt-3 mb-5">
+          <div class="card-group mt-3 mb-5">
             <div class="card border-0 rounded-3 hover-shadow">
               <div class="card-body">
                 <h3 class="card-title"> Ambient data in&hellip; </h3>
@@ -605,7 +605,148 @@
               </div>
             </div>
           </div>
-          <div class="text-center text-muted display-6 animate-breathing">
+          <!-- Data structure -->
+          <h3 class="mt-5"> <em>Any</em> identifiable device.  <em>One</em> data structure. </h3>
+          <div class="row mt-4">
+            <div class="col-lg-6 mb-3">
+              <pre class="text-dark">
+{
+  "type": "dynamb",
+  "data": {
+    "deviceId": "...",
+    "deviceIdType": 0,
+    "timestamp": 1645568542222,
+    <span class="text-muted">"temperature": 21.0,
+        &vellip;
+    "relativeHumidity": 51.2</span>
+  }
+}</pre>
+            </div>
+            <div class="col-lg-6">
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="dynambtab"
+                          data-bs-toggle="tab" data-bs-target="#dynambcontent"
+                          type="button" role="tab" aria-controls="dynambtab"
+                          aria-selected="true"> dynamb </button>
+                </li>
+              </ul>
+              <div class="tab-content tab-content-border">
+                <div class="tab-pane fade show active" id="dynambcontent"
+                     role="tabpanel" aria-labelledby="dynambtab">
+                  <p class="mb-1"> <em class="fw-bold">dyn</em>amic <em class="fw-bold">amb</em>ient data: </p>
+                  <div class="accordion accordion-flush" id="accordionDynamb">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="accordionHeaderDeviceId">
+                        <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#accordionBodyDeviceId"
+                                aria-expanded="false"
+                                aria-controls="accordionBodyDeviceId">
+                          <span class="font-monospace">
+                            <i class="fas fa-barcode text-ambient"></i> deviceId
+                          </span>
+                        </button>
+                      </h2>
+                      <div id="accordionBodyDeviceId"
+                           class="accordion-collapse collapse"
+                           aria-labelledby="accordionHeaderDeviceId"
+                           data-bs-parent="#accordionDynamb">
+                        <div class="accordion-body">
+                          <dl class="row font-monospace">
+                            <dt class="col-3"> Type </dt>
+                            <dd class="col-9">
+                              String <small class="text-muted"> (hexadecimal, lowercase) </small>
+                            </dd>
+                          </dl>
+                          <p> Identifier of the device from which the data originates. </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header"
+                          id="accordionHeaderDeviceIdType">
+                        <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#accordionBodyDeviceIdType"
+                                aria-expanded="false"
+                                aria-controls="accordionBodyDeviceIdType">
+                          <span class="font-monospace">
+                            <i class="fas fa-info-circle text-ambient"></i> deviceIdType
+                          </span>
+                        </button>
+                      </h2>
+                      <div id="accordionBodyDeviceIdType"
+                           class="accordion-collapse collapse"
+                           aria-labelledby="accordionHeaderDeviceIdType"
+                           data-bs-parent="#accordionDynamb">
+                        <div class="accordion-body">
+                          <dl class="row font-monospace">
+                            <dt class="col-3"> Type </dt>
+                            <dd class="col-9">
+                              Number <small class="text-muted"> (whole number) </small>
+                            </dd>
+                          </dl>
+                          <p> Type of identifier of the device from which the data originates.  See <a href="https://reelyactive.github.io/diy/cheatsheet/#idtype" target="_blank"><i class="fas fa-external-link-alt"></i> Cheatsheet #idtype</a>. </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header"
+                          id="accordionHeaderTimestamp">
+                        <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#accordionBodyTimestamp"
+                                aria-expanded="false"
+                                aria-controls="accordionBodyTimestamp">
+                          <span class="font-monospace">
+                            <i class="fas fa-clock text-primary"></i> timestamp
+                          </span>
+                        </button>
+                      </h2>
+                      <div id="accordionBodyTimestamp"
+                           class="accordion-collapse collapse"
+                           aria-labelledby="accordionHeaderTimestamp"
+                           data-bs-parent="#accordionDynamb">
+                        <div class="accordion-body">
+                          <dl class="row font-monospace">
+                            <dt class="col-3"> Type </dt>
+                            <dd class="col-9">
+                              Number <small class="text-muted"> (whole number) </small>
+                            </dd>
+                          </dl>
+                          <p> UNIX epoch (in milliseconds) representing the time at which the data was collected. </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header"
+                          id="accordionHeaderProperties">
+                        <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#accordionBodyProperties"
+                                aria-expanded="false"
+                                aria-controls="accordionBodyProperties">
+                          <span class="font-monospace text-muted">
+                            <i class="fas fa-info-circle"></i> properties
+                          </span>
+                        </button>
+                      </h2>
+                      <div id="accordionBodyProperties"
+                           class="accordion-collapse collapse"
+                           aria-labelledby="accordionHeaderProperties"
+                           data-bs-parent="#accordionDynamb">
+                        <div class="accordion-body">
+                          See our <a href="https://reelyactive.github.io/diy/cheatsheet/#dynamb" target="_blank"><i class="fas fa-external-link-alt"></i> Developers Cheatsheet</a> for the standard representation of all <em>optional</em> dynamb properties.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center text-muted display-6 animate-breathing mt-5">
             &vellip;
           </div>
           <!----- Developers ----->
