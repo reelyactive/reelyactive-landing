@@ -434,9 +434,14 @@
               <h4 class="card-header bg-ambient text-white"> Ambient devices </h4>
               <div class="card-body">
                 <h5 class="card-subtitle mb-2 text-secondary"> What? How? </h5>
-                <p id="ambientdevice" class="card-text">
-                  112 million Bluetooth asset tracking devices per year
-                </p>
+                <div id="ambientdevice" class="card-text">
+                  <p id="ambientdevicecount" class="lead text-info mb-0"></p>
+                  <p id="ambientdevicename" class="mb-0">
+                    <i class="fas fa-wifi animate-breathing"></i>
+                  </p>
+                  <p id="ambientdevicerate"
+                     class="text-small fst-italic text-muted mb-1"></p>
+                </div>
               </div>
               <div class="card-footer bg-white">
                 <a href="../pareto/anywhere/devices/#content"
@@ -449,9 +454,15 @@
               <h4 class="card-header bg-success text-white"> Ambient infrastructure </h4>
               <div class="card-body">
                 <h5 class="card-subtitle mb-2 text-secondary"> Where? </h5>
-                <p id="ambientinfrastructure" class="card-text">
-                  About 35 million Aruba APs
-                </p>
+                <div id="ambientinfrastructure" class="card-text">
+                  <p id="ambientinfrastructurecount"
+                     class="lead text-info mb-0"></p>
+                  <p id="ambientinfrastructurename" class="mb-0">
+                    <i class="fas fa-satellite-dish animate-breathing"></i>
+                  </p>
+                  <p id="ambientinfrastructurerate"
+                     class="text-small fst-italic text-muted mb-1"></p>
+                </div>
               </div>
               <div class="card-footer bg-white">
                 <a href="../pareto/anywhere/infrastructure/#content"
@@ -461,6 +472,21 @@
               </div>
             </div>
           </div>
+          <ul class="list-inline text-muted small text-center mt-4">
+            <li class="list-inline-item"> Sources: </li>
+            <li class="list-inline-item">
+              <a href="https://www.bluetooth.com/2023-market-update/"
+                 target="_blank">2023 Bluetooth&reg; Market Update</a>,
+            </li>
+            <li class="list-inline-item">
+              <a href="https://rainrfid.org/rain-rfid-market-research-report/"
+                 target="_blank">2022 RAIN Alliance Report</a>,
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.enocean-alliance.org/about-us/"
+                 target="_blank">About EnOcean Alliance</a>
+            </li>
+          </ul>
         </div>
       </div>
       <!-- RFID as Ambient Data tutorial -->
@@ -611,5 +637,6 @@
     <!-- Optional JavaScript -->
     <script defer src="../js/fontawesome-reelyactive.min.js"></script>
     <script src="../js/bootstrappyactive.bundle.min.js"></script>
+    <script src="../js/ambient-stats.js"></script>
   </body>
 </html>
