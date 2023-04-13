@@ -389,8 +389,19 @@
     <div id="content" class="container-fluid">
       <a href="#top">
         <img src="../../../images/barnarrow-up.png" alt="Top of Page"
-             class="mx-auto d-block barnarrow animate-breathing">
+             class="mx-auto mb-4 d-block barnarrow animate-breathing">
       </a>
+      <!-- Ambient device statistics -->
+      <div class="row justify-content-center bg-dark text-white text-center">
+        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+          <h1 id="ambientdevicecount" class="text-ambient mt-5 mb-1"></h1>
+          <h3 id="ambientdevicename" class="mb-0">
+              <i class="fas fa-wifi animate-breathing"></i>
+          </h3>
+          <p id="ambientdevicerate"
+                class="lead fst-italic text-muted mb-5"></p>
+        </div>
+      </div>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
           <div class="row mt-5">
@@ -1835,5 +1846,6 @@
     <script defer src="../../../js/fontawesome-reelyactive.min.js"></script>
     <script src="../../../js/bootstrappyactive.bundle.min.js"></script>
     <script src="../../../js/devices.js"></script>
+    <script src="../../../js/ambient-stats.js"></script>
   </body>
 </html>
