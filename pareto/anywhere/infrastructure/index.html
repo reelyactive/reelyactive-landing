@@ -427,9 +427,58 @@
               </div>
             </div>
           </div>
-          <div class="row row-cols-2 row-cols-xxl-3 g-4 my-4">
+          <!-- Filter -->
+          <div class="row mt-5">
+            <div class="col-md-6 mb-3">
+              <h3> Browse ambient infrastructure <small class="text-muted">by wireless technology</small> </h3>
+            </div>
+            <div class="col-md-6">
+              <table class="table table-hover text-center">
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="form-switch">
+                        <input class="form-check-input align-middle" checked
+                               type="checkbox" id="filterBluetoothLowEnergy">
+                      </div>
+                    </td>
+                    <th class="bg-dark text-white align-middle lead">
+                      <i class="fas fa-wifi"></i>
+                    </th>
+                    <td class="align-middle"> Bluetooth Low Energy </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-switch">
+                        <input class="form-check-input align-middle" checked
+                               type="checkbox" id="filterRAIN">
+                      </div>
+                    </td>
+                    <th class="bg-dark text-white align-middle lead">
+                      <i class="fas fa-wifi"></i>
+                    </th>
+                    <td class="align-middle"> RAIN RFID </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-switch">
+                        <input class="form-check-input align-middle" checked
+                               type="checkbox" id="filterEnOcean">
+                      </div>
+                    </td>
+                    <th class="bg-dark text-white align-middle lead">
+                      <i class="fas fa-wifi"></i>
+                    </th>
+                    <td class="align-middle"> EnOcean </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row row-cols-2 row-cols-xxl-3 g-4 my-4"
+               id="infrastructurecards">
             <!-- Aruba AP -->
-            <div class="col" id="aruba-ap">
+            <div class="col" id="aruba-ap" technology="ble">
               <div class="card hover-shadow">
                 <img src="../../../images/infrastructure-aruba-303h.jpg"
                      class="card-img-top" alt="Aruba 303H">
@@ -489,7 +538,7 @@
               </div>
             </div>
             <!-- Impinj -->
-            <div class="col" id="impinj-r700">
+            <div class="col" id="impinj-r700" technology="rain">
               <div class="card hover-shadow">
                 <img src="../../../images/infrastructure-impinj-r700.jpg"
                      class="card-img-top" alt="Impinj R700">
@@ -541,7 +590,7 @@
               </div>
             </div>
             <!-- RF Controls -->
-            <div class="col" id="rfcontrols">
+            <div class="col" id="rfcontrols" technology="rain">
               <div class="card hover-shadow">
                 <img src="../../../images/infrastructure-rfcontrols.png"
                      class="card-img-top" alt="RF Controls">
@@ -588,7 +637,7 @@
               </div>
             </div>
             <!-- reelyActive Reelceiver -->
-            <div class="col" id="reelceiver">
+            <div class="col" id="reelceiver" technology="ble">
               <div class="card hover-shadow">
                 <img src="../../../images/infrastructure-reelceiver.jpg"
                      class="card-img-top" alt="reelyActive Reelceiver">
@@ -656,7 +705,7 @@
               </div>
             </div>
             <!-- Minew G1 -->
-            <div class="col" id="minew-g1">
+            <div class="col" id="minew-g1" technology="ble">
               <div class="card hover-shadow">
                 <img src="../../../images/infrastructure-minew-g1.jpg"
                      class="card-img-top" alt="Minew G1">
@@ -716,7 +765,7 @@
               </div>
             </div>
             <!-- Minew G2 -->
-            <div class="col" id="minew-g2">
+            <div class="col" id="minew-g2" technology="ble">
               <div class="card hover-shadow">
                 <img src="../../../images/infrastructure-minew-g2.jpg"
                      class="card-img-top" alt="Minew G2">
@@ -765,7 +814,7 @@
               </div>
             </div>
             <!-- Minew MG3 -->
-            <div class="col" id="minew-mg3">
+            <div class="col" id="minew-mg3" technology="ble">
               <div class="card hover-shadow">
                 <img src="../../../images/infrastructure-minew-mg3.jpg"
                      class="card-img-top" alt="Minew MG3">
@@ -818,7 +867,7 @@
               </div>
             </div>
             <!-- Minew MG4 -->
-            <div class="col" id="minew-mg4">
+            <div class="col" id="minew-mg4" technology="ble">
               <div class="card hover-shadow">
                 <img src="../../../images/infrastructure-minew-mg4.jpg"
                      class="card-img-top" alt="Minew MG4">
@@ -871,7 +920,7 @@
               </div>
             </div>
             <!-- reelyActive Owl-in-One -->
-            <div class="col" id="owl-in-one">
+            <div class="col" id="owl-in-one" technology="ble">
               <div class="card hover-shadow">
                 <img src="../../../images/infrastructure-owl-in-one.jpg"
                      class="card-img-top" alt="reelyActive Owl-in-One">
@@ -953,7 +1002,7 @@
               </div>
             </div>
             <!-- Raspberry Pi -->
-            <div class="col" id="raspberry-pi">
+            <div class="col" id="raspberry-pi" technology="ble">
               <div class="card hover-shadow">
                 <img src="../../../images/infrastructure-raspberrypi.jpg"
                      class="card-img-top" alt="Raspberry Pi">
@@ -1023,7 +1072,7 @@
               </div>
             </div>
             <!-- Personal Computer -->
-            <div class="col" id="pc">
+            <div class="col" id="pc" technology="ble">
               <div class="card hover-shadow">
                 <img src="../../../images/infrastructure-pc.jpg"
                      class="card-img-top" alt="Personal Computer">
@@ -1075,7 +1124,7 @@
               </div>
             </div>
             <!-- Laird IG60-BL654 -->
-            <div class="col" id="laird-ig60-bl654">
+            <div class="col" id="laird-ig60-bl654" technology="ble">
               <div class="card hover-shadow">
                 <img src="../../../images/infrastructure-ig60-bl654.jpg"
                      class="card-img-top" alt="Laird IG60-BL654">
@@ -1133,7 +1182,7 @@
               </div>
             </div>
             <!-- Bluecats BC510 -->
-            <div class="col" id="bluecats-bc510">
+            <div class="col" id="bluecats-bc510" technology="ble">
               <div class="card hover-shadow">
                 <img src="../../../images/infrastructure-bluecats-bc510.jpg"
                      class="card-img-top" alt="Bluecats BC510">
@@ -1258,6 +1307,7 @@
     <!-- Optional JavaScript -->
     <script defer src="../../../js/fontawesome-reelyactive.min.js"></script>
     <script src="../../../js/bootstrappyactive.bundle.min.js"></script>
+    <script src="../../../js/infrastructure.js"></script>
     <script src="../../../js/ambient-stats.js"></script>
   </body>
 </html>
