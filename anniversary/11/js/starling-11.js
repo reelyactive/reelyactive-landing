@@ -10,7 +10,13 @@ let starling = (function() {
   let DEFAULT_TRANSMITTERS = [
       { id: "fee150bada55", idType: 3, dynambProperties: [],
         statid: { uri: "https://sniffypedia.org/Product/Any_BLE-Device/",
-        name: "Harald" } },
+        name: "Bluetooth Low Energy" } },
+      { id: "a00000000000000000001234", idType: 5, dynambProperties: [],
+        statid: { uri: "https://sniffypedia.org/Standard/Electronic_Product_Code/",
+        name: "EPC" } },
+      { id: "04140000", idType: 7, dynambProperties: [],
+        statid: { uri: "https://sniffypedia.org/Organization/EnOcean_GmbH/",
+        name: "EnOcean" } },
       { id: "d070b11d070b", idType: 3, dynambProperties: [],
         statid: { deviceIds: [ "496f4944434f4445b73e5554462d3332/0001/f989" ] },
         url: "https://www.reelyactive.com/team/barnowl/" },
@@ -64,30 +70,42 @@ let starling = (function() {
         statid: { uri: "https://www.reelyactive.com/anniversary/11/stories/enocean-emsib/" } }
   ];
   let DEFAULT_RECEIVERS = [
-      { id: "0b1e6a7e8a40", idType: 2, position: [ -10, 8 ],
-        url: "https://www.reelyactive.com/anniversary/11/stories/aruba-ap/" },
-      { id: "0b1e6a7e8a41", idType: 2, position: [ -10, 4 ],
-        url: "https://www.reelyactive.com/anniversary/11/stories/impinj-r700/" },
-      { id: "0b1e6a7e8a42", idType: 2, position: [ -10, 0 ],
-        url: "https://www.reelyactive.com/anniversary/11/stories/raspberry-pi/" },
-      { id: "0b1e6a7e8a43", idType: 2, position: [ -10, -4 ],
-        url: "https://www.reelyactive.com/anniversary/11/stories/rf-controls/" },
-      { id: "0b1e6a7e8a44", idType: 2, position: [ -10, -8 ],
-        url: "https://www.reelyactive.com/anniversary/11/stories/pc/" },
-      { id: "001bc50940810000", idType: 1, position: [ -12, 6 ],
-        url: "https://www.reelyactive.com/anniversary/11/stories/reelceiver/" },
-      { id: "ac233fa00061", idType: 1, position: [ 10, 8 ],
-        url: "https://www.reelyactive.com/anniversary/11/stories/minew-g1/" },
-      { id: "0b1e6a7e8a46", idType: 2, position: [ 10, 4 ],
-        url: "https://www.reelyactive.com/anniversary/11/stories/csl-cs463/" },
-      { id: "ac233fa00063", idType: 2, position: [ 10, 0 ],
-        url: "https://www.reelyactive.com/anniversary/11/stories/minew-mg3/" },
-      { id: "0b1e6a7e8a48", idType: 2, position: [ 10, -4 ],
-        url: "https://www.reelyactive.com/anniversary/11/stories/enocean-usb/" },
+      { id: "204c0fffffff", idType: 2, position: [ -10, 8 ],
+        url: "https://www.reelyactive.com/anniversary/11/stories/aruba-ap/",
+        acceptedIdTypes: [ 2, 3 ] },
       { id: "ac233fa00064", idType: 2, position: [ 10, -8 ],
-        url: "https://www.reelyactive.com/anniversary/11/stories/minew-mg4/" },
+        url: "https://www.reelyactive.com/anniversary/11/stories/minew-mg4/",
+        acceptedIdTypes: [ 2, 3 ] },
+      { id: "ac233fa00061", idType: 1, position: [ 10, 8 ],
+        url: "https://www.reelyactive.com/anniversary/11/stories/minew-g1/",
+        acceptedIdTypes: [ 2, 3 ] },
+      { id: "0b1e6a7e8a44", idType: 2, position: [ -10, -8 ],
+        url: "https://www.reelyactive.com/anniversary/11/stories/pc/",
+        acceptedIdTypes: [ 2, 3 ] },
+      { id: "ac233fa00063", idType: 2, position: [ 10, 0 ],
+        url: "https://www.reelyactive.com/anniversary/11/stories/minew-mg3/",
+        acceptedIdTypes: [ 2, 3 ] },
+      { id: "0b1e6a7e8a42", idType: 2, position: [ -10, 0 ],
+        url: "https://www.reelyactive.com/anniversary/11/stories/raspberry-pi/",
+        acceptedIdTypes: [ 2, 3 ] },
       { id: "001bc50940820000", idType: 1, position: [ 8, 6 ],
-        url: "https://www.reelyactive.com/anniversary/11/stories/owl-in-one/" }
+        url: "https://www.reelyactive.com/anniversary/11/stories/owl-in-one/",
+        acceptedIdTypes: [ 2, 3 ] },
+      { id: "001bc50940810000", idType: 1, position: [ -12, 6 ],
+        url: "https://www.reelyactive.com/anniversary/11/stories/reelceiver/",
+        acceptedIdTypes: [ 1, 2, 3 ] },
+      { id: "001625ffffff", idType: 2, position: [ -10, 4 ],
+        url: "https://www.reelyactive.com/anniversary/11/stories/impinj-r700/",
+        acceptedIdTypes: [ 4, 5 ] },
+      { id: "0b1e6a7e8a43", idType: 2, position: [ -10, -4 ],
+        url: "https://www.reelyactive.com/anniversary/11/stories/rf-controls/",
+        acceptedIdTypes: [ 4, 5 ] },
+      { id: "0b1e6a7e8a46", idType: 2, position: [ 10, 4 ],
+        url: "https://www.reelyactive.com/anniversary/11/stories/csl-cs463/",
+        acceptedIdTypes: [ 4, 5 ] },
+      { id: "0b1e6a7e8a48", idType: 2, position: [ 10, -4 ],
+        url: "https://www.reelyactive.com/anniversary/11/stories/enocean-usb/",
+        acceptedIdTypes: [ 7 ] }
   ];
   let DEFAULT_UPDATE_CYCLE_MILLISECONDS = 4000;
 
@@ -185,11 +203,14 @@ let starling = (function() {
         let dynamb = createDynamb(transmitter);
 
         receivers.forEach((receiver) => {
-          if((Math.random() * device.nearest.length) < 0.7) {
-            device.nearest.push({
-              device: receiver.id + SIGNATURE_SEPARATOR + receiver.idType,
-              rssi: -90 + Math.round(Math.random() * 40)
-            });
+          if(receiver.acceptedIdTypes.includes(transmitter.idType)) {
+            if((transmitter.idType === 5) ||
+               ((Math.random() * device.nearest.length) < 0.7)) {
+              device.nearest.push({
+                device: receiver.id + SIGNATURE_SEPARATOR + receiver.idType,
+                rssi: -90 + Math.round(Math.random() * 40)
+              });
+            }
           }
         });
         device.nearest.sort((a, b) => (b.rssi - a.rssi));
@@ -248,7 +269,7 @@ let starling = (function() {
 
   // Get the (emulated) context for a specific route
   let getContext = function(route) {
-    console.log(contextCount++);
+    contextCount++;
     return { devices: createDevices(route) };
   };
 
