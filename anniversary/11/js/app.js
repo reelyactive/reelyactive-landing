@@ -18,6 +18,22 @@ charlotte.init(document.getElementById('cy'), devicePropertiesMap);
 poll();
 setInterval(poll, 5000);
 
+// Pre-load all the stories
+starling.transmitters.forEach(transmitter => {
+  let uri = transmitter.url || transmitter.statid.uri;
+  let deviceSignature = transmitter.id + SIGNATURE_SEPARATOR +
+                        transmitter.idType;
+  cormorant.retrieveStory(uri, {}, story => {
+    updateDeviceProperty(deviceSignature, story);
+  });
+});
+starling.receivers.forEach(receiver => {
+  let deviceSignature = receiver.id + SIGNATURE_SEPARATOR + receiver.idType;
+  cormorant.retrieveStory(receiver.url, {}, story => {
+    updateDeviceProperty(deviceSignature, story);
+  });
+});
+
 
 // Set the height of the graph container
 function setContainerHeight() {
@@ -36,6 +52,20 @@ function poll() {
 }
 
 
+// Update the devicePropertiesMap for a single device based on the story
+function updateDeviceProperty(deviceSignature, story) {
+  let imageUrl = cuttlefishStory.determineImageUrl(story);
+  let title;
+
+  if(imageUrl || title) {
+    let deviceProperties = {};
+    if(imageUrl) { deviceProperties.imageUrl = imageUrl }
+    if(title) { deviceProperties.title = title }
+    devicePropertiesMap.set(deviceSignature, deviceProperties);
+  }
+}
+
+
 // Update the devicePropertiesMap
 function updateDevicePropertiesMap(devices) {
   for(const deviceSignature in devices) {
@@ -49,19 +79,7 @@ function updateDevicePropertiesMap(devices) {
 
       if(deviceUrl) {
         cormorant.retrieveStory(deviceUrl, {}, (story) => {
-          let imageUrl = cuttlefishStory.determineImageUrl(story);
-          let title;
-
-          if(!deviceUrl.includes('sniffypedia.org')) {
-            title = cuttlefishStory.determineTitle(story);
-          }
-
-          if(imageUrl || title) {
-            let deviceProperties = {};
-            if(imageUrl) { deviceProperties.imageUrl = imageUrl }
-            if(title) { deviceProperties.title = title }
-            devicePropertiesMap.set(deviceSignature, deviceProperties);
-          }
+           updateDeviceProperty(deviceSignature, story);
         });
       }
     }

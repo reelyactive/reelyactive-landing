@@ -8,66 +8,68 @@ let starling = (function() {
 
   // Internal constants
   let DEFAULT_TRANSMITTERS = [
+      { id: "001bc50940000000", idType: 1, dynambProperties: [],
+        statid: { uri: "https://sniffypedia.org/Product/reelyActive_RA-T411/",
+        name: "RA-T411" } },
       { id: "fee150bada55", idType: 3, dynambProperties: [],
         statid: { uri: "https://sniffypedia.org/Product/Any_BLE-Device/",
         name: "Bluetooth Low Energy" } },
+      { id: "d070b11d070b", idType: 3, dynambProperties: [],
+        statid: { deviceIds: [ "496f4944434f4445b73e5554462d3332/0001/f989" ] },
+        url: "https://www.reelyactive.com/team/barnowl/" },
       { id: "a00000000000000000001234", idType: 5, dynambProperties: [],
         statid: { uri: "https://sniffypedia.org/Standard/Electronic_Product_Code/",
         name: "EPC" } },
       { id: "04140000", idType: 7, dynambProperties: [],
-        statid: { uri: "https://sniffypedia.org/Organization/EnOcean_GmbH/",
-        name: "EnOcean" } },
-      { id: "d070b11d070b", idType: 3, dynambProperties: [],
-        statid: { deviceIds: [ "496f4944434f4445b73e5554462d3332/0001/f989" ] },
-        url: "https://www.reelyactive.com/team/barnowl/" },
-      { id: "0be118ad0660", idType: 3, dynambProperties: [],
-        statid: { deviceIds: [ "496f49445554462d3332/00000001f415"] },
-        url: "https://www.reelyactive.com/team/obelix/" },
+        statid: { uri: "https://sniffypedia.org/Organization/EnOcean_Alliance/",
+        name: "EnOcean Alliance" } },
       { id: "c07105de81ce", idType: 3, dynambProperties: [],
         statid: { uri: "https://sniffypedia.org/Product/Any_Curious-Device/" } },
-      { id: "a991ede81ce1", idType: 3, dynambProperties: [],
-        statid: { uri: "https://sniffypedia.org/Organization/Apple_Inc/" } },
-      { id: "a991ede81ce2", idType: 3, dynambProperties: [],
-        statid: { uri: "https://sniffypedia.org/Organization/Apple_Inc/AirPlay/" } },
-      { id: "a991ede81ce3", idType: 3, dynambProperties: [],
-        statid: { deviceIds: [ "1beac04beac04beac04beac04beac045/1234/5678" ],
-                  uri: "https://sniffypedia.org/Organization/Apple_Inc/iBeacon/" } },
-      { id: "a991ede81ce4", idType: 3, dynambProperties: [],
-        statid: { uri: "https://sniffypedia.org/Product/Apple_AirPods/" } },
-      { id: "0c4708eca570", idType: 3, dynambProperties: [],
-        statid: { uri: "https://sniffypedia.org/Product/Google_Chromecast/",
-                  uuids: [ "fea0" ], name: "Ambient Display" } },
+      { id: "a00000000000000000005678", idType: 5, dynambProperties: [],
+        statid: { uri: "https://sniffypedia.org/Organization/RAIN_Alliance/",
+        name: "RAIN Tag" } },
+      { id: "04140001", idType: 7, dynambProperties: [],
+        statid: { uri: "https://sniffypedia.org/Organization/EnOcean_GmbH/",
+        name: "EnOcean" } },
+      { id: "e50010000002", idType: 3 ,
+        dynambProperties: [ 'acceleration', 'illuminance', 'isContactDetected',
+                            'isMotionDetected', 'temperature',
+                            'relativeHumidity' ],
+        statid: { uri: "https://www.reelyactive.com/anniversary/11/stories/enocean-emsib/" } },
+      { id: "ac233fa00004", idType: 2,
+        dynambProperties: [ 'isButtonPressed', 'isMotionDetected' ],
+        statid: { uri: "https://www.reelyactive.com/anniversary/11/stories/minew-mwc01/" } },
+      { id: "ac233fa00006", idType: 2,
+        dynambProperties: [ 'illuminance', 'isMotionDetected', 'temperature', 'humidity' ],
+        statid: { uri: "https://www.reelyactive.com/anniversary/11/stories/minew-msp01/" } },
+      { id: "e50000000001", idType: 3,
+        dynambProperties: [ 'illuminance', 'isMotionDetected' ],
+        statid: { uri: "https://www.reelyactive.com/anniversary/11/stories/enocean-emdcb/" } },
+      { id: "ac233fa00007", idType: 2,
+        dynambProperties: [ 'isMotionDetected' ],
+        statid: { uri: "https://www.reelyactive.com/anniversary/11/stories/minew-msv01/" } },
+      { id: "ac233fa00003", idType: 2,
+        dynambProperties: [ 'isButtonPressed' ],
+        statid: { uri: "https://www.reelyactive.com/anniversary/11/stories/minew-b10/" } },
+      { id: "ac233fa00005", idType: 2,
+        dynambProperties: [ 'isContactDetected' ],
+        statid: { uri: "https://www.reelyactive.com/anniversary/11/stories/minew-s4/" } },
+      { id: "ac233fa00008", idType: 2,
+        dynambProperties: [ 'isContactDetected' ],
+        statid: { uri: "https://www.reelyactive.com/anniversary/11/stories/minew-mbt01/" } },
       { id: "ac233fa00001", idType: 2, dynambProperties: [ 'acceleration' ],
         statid: { uri: "https://www.reelyactive.com/anniversary/11/stories/minew-e8/" } },
       { id: "ac233fa00002", idType: 2,
         dynambProperties: [ 'temperature', 'relativeHumidity' ],
         statid: { uri: "https://www.reelyactive.com/anniversary/11/stories/minew-s1/" } },
-      { id: "ac233fa00003", idType: 2,
-        dynambProperties: [ 'isButtonPressed' ],
-        statid: { uri: "https://www.reelyactive.com/anniversary/11/stories/minew-b10/" } },
-      { id: "ac233fa00004", idType: 2,
-        dynambProperties: [ 'isButtonPressed', 'isMotionDetected' ],
-        statid: { uri: "https://www.reelyactive.com/anniversary/11/stories/minew-mwc01/" } },
-      { id: "ac233fa00005", idType: 2,
-        dynambProperties: [ 'isContactDetected' ],
-        statid: { uri: "https://www.reelyactive.com/anniversary/11/stories/minew-s4/" } },
-      { id: "ac233fa00006", idType: 2,
-        dynambProperties: [ 'illuminance', 'isMotionDetected', 'temperature', 'humidity' ],
-        statid: { uri: "https://www.reelyactive.com/anniversary/11/stories/minew-msp01/" } },
-      { id: "ac233fa00007", idType: 2,
-        dynambProperties: [ 'isMotionDetected' ],
-        statid: { uri: "https://www.reelyactive.com/anniversary/11/stories/minew-msv01/" } },
-      { id: "ac233fa00008", idType: 2,
-        dynambProperties: [ 'isContactDetected' ],
-        statid: { uri: "https://www.reelyactive.com/anniversary/11/stories/minew-mbt01/" } },
-      { id: "e50000000001", idType: 3,
-        dynambProperties: [ 'illuminance', 'isMotionDetected' ],
-        statid: { uri: "https://www.reelyactive.com/anniversary/11/stories/enocean-emdcb/" } },
-      { id: "e50010000002", idType: 3 ,
-        dynambProperties: [ 'acceleration', 'illuminance', 'isContactDetected',
-                            'isMotionDetected', 'temperature',
-                            'relativeHumidity' ],
-        statid: { uri: "https://www.reelyactive.com/anniversary/11/stories/enocean-emsib/" } }
+      { id: "a991ede81ce4", idType: 3, dynambProperties: [],
+        statid: { uri: "https://sniffypedia.org/Product/Apple_AirPods/" } },
+      { id: "0c4708eca570", idType: 3, dynambProperties: [],
+        statid: { uri: "https://sniffypedia.org/Product/Google_Chromecast/",
+                  uuids: [ "fea0" ], name: "Ambient Display" } },
+      { id: "0be118ad0660", idType: 3, dynambProperties: [],
+        statid: { deviceIds: [ "496f49445554462d3332/00000001f415"] },
+        url: "https://www.reelyactive.com/team/obelix/" }
   ];
   let DEFAULT_RECEIVERS = [
       { id: "204c0fffffff", idType: 2, position: [ -10, 8 ],
@@ -103,7 +105,7 @@ let starling = (function() {
       { id: "0b1e6a7e8a46", idType: 2, position: [ 10, 4 ],
         url: "https://www.reelyactive.com/anniversary/11/stories/csl-cs463/",
         acceptedIdTypes: [ 4, 5 ] },
-      { id: "0b1e6a7e8a48", idType: 2, position: [ 10, -4 ],
+      { id: null, idType: 0, position: [ 10, -4 ],
         url: "https://www.reelyactive.com/anniversary/11/stories/enocean-usb/",
         acceptedIdTypes: [ 7 ] }
   ];
@@ -194,9 +196,10 @@ let starling = (function() {
   // Emulate a context of devices
   function createDevices(route) {
     let devices = {};
+    let numberOfDevicesToInclude = (contextCount - 1) % transmitters.length;
 
     transmitters.forEach((transmitter, index) => {
-      if(index < (contextCount - 1)) {
+      if(index < numberOfDevicesToInclude) {
         let signature = transmitter.id + SIGNATURE_SEPARATOR +
                         transmitter.idType;
         let device = { nearest: [] };
@@ -291,7 +294,9 @@ let starling = (function() {
   return {
     on: setEventCallback,
     getContext: getContext,
-    connect: connect
+    connect: connect,
+    transmitters: transmitters, // Added for
+    receivers: receivers        //   demo
   }
 
 }());
