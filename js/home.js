@@ -1,4 +1,8 @@
 // Constants
+const MIDDLEWARE_DIFFERENTIATIONS = [ 'technology-agnostic', 'vendor-agnostic',
+                                      'application-agnostic' ];
+const HEADLINE_BOLD_IDS = [ 'headlineWho', 'headlineWhat', 'headlineWhere',
+                            'headlineHow' ];
 const CASE_STUDIES = [
   {
     quote: "How many square feet of office real estate do we need to accommodate our transition to non-assigned seating?",
@@ -65,39 +69,50 @@ const CASE_STUDIES = [
     url: "case-studies/videotron-radius/"
   }
 ];
-const CONTINUOUS_X = [ 'improvement', 'evolution', 'progress' ];
-const CASE_STUDY_TYPING_MILLISECONDS = 4800;
-const CASE_STUDY_HOLD_MILLISECONDS = 4800;
-const CONTINUOUS_X_UPDATE_MILLISECONDS = 2400;
+const HEADLINE_BOLD_UPDATE_MILLISECONDS = 1200;
+const MIDDLEWARE_DIFFERENTIATION_UPDATE_MILLISECONDS = 1800;
 
 
 // DOM elements
-let caseStudyImage = document.querySelector('#caseStudyImage');
-let quote = document.querySelector('#quote');
-let source = document.querySelector('#source');
-let badgeCommunity = document.querySelector('#badgeCommunity');
-let badgeBreakthrough = document.querySelector('#badgeBreakthrough');
-let badgeBeyond = document.querySelector('#badgeBeyond');
-let badgeOA = document.querySelector('#badgeOA');
-let badgeAT = document.querySelector('#badgeAT');
-let badgePT = document.querySelector('#badgePT');
-let badgeES = document.querySelector('#badgeES');
-let badgeID = document.querySelector('#badgeID');
-let caseStudyButton = document.querySelector('#caseStudyButton');
-let caseStudiesButton = document.querySelector('#caseStudiesButton');
-let continuousX = document.querySelector('#continuousX');
+let middlewareDifferentiation =
+                           document.querySelector('#middlewareDifferentiation');
 
 
 // Other variables
-let currentCaseStudyIndex = 0;
-let currentQuoteCharacter = -1;
-let currentSourceCharacter = -1;
-let caseStudyIndexes = createRandomIndexList(CASE_STUDIES);
-let currentContinuousIndex = 0;
+let currentHeadlineBoldIndex = 0;
+let currentDifferentiationIndex = 0;
 
 // Start the text rotations
-updateCaseStudy();
-updateContinuousX();
+updateHeadlineBold();
+updateMiddlewareDifferentiation();
+
+
+// Update the headline bold element periodically
+function updateHeadlineBold() {
+  HEADLINE_BOLD_IDS.forEach((id, index) => {
+    let element = document.getElementById(id);
+    if(index === currentHeadlineBoldIndex) {
+      element.setAttribute('class', 'fw-bold');
+    }
+    else {
+      element.setAttribute('class', '');
+    }
+  });
+  currentHeadlineBoldIndex = (currentHeadlineBoldIndex + 1) %
+                             HEADLINE_BOLD_IDS.length;
+  setTimeout(updateHeadlineBold,
+             HEADLINE_BOLD_UPDATE_MILLISECONDS)
+}
+
+// Update the middleware differentiation periodically
+function updateMiddlewareDifferentiation() {
+  middlewareDifferentiation.textContent =
+                       MIDDLEWARE_DIFFERENTIATIONS[currentDifferentiationIndex];
+  currentDifferentiationIndex = (currentDifferentiationIndex + 1) %
+                                MIDDLEWARE_DIFFERENTIATIONS.length;
+  setTimeout(updateMiddlewareDifferentiation,
+             MIDDLEWARE_DIFFERENTIATION_UPDATE_MILLISECONDS);
+}
 
 
 // Update the case study one character at a time
@@ -163,14 +178,6 @@ function updateCaseStudy() {
   }
 
   setTimeout(updateCaseStudy, nextCharacterMilliseconds);
-}
-
-
-// Update the continuous X phrase periodically
-function updateContinuousX() {
-  continuousX.textContent = CONTINUOUS_X[currentContinuousIndex];
-  currentContinuousIndex = (currentContinuousIndex + 1) % CONTINUOUS_X.length;
-  setTimeout(updateContinuousX, CONTINUOUS_X_UPDATE_MILLISECONDS);
 }
 
 
