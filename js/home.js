@@ -42,6 +42,8 @@ const EXAMPLE_HOLD_MILLISECONDS = 2400;
 // DOM elements
 let middlewareDifferentiation =
                            document.querySelector('#middlewareDifferentiation');
+let exampleIcon = document.querySelector('#exampleIcon');
+let exampleText = document.querySelector('#exampleText');
 
 
 // Other variables
