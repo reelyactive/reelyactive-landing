@@ -3,74 +3,40 @@ const MIDDLEWARE_DIFFERENTIATIONS = [ 'technology-agnostic', 'vendor-agnostic',
                                       'application-agnostic' ];
 const HEADLINE_BOLD_IDS = [ 'headlineWho', 'headlineWhat', 'headlineWhere',
                             'headlineHow' ];
-const CASE_STUDIES = [
+const EXAMPLES = [
   {
-    quote: "How many square feet of office real estate do we need to accommodate our transition to non-assigned seating?",
-    source: "Serge Bendahan, Desjardins",
-    image: "images/case-studies-desjardins-dtm-icon.jpg",
-    plan: "Breakthrough",
-    useCases: [ 'OA' ],
-    url: "case-studies/desjardins-dtm/"
+    iconClass: "fas fa-tag",
+    text: "Enable real-time tracking with Bluetooth Low Energy asset beacons, existing access points and customisable web apps."
   },
   {
-    quote: "How quickly can we pilot an asset tracking solution in one of our healthcare facilities?",
-    source: "Georges Bendavid, JGH",
-    image: "images/case-studies-jgh-clsc-metro-icon.jpg",
-    plan: "Breakthrough",
-    useCases: [ 'AT' ],
-    url: "case-studies/jgh-clsc-metro/"
+    iconClass: "fas fa-thermometer-half",
+    text: "Collect temperature timeseries data with Bluetooth Low Energy sensor beacons and gateways, using an existing database and analytics suite."
   },
   {
-    quote: "How can we improve our maintenance operations based on how soldiers actually spend their work day?",
-    source: "US Army",
-    image: "images/case-studies-usarmy-drum-hood-icon.jpg",
-    plan: "Breakthrough",
-    useCases: [ 'PT' ],
-    url: "case-studies/usarmy-drum-hood/"
+    iconClass: "fas fa-tag",
+    text: "Trigger a custom action in Node-RED when a RAIN-tagged container is placed on a shelf observed by any reader-antenna pair."
   },
   {
-    quote: "What is the volume, speed and composition of pedestrian, cyclist and motorist traffic along a specific route?",
-    source: "Xavier Prudent, Civilia",
-    image: "images/case-studies-civilia-traffic-investigation-icon.jpg",
-    plan: "Community",
-    useCases: [ 'OA' ],
-    url: "case-studies/civilia-traffic-investigation/"
+    iconClass: "fas fa-people-arrows",
+    text: "Capture person-to-person interactions using DirAct-compatible wearables and a Raspberry Pi computer, writing the data to CSV files."
   },
   {
-    quote: "For how long do guests visit the museum and where do they spend their time?",
-    source: "Brigitte Belleville, MCQ",
-    image: "images/case-studies-mcq-personas-icon.jpg",
-    plan: "Community",
-    useCases: [ 'ID' ],
-    url: "case-studies/mcq-personas/"
+    iconClass: "fas fa-walking",
+    text: "Collect office occupancy data using any combination of EnOcean Alliance sensors, existing HPE Aruba Networking APs, and familiar analytics tools on Microsoft Azure."
   },
   {
-    quote: "How does where and with whom an individual spends their day affect their wellness and performance at work?",
-    source: "Karel Mundnich, USC",
-    image: "images/case-studies-usc-tiles-2018-icon.jpg",
-    plan: "Beyond",
-    useCases: [ 'PT', 'ES', 'ID' ],
-    url: "case-studies/usc-tiles-2018/"
+    iconClass: "fas fa-tag",
+    text: "Locate and identify RAIN-tagged inventory in real-time using RF Controls Smart Antennas and an existing WMS."
   },
   {
-    quote: "What are the foot traffic patterns across our outdoor projection sites?",
-    source: "Montreal en Histoires",
-    image: "images/case-studies-montrealenhistoires-citememoire-icon.jpg",
-    plan: "Breakthrough",
-    useCases: [ 'OA' ],
-    url: "case-studies/montrealenhistoires-citememoire/"
-  },
-  {
-    quote: "How can we create a social distancing and contact tracing business solution in time to meet market demand?",
-    source: "Videotron Affaires",
-    image: "images/case-studies-videotron-radius-icon.jpg",
-    plan: "Breakthrough",
-    useCases: [ 'ID' ],
-    url: "case-studies/videotron-radius/"
+    iconClass: "fas fa-bell",
+    text: "Notify whenever wearable duress buttons are pressed, using Bluetooth Low Energy gateways and an established messaging system."
   }
 ];
 const HEADLINE_BOLD_UPDATE_MILLISECONDS = 1200;
 const MIDDLEWARE_DIFFERENTIATION_UPDATE_MILLISECONDS = 1800;
+const EXAMPLE_TYPING_MILLISECONDS = 3600;
+const EXAMPLE_HOLD_MILLISECONDS = 2400;
 
 
 // DOM elements
@@ -81,10 +47,13 @@ let middlewareDifferentiation =
 // Other variables
 let currentHeadlineBoldIndex = 0;
 let currentDifferentiationIndex = 0;
+let currentExampleIndex = 0;
+let currentExampleCharacter = -1;
 
 // Start the text rotations
 updateHeadlineBold();
 updateMiddlewareDifferentiation();
+updateExample();
 
 
 // Update the headline bold element periodically
@@ -115,69 +84,31 @@ function updateMiddlewareDifferentiation() {
 }
 
 
-// Update the case study one character at a time
-function updateCaseStudy() {
-  let caseStudy = CASE_STUDIES[caseStudyIndexes[currentCaseStudyIndex]];
-  let nextCharacterMilliseconds = Math.round(CASE_STUDY_TYPING_MILLISECONDS /
-                                             (caseStudy.quote.length + 1));
-  let isNewCaseStudy = (currentQuoteCharacter === -1) &&
-                       (currentSourceCharacter === -1);
-  let isQuoteComplete = (currentQuoteCharacter >= (caseStudy.quote.length - 1));
-  let isSourceComplete = (currentSourceCharacter >=
-                          (caseStudy.source.length - 1));
-  let isCaseStudyComplete = (isQuoteComplete && isSourceComplete);
+// Update the example one character at a time
+function updateExample() {
+  let example = EXAMPLES[currentExampleIndex];
+  let nextCharacterMilliseconds = Math.round(EXAMPLE_TYPING_MILLISECONDS /
+                                             (example.text.length + 1));
+  let isNewExample = (currentExampleCharacter === -1);
+  let isExampleComplete = (currentExampleCharacter >= (example.text.length - 1));
 
-  if(isNewCaseStudy) {
-    quote.textContent = '';
-    source.textContent = '';
-    caseStudyImage.setAttribute('src', caseStudy.image);
-    badgeCommunity.hidden = true;
-    badgeBreakthrough.hidden = true;
-    badgeBeyond.hidden = true;
-    badgeOA.hidden = true;
-    badgeAT.hidden = true;
-    badgePT.hidden = true;
-    badgeES.hidden = true;
-    badgeID.hidden = true;
-    caseStudyButton.hidden = true;
-    caseStudiesButton.hidden = true;
+  if(isNewExample) {
+    exampleIcon.setAttribute('class', example.iconClass + ' text-ambient');
+    exampleText.textContent = '';
   }
 
-  if(isCaseStudyComplete) {
-    switch(caseStudy.plan) {
-      case 'Community': badgeCommunity.hidden = false; break;
-      case 'Breakthrough': badgeBreakthrough.hidden = false; break;
-      case 'Beyond': badgeBeyond.hidden = false; break;
-    }
-    caseStudy.useCases.forEach(function(useCase) {
-      switch(useCase) {
-        case 'OA': badgeOA.hidden = false; break;
-        case 'AT': badgeAT.hidden = false; break;
-        case 'PT': badgePT.hidden = false; break;
-        case 'ES': badgeES.hidden = false; break;
-        case 'ID': badgeID.hidden = false; break;
-      }
-    });
-    if(caseStudy.url) {
-      caseStudyButton.setAttribute('href', caseStudy.url);
-      caseStudyButton.hidden = false;
-    }
-    currentCaseStudyIndex = (currentCaseStudyIndex + 1) % CASE_STUDIES.length;
-    currentQuoteCharacter = -1;
-    currentSourceCharacter = -1;
-    caseStudiesButton.hidden = false;
+  if(isExampleComplete) {
+    exampleIcon.setAttribute('class', 'fas fa-check text-success');
+    currentExampleIndex = (currentExampleIndex + 1) % EXAMPLES.length;
+    currentExampleCharacter = -1;
 
-    return setTimeout(updateCaseStudy, CASE_STUDY_HOLD_MILLISECONDS);
+    return setTimeout(updateExample, EXAMPLE_HOLD_MILLISECONDS);
+  }
+  else {
+    exampleText.textContent += example.text[++currentExampleCharacter];
   }
 
-  if(!isQuoteComplete) {
-    quote.textContent += caseStudy.quote[++currentQuoteCharacter];
-  }
-  if(!isSourceComplete) {
-    source.textContent += caseStudy.source[++currentSourceCharacter];
-  }
-
-  setTimeout(updateCaseStudy, nextCharacterMilliseconds);
+  setTimeout(updateExample, nextCharacterMilliseconds);
 }
 
 
