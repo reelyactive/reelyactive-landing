@@ -42,7 +42,6 @@ const EXAMPLE_HOLD_MILLISECONDS = 2400;
 // DOM elements
 let middlewareDifferentiation =
                            document.querySelector('#middlewareDifferentiation');
-let exampleIcon = document.querySelector('#exampleIcon');
 let exampleText = document.querySelector('#exampleText');
 
 
@@ -93,6 +92,7 @@ function updateExample() {
                                              (example.text.length + 1));
   let isNewExample = (currentExampleCharacter === -1);
   let isExampleComplete = (currentExampleCharacter >= (example.text.length - 1));
+  let exampleIcon = document.querySelector('#exampleIcon');
 
   if(isNewExample) {
     exampleIcon.setAttribute('class', example.iconClass + ' text-ambient');
