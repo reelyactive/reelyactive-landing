@@ -5,10 +5,11 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
-          content="Our foundational technologies foster a digital representation of the physical world: who/what is where/how at a human scale. Together, let's put things in context.">
+          content="Realise the potential of the Internet of Things on your own terms by leveraging our open source technologies and unique expertise.">
     <meta name="msvalidate.01" content="290718595E7C106146EE4DF28E941869" />
     <link rel="stylesheet" href="style/bootstrappyactive.min.css">
     <link rel="stylesheet" href="style/heroes.css">
+    <script type="module" src="js/color-modes.js"></script>
     <title> reelyActive </title>
     <!----- Structured, linked metadata (JSON-LD & Schema.org) ----->
     <script type="application/ld+json">
@@ -16,7 +17,7 @@
       "@context": "https://schema.org", 
       "@type": "WebPage",
       "name": "reelyActive",
-      "description": "We are the leaders in context-aware physical spaces open source technology.  We guide forward-looking organisations to the edge, and beyond.",
+      "description": "Realise the potential of the Internet of Things on your own terms by leveraging our open source technologies and unique expertise.",
       "image": "https://www.reelyactive.com/images/reelyactive-logo-square.png",
       "creator": {
         "@type": "Organization",
@@ -106,8 +107,7 @@
   </head>
   <body id="top">
     <!-- Navigation -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white
-                shadow">
+    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary shadow">
       <div class="container-fluid">
         <a class="navbar-brand" href="https://www.reelyactive.com/">
           <img src="/images/reelyactive-logo-nav.png" width="165" height="30"
@@ -133,7 +133,7 @@
                    aria-labelledby="navbarTechnology">
                 <li>
                   <a href="/technology/#content"
-                     class="dropdown-item fw-bolder"> Tour our Tech </a>
+                     class="dropdown-item fw-bolder"> Our Technology </a>
                 </li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
@@ -149,10 +149,6 @@
                 <li>
                   <a href="/technology/reel/#content"
                      class="dropdown-item" > The Reel(ceiver) </a>
-                </li>
-                <li>
-                  <a href="/open-architecture/#content"
-                     class="dropdown-item" > Open Architecture </a>
                 </li>
                 <li>
                   <a href="/open-source/#content"
@@ -190,7 +186,7 @@
                    aria-labelledby="navbarProducts">
                 <li>
                   <a href="/products/#content"
-                     class="dropdown-item fw-bolder"> Peruse our Products </a>
+                     class="dropdown-item fw-bolder"> Our Products </a>
                 </li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
@@ -221,11 +217,9 @@
                 </li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
-                  <a href="https://github.com/reelyactive" target="_blank"
-                     class="dropdown-item">
-                    <i class="text-muted fas fa-external-link-alt"></i>
-                    reelyActive GitHub
-                    <i class="text-muted fab fa-github animate-breathing"></i>
+                  <a href="/the-briefcase-kit/#content" class="dropdown-item">
+                    The Briefcase Kit
+                    <i class="text-muted fas fa-user-tie animate-breathing"></i>
                   </a>
                 </li>
               </ul>
@@ -239,12 +233,12 @@
                    aria-labelledby="navbarBusiness">
                 <li>
                   <a href="/business/#content"
-                     class="dropdown-item fw-bolder"> Browse our Business </a>
+                     class="dropdown-item fw-bolder"> Our Business </a>
                 </li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
                   <a href="/pricing/#content"
-                     class="dropdown-item"> Pricing & Model </a>
+                     class="dropdown-item"> Pricing & Packages </a>
                 </li>
                 <ul>
                   <a href="/behold/#content"
@@ -296,7 +290,7 @@
                    aria-labelledby="navbarAboutUs">
                 <li>
                   <a href="/about/#content"
-                     class="dropdown-item fw-bolder"> Ascertain About Us </a>
+                     class="dropdown-item fw-bolder"> "Owl" About Us </a>
                 </li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
@@ -327,10 +321,6 @@
                   <a href="/uni/#content"
                      class="dropdown-item"> UNI Philosophy </a>
                 </li>
-                <li>
-                  <a href="/made-in-montreal/#content"
-                     class="dropdown-item"> Made in Montr&eacute;al </a>
-                </li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
                   <a href="/directory/#content" class="dropdown-item">
@@ -338,7 +328,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="https://reelyactive.com/blog" target="_blank"
+                  <a href="https://blog.reelyactive.com/" target="_blank"
                      class="dropdown-item">
                     <i class="text-muted fas fa-external-link-alt"></i> Blog
                   </a>
@@ -354,7 +344,37 @@
             </li>
             <li class="nav-item">
               <a href="/get-started/#content" role="button"
-                 class="nav-link btn btn-secondary text-white"> Get Started </a>
+                 class="nav-link btn btn-secondary"> Get Started </a>
+            </li>
+            <!-- Colour theme chooser -->
+            <li class="nav-item dropdown">
+              <button class="btn btn-link nav-link dropdown-toggle"
+                      id="bd-theme" type="button" aria-expanded="false"
+                      data-bs-toggle="dropdown" data-bs-display="static"
+                      aria-label="Toggle theme (auto)">
+                <i class="fas fa-adjust"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                  aria-labelledby="bd-theme-text">
+                <li>
+                  <button type="button" class="dropdown-item"
+                          data-bs-theme-value="light" aria-pressed="false">
+                    <i class="fas fa-sun"></i> Light
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-item"
+                          data-bs-theme-value="dark" aria-pressed="false">
+                    <i class="fas fa-moon"></i> Dark
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-item active"
+                          data-bs-theme-value="auto" aria-pressed="true">
+                    <i class="fas fa-adjust"></i> Auto
+                  </button>
+                </li>
+              </ul>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" id="navbarInfoDropdown"
@@ -424,19 +444,23 @@
     </nav>
 
     <!----- Herolocal Context ----->
-    <div class="hero-home hero">
-      <div class="col-xs-12 col-sm-10 col-lg-10 col-xl-8 col-xxl-6">
+    <div class="herowl">
+      <div class="col-xs-12 col-sm-10 col-lg-10 col-xl-8">
         <div class="card">
-          <div class="card-body">
-            <div class="d-lg-none card-text">
-              <h2 class="card-text text-muted">
-                Let's put <em class="text-ambient fw-bold">things</em> in <span class="text-secondary">context</span>,<br>one space at a time<a href="#content" class="text-ambient text-decoration-none animate-breathing">&hellip;</a>
-              </h2>
+          <div class="row flex-lg-row-reverse align-items-center g-0">
+            <div class="col-lg-6">
+              <img src="images/home-overview.png" alt="reelyActive Funnel"
+                   class="d-block mx-lg-auto img-fluid rounded" loading="lazy">
             </div>
-            <div class="d-none d-lg-block">
-              <h1 class="card-text text-muted">
-                Let's put <em class="text-ambient fw-bold">things</em> in <span class="text-secondary">context</span>, one space at a time<a href="#content" class="text-ambient text-decoration-none animate-breathing">&hellip;</a>
-              </h1>
+            <div class="col-lg-6">
+              <div class="card-body text-start">
+                <h1 class="display-4 fw-bold lh-1 mb-3"> Freedom to make sense of things </h1>
+                <p class="lead"> Realise the promise of the Internet of Things on your own terms. </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                  <a href="#content" class="btn btn-primary btn-lg px-4 me-md-2"
+                     type="button"> Tell me more </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -447,24 +471,100 @@
     <div id="content" class="container-fluid">
       <a href="#top">
         <img src="images/barnarrow-up.png" alt="Top of Page"
-             class="mx-auto mb-4 d-block barnarrow animate-breathing invisible">
+             class="mx-auto mb-0 d-block barnarrow animate-breathing invisible">
       </a>
       <!-- One-liner -->
       <div class="row justify-content-center bg-dark text-light text-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
-          <h2 class="mt-5"> Our <b class="text-white">foundational technologies</b> foster <br class="d-none d-sm-block"> a <em class="text-primary fw-bold">digital</em> representation of the <em class="text-ambient fw-bold">physical</em> world: </h2>
-          <h1 class="text-secondary my-2"> <span id="headlineWho">who</span>/<span id="headlineWhat">what</span> <span class="text-muted small">is</span> <span id="headlineWhere">where</span>/<span id="headlineHow">how</span> </h1>
-          <h2 class="mb-5"> at a <span class="text-white"><em>human</em> scale</span>. </h2>
+          <p class="fs-2 mt-5 mb-0"> Our <b>Pareto Anywhere</b> middleware makes sense of </p>
+          <p class="text-secondary display-5 my-2"> <span id="headlineWho">who</span>/<span id="headlineWhat">what</span> <span class="text-light small">is</span> <span id="headlineWhere">where</span>/<span id="headlineHow">how</span> </p>
+          <p class="fs-2 mb-5"> in a <em class="fw-bold" id="middlewareDifferentiation">standard</em> way. </p>
         </div>
       </div>
       <div class="row justify-content-center text-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
-          <!-- In the middle... -->
-          <div class="border-top border-bottom border-dark bg-light bg-gradient my-5">
-            <h2 class="my-5"> In the <span class="badge text-bg-dark">middle</span> where every<em class="text-ambient fw-bold">thing</em> <span class="text-secondary">makes sense</span> </h2>
+          <!-- Use cases -->
+          <ul class="nav nav-tabs mt-5" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="sensortab"
+                      data-bs-toggle="tab" data-bs-target="#sensorcontent"
+                      type="button" role="tab" aria-controls="sensortab"
+                      aria-selected="true">
+                <i class="display-6 fas fa-thermometer-half"></i>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="occupancytab" data-bs-toggle="tab"
+                      data-bs-target="#occupancycontent" type="button" role="tab"
+                      aria-controls="occupancytab"
+                      aria-selected="false">
+                <i class="display-6 fas fa-shoe-prints"></i>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="assettab" data-bs-toggle="tab"
+                      data-bs-target="#assetcontent" type="button" role="tab"
+                      aria-controls="assettab"
+                      aria-selected="false">
+                <i class="display-6 fas fa-tag"></i>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="personneltab" data-bs-toggle="tab"
+                      data-bs-target="#personnelcontent" type="button" role="tab"
+                      aria-controls="personneltab"
+                      aria-selected="false">
+                <i class="display-6 fas fa-user-tag"></i>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="interactiontab" data-bs-toggle="tab"
+                      data-bs-target="#interactioncontent" type="button"
+                      role="tab" aria-controls="interactiontab"
+                      aria-selected="false">
+                <i class="display-6 fas fa-people-arrows"></i>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="etctab" data-bs-toggle="tab"
+                      data-bs-target="#etccontent" type="button"
+                      role="tab" aria-controls="etctab"
+                      aria-selected="false">
+                <i class="display-6 fas fa-code"></i>
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content tab-content-border text-start">
+            <div class="tab-pane fade show active" id="sensorcontent"
+                 role="tabpanel" aria-labelledby="sensortab">
+              <h3> Collect sensor data </h3>
+            </div>
+            <div class="tab-pane fade" id="occupancycontent" role="tabpanel"
+                 aria-labelledby="occupancytab">
+              <h3> Analyse occupancy </h3>
+            </div>
+            <div class="tab-pane fade" id="assetcontent" role="tabpanel"
+                 aria-labelledby="assettab">
+              <h3> Track assets </h3>
+            </div>
+            <div class="tab-pane fade" id="personnelcontent" role="tabpanel"
+                 aria-labelledby="personneltab">
+              <h3> Locate personnel </h3>
+            </div>
+            <div class="tab-pane fade" id="interactioncontent" role="tabpanel"
+                 aria-labelledby="interactiontab">
+              <h3> Detect interactions </h3>
+            </div>
+            <div class="tab-pane fade" id="etccontent" role="tabpanel"
+                 aria-labelledby="etctab">
+              <h3> Develop <em>your</em> application </h3>
+            </div>
           </div>
-          <!-- Hardware-Middleware-Software -->
-          <div class="row row-cols-3 g-1 my-5">
+          <!-- Our Product -->
+          <h2 class="mt-5"> Our Product </h2>
+          <p class="lead text-info mb-0"> <span class="fw-bold">Pareto Anywhere</span> is the <em>only</em> <span class="fw-bold">open source middleware</span> that works with <em>any</em> radio-identifiable device and <em>existing</em> in-building infrastructure. </p>
+          <p class="text-muted"> And it is free to use<em>&mdash;forever!</em> </p>
+          <div class="row row-cols-3 g-1 my-4">
             <div class="col">
               <div class="card h-100">
                 <h5 class="card-header text-truncate text-white text-bg-ambient">
@@ -504,76 +604,55 @@
               </div>
             </div>
           </div>
-          <!-- Examples -->
-          <div class="d-flex justify-content-center align-items-center my-5"
-               style="height: 4em">
-            <p class="text-dark mb-0">
-              <i id="exampleIcon"></i> &nbsp;
-              <span id="exampleText"> </span>
-            </p>
+          <div class="d-grid gap-3 d-md-block text-center text-md-end mb-5">
+            <span class="lead text-muted align-middle pr-4">
+              Learn more about &nbsp;
+            </span>
+            <a href="pareto/anywhere/#content" class="btn btn-outline-secondary"
+               role="button"> Pareto Anywhere </a>
           </div>
-          <!-- Differentiation -->
-          <div class="row my-5">
-            <div class="col-md-7">
-              <img src="images/home-differentiation-funnel.png"
-                   class="img-fluid mt-4">
-            </div>
-            <div class="col-md-5 align-self-center">
-              <h3 class="text-info mt-4"> We develop and steward the <em class="text-dark fw-bold">only</em><br><span id="middlewareDifferentiation" class="text-primary">open source</span> </h3>
-              <h1 class="my-2"><span class="badge text-bg-dark"> middleware </span> </h1>
-              <h4 class="text-info"> that works with <em class="text-dark fw-bold">any</em> <b class="text-ambient">radio-identifiable device</b> and <em class="text-dark fw-bold">existing</em> <b class="text-info">in-building infrastructure</b>. </h4>
-            </div>
-          </div>
-          <!-- Open "owl" the way -->
-          <div class="border-top border-bottom border-dark bg-light bg-gradient mt-5">
-            <h2 class="my-5"> You'll find that we're <b class="text-success">open</b> <em>"owl"</em> the way </h2>
-          </div>
-          <div class="row">
-            <!-- Our Product -->
-            <div class="col-md-6">
-              <h2 class="mt-5"> Our Product </h2>
-              <p class="lead text-info"> Our <span class="text-dark">Pareto Anywhere</span> middleware is <span class="text-success fw-bold">open source</span> and <em class="text-dark fw-bold">free of cost</em> to use. </p>
-              <img src="images/home-our-product.png"
-                   class="img-fluid my-3">
-              <p class="small text-info"> Open and free, as foundational technology should be. </p>
-              <a href="pareto/anywhere/#content"
-                 class="btn btn-outline-primary"> Learn more </a>
-            </div>
-            <!-- Our Business -->
-            <div class="col-md-6">
-              <h2 class="mt-5"> Our Business </h2>
-              <p class="lead text-info"> We <em class="text-dark fw-bold">guide</em> forward-looking organisations at any stage of their journey. </p>
-              <img src="images/home-our-business.png"
-                   class="img-fluid my-3">
-              <p class="small text-info"> Leverage our team as an extension of your own. </p>
-              <a href="business/#content"
-                 class="btn btn-outline-primary"> Learn more </a>
-            </div>
-          </div>
-          <!-- Testimonials -->
-          <div class="my-5"></div>
-          <!-- Owl-idays 2023 -->
-          <div class="card text-bg-ambient border-0 rounded-4 my-5">
-            <div class="row g-0">
-              <div class="col-md-6">
-                <a href="owlidays/2023/#content">
-                  <img src="images/owlidays-2023.gif"
-                       class="img-fluid rounded-start p-3" alt="Owl-idays 2023">
-                </a>
-              </div>
-              <div class="col-md-6 align-self-center">
-                <div class="card-body">
-                  <h2 class="card-title text-dark"> Happy <em>Owl-</em>idays! </h2>
-                  <p class="card-text">
-                     <span class="animate-breathing"> &searr; </span>
-                     <span class="text-info"> Our annual tradition continues... </span>
-                     <span class="animate-breathing"> &swarr; </span>
-                  </p>
-                  <a href="owlidays/2023/#content"
-                     class="btn btn-dark btn-lg"> 2023 Owl-iday Special </a>
+          <!-- Our Business -->
+          <h2 class="mt-5"> Our Business </h2>
+          <p class="lead text-info mb-0"> We <em class="fw-bold">guide</em> forward-looking organisations at any stage of their journey. </p>
+          <p class="text-muted"> Leverage our team and expertise as an extension of your own. </p>
+          <div class="row row-cols-3 g-1 my-4">
+            <div class="col">
+              <div class="card h-100 hover-shadow">
+                <h5 class="card-header text-truncate text-white text-bg-success">
+                  Behold
+                </h5>
+                <div class="card-body text-start">
+                  <p class="card-text"> Make sense of <em>where to begin</em> with an on-site training & workshop. </p>
                 </div>
               </div>
             </div>
+            <div class="col">
+              <div class="card h-100 hover-shadow">
+                <h5 class="card-header text-truncate text-bg-primary">
+                  Breakthrough
+                </h5>
+                <div class="card-body text-start">
+                  <p class="card-text"> Achieve a <em>quick win</em> with a turnkey pilot project. </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 hover-shadow">
+                <h5 class="card-header text-truncate text-bg-dark">
+                  Beyond
+                </h5>
+                <div class="card-body text-start">
+                  <p class="card-text"> Evolve <em>from within</em> with expert guidance from our team. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-grid gap-3 d-md-block text-center text-md-end mb-5">
+            <span class="lead text-muted align-middle pr-4">
+              Learn more about &nbsp;
+            </span>
+            <a href="business/#content" class="btn btn-outline-secondary"
+               role="button"> Our Packages </a>
           </div>
         </div>
       </div>
@@ -587,7 +666,7 @@
           <div class="card-body">
             <div class="d-grid gap-3 d-md-block">
               <span class="lead align-middle pr-4">
-                Together, let's put things in context &nbsp;
+                Together, let's make sense of things &nbsp;
               </span>
               <a class="btn btn-secondary" role="button"
                  href="/get-started/#content"> Get Started </a>
@@ -600,7 +679,7 @@
     <footer class="footer bg-dark bg-gradient">
       <a href="./"> Home </a>
       &nbsp; | &nbsp;
-      <a href="https://www.reelyactive.com"> &copy; reelyActive 2016-2023 </a>
+      <a href="https://www.reelyactive.com"> &copy; reelyActive 2016-2024 </a>
     </footer>
 
     <!-- Optional JavaScript -->
