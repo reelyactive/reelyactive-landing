@@ -52,6 +52,7 @@ https://www.reelyactive.com/pareto/anywhere/infrastructure/aruba/
 https://www.reelyactive.com/pareto/anywhere/integrations/
 https://www.reelyactive.com/pareto/anywhere/integrations/azure/
 https://www.reelyactive.com/pareto/anywhere/integrations/elastic-stack/
+https://www.reelyactive.com/partners/
 https://www.reelyactive.com/press/
 https://www.reelyactive.com/pricing/
 https://www.reelyactive.com/products/
@@ -61,6 +62,7 @@ https://www.reelyactive.com/science/
 https://www.reelyactive.com/showcase/
 https://www.reelyactive.com/team/
 https://www.reelyactive.com/technology/
+https://www.reelyactive.com/the-briefcase-kit/
 https://www.reelyactive.com/uni/
 https://www.reelyactive.com/use-cases/
 https://www.reelyactive.com/use-cases/asset-tracking/
