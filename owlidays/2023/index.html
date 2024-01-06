@@ -8,6 +8,7 @@
           content="reelyActive's 2023 Owl-iday Special:  Repeating the theme from 2019 without the clever rhymes just updated for the times!">
     <link rel="stylesheet" href="../../style/bootstrappyactive.min.css">
     <link rel="stylesheet" href="../../style/heroes.css">
+    <script type="module" src="../../js/color-modes.js"></script>
     <title> reelyActive Owl-iday Special 2023 </title>
     <!----- Structured, linked metadata (JSON-LD & Schema.org) ----->
     <script type="application/ld+json">
@@ -45,8 +46,7 @@
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white
-                shadow">
+    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary shadow">
       <div class="container-fluid">
         <a class="navbar-brand" href="https://www.reelyactive.com/">
           <img src="/images/reelyactive-logo-nav.png" width="165" height="30"
@@ -72,7 +72,7 @@
                    aria-labelledby="navbarTechnology">
                 <li>
                   <a href="/technology/#content"
-                     class="dropdown-item fw-bolder"> Tour our Tech </a>
+                     class="dropdown-item fw-bolder"> Our Technology </a>
                 </li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
@@ -88,10 +88,6 @@
                 <li>
                   <a href="/technology/reel/#content"
                      class="dropdown-item" > The Reel(ceiver) </a>
-                </li>
-                <li>
-                  <a href="/open-architecture/#content"
-                     class="dropdown-item" > Open Architecture </a>
                 </li>
                 <li>
                   <a href="/open-source/#content"
@@ -129,7 +125,7 @@
                    aria-labelledby="navbarProducts">
                 <li>
                   <a href="/products/#content"
-                     class="dropdown-item fw-bolder"> Peruse our Products </a>
+                     class="dropdown-item fw-bolder"> Our Products </a>
                 </li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
@@ -160,11 +156,9 @@
                 </li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
-                  <a href="https://github.com/reelyactive" target="_blank"
-                     class="dropdown-item">
-                    <i class="text-muted fas fa-external-link-alt"></i>
-                    reelyActive GitHub
-                    <i class="text-muted fab fa-github animate-breathing"></i>
+                  <a href="/the-briefcase-kit/#content" class="dropdown-item">
+                    The Briefcase Kit
+                    <i class="text-muted fas fa-user-tie animate-breathing"></i>
                   </a>
                 </li>
               </ul>
@@ -178,12 +172,12 @@
                    aria-labelledby="navbarBusiness">
                 <li>
                   <a href="/business/#content"
-                     class="dropdown-item fw-bolder"> Browse our Business </a>
+                     class="dropdown-item fw-bolder"> Our Business </a>
                 </li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
                   <a href="/pricing/#content"
-                     class="dropdown-item"> Pricing & Model </a>
+                     class="dropdown-item"> Pricing & Packages </a>
                 </li>
                 <ul>
                   <a href="/behold/#content"
@@ -200,6 +194,10 @@
                 <li>
                   <a href="/clients/#content"
                      class="dropdown-item"> Clients </a>
+                </li>
+                <li>
+                  <a href="/partners/#content"
+                     class="dropdown-item"> Partners </a>
                 </li>
                 <li>
                   <a href="/use-cases/#content"
@@ -235,7 +233,7 @@
                    aria-labelledby="navbarAboutUs">
                 <li>
                   <a href="/about/#content"
-                     class="dropdown-item fw-bolder"> Ascertain About Us </a>
+                     class="dropdown-item fw-bolder"> "Owl" About Us </a>
                 </li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
@@ -266,10 +264,6 @@
                   <a href="/uni/#content"
                      class="dropdown-item"> UNI Philosophy </a>
                 </li>
-                <li>
-                  <a href="/made-in-montreal/#content"
-                     class="dropdown-item"> Made in Montr&eacute;al </a>
-                </li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
                   <a href="/directory/#content" class="dropdown-item">
@@ -277,7 +271,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="https://reelyactive.com/blog" target="_blank"
+                  <a href="https://blog.reelyactive.com/" target="_blank"
                      class="dropdown-item">
                     <i class="text-muted fas fa-external-link-alt"></i> Blog
                   </a>
@@ -293,7 +287,37 @@
             </li>
             <li class="nav-item">
               <a href="/get-started/#content" role="button"
-                 class="nav-link btn btn-secondary text-white"> Get Started </a>
+                 class="btn btn-secondary"> Get Started </a>
+            </li>
+            <!-- Colour theme chooser -->
+            <li class="nav-item dropdown">
+              <button class="btn btn-link nav-link dropdown-toggle"
+                      id="bd-theme" type="button" aria-expanded="false"
+                      data-bs-toggle="dropdown" data-bs-display="static"
+                      aria-label="Toggle theme (auto)">
+                <i class="fas fa-adjust"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                  aria-labelledby="bd-theme-text">
+                <li>
+                  <button type="button" class="dropdown-item"
+                          data-bs-theme-value="light" aria-pressed="false">
+                    <i class="fas fa-sun"></i> Light
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-item"
+                          data-bs-theme-value="dark" aria-pressed="false">
+                    <i class="fas fa-moon"></i> Dark
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-item active"
+                          data-bs-theme-value="auto" aria-pressed="true">
+                    <i class="fas fa-adjust"></i> Auto
+                  </button>
+                </li>
+              </ul>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" id="navbarInfoDropdown"
@@ -303,7 +327,7 @@
               </a>
               <!-- Info about tracking and open source software/licenses -->
               <ul class="dropdown-menu dropdown-menu-end shadow"
-                   aria-labelledby="navbarInfoDropdown">
+                  aria-labelledby="navbarInfoDropdown">
                 <li>
                   <a class="dropdown-item"
                      href="https://www.reelyactive.com/how-we-observe/#digital">
@@ -383,7 +407,7 @@
     <div id="content" class="container-fluid">
       <a href="#top">
         <img src="../../images/barnarrow-up.png" alt="Top of Page"
-             class="mx-auto d-block barnarrow animate-breathing">
+             class="mx-auto d-block barnarrow animate-breathing invisible">
       </a>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
