@@ -47,6 +47,7 @@ https://www.reelyactive.com/parc/
 https://www.reelyactive.com/pareto/
 https://www.reelyactive.com/pareto/anywhere/
 https://www.reelyactive.com/pareto/anywhere/devices/
+https://www.reelyactive.com/pareto/anywhere/devices/enocean-alliance/
 https://www.reelyactive.com/pareto/anywhere/infrastructure/
 https://www.reelyactive.com/pareto/anywhere/infrastructure/aruba/
 https://www.reelyactive.com/pareto/anywhere/integrations/
