@@ -444,7 +444,7 @@
               <tr>
                 <td class="font-monospace"> A5-07-01 </td>
                 <td class="font-monospace"> batteryVoltage, isMotionDetected </td>
-                <td> &hellip; </td>
+                <td> EnoPuck, &hellip; </td>
               </tr>
               <tr>
                 <td class="font-monospace"> A5-07-02 </td>
@@ -459,12 +459,47 @@
               <tr>
                 <td class="font-monospace"> A5-09-04 </td>
                 <td class="font-monospace"> carbonDioxideConcentration, temperature, relativeHumidity </td>
-                <td> &hellip; </td>
+                <td> EnoPuck CO2, &hellip; </td>
               </tr>
               <tr>
                 <td class="font-monospace"> A5-14-05 </td>
                 <td class="font-monospace"> batteryVoltage, isMotionDetected </td>
                 <td> &hellip; </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- D1-XX-XX (MSC) --->
+          <h3 id="msc" class="font-monospace mt-4">
+            D1<span class="text-body-secondary">-XX-XX</span>
+            <a href="#msc" class="badge bg-primary">MSC</a>
+          </h3>
+          <p class="text-body-secondary"> Devices that have an EEP beginning with <b class="font-monospace">D1</b> use Manufacturer Specific Communication (MSC) telegrams, the following of which are currently supported: </p>
+          <table class="table table-hover">
+            <caption class="text-end"> Source of truth: <a href="https://github.com/reelyactive/advlib-eep-msc" target="_blank"><i class="fab fa-github"></i>/reelyactive/advlib-eep-msc</a> </caption>
+            <thead>
+              <tr>
+                <th scope="col"> EEP </th>
+                <th scope="col"> dynamb Properties </th>
+                <th scope="col"> Devices </th>
+                <th scope="col"> Mfr. Id </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-monospace"> D1-07-10 </td>
+                <td class="font-monospace"> batteryVoltage, passageCounts </td>
+                <td> EnoSense People Counter </td>
+                <td class="font-monospace"> 0x047 </td>
+              </tr>
+              <tr>
+                <td class="font-monospace"> D1-09-01 </td>
+                <td class="font-monospace"> batteryVoltage, <br>
+                                            carbonDioxideConcentration, <br>
+                                            relativeHumidity, <br>
+                                            temperature
+                </td>
+                <td> &hellip; </td>
+                <td class="font-monospace"> 0x047 </td>
               </tr>
             </tbody>
           </table>
@@ -486,7 +521,13 @@
             <tbody>
               <tr>
                 <td class="font-monospace"> D2-14-41 </td>
-                <td class="font-monospace"> acceleration, illuminance, isContactDetected, isMotionDetected, relativeHumidity, temperature </td>
+                <td class="font-monospace"> acceleration, <br>
+                                            illuminance, <br>
+                                            isContactDetected, <br>
+                                            isMotionDetected, <br>
+                                            relativeHumidity, <br>
+                                            temperature
+                </td>
                 <td> EnOcean STM 550, &hellip; </td>
               </tr>
               <tr>
