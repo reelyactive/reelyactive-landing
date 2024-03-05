@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
-          content="The open source IoT middleware that makes sense.">
+          content="The open source IoT middleware that makes sense of things.">
     <link rel="stylesheet" href="../../style/bootstrappyactive.min.css">
     <script type="module" src="../../js/color-modes.js"></script>
     <title> Pareto Anywhere </title>
@@ -15,7 +15,7 @@
       "@context": "https://schema.org", 
       "@type": "WebPage",
       "name": "Pareto Anywhere by reelyActive",
-      "description": "The open source IoT middleware that makes sense.",
+      "description": "The open source IoT middleware that makes sense of things.",
       "image": "https://www.reelyactive.com/images/pareto-anywhere-logo.png",
       "creator": {
         "@type": "Organization",
@@ -426,201 +426,132 @@
       </div>
       <div class="row justify-content-center text-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
-          <!----- IoT Middleware ----->
-          <div class="card hover-shadow rounded my-5">
-            <div class="row g-0">
-              <div class="col-lg-5 col-xxl-4 align-self-center">
-                <img src="../../images/pareto-anywhere-wares.png"
-                     class="img-fluid p-2">
-              </div>
-              <div class="col-lg-7 col-xxl-8 align-self-center text-start p-2">
-                <p class="lead"> IoT middleware: <span class="text-body-secondary">the glue between hardware and software</span> </p>
-                <p> <b>Pareto Anywhere</b> abstracts away the <em>hard</em> part <small class="text-body-secondary">(pun intended)</small> facilitating application development using a familiar data format. </p>
+          <!----- Devices ----->
+          <div class="row justify-content-center mt-5">
+            <div class="col-8 col-lg-4">
+              <img src="../../images/devices-funnel.png" alt="Ambient Devices"
+                   class="img-fluid rounded-1" loading="lazy">
+            </div>
+            <div class="col-12 col-lg-8">
+              <h2 class="mt-3"> Make sense of <em>every</em>thing </h2>
+              <p> <b class="text-body-emphasis">Pareto Anywhere</b> inherently works with <em>any</em> <span class="text-body-secondary">(radio-)</span>identifiable thing/device. </p>
+              <a href="devices"
+                 class="btn btn-sm btn-outline-ambient"> Learn more </a>
+            </div>
+          </div>
+          <!----- Infrastructure ----->
+          <div class="row justify-content-center mt-5">
+            <div class="col-8 col-lg-4">
+              <img src="../../images/infrastructure-funnel.png"
+                   alt="Ambient Infrastructure" class="img-fluid rounded-1"
+                   loading="lazy">
+            </div>
+            <div class="col-12 col-lg-8">
+              <h2 class="mt-3"> Use <em>existing</em> infrastructure </h2>
+              <p> It makes sense to leverage the APs, gateways & readers that are <em>already</em> there. </p>
+              <a href="infrastructure"
+                 class="btn btn-sm btn-outline-success"> Learn more </a>
+            </div>
+          </div>
+          <!----- Anywhere ----->
+          <div class="row justify-content-center mt-5">
+            <div class="col-12 col-lg-8">
+              <h2 class="mt-3"> Run <em>anywhere</em> that makes sense </h2>
+              <p> <b class="text-body-emphasis">Pareto Anywhere</b> is highly modular and written in <i class="fab fa-node-js"></i> Node.js </p>
+              <ul class="nav nav-tabs justify-content-center mt-3"
+                  role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="edgetab"
+                          data-bs-toggle="tab" data-bs-target="#edgecontent"
+                          type="button" role="tab" aria-controls="edgetab"
+                          aria-selected="false"> Edge </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="localtab"
+                          data-bs-toggle="tab" data-bs-target="#localcontent"
+                          type="button" role="tab" aria-controls="localtab"
+                          aria-selected="true"> Local </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="cloudtab" data-bs-toggle="tab"
+                          data-bs-target="#cloudcontent" type="button" role="tab"
+                          aria-controls="cloudtab"
+                          aria-selected="false"> Cloud </button>
+                </li>
+              </ul>
+              <div class="tab-content tab-content-border bg-dark-subtle
+                          border-light-subtle">
+                <div class="tab-pane fade" id="edgecontent" role="tabpanel"
+                     aria-labelledby="edgetab">
+                  <p> Run on resource-constrained edge devices like the ubiquitous <i class="fab fa-raspberry-pi"></i> Pi. </p>
+                  <a href="https://reelyactive.github.io/diy/pareto-anywhere-pi/"
+                     target="_blank" class="btn btn-sm btn-dark mb-2">
+                    <i class="fas fa-external-link-alt"></i>
+                    Run Pareto Anywhere on a Pi
+                  </a>
+                </div>
+                <div class="tab-pane fade show active" id="localcontent"
+                     role="tabpanel" aria-labelledby="localtab">
+                  <div class="card font-monospace text-start">
+                    <div class="card-header bg-info text-white small">
+                      <i class="fas fa-code"></i>
+                    </div>
+                    <div id="terminal" class="card-body font-monospace">
+                      <p class="mb-1"> &nbsp; </p>
+                      <p class="mb-1 text-muted"> &nbsp; </p>
+                      <p class="mb-1"> &nbsp; </p>
+                      <p class="mb-1 text-muted"> &nbsp; </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="cloudcontent" role="tabpanel"
+                     aria-labelledby="cloudtab">
+                  <p> Run efficiently as a serverless Azure Function. </p>
+                  <a href="integrations/azure/"
+                     class="btn btn-sm btn-dark mb-2">
+                    Pareto Anywhere for Azure
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-          <div class="text-center text-muted display-6 animate-breathing">
+          <!----- Integrations ----->
+          <div class="row justify-content-center mt-5">
+            <div class="col-8 col-lg-4">
+              <img src="../../images/integrations-funnel.png"
+                   alt="Software integrations" class="img-fluid rounded-1"
+                   loading="lazy">
+            </div>
+            <div class="col-12 col-lg-8">
+              <h2 class="mt-3"> Use <em>familiar</em> software </h2>
+              <p> It makes sense to use the databases, tools and analytics suite you <em>already</em> know. </p>
+              <a href="integrations"
+                 class="btn btn-sm btn-outline-primary"> Learn more </a>
+            </div>
+          </div>
+          <!----- Use cases ----->
+          <div class="row justify-content-center mt-5">
+            <div class="col-8 col-lg-4">
+              <img src="../../images/use-cases-funnel.png" alt="Use cases"
+                   class="img-fluid rounded-1" loading="lazy">
+            </div>
+            <div class="col-12 col-lg-8">
+              <h2 class="mt-3"> Enable <em>complementary</em> use cases </h2>
+              <p> Because siloed IoT applications simply <em>don't</em> make sense! </p>
+              <a href="../../use-cases"
+                 class="btn btn-sm btn-outline-info"> Learn more </a>
+            </div>
+          </div>
+          <div class="text-center text-muted display-6 animate-breathing mt-5">
             &vellip;
           </div>
-          <img src="../../images/pareto-anywhere-overview.png"
-               class="img-fluid my-5" alt="Pareto Anywhere overview">
-          <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="discovertab"
-                      data-bs-toggle="tab" data-bs-target="#discovercontent"
-                      type="button" role="tab" aria-controls="discovertab"
-                      aria-selected="true"> Discover </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="interacttab" data-bs-toggle="tab"
-                      data-bs-target="#interactcontent" type="button" role="tab"
-                      aria-controls="interacttab"
-                      aria-selected="false"> Interact </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="storetab" data-bs-toggle="tab"
-                      data-bs-target="#storecontent" type="button" role="tab"
-                      aria-controls="storetab"
-                      aria-selected="false"> Store </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="analysetab" data-bs-toggle="tab"
-                      data-bs-target="#analysecontent" type="button" role="tab"
-                      aria-controls="analysetab"
-                      aria-selected="false"> Analyse </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="developtab" data-bs-toggle="tab"
-                      data-bs-target="#developcontent" type="button" role="tab"
-                      aria-controls="developtab"
-                      aria-selected="false"> Develop </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="acceleratetab" data-bs-toggle="tab"
-                      data-bs-target="#acceleratecontent" type="button"
-                      role="tab" aria-controls="acceleratetab"
-                      aria-selected="false"> Accelerate </button>
-            </li>
-          </ul>
-          <div class="tab-content tab-content-border border-light-subtle">
-            <div class="tab-pane fade show active" id="discovercontent"
-                 role="tabpanel" aria-labelledby="discovertab">
-              <div class="row">
-                <div class="col-lg-4">
-                  <img src="../../images/pareto-anywhere-discover.jpg"
-                       class="img-fluid my-2" alt="Discover">
-                </div>
-                <div class="col-lg-8 align-self-center">
-                  <p class="lead mb-1"> <span class="text-primary">Discover</span> the data <em>already</em> in your space. </p>
-                  <p> <b class="text-body-emphasis">Pareto Anywhere</b> includes intuitive web apps that let <em>you</em> make sense of how <em>computers</em> make sense of a physical space and its occupants. </p>
-                  <p>
-                    <a href="apps/#content" role="button"
-                       class="btn btn-sm btn-outline-primary mb-1">
-                      <i class="fas fa-eye"></i> Pareto Anywhere Apps
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="interactcontent" role="tabpanel"
-                 aria-labelledby="interacttab">
-              <div class="row">
-                <div class="col-lg-4">
-                  <img src="../../images/pareto-anywhere-interact.png"
-                       class="img-fluid my-2" alt="Interact">
-                </div>
-                <div class="col-lg-8 align-self-center">
-                  <p class="lead mb-1"> <span class="text-primary">Interact</span> in physical spaces <em>naturally</em>. </p>
-                  <p> <b class="text-body-emphasis">Pareto Anywhere</b> enables computers to make sense of <em>our</em> physical reality.  <em>You do you:</em> that's the future of human-computer interaction. </p>
-                  <p>
-                    <a href="../../context-aware-physical-spaces/#content"
-                       class="btn btn-sm btn-outline-primary mb-1"
-                       role="button">
-                      <i class="fas fa-share-alt"></i> Context-aware physical spaces
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="storecontent" role="tabpanel"
-                 aria-labelledby="storetab">
-              <div class="row">
-                <div class="col-lg-4">
-                  <img src="../../images/pareto-anywhere-store.png"
-                       class="img-fluid my-2" alt="Store">
-                </div>
-                <div class="col-lg-8 align-self-center">
-                  <p class="lead mb-1"> <span class="text-primary">Store</span> your data <em>anywhere</em> you please. </p>
-                  <p> <b class="text-body-emphasis">Pareto Anywhere</b> natively supports InfluxDB & Elasticsearch, and connects to any store in a few lines of code. </p>
-                  <p>
-                    <a href="integrations/elastic-stack/#content" role="button"
-                       class="btn btn-sm btn-outline-primary mb-1">
-                      <i class="fas fa-database"></i> Elastic Integration
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="analysecontent" role="tabpanel"
-                 aria-labelledby="analysetab">
-              <div class="row">
-                <div class="col-lg-4">
-                  <img src="../../images/pareto-anywhere-analyse.jpg"
-                       class="img-fluid my-2" alt="Analyse">
-                </div>
-                <div class="col-lg-8 align-self-center">
-                  <p class="lead mb-1"> <span class="text-primary">Analyse</span> your data <em>however</em> you please. </p>
-                  <p> <b class="text-body-emphasis">Pareto Anywhere</b> natively supports Grafana & Kibana.  Of course you're free to use the analytics tools most familiar to you! </p>
-                  <p>
-                    <a href="integrations/elastic-stack/#content" role="button"
-                       class="btn btn-sm btn-outline-primary mb-1">
-                      <i class="fas fa-chart-line"></i> Elastic Integration
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="developcontent" role="tabpanel"
-                 aria-labelledby="developtab">
-              <div class="row">
-                <div class="col-lg-4">
-                  <img src="../../images/pareto-anywhere-develop.png"
-                       class="img-fluid my-2" alt="Develop">
-                </div>
-                <div class="col-lg-8 align-self-center">
-                  <p class="lead mb-1"> <span class="text-primary">Develop</span> your application, not the underlying tech. </p>
-                  <p> <b class="text-body-emphasis">Pareto Anywhere</b> is <em>by</em> developers, <em>for</em> developers.  Written in JavaScript for <b><i class="fab fa-node-js"></i> Node.js</b>, it runs <em>anywhere:</em> &nbsp; <i class="fas fa-sd-card text-success"></i>&nbsp; Edge, <i class="fas fa-building text-dark"></i>&nbsp; Local and <i class="fas fa-cloud text-muted"></i>&nbsp; Cloud. </p>
-                  <p>
-                    <a href="https://reelyactive.github.io" target="_blank"
-                       class="btn btn-sm btn-outline-primary mb-1"
-                       role="button">
-                      <i class="fas fa-external-link-alt"></i> reelyActive Developers
-                    </a>
-                    <a href="https://github.com/reelyactive/pareto-anywhere"
-                       class="btn btn-sm btn-outline-primary mb-1"
-                       target="_blank" role="button">
-                      <i class="fab fa-github"></i> pareto-anywhere
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="acceleratecontent" role="tabpanel"
-                 aria-labelledby="acceleratetab">
-              <div class="row">
-                <div class="col-lg-4">
-                  <img src="../../images/pareto-anywhere-accelerate.png"
-                       class="img-fluid my-2" alt="Accelerate">
-                </div>
-                <div class="col-lg-8 align-self-center">
-                  <p class="lead mb-1"> <span class="text-primary">Accelerate</span> adoption with our guidance. </p>
-                  <p> <b class="text-body-emphasis">Pareto Anywhere</b> is free and open source.  Looking for the "faster" button?  Choose one of our packages and let us be your guide. </p>
-                  <p>
-                    <a href="../../business/#content" role="button"
-                       class="btn btn-sm btn-outline-primary mb-1">
-                      <i class="fas fa-people-arrows"></i> Our business
-                    </a>
-                    <a href="../../case-studies/?middleware=pa#content"
-                       class="btn btn-sm btn-outline-primary mb-1"
-                       role="button">
-                      <i class="fas fa-book-open"></i> Case Studies
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Ambient data in... ...hyperlocal context out -->
-      <div class="row justify-content-center">
-        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+          <!-- Ambient data in... ...hyperlocal context out -->
           <h3 class="text-center mt-5"> <b>Pareto Anywhere</b> provides a <span class="text-secondary">single standard stream</span> of real-time data, <span class="text-body-secondary">regardless of the underlying devices & technologies.</span> </h3>
           <div class="card-group mt-3 mb-5">
-            <div class="card border-0 rounded-3 hover-shadow">
+            <div class="card text-start border-0 rounded-3 hover-shadow">
               <div class="card-body">
                 <h3 class="card-title"> Ambient data in&hellip; </h3>
-                <p class="card-text"> <b class="text-body-emphasis">Pareto Anywhere</b> collects <b class="text-ambient"><i class="fas fa-wifi"></i> ambient data</b> from the radio-identifiable devices occupying a physical space via the ambient infrastructure <em>already present</em> in that space. </p>
+                <p class="card-text"> <b class="text-body-emphasis">Pareto Anywhere</b> collects <b class="text-ambient"><i class="fas fa-wifi"></i> ambient data</b> from the <span class="text-body-secondary">(radio-)</span>identifiable devices occupying a physical space via the ambient infrastructure <em>already present</em> in that space. </p>
               </div>
               <div class="card-footer bg-ambient bg-gradient border-0">
                 <a href="../../ambient-data/#content"
@@ -639,31 +570,6 @@
                    class="btn btn-outline-light" role="button">
                   <i class="fas fa-share-alt"></i> Hyperlocal Context
                 </a>
-              </div>
-            </div>
-          </div>
-          <div class="text-center text-muted display-6 animate-breathing">
-            &vellip;
-          </div>
-          <!----- Developers ----->
-          <div class="card hover-shadow rounded bg-white mt-5">
-            <div class="row g-0">
-              <div class="col-lg-6 align-self-center">
-                <img src="../../images/reelyactive-developers.png"
-                     class="img-fluid p-2">
-              </div>
-              <div class="col-lg-6 align-self-center p-1">
-                <div class="card font-monospace text-start">
-                  <div class="card-header bg-info text-white small">
-                    <i class="fas fa-code"></i>
-                  </div>
-                  <div id="terminal" class="card-body font-monospace">
-                    <p class="mb-1"> &nbsp; </p>
-                    <p class="mb-1 text-muted"> &nbsp; </p>
-                    <p class="mb-1"> &nbsp; </p>
-                    <p class="mb-1 text-muted"> &nbsp; </p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
