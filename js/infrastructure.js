@@ -3,13 +3,19 @@ const BLUETOOTH_LOW_ENERGY = 'ble';
 const RAIN_RFID = 'rain';
 const ENOCEAN = 'enocean';
 const TECHNOLOGY_SEARCH_PARAMETER = 'technology';
+const TABLE_COLUMNS = [ 'vendor', 'model', 'technologies', 'links' ];
 
 
 // DOM elements
-let infrastructurecards = document.querySelector('#infrastructurecards');
+let devicetablebody = document.querySelector('#devicetablebody');
 let filterBLE = document.querySelector('#filterBluetoothLowEnergy');
 let filterRAIN = document.querySelector('#filterRAIN');
 let filterEnOcean = document.querySelector('#filterEnOcean');
+
+
+// Variables
+let devices = {};
+let filters = { technologies: [ BLUETOOTH_LOW_ENERGY, RAIN_RFID, ENOCEAN ] };
 
 
 // Monitor technology switches
@@ -23,51 +29,38 @@ let searchParams = new URLSearchParams(location.search);
 let hasTechnologySearch = searchParams.has(TECHNOLOGY_SEARCH_PARAMETER);
 
 if(hasTechnologySearch) {
-  let technologies = searchParams.get(TECHNOLOGY_SEARCH_PARAMETER).split(',');
+  filters.technologies =
+                       searchParams.get(TECHNOLOGY_SEARCH_PARAMETER).split(',');
 
-  filterBLE.checked = technologies.includes(BLUETOOTH_LOW_ENERGY);
-  filterRAIN.checked = technologies.includes(RAIN_RFID);
-  filterEnOcean.checked = technologies.includes(ENOCEAN);
-
-  filterByTechnology(technologies);
+  filterBLE.checked = filters.technologies.includes(BLUETOOTH_LOW_ENERGY);
+  filterRAIN.checked = filters.technologies.includes(RAIN_RFID);
+  filterEnOcean.checked = filters.technologies.includes(ENOCEAN);
 }
+
+// Fetch the list of devices
+fetch('list.json')
+  .then((response) => {
+    if(!response.ok) { throw new Error('GET returned ' + response.status); }
+    return response.json();
+  })
+  .then((result) => {
+    devices = result;
+    renderDeviceTableRows(devices, devicetablebody, TABLE_COLUMNS, filters);
+  })
+  .catch((error) => { console.log(error); });
 
 
 // Update infrastructure visibility and the technology table
 function updateTechnology(event) {
-  let technologies = [];
+  filters.technologies = [];
   let searchString = new URLSearchParams();
 
-  if(filterBLE.checked) { technologies.push(BLUETOOTH_LOW_ENERGY); }
-  if(filterRAIN.checked) { technologies.push(RAIN_RFID); }
-  if(filterEnOcean.checked) { technologies.push(ENOCEAN); }
+  if(filterBLE.checked) { filters.technologies.push(BLUETOOTH_LOW_ENERGY); }
+  if(filterRAIN.checked) { filters.technologies.push(RAIN_RFID); }
+  if(filterEnOcean.checked) { filters.technologies.push(ENOCEAN); }
 
-  filterByTechnology(technologies);
-  searchString.append(TECHNOLOGY_SEARCH_PARAMETER, technologies);
+  renderDeviceTableRows(devices, devicetablebody, TABLE_COLUMNS, filters);
+  searchString.append(TECHNOLOGY_SEARCH_PARAMETER, filters.technologies);
   history.pushState(null, '', location.pathname + '?' + searchString +
                               location.hash);
-}
-
-
-// Update infrastructure visibility to reflect the given list of technologies
-function filterByTechnology(technologies) {
-  for(let infrastructurecard of infrastructurecards.children) {
-    let displayInfrastructure = false;
-    let infrastructureTechnologies = [];
-    let infrastructureTechnologiesAttribute =
-                                 infrastructurecard.getAttribute('technology');
-
-    if(infrastructureTechnologiesAttribute) {
-      infrastructureTechnologies =
-                                infrastructureTechnologiesAttribute.split(',');
-    }
-
-    for(let technology of technologies) {
-      if(infrastructureTechnologies.includes(technology)) {
-        displayInfrastructure = true;
-      }
-    }
-
-    infrastructurecard.hidden = !displayInfrastructure;
-  }
 }

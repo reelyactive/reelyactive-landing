@@ -1,0 +1,288 @@
+{
+  "minew-mwc01": {
+    "vendor": "Minew",
+    "model": "MWC01",
+    "technologies": [ "ble", "rain" ],
+    "useCases": [ "pt" ],
+    "dynambProperties": [ "acceleration", "isButtonPressed" ],
+    "links": [
+      { "title": "Buy from Minew",
+        "url": "https://www.minewstore.com/product/mwc01-bluetooth-rechargeable-badge/" }
+    ]
+  },
+  "minew-msp01": {
+    "vendor": "Minew",
+    "model": "MSP01",
+    "technologies": [ "ble" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "isMotionDetected", "illuminance", "temperature", "relativeHumidity", "acceleration" ],
+    "links": [
+      { "title": "Configuration Guide",
+        "url": "https://reelyactive.github.io/diy/minew-msp01-config/" },
+      { "title": "Buy from Minew",
+        "url": "https://www.minewstore.com/product/msp01-passive-infrared-sensor/" }
+    ]
+  },
+  "minew-msr01": {
+    "vendor": "Minew",
+    "model": "MSR01",
+    "technologies": [ "ble" ],
+    "useCases": [ "oa" ],
+    "dynambProperties": [ "numberOfOccupants", "passageCounts" ],
+    "links": [
+      { "title": "Buy from Minew",
+        "url": "https://www.minewstore.com/product/msr01-millimeter-wave-radar-sensor/" }
+    ]
+  },
+  "minew-mst01": {
+    "vendor": "Minew",
+    "model": "MST01",
+    "technologies": [ "ble" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "temperature", "relativeHumidity" ],
+    "links": [
+      { "title": "Buy from Minew",
+        "url": "https://www.minewstore.com/product/mst01-industrial-temperature-and-humidity-sensor/" }
+    ]
+  },
+  "minew-msl01": {
+    "vendor": "Minew",
+    "model": "MSL01",
+    "technologies": [ "ble" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "isLiquidDetected" ],
+    "links": [
+      { "title": "Buy from Minew",
+        "url": "https://www.minewstore.com/product/msl01-wireless-water-leak-sensor/" }
+    ]
+  },
+  "minew-msv01": {
+    "vendor": "Minew",
+    "model": "MSV01",
+    "technologies": [ "ble" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "isMotionDetected" ],
+    "links": [
+      { "title": "Buy from Minew",
+        "url": "https://www.minewstore.com/product/msv01-vibration-sensor/" }
+    ]
+  },
+  "minew-mbt01": {
+    "vendor": "Minew",
+    "model": "MBT01",
+    "technologies": [ "ble" ],
+    "useCases": [ "at" ],
+    "dynambProperties": [ "isContactDetected" ],
+    "links": [
+      { "title": "Buy from Minew",
+        "url": "https://www.minewstore.com/product/mbt01-anti-tamper-asset-tag/" }
+    ]
+  },
+  "minew-b10": {
+    "vendor": "Minew",
+    "model": "B10",
+    "technologies": [ "ble" ],
+    "useCases": [ "pt" ],
+    "dynambProperties": [ "isButtonPressed", "isMotionDetected", "acceleration" ],
+    "links": [
+      { "title": "Configuration Guide",
+        "url": "https://reelyactive.github.io/diy/minew-b10-config/" },
+      { "title": "Buy from Minew",
+        "url": "https://www.minewstore.com/product/b10-smart-emergency-button/" }
+    ]
+  },
+  "minew-e8": {
+    "vendor": "Minew",
+    "model": "E8",
+    "technologies": [ "ble" ],
+    "useCases": [ "at", "pt" ],
+    "dynambProperties": [ "isMotionDetected", "acceleration" ],
+    "links": [
+      { "title": "Configuration Guide",
+        "url": "https://reelyactive.github.io/diy/minew-e8-config/" },
+      { "title": "Buy from Minew",
+        "url": "https://www.minewstore.com/product/e8s-asset-tag/" }
+    ]
+  },
+  "minew-e9": {
+    "vendor": "Minew",
+    "model": "E9",
+    "technologies": [ "ble" ],
+    "useCases": [ "at" ],
+    "dynambProperties": [ "isMotionDetected", "acceleration" ],
+    "links": [
+      { "title": "Buy from Minew",
+        "url": "https://www.minewstore.com/product/e9-dear-beacon/" }
+    ]
+  },
+  "minew-s1": {
+    "vendor": "Minew",
+    "model": "S1",
+    "technologies": [ "ble" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "temperature", "relativeHumidity" ],
+    "links": [
+      { "title": "Configuration Guide",
+        "url": "https://reelyactive.github.io/diy/minew-s1-config/" },
+      { "title": "Buy from Minew",
+        "url": "https://www.minewstore.com/product/s1-temperature-humidity-sensor/" }
+    ]
+  },
+  "minew-s4": {
+    "vendor": "Minew",
+    "model": "S4",
+    "technologies": [ "ble" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "isContactDetected" ],
+    "links": [
+      { "title": "Buy from Minew",
+        "url": "https://www.minewstore.com/product/door-sensor/" }
+    ]
+  },
+  "enocean-emsi": {
+    "vendor": "enocean",
+    "model": "EMSI",
+    "technologies": [ "ble", "enocean" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "temperature", "relativeHumidity", "illuminance", "isMotionDetected", "isContactDetected" ],
+    "links": [
+      { "title": "Supported EEPs",
+        "url": "https://www.reelyactive.com/pareto/anywhere/devices/enocean-alliance/" },
+      { "title": "Product Page",
+        "url": "https://www.enocean.com/en/product/stm-550-kit/" }
+    ]
+  },
+  "enocean-emdc": {
+    "vendor": "enocean",
+    "model": "EMDC",
+    "technologies": [ "ble", "enocean" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "isMotionDetected", "illuminance" ],
+    "links": [
+      { "title": "Supported EEPs",
+        "url": "https://www.reelyactive.com/pareto/anywhere/devices/enocean-alliance/" },
+      { "title": "Product Page",
+        "url": "https://www.enocean.com/en/product/motion-detector-with-illumination-sensor-emdc-oem/" }
+    ]
+  },
+  "enocean-esrp": {
+    "vendor": "enocean",
+    "model": "ESRP",
+    "technologies": [ "ble", "enocean" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "isButtonPressed" ],
+    "links": [
+      { "title": "Supported EEPs",
+        "url": "https://www.reelyactive.com/pareto/anywhere/devices/enocean-alliance/" },
+      { "title": "Product Page",
+        "url": "https://www.enocean.com/en/product/easyfit-single-double-rocker-pad-for-ble-esrpb-edrpb/" }
+    ]
+  },
+  "arduino-nicla-vision": {
+    "vendor": "Arduino",
+    "model": "Nicla Vision",
+    "technologies": [ "ble" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "levelPercentage", "distance" ],
+    "links": [
+      { "title": "Development Guide",
+        "url": "https://reelyactive.github.io/diy/nicla-vision-dev/" },
+      { "title": "Buy from Arduino",
+        "url": "https://store.arduino.cc/products/nicla-vision" }
+    ]
+  },
+  "espruino-puckjs": {
+    "vendor": "Espruino",
+    "model": "Puck.js",
+    "technologies": [ "ble" ],
+    "useCases": [ "es", "id" ],
+    "dynambProperties": [ "angleOfRotation", "nearest", "isButtonPressed", "acceleration", "temperature", "magneticField" ],
+    "links": [
+      { "title": "Development Guide",
+        "url": "https://reelyactive.github.io/diy/puckjs-dev/" },
+      { "title": "Buy from Espruino",
+        "url": "https://shop.espruino.com/puckjs" }
+    ]
+  },
+  "espruino-banglejs": {
+    "vendor": "Espruino",
+    "model": "Bangle.js",
+    "technologies": [ "ble" ],
+    "useCases": [ "pt", "id" ],
+    "dynambProperties": [ "heartRate", "nearest", "position", "elevation", "heading", "speed", "temperature", "pressure", "magneticField", "acceleration" ],
+    "links": [
+      { "title": "Development Guide",
+        "url": "https://reelyactive.github.io/diy/banglejs-dev/" },
+      { "title": "Buy from Espruino",
+        "url": "https://shop.espruino.com/banglejs2" }
+    ]
+  },
+  "bbc-microbit": {
+    "vendor": "BBC",
+    "model": "micro:bit",
+    "technologies": [ "ble" ],
+    "useCases": [ "pt", "es", "id" ],
+    "dynambProperties": [ "nearest", "isButtonPressed", "temperature", "acceleration", "magneticField" ],
+    "links": [
+      { "title": "microbit.org",
+        "url": "https://microbit.org/" }
+    ]
+  },
+  "wiliot-iot-pixel": {
+    "vendor": "Wiliot",
+    "model": "IoT Pixel",
+    "technologies": [ "ble" ],
+    "useCases": [ "at" ],
+    "dynambProperties": [],
+    "links": [
+      { "title": "Product Page",
+        "url": "https://www.wiliot.com/product/iot-pixels" }
+    ]
+  },
+  "sensorworks-bluvib": {
+    "vendor": "Sensor-Works",
+    "model": "BluVib",
+    "technologies": [ "ble" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "isMotionDetected" ],
+    "links": [
+      { "title": "Interface Demo",
+        "url": "https://reelyactive.github.io/gatt-interfaces/sensorworks-bluvib/" },
+      { "title": "Product Page",
+        "url": "https://www.sensor-works.com/products/" }
+    ]
+  },
+  "laird-bt710": {
+    "vendor": "Laird",
+    "model": "BT710",
+    "technologies": [ "ble" ],
+    "useCases": [ "pt" ],
+    "dynambProperties": [ "isButtonPressed", "isMotionDetected" ],
+    "links": [
+      { "title": "Product Page",
+        "url": "https://www.lairdconnect.com/iot-devices/bluetooth-iot-devices/sentrius-bt710-contact-tracer-multi-sensor" }
+    ]
+  },
+  "laird-bt610": {
+    "vendor": "Laird",
+    "model": "BT610",
+    "technologies": [ "ble" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "temperatures", "voltages", "amperages", "pressures", "distance" ],
+    "links": [
+      { "title": "Product Page",
+        "url": "https://www.lairdconnect.com/iot-devices/bluetooth-iot-devices/sentrius-bt610-io-sensor" }
+    ]
+  },
+  "laird-bt510": {
+    "vendor": "Laird",
+    "model": "BT510",
+    "technologies": [ "ble" ],
+    "useCases": [ "at", "es" ],
+    "dynambProperties": [ "temperature", "isContactDetected", "isMotionDetected", "acceleration" ],
+    "links": [
+      { "title": "Product Page",
+        "url": "https://www.lairdconnect.com/iot-devices/bluetooth-iot-devices/bt510-bluetooth-5-long-range-ip67-multi-sensor" }
+    ]
+  }
+}

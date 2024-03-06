@@ -5,16 +5,24 @@ const PERSONNEL_TRACKING = 'pt';
 const ENVIRONMENTAL_SENSING = 'es';
 const INTERACTION_DETECTION = 'id';
 const USE_CASES_SEARCH_PARAMETER = 'use-cases';
+const TABLE_COLUMNS = [ 'vendor', 'model', 'technologies', 'useCases',
+                        'dynambProperties', 'links' ];
 
 
 // DOM elements
-let devicecards = document.querySelector('#devicecards');
+let devicetablebody = document.querySelector('#devicetablebody');
 let filterOA = document.querySelector('#filterOccupancyAnalytics');
 let filterAT = document.querySelector('#filterAssetTracking');
 let filterPT = document.querySelector('#filterPersonnelTracking');
 let filterES = document.querySelector('#filterEnvironmentalSensing');
 let filterID = document.querySelector('#filterInteractionDetection');
 
+
+// Variables
+let devices = {};
+let filters = { useCases: [ OCCUPANCY_ANALYTICS, ASSET_TRACKING,
+                            PERSONNEL_TRACKING, ENVIRONMENTAL_SENSING,
+                            INTERACTION_DETECTION ] };
 
 // Monitor use case switches
 filterOA.onclick = updateUseCases;
@@ -29,53 +37,41 @@ let searchParams = new URLSearchParams(location.search);
 let hasUseCaseSearch = searchParams.has(USE_CASES_SEARCH_PARAMETER);
 
 if(hasUseCaseSearch) {
-  let useCases = searchParams.get(USE_CASES_SEARCH_PARAMETER).split(',');
+  filters.useCases = searchParams.get(USE_CASES_SEARCH_PARAMETER).split(',');
 
   // filterOA.checked = useCases.includes(OCCUPANCY_ANALYTICS);
-  filterAT.checked = useCases.includes(ASSET_TRACKING);
-  filterPT.checked = useCases.includes(PERSONNEL_TRACKING);
-  filterES.checked = useCases.includes(ENVIRONMENTAL_SENSING);
-  filterID.checked = useCases.includes(INTERACTION_DETECTION);
-
-  filterByUseCase(useCases);
+  filterAT.checked = filters.useCases.includes(ASSET_TRACKING);
+  filterPT.checked = filter.suseCases.includes(PERSONNEL_TRACKING);
+  filterES.checked = filters.useCases.includes(ENVIRONMENTAL_SENSING);
+  filterID.checked = fitlers.useCases.includes(INTERACTION_DETECTION);
 }
+
+// Fetch the list of devices
+fetch('list.json')
+  .then((response) => {
+    if(!response.ok) { throw new Error('GET returned ' + response.status); }
+    return response.json();
+  })
+  .then((result) => {
+    devices = result;
+    renderDeviceTableRows(devices, devicetablebody, TABLE_COLUMNS, filters);
+  })
+  .catch((error) => { console.log(error); });
 
 
 // Update client visibility and the use case table
 function updateUseCases(event) {
-  let useCases = [];
+  filters.useCases = [];
   let searchString = new URLSearchParams();
 
-  // if(filterOA.checked) { useCases.push(OCCUPANCY_ANALYTICS); }
-  if(filterAT.checked) { useCases.push(ASSET_TRACKING); }
-  if(filterPT.checked) { useCases.push(PERSONNEL_TRACKING); }
-  if(filterES.checked) { useCases.push(ENVIRONMENTAL_SENSING); }
-  if(filterID.checked) { useCases.push(INTERACTION_DETECTION); }
+  // if(filterOA.checked) { filters.useCases.push(OCCUPANCY_ANALYTICS); }
+  if(filterAT.checked) { filters.useCases.push(ASSET_TRACKING); }
+  if(filterPT.checked) { filters.useCases.push(PERSONNEL_TRACKING); }
+  if(filterES.checked) { filters.useCases.push(ENVIRONMENTAL_SENSING); }
+  if(filterID.checked) { filters.useCases.push(INTERACTION_DETECTION); }
 
-  filterByUseCase(useCases);
-  searchString.append(USE_CASES_SEARCH_PARAMETER, useCases);
+  renderDeviceTableRows(devices, devicetablebody, TABLE_COLUMNS, filters);
+  searchString.append(USE_CASES_SEARCH_PARAMETER, filters.useCases);
   history.pushState(null, '', location.pathname + '?' + searchString +
                               location.hash);
-}
-
-
-// Update client visibility to reflect the given list of use cases
-function filterByUseCase(useCases) {
-  for(let devicecard of devicecards.children) {
-    let displayDevice = false;
-    let deviceUseCases = [];
-    let deviceUseCasesAttribute = devicecard.getAttribute('use-cases');
-
-    if(deviceUseCasesAttribute) {
-      deviceUseCases = deviceUseCasesAttribute.split(',');
-    }
-
-    for(let useCase of useCases) {
-      if(deviceUseCases.includes(useCase)) {
-        displayDevice = true;
-      }
-    }
-
-    devicecard.hidden = !displayDevice;
-  }
 }

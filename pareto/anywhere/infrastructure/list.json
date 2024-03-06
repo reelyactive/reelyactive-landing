@@ -1,0 +1,169 @@
+{
+  "aruba-ap": {
+    "vendor": "HPE Aruba Networking",
+    "model": "AP-xxx",
+    "technologies": [ "ble", "enocean" ],
+    "links": [
+      { "title": "Overview",
+        "url": "https://www.reelyactive.com/pareto/anywhere/infrastructure/aruba/" },
+      { "title": "Configuration Guide",
+        "url": "https://reelyactive.github.io/diy/aruba-instant-config/" },
+      { "title": "Pareto Anywhere for Azure Guide",
+        "url": "https://reelyactive.github.io/diy/pareto-anywhere-azure-aruba/" },
+      { "title": "barnowl-aruba",
+        "url": "https://github.com/reelyactive/barnowl-aruba/" }
+    ]
+  },
+  "impinj-r700": {
+    "vendor": "Impinj",
+    "model": "R700",
+    "technologies": [ "rain" ],
+    "links": [
+      { "title": "Configuration Guide",
+        "url": "https://reelyactive.github.io/diy/impinj-r700-config/" },
+      { "title": "barnowl-impinj",
+        "url": "https://github.com/reelyactive/barnowl-impinj/" }
+    ]
+  },
+  "enocean-usb": {
+    "vendor": "EnOcean",
+    "model": "USB x00",
+    "technologies": [ "enocean" ],
+    "links": [
+      { "title": "barnowl-enocean",
+        "url": "https://github.com/reelyactive/barnowl-enocean/" }
+    ]
+  },
+  "minew-g1": {
+    "vendor": "Minew",
+    "model": "G1",
+    "technologies": [ "ble" ],
+    "links": [
+      { "title": "Configuration Guide",
+        "url": "https://reelyactive.github.io/diy/minew-g1-config/" },
+      { "title": "barnowl-minew",
+        "url": "https://github.com/reelyactive/barnowl-minew/" },
+      { "title": "Buy from Minew",
+        "url": "https://www.minewstore.com/product/g1-iot-gateway/" }
+    ]
+  },
+  "minew-g2": {
+    "vendor": "Minew",
+    "model": "G2",
+    "technologies": [ "ble" ],
+    "links": [
+      { "title": "barnowl-minew",
+        "url": "https://github.com/reelyactive/barnowl-minew/" }
+    ]
+  },
+  "minew-mg3": {
+    "vendor": "Minew",
+    "model": "MG3",
+    "technologies": [ "ble" ],
+    "links": [
+      { "title": "Configuration Guide",
+        "url": "https://reelyactive.github.io/diy/minew-mg3-config/" },
+      { "title": "barnowl-minew",
+        "url": "https://github.com/reelyactive/barnowl-minew/" },
+      { "title": "Buy from Minew",
+        "url": "https://www.minewstore.com/product/mg3-usb-mini-gateway/" }
+    ]
+  },
+  "minew-mg4": {
+    "vendor": "Minew",
+    "model": "MG4",
+    "technologies": [ "ble" ],
+    "links": [
+      { "title": "Configuration Guide",
+        "url": "https://reelyactive.github.io/diy/minew-mg4-config/" },
+      { "title": "barnowl-minew",
+        "url": "https://github.com/reelyactive/barnowl-minew/" },
+      { "title": "Buy from Minew",
+        "url": "https://www.minewstore.com/product/mg4-smart-rechargeable-gateway/" }
+    ]
+  },
+  "rfcontrols-rfcos": {
+    "vendor": "RF Controls",
+    "model": "RFC OS",
+    "technologies": [ "rain" ],
+    "links": [
+      { "title": "barnowl-rfcontrols",
+        "url": "https://github.com/reelyactive/barnowl-rfcontrols/" }
+    ]
+  },
+  "csl-cs463": {
+    "vendor": "CSL",
+    "model": "CS463",
+    "technologies": [ "rain" ],
+    "links": [
+      { "title": "Configuration Guide",
+        "url": "https://reelyactive.github.io/diy/csl-cs463-config/" },
+      { "title": "barnowl-csl",
+        "url": "https://github.com/reelyactive/barnowl-csl/" }
+    ]
+  },
+  "raspberrypi-3b": {
+    "vendor": "Raspberry Pi",
+    "model": "3B",
+    "technologies": [ "ble" ],
+    "links": [
+      { "title": "Pareto Anywhere Guide",
+        "url": "https://reelyactive.github.io/diy/pareto-anywhere-pi/" }
+    ]
+  },
+  "raspberrypi-4": {
+    "vendor": "Raspberry Pi",
+    "model": "4",
+    "technologies": [ "ble" ],
+    "links": [
+      { "title": "Pareto Anywhere Guide",
+        "url": "https://reelyactive.github.io/diy/pareto-anywhere-pi/" }
+    ]
+  },
+  "laird-ig60-bl654": {
+    "vendor": "Laird",
+    "model": "IG60-BL654",
+    "technologies": [ "ble" ],
+    "links": [
+      { "title": "Preparation Guide",
+        "url": "https://reelyactive.github.io/diy/laird-ig60-prep/" },
+      { "title": "barnowl-laird",
+        "url": "https://github.com/reelyactive/barnowl-laird/" }
+    ]
+  },
+  "reelyactive-reelceiver": {
+    "vendor": "reelyActive",
+    "model": "Reelceiver",
+    "technologies": [ "ble" ],
+    "links": [
+      { "title": "Reel Technology",
+        "url": "https://www.reelyactive.com/technology/reel/" },
+      { "title": "barnowl-reel",
+        "url": "https://github.com/reelyactive/barnowl-reel/" }
+    ]
+  },
+  "reelyactive-oio": {
+    "vendor": "reelyActive",
+    "model": "Owl-in-One",
+    "technologies": [ "ble" ],
+    "links": [
+      { "title": "Ambient Data Gateways",
+        "url": "https://www.reelyactive.com/products/gateways/#owl-in-one" },
+      { "title": "Configuration Guide",
+        "url": "https://reelyactive.github.io/diy/oio-config/" },
+      { "title": "tessel-edge",
+        "url": "https://github.com/reelyactive/tessel-edge/" }
+    ]
+  },
+  "personalcomputer": {
+    "vendor": "Various",
+    "model": "PC",
+    "technologies": [ "ble" ],
+    "links": [
+      { "title": "Pareto Anywhere Guide",
+        "url": "https://reelyactive.github.io/diy/pareto-anywhere-pc/" },
+      { "title": "barnowl-hci",
+        "url": "https://github.com/reelyactive/barnowl-hci/" }
+    ]
+  }
+}
