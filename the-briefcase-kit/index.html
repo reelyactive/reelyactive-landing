@@ -380,20 +380,28 @@
       </div>
     </nav>
 
-    <!----- Herowl ----->
+    <!----- Herowl++ ----->
     <div class="herowl">
-      <div class="col-xs-12 col-sm-10 col-lg-6 offset-lg-4 col-xl-6
-                  offset-xl-2">
-        <div class="card">
-          <div class="card-body">
-            <h1 class="card-title"> The Briefcase Kit </h1>
-            <p class="card-text"> Coming soon... </p>
+      <div class="col-xs-12 col-sm-10 col-lg-10 col-xl-8">
+        <div class="card shadow">
+          <div class="row flex-lg-row-reverse align-items-center g-0">
+            <div class="col-lg-6">
+              <img src="../images/the-briefcase-kit-teaser.png"
+                   alt="The Briefcase Kit" loading="lazy"
+                   class="d-block mx-lg-auto img-fluid my-4 rounded">
+            </div>
+            <div class="col-lg-6">
+              <div class="card-body text-start">
+                <h1 class="display-3 fw-bold lh-1 mb-3"> The Briefcase Kit </h1>
+                <p class="lead"> We happy?  Yeah, we happy. </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                  <a href="#content" class="btn btn-primary btn-lg px-4 me-md-2"
+                     type="button"> Tell me more </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <a href="#content">
-          <img src="../images/barnarrow-down.png" alt="Learn More"
-               class="mx-auto d-block barnarrow animate-breathing">
-        </a>
       </div>
     </div>
 
@@ -407,17 +415,99 @@
       <div class="row justify-content-center bg-dark text-white text-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
           <h2 class="my-5">
-            We happy?<br>Yeah, we happy.
+            In case you need to make sense of the Internet of Things&hellip;
           </h2>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
-          <div class="min-vh-100 d-flex align-items-center justify-content-center">
-            <p class="text-center">
-              <span class="lead"> This page intentionally left blank... </span>
-              <br> <span class="text-muted"> ... we're working on it. </span>
-            </p>
+          <img src="../images/the-briefcase-kit-teaser.png"
+               class="img-fluid my-5"
+               alt="The Briefcase Kit (teaser)" loading="lazy">
+          <h2> Technology-agnostic IoT interoperability </h2>
+          <ul class="nav nav-tabs mt-3" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="bletab"
+                      data-bs-toggle="tab" data-bs-target="#blecontent"
+                      type="button" role="tab" aria-controls="bletab"
+                      aria-selected="false"> Bluetooth Low Energy </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="raintab"
+                      data-bs-toggle="tab" data-bs-target="#raincontent"
+                      type="button" role="tab" aria-controls="raintab"
+                      aria-selected="true"> RAIN RFID </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="enoceantab" data-bs-toggle="tab"
+                      data-bs-target="#enoceancontent" type="button" role="tab"
+                      aria-controls="enoceantab"
+                      aria-selected="false"> EnOcean Alliance </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="lorawantab" data-bs-toggle="tab"
+                      data-bs-target="#lorawancontent" type="button" role="tab"
+                      aria-controls="lorawantab"
+                      aria-selected="false"> LoRaWAN </button>
+            </li>
+          </ul>
+          <div class="tab-content tab-content-border bg-dark-subtle
+                      border-light-subtle mb-5">
+            <div class="tab-pane fade show active" id="blecontent"
+                 role="tabpanel" aria-labelledby="bletab">
+              <p class="text-body-secondary"> Bluetooth Low Energy operates in the 2.4GHz global ISM band </p>
+              <h5> Infrastructure </h5>
+              <ul>
+                <li> Aruba AP-505H or AP-605H <small class="text-body-secondary"> (Onboard radio) </small> </li>
+                <li> EdgeBox RPi-200 <small class="text-body-secondary"> (Onboard radio) </small> </li>
+              </ul>
+              <h5> Devices </h5>
+              <ul>
+                <li> Too many to list&hellip; </li>
+                <li> add more from <a href="../pareto/anywhere/devices/#content">this list&hellip;</a> </li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="raincontent" role="tabpanel"
+                 aria-labelledby="raintab">
+              <p class="text-body-secondary"> RAIN RFID operates in the sub-GHz regional ISM bands </p>
+              <h5> Infrastructure </h5>
+              <ul>
+                <li> Impinj R700 reader </li>
+                <li> Times-7 A5020 Antennas </li>
+              </ul>
+              <h5> Devices </h5>
+              <ul>
+                <li> Too many to list&hellip; </li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="enoceancontent" role="tabpanel"
+                 aria-labelledby="enoceantab">
+              <p class="text-body-secondary"> The EnOcean Wireless Standard operates in the sub-GHz regional ISM bands </p>
+              <h5> Infrastructure </h5>
+              <ul>
+                <li> EnOcean USB Dongle <small class="text-body-secondary"> (Connected to Aruba AP) </small> </li>
+              </ul>
+              <h5> Devices </h5>
+              <ul>
+                <li> EMSIU <small class="text-body-secondary"> Multisensor </small> </li>
+                <li> EDRPU <small class="text-body-secondary"> Rocker panel switch </small> </li>
+                <li> ETHSU <small class="text-body-secondary"> Temperature/humidity sensor </small> </li>
+                <li> EMCSU <small class="text-body-secondary"> Magnetic contact sensor </small> </li>
+                <li> add more from <a href="../pareto/anywhere/devices/#content">this list&hellip;</a> </li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="lorawancontent" role="tabpanel"
+                 aria-labelledby="lorawantab">
+              <p class="text-body-secondary"> LoRaWAN operates in the sub-GHz regional ISM bands </p>
+              <h5> Infrastructure </h5>
+              <ul>
+                <li> EdgeBox RPi-200 <small class="text-body-secondary"> (Embedded radio) </small> </li>
+              </ul>
+              <h5> Devices </h5>
+              <ul>
+                <li> Support to come&hellip; </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
