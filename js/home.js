@@ -4,8 +4,8 @@ const MIDDLEWARE_DIFFERENTIATIONS = [ 'privacy-preserving',
                                       'application-agnostic' ];
 const HEADLINE_BOLD_IDS = [ 'headlineWho', 'headlineWhat', 'headlineWhere',
                             'headlineHow' ];
-const EXAMPLES = [ 'workplace occupancy with Desjardins.',
-                   'equipment condition status with Entergy.',
+const EXAMPLES = [ 'equipment condition status with Entergy.',
+                   'workplace occupancy with Desjardins.',
                    'workplace stress and performance factors with USC.',
                    'museum visitor journeys with MCQ.',
                    'operational efficiency with the US Army.' ];
