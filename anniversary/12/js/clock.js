@@ -82,7 +82,7 @@ function sweepHoursIteration(iteration, hourAngleIncrement) {
 }
 
 function calculateHourAngle(currentTime) {
-  return 225 + (90 * (currentTime.getHours() % 12));
+  return 225 + (90 * (currentTime.getHours() % 12) / 12);
 }
 
 function calculateMinuteAngle(currentTime) {
