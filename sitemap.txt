@@ -55,6 +55,7 @@ https://www.reelyactive.com/pareto/anywhere/devices/espruino/
 https://www.reelyactive.com/pareto/anywhere/devices/minew/
 https://www.reelyactive.com/pareto/anywhere/infrastructure/
 https://www.reelyactive.com/pareto/anywhere/infrastructure/aruba/
+https://www.reelyactive.com/pareto/anywhere/infrastructure/impinj/
 https://www.reelyactive.com/pareto/anywhere/integrations/
 https://www.reelyactive.com/pareto/anywhere/integrations/azure/
 https://www.reelyactive.com/pareto/anywhere/integrations/elastic-stack/
