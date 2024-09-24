@@ -17,7 +17,7 @@
       "@type": "WebPage",
       "name": "EnOcean Alliance devices & Pareto Anywhere",
       "description": "EnOcean Alliance devices, grouped by EEP, currently supported by reelyActive's Pareto Anywhere open source IoT middleware.",
-      "image": "https://www.reelyactive.com/images/infrastructure-aruba-architecture.png",
+      "image": "https://www.reelyactive.com/images/devices-enocean-alliance-funnel.png",
       "creator": {
         "@type": "Organization",
         "url": "https://www.reelyactive.com"
@@ -396,15 +396,105 @@
       </div>
     </nav>
 
+    <!----- Herowl++ ----->
+    <div class="herowl">
+      <div class="col-xs-12 col-sm-10 col-lg-10 col-xl-8">
+        <div class="card shadow">
+          <div class="row flex-lg-row-reverse align-items-center g-0">
+            <div class="col-lg-6">
+              <img src="../../../../images/devices-enocean-alliance-funnel.png"
+                   alt="Pareto Anywhere & EnOcean Alliance Devices"
+                   class="d-block mx-lg-auto img-fluid rounded" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+              <div class="card-body text-start">
+                <h1 class="display-6 fw-bold lh-1 mb-3"> EnOcean Alliance Devices </h1>
+                <p class="lead"> <em class="fw-bold text-ambient">Wireless sensors</em> that transmit data for <span class="text-body-emphasis">Pareto Anywhere</span> to make sense of. </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                  <a href="#content" class="btn btn-ambient btn-lg px-4 me-md-2"
+                     type="button"> Tell me more </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Content -->
     <div id="content" class="container-fluid">
+      <a href="#top">
+        <img src="../../../../images/barnarrow-up.png" alt="Top of Page"
+             class="mx-auto mb-0 d-block barnarrow animate-breathing invisible">
+      </a>
+      <!-- Tagline -->
+      <div class="row justify-content-center bg-dark text-white text-center">
+        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+          <h2 class="my-5"> <span class="text-ambient">Wirelessly monitor</span> environmental conditions, occupancy and smart building interactions using the <span class="text-success">connectivity infrastructure</span> and <span class="text-primary">software stack</span> of your choice. </h2>
+        </div>
+      </div>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
-          <h1 class="mt-4"> EnOcean Alliance devices & Pareto Anywhere </h1>
-          <p class="lead"> Devices currently supported by our open source IoT middleware </p>
+          <!-- Overview -->
+          <p class="lead mt-5"> <b class="text-ambient">EnOcean Alliance devices</b> <i class="fas fa-wifi text-ambient animate-breathing"></i> transmit identifiers and sensor data. </p>
+          <div class="row d-flex align-items-center mb-5">
+            <div class="col-md-6">
+              <p class="lead mb-2"> <span class="fw-bold text-body-emphasis">Pareto Anywhere</span> middleware affords you the freedom to choose: </p>
+              <ul class="mb-2">
+                <li> any compatible <b class="text-success">connectivity infrastructure</b>, </li>
+                <li> any <b class="text-primary">software stack</b>, </li>
+              </ul>
+              <p> processing and relaying the data between the two, in a <span class="text-secondary">standard format</span> that makes sense. </p>
+              <div class="d-flex justify-content-center">
+                <div class="btn-group">
+                  <a href="../../#content" role="button"
+                     class="btn btn-dark"> Pareto Anywhere </a>
+                  <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden"> Toggle Dropdown </span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <a href="../../infrastructure/#content"
+                         class="dropdown-item text-success fw-bold">
+                        Ambient Infrastructure
+                      </a>
+                    </li>
+                    <li>
+                      <a href="../../integrations/#content"
+                         class="dropdown-item text-primary fw-bold">
+                        Software Integrations
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div id="middlewareCarousel" data-bs-ride="carousel"
+                   class="carousel slide carousel-fade my-4">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="2400">
+                    <img src="../../../../images/infrastructure-funnel.png"
+                         class="d-block w-100" alt="">
+                    <div class="carousel-caption text-success d-none d-md-block position-absolute bottom-0">
+                      <h5 class="mb-0"> &laquo; Choose any &laquo; </h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2400">
+                    <img src="../../../../images/integrations-funnel.png"
+                         class="d-block w-100" alt="">
+                    <div class="carousel-caption text-primary d-none d-md-block position-absolute bottom-0">
+                      <h5 class="mb-0"> &raquo; Choose any &raquo; </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <h2 class="mt-5"> Supported EnOcean Equipment Profiles (EEP) </h2>
           <p> EnOcean Alliance devices communicate using telegrams which are structured by EnOcean Equipment Profile (EEP) types.  Devices transmit their identifier and additional payload data using one or more EEPs which are represented in the format <span class="font-monospace">XX-XX-XX</span>. </p>
-          <p> The EEP types, and hence EnOcean Alliance devices, currently supported by <a href="../../">Pareto Anywhere</a> are listed below, grouped organisationally by their first character pair (the RORG). </p>
+          <p> The EEP types, and hence EnOcean Alliance devices, currently supported by <b>Pareto Anywhere</b> are listed below, grouped organisationally by their first character pair (the RORG). </p>
           <!-- A5-XX-XX (4BS) --->
           <h3 id="4bs" class="font-monospace mt-4">
             A5<span class="text-body-secondary">-XX-XX</span>
