@@ -5,10 +5,12 @@ const PERSONNEL_TRACKING = 'pt';
 const ENVIRONMENTAL_SENSING = 'es';
 const INTERACTION_DETECTION = 'id';
 const ELASTIC_STACK = 'elastic';
+const SQL_SERVER = 'sqlserver';
 const PARETO_ANYWHERE = 'pa';
 const PARETO_CLASSIC = 'pc';
 const REEL = 'reel';
 const OWL_IN_ONE = 'oio';
+const ARUBA_AP = 'aruba-ap';
 const MINEW_G1 = 'minew-g1';
 const MOBILE = 'mobile';
 const DIRACT = 'diract';
@@ -22,9 +24,9 @@ const MIDDLEWARE_SEARCH_PARAMETER = 'middleware';
 const INFRASTRUCTURE_SEARCH_PARAMETER = 'infrastructure';
 const DEVICES_SEARCH_PARAMETER = 'devices';
 const TOTAL_USE_CASES = 5;
-const TOTAL_SOFTWARE = 2;
+const TOTAL_SOFTWARE = 3;
 const TOTAL_MIDDLEWARE = 2;
-const TOTAL_INFRASTRUCTURE = 3;
+const TOTAL_INFRASTRUCTURE = 4;
 const TOTAL_DEVICES = 6;
 
 
@@ -36,11 +38,13 @@ let filterPT = document.querySelector('#filterPersonnelTracking');
 let filterES = document.querySelector('#filterEnvironmentalSensing');
 let filterID = document.querySelector('#filterInteractionDetection');
 let filterElasticStack = document.querySelector('#filterElasticStack');
+let filterSqlServer = document.querySelector('#filterSqlServer');
 let filterBespokeSoftware = document.querySelector('#filterBespokeSoftware');
 let filterPA = document.querySelector('#filterParetoAnywhere');
 let filterPC = document.querySelector('#filterParetoClassic');
 let filterReel = document.querySelector('#filterReel');
 let filterOwlInOne = document.querySelector('#filterOwlInOne');
+let filterArubaAp = document.querySelector('#filterArubaAp');
 let filterMinewG1 = document.querySelector('#filterMinewG1');
 let filterMobile = document.querySelector('#filterMobile');
 let filterDirAct = document.querySelector('#filterDirAct');
@@ -62,11 +66,13 @@ filterPT.onchange = updateUseCases;
 filterES.onchange = updateUseCases;
 filterID.onchange = updateUseCases;
 filterElasticStack.onchange = updateSoftware;
+filterSqlServer.onchange = updateSoftware;
 filterBespokeSoftware.onchange = updateSoftware;
 filterPA.onchange = updateMiddleware;
 filterPC.onchange = updateMiddleware;
 filterReel.onchange = updateInfrastructure;
 filterOwlInOne.onchange = updateInfrastructure;
+filterArubaAp.onchange = updateInfrastructure;
 filterMinewG1.onchange = updateInfrastructure;
 filterMobile.onchange = updateDevices;
 filterDirAct.onchange = updateDevices;
@@ -86,9 +92,9 @@ let hasDevicesSearch = searchParams.has(DEVICES_SEARCH_PARAMETER);
 let selectedUseCases = [ OCCUPANCY_ANALYTICS, ASSET_TRACKING,
                          PERSONNEL_TRACKING, ENVIRONMENTAL_SENSING,
                          INTERACTION_DETECTION ];
-let selectedSoftware = [ ELASTIC_STACK, BESPOKE ];
+let selectedSoftware = [ ELASTIC_STACK, SQL_SERVER, BESPOKE ];
 let selectedMiddleware = [ PARETO_ANYWHERE, PARETO_CLASSIC ];
-let selectedInfrastructure = [ REEL, OWL_IN_ONE, MINEW_G1 ];
+let selectedInfrastructure = [ REEL, OWL_IN_ONE, ARUBA_AP, MINEW_G1 ];
 let selectedDevices = [ MOBILE, DIRACT, MINEW_E8, MINEW_S1, PUCKJS, BESPOKE ];
 
 if(hasUseCaseSearch) {
@@ -105,6 +111,7 @@ if(hasSoftwareSearch) {
   selectedSoftware = searchParams.get(SOFTWARE_SEARCH_PARAMETER).split(',');
 
   filterElasticStack.checked = selectedSoftware.includes(ELASTIC_STACK);
+  filterSqlServer.checked = selectedSoftware.includes(SQL_SERVER);
   filterBespokeSoftware.checked = selectedSoftware.includes(BESPOKE);
 }
 
@@ -121,6 +128,7 @@ if(hasInfrastructureSearch) {
 
   filterReel.checked = selectedInfrastructure.includes(REEL);
   filterOwlInOne.checked = selectedInfrastructure.includes(OWL_IN_ONE);
+  filterArubaAp.checked = selectedInfrastructure.includes(ARUBA_AP);
   filterMinewG1.checked = selectedInfrastructure.includes(MINEW_G1);
 }
 
@@ -158,6 +166,7 @@ function updateSoftware(event) {
   selectedSoftware = [];
 
   if(filterElasticStack.checked) { selectedSoftware.push(ELASTIC_STACK); }
+  if(filterSqlServer.checked) { selectedSoftware.push(SQL_SERVER); }
   if(filterBespokeSoftware.checked) { selectedSoftware.push(BESPOKE); }
 
   filterSelected();
@@ -183,6 +192,7 @@ function updateInfrastructure(event) {
 
   if(filterReel.checked) { selectedInfrastructure.push(REEL); }
   if(filterOwlInOne.checked) { selectedInfrastructure.push(OWL_IN_ONE); }
+  if(filterArubaAp.checked) { selectedInfrastructure.push(ARUBA_AP); }
   if(filterMinewG1.checked) { selectedInfrastructure.push(MINEW_G1); }
 
   filterSelected();
