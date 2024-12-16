@@ -428,6 +428,67 @@
                    class="img-fluid" alt="Owl-idays 2024 premise">
             </div>
           </div>
+
+          <div class="accordion accordion-flush" id="accordionQuestions">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="accordionHeadingHow">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapseHow" aria-expanded="false" aria-controls="accordionCollapseHow">
+                  <i class="fas fa-question-circle text-primary"></i>&nbsp;
+                  How does this work?
+                </button>
+              </h2>
+              <div id="accordionCollapseHow" class="accordion-collapse collapse" aria-labelledby="accordionHeadingHow" data-bs-parent="#accordionQeustions">
+                <div class="accordion-body">
+                  <p> In short, <a href="https://github.com/reelyactive/owlidays2024" target="_blank"><i class="fab fa-github"></i>/owlidays2024</a> serves a webpage that allows all client devices to play the same MIDI file in sync, creating a spontaneous chorus where the instruments are divided among devices. </p>
+                  <p> The Owl-iday magic is keeping the devices in sync, which is done with WebSockets and <i class="fab fa-js"></i> JavaScript.  From a development standpoint, that's the most interesting and challenging programming aspect. </p>
+                  <p> Each twinkling <i class="fas fa-star animate-breathing"></i> star is in fact an <a href="../../ambient-data/#content">ambient wireless device</a> processed by our <a href="../../pareto/anywhere/#content">Pareto Anywhere</a> open source IoT middleware, running alongside.  The more <i class="fas fa-star animate-breathing"></i> stars, the more <em>things</em> in the space, each twinkling proportionally to the <i class="fas fa-signal"></i> received signal strength. </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="accordionHeadingWhy">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapseWhy" aria-expanded="false" aria-controls="accordionCollapseWhy">
+                  <i class="fas fa-question-circle text-primary"></i>&nbsp;
+                  Why did we do this?
+                </button>
+              </h2>
+              <div id="accordionCollapseWhy" class="accordion-collapse collapse" aria-labelledby="accordionHeadingWhy" data-bs-parent="#accordionQuestions">
+                <div class="accordion-body">
+                  <p> We did this in keeping with <a href="../">our annual Owl-iday tradition</a>, highlighting the unique capabilities of <a href="../../the-briefcase-kit/#content">the Briefcase Kit</a> which we launched this year. </p>
+                  <p> The Briefcase Kit includes a WiFi access point which supports a captive portal, allowing streamlined access to the network, and redirecting to a specific web page.  Why not use this to spread Owl-iday cheer over a backdrop of ambient <i class="fas fa-star animate-breathing"></i> data! </p>
+                  <p> Besides, <a href="../../team/#contributors">Don</a> was <em>reely</em> looking for an excuse to develop a synchronised mobile musical experience, and this proved an ideal occasion. &#x1F913; </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="accordionHeadingDIY">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapseDIY" aria-expanded="false" aria-controls="accordionCollapseDIY">
+                  <i class="fas fa-question-circle text-primary"></i>&nbsp;
+                  Can I try this at home?
+                </button>
+              </h2>
+              <div id="accordionCollapseDIY" class="accordion-collapse collapse" aria-labelledby="accordionHeadingDIY" data-bs-parent="#accordionQuestions">
+                <div class="accordion-body">
+                  <p> <span class="lead">Yes, please do!</span>  Grab the code from <a href="https://github.com/reelyactive/owlidays2024" target="_blank"><i class="fab fa-github"></i>/owlidays2024</a> and <span class="font-monospace">npm install</span> & <span class="font-monospace">npm start</span>.<sup>*</sup>  Then point every web device in your home to port 3003 of the computer running the code and press <span class="badge text-bg-success">Play!</span> in the browser. </p>
+                  <p> Sprinkle in some twinkle <i class="fas fa-star animate-breathing"></i> stars by running Pareto Anywhere on the same computer: just follow <a href="https://reelyactive.github.io/diy/pareto-anywhere-pc/" target="_blank"><i class="fas fa-external-link-alt"></i> this tutorial</a>.<sup>*</sup> </p>
+                  <p class="small text-end text-body-secondary"> <sup>*</sup> The only prerequisite is <i class="fab fa-node-js"></i> Node.js. </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="accordionHeadingHack">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapseHack" aria-expanded="false" aria-controls="accordionCollapseHack">
+                  <i class="fas fa-question-circle text-primary"></i>&nbsp;
+                  Can I hack this?
+                </button>
+              </h2>
+              <div id="accordionCollapseHack" class="accordion-collapse collapse" aria-labelledby="accordionHeadingHack" data-bs-parent="#accordionQuestions">
+                <div class="accordion-body">
+                  <p> <span class="lead">Yes, please do!</span>  It's <em>owl</em> <a href="../../open-source/#content">open source</a>, so hack it to make something cool<em>&mdash;and please tell us about it!</em> </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
