@@ -419,13 +419,13 @@
       <!-- One-liner -->
       <div class="row justify-content-center bg-dark text-light text-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
-          <p class="fs-2 my-5"> The <em>only</em> open source <strong>IoT middleware</strong> that makes the data from just about <em>any</em>thing <span class="text-secondary">usable</span>. </p>
+          <p class="fs-2 my-5"> The <em>only</em> <span class="text-success">open source</span> <strong>IoT middleware</strong> that makes the data from just about <em>any</em>thing <span class="text-secondary">usable</span>. </p>
         </div>
       </div>
       <div class="row justify-content-center text-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
           <h1 class="mt-5 text-body-secondary"> <strong class="text-ambient">IoT data</strong> made <strong class="text-secondary">usable</strong> </h1>
-          <p class="lead"> <b>Pareto Anywhere</b> provides a <span class="text-secondary">standard stream</span> of real-time data, <span class="text-body-secondary">regardless of the underlying devices & technologies.</span> </p>
+          <p class="lead"> <span class="fw-bold">Pareto Anywhere</span> provides a <span class="text-secondary">standard stream</span> of real-time data, <span class="text-body-secondary">regardless of the underlying devices & technologies.</span> </p>
           <div class="row row-cols-3 g-1 my-4">
             <div class="col">
               <div class="card h-100">
@@ -468,31 +468,226 @@
           </div>
           <p class="small text-body-secondary mb-1"> In the <span class="text-body">middle</span>&mdash;where every <em>thing</em> makes sense! </p>
           <p> <strong>Pareto Anywhere</strong> handles the <span class="text-body-emphasis">hardware</span> side of <em>things</em> so that you can rightly focus on the <span class="text-body-emphasis">applications</span> side of <em>things</em>. </p>
-          <!----- Devices ----->
-          <div class="row justify-content-center mt-5">
-            <div class="col-8 col-lg-4">
-              <img src="../../images/devices-funnel.png" alt="Ambient Devices"
-                   class="img-fluid rounded-1" loading="lazy">
+          <!-- Put to good use -->
+          <h1 class="mt-5"> <strong class="text-ambient">IoT data</strong> put to <strong class="text-primary">good use</strong> </h1>
+          <p class="lead text-body-secondary"> Readily apply IoT data using the platforms & tools you <em>already</em> know and love. </p>
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="analyticstab"
+                      data-bs-toggle="tab" data-bs-target="#analyticscontent"
+                      type="button" role="tab" aria-controls="analyticstab"
+                      aria-selected="true"> Analytics </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="databasestab" data-bs-toggle="tab"
+                      data-bs-target="#databasescontent" type="button"
+                      role="tab" aria-controls="databasestab"
+                      aria-selected="false"> Databases </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="iottab" data-bs-toggle="tab"
+                      data-bs-target="#iotcontent" type="button" role="tab"
+                      aria-controls="iottab"
+                      aria-selected="false"> IoT </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="protocolstab" data-bs-toggle="tab"
+                      data-bs-target="#protocolscontent" type="button"
+                      role="tab" aria-controls="protocolstab"
+                      aria-selected="false"> Protocols </button>
+            </li>
+          </ul>
+          <div class="tab-content border-light-subtle tab-content-border">
+            <div class="tab-pane fade show active" id="analyticscontent"
+                 role="tabpanel" aria-labelledby="analyticstab">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <img src="../../images/icon-powerbi.png"
+                       class="rounded-1 mt-2">
+                  <p class="my-2">
+                    <a href="integrations/azure/" role="button"
+                       class="btn btn-sm btn-outline-primary"> Learn more </a>
+                  </p>
+                </li>
+                <li class="list-inline-item">
+                  <img src="../../images/icon-grafana.png"
+                       class="rounded-1 mt-2">
+                  <p class="my-2">
+                    <a href="integrations/grafana/" role="button"
+                       class="btn btn-sm btn-outline-primary disabled"> Learn more </a>
+                  </p>
+                </li>
+                <li class="list-inline-item">
+                  <img src="../../images/icon-kibana.png"
+                       class="rounded-1 mt-2">
+                  <p class="my-2">
+                    <a href="integrations/elastic-stack/" role="button"
+                       class="btn btn-sm btn-outline-primary"> Learn more </a>
+                  </p>
+                </li>
+              </ul>
+              <p class="text-body-secondary small mb-0"> Don't see <em>your</em> favourite analytics suite?  <a href="../../get-started/#content" class="text-secondary">Get Started</a> with an integration. </p>
             </div>
-            <div class="col-12 col-lg-8">
-              <h2 class="mt-3"> Make sense of <em>every</em>thing </h2>
-              <p> <b class="text-body-emphasis">Pareto Anywhere</b> inherently works with <em>any</em> <span class="text-body-secondary">(radio-)</span>identifiable thing/device. </p>
-              <a href="devices"
-                 class="btn btn-sm btn-outline-ambient"> Learn more </a>
+            <div class="tab-pane fade" id="databasescontent" role="tabpanel"
+                 aria-labelledby="databasestab">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <img src="../../images/icon-sqlserver.png"
+                       class="rounded-1 mt-2">
+                  <p class="my-2">
+                    <a href="integrations/sql-server/" role="button"
+                       class="btn btn-sm btn-outline-primary disabled"> Learn more </a>
+                  </p>
+                </li>
+                <li class="list-inline-item">
+                  <img src="../../images/icon-influxdb.png"
+                       class="rounded-1 mt-2">
+                  <p class="my-2">
+                    <a href="integrations/influxdb/" role="button"
+                       class="btn btn-sm btn-outline-primary disabled"> Learn more </a>
+                  </p>
+                </li>
+                <li class="list-inline-item">
+                  <img src="../../images/icon-elasticsearch.png"
+                       class="rounded-1 mt-2">
+                  <p class="my-2">
+                    <a href="integrations/elastic-stack/" role="button"
+                       class="btn btn-sm btn-outline-primary"> Learn more </a>
+                  </p>
+                </li>
+              </ul>
+              <p class="text-body-secondary small mb-0"> Don't see <em>your</em> favourite database?  <a href="../../get-started/#content" class="text-secondary">Get Started</a> with an integration. </p>
+            </div>
+            <div class="tab-pane fade" id="iotcontent" role="tabpanel"
+                 aria-labelledby="iottab">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <img src="../../images/icon-nodered.png"
+                       class="rounded-1 mt-2">
+                  <p class="my-2">
+                    <a href="integrations/node-red/" role="button"
+                       class="btn btn-sm btn-outline-primary"> Learn more </a>
+                  </p>
+                </li>
+                <li class="list-inline-item">
+                  <img src="../../images/icon-azureiothub.png"
+                       class="rounded-1 mt-2">
+                  <p class="my-2">
+                    <a href="integrations/azure/" role="button"
+                       class="btn btn-sm btn-outline-primary"> Learn more </a>
+                  </p>
+                </li>
+              </ul>
+              <p class="text-body-secondary small mb-0"> Don't see <em>your</em> favourite IoT platform?  <a href="../../get-started/#content" class="text-secondary">Get Started</a> with an integration. </p>
+            </div>
+            <div class="tab-pane fade" id="protocolscontent" role="tabpanel"
+                 aria-labelledby="protocolstab">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <img src="../../images/icon-websockets.png"
+                       class="rounded-1 mt-2">
+                  <p class="my-2">
+                    <a href="integrations/websockets/" role="button"
+                       class="btn btn-sm btn-outline-primary disabled"> Learn more </a>
+                  </p>
+                </li>
+                <li class="list-inline-item">
+                  <img src="../../images/icon-mqtt.png"
+                       class="rounded-1 mt-2">
+                  <p class="my-2">
+                    <a href="integrations/mqtt/" role="button"
+                       class="btn btn-sm btn-outline-primary disabled"> Learn more </a>
+                  </p>
+                </li>
+                <li class="list-inline-item">
+                  <img src="../../images/icon-opcua.png"
+                       class="rounded-1 mt-2">
+                  <p class="my-2">
+                    <a href="integrations/opc-ua/" role="button"
+                       class="btn btn-sm btn-outline-primary disabled"> Learn more </a>
+                  </p>
+                </li>
+              </ul>
+              <p class="text-body-secondary small mb-0"> Don't see <em>your</em> favourite transport protocol?  <a href="../../get-started/#content" class="text-secondary">Get Started</a> with an integration. </p>
             </div>
           </div>
-          <!----- Infrastructure ----->
-          <div class="row justify-content-center mt-5">
-            <div class="col-8 col-lg-4">
-              <img src="../../images/infrastructure-funnel.png"
-                   alt="Ambient Infrastructure" class="img-fluid rounded-1"
-                   loading="lazy">
+          <!-- Devices and Infrastructure -->
+          <div class="card-group mt-5">
+            <div class="card hover-shadow">
+              <img src="../../images/devices-funnel.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h2 class="card-title"> Make sense of <em>every</em>thing </h2>
+                <p class="card-text"> <b class="text-body-emphasis">Pareto Anywhere</b> inherently works with <em>any</em> <span class="text-body-secondary">(radio-)</span>identifiable thing/device. </p>
+                <p class="card-text">
+                  <a href="devices"
+                     class="btn btn-sm btn-ambient"> Learn more </a>
+                </p>
+              </div>
+              <div class="card-footer">
+                <div class="row text-start align-items-center">
+                  <div class="col-3">
+                    <div class="carousel slide carousel-fade"
+                         data-bs-ride="carousel" data-bs-interval="1600"
+                         data-bs-pause="false">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="../../images/devices-partner-minew.jpg"
+                               class="d-block w-100 rounded">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="../../images/devices-minew.png"
+                               class="d-block w-100 rounded">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-9">
+                    <p class="lead mb-1"> <span class="fw-bold text-ambient">Spotlight:</span> Minew </p>
+                    <p class="mb-1">
+                      <a href="devices/minew/" role="button"
+                         class="btn btn-sm btn-outline-ambient"> Discover <i class="fab fa-bluetooth"></i> Beacons </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-12 col-lg-8">
-              <h2 class="mt-3"> Use <em>existing</em> infrastructure </h2>
-              <p> It makes sense to leverage the APs, gateways & readers that are <em>already</em> there. </p>
-              <a href="infrastructure"
-                 class="btn btn-sm btn-outline-success"> Learn more </a>
+            <div class="card hover-shadow">
+              <img src="../../images/infrastructure-funnel.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h2 class="card-title"> Use <em>existing</em> infrastructure </h2>
+                <p class="card-text"> It makes sense to leverage the APs, gateways & readers that are <em>already</em> there. </p>
+                <p class="card-text">
+                  <a href="infrastructure"
+                     class="btn btn-sm btn-success"> Learn more </a>
+                </p>
+              </div>
+              <div class="card-footer">
+                <div class="row text-start align-items-center">
+                  <div class="col-3">
+                    <div class="carousel slide carousel-fade"
+                         data-bs-ride="carousel" data-bs-interval="1600"
+                         data-bs-pause="false">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="../../images/infrastructure-partner-aruba.jpg"
+                               class="d-block w-100 rounded">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="../../images/infrastructure-aruba.png"
+                               class="d-block w-100 rounded">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-9">
+                    <p class="lead mb-1"> <span class="fw-bold text-success">Spotlight:</span> HPE Aruba </p>
+                    <p class="mb-1">
+                      <a href="infrastructure/aruba/" role="button"
+                         class="btn btn-sm btn-outline-success"> Discover IoT Access Points </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <!----- Anywhere ----->
@@ -555,33 +750,6 @@
                   </a>
                 </div>
               </div>
-            </div>
-          </div>
-          <!----- Integrations ----->
-          <div class="row justify-content-center mt-5">
-            <div class="col-8 col-lg-4">
-              <img src="../../images/integrations-funnel.png"
-                   alt="Software integrations" class="img-fluid rounded-1"
-                   loading="lazy">
-            </div>
-            <div class="col-12 col-lg-8">
-              <h2 class="mt-3"> Use <em>familiar</em> software </h2>
-              <p> It makes sense to use the databases, tools and analytics suite you <em>already</em> know. </p>
-              <a href="integrations"
-                 class="btn btn-sm btn-outline-primary"> Learn more </a>
-            </div>
-          </div>
-          <!----- Use cases ----->
-          <div class="row justify-content-center mt-5">
-            <div class="col-8 col-lg-4">
-              <img src="../../images/use-cases-funnel.png" alt="Use cases"
-                   class="img-fluid rounded-1" loading="lazy">
-            </div>
-            <div class="col-12 col-lg-8">
-              <h2 class="mt-3"> Enable <em>complementary</em> use cases </h2>
-              <p> Because siloed IoT applications simply <em>don't</em> make sense! </p>
-              <a href="../../use-cases"
-                 class="btn btn-sm btn-outline-info"> Learn more </a>
             </div>
           </div>
         </div>
