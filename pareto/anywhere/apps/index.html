@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
-          content="Web apps that allow anyone to make sense of and interact with the ambient data in their context-aware physical space, provided by reelyActive's Pareto Anywhere open source middleware.">
+          content="Visualise real-time contextual IoT data from Pareto Anywhere open source middleware in your web browser and on digital signage.">
     <link rel="stylesheet" href="../../../style/bootstrappyactive.min.css">
     <link rel="stylesheet" href="../../../style/heroes.css">
     <script type="module" src="../../../js/color-modes.js"></script>
@@ -16,8 +16,8 @@
       "@context": "https://schema.org", 
       "@type": "WebPage",
       "name": "Pareto Anywhere Apps",
-      "description": "Web apps that allow anyone to make sense of and interact with the ambient data in their context-aware physical space, provided by reelyActive's Pareto Anywhere open source middleware.",
-      "image": "https://www.reelyactive.com/images/integrations-pareto-anywhere-apps.jpg",
+      "description": "Visualise real-time contextual IoT data from Pareto Anywhere open source middleware in your web browser and on digital signage.",
+      "image": "https://www.reelyactive.com/images/integrations-apps-funnel.png",
       "creator": {
         "@type": "Organization",
         "url": "https://www.reelyactive.com"
@@ -425,13 +425,111 @@
       <!-- Tagline -->
       <div class="row justify-content-center bg-dark text-white text-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
-          <h2 class="my-5"> Visualise and interact with <span class="text-secondary">processed IoT data</span> conveniently and intuitively <span class="text-primary">in your web browser</span>. </h2>
+          <h2 class="my-5"> Visualise <span class="text-secondary">contextual IoT data</span> in your web browser and on digital signage with <span class="text-primary">Pareto Anywhere Apps</span>. </h2>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+          <!-- App cards -->
+          <div class="row row-cols-1 row-cols-md-2 g-4 my-5">
+            <div class="col">
+              <div class="card h-100">
+                <img src="../../../images/integrations-apps-hlc-explorer.png"
+                     class="card-img-top" alt="/hlc-explorer">
+                <div class="card-body">
+                  <h5 class="card-title"> Hyperlocal Context Explorer </h5>
+                  <p class="card-text"> Explore real-time location & context represented as a graph of ambient devices. </p>
+                </div>
+                <div class="card-footer text-center">
+                  <a href="https://reelyactive.github.io/pareto-anywhere-apps/hlc-explorer/?demo=default&updates=periodic"
+                     target="_blank" class="btn btn-sm btn-primary"
+                     role="button">
+                    <i class="fas fa-external-link-alt"></i> Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="../../../images/integrations-apps-ambient-context.png"
+                     class="card-img-top" alt="/ambient-context">
+                <div class="card-body">
+                  <h5 class="card-title"> Ambient Context </h5>
+                  <p class="card-text"> Display environmental and event-based information about a physical space and its occupants. </p>
+                </div>
+                <div class="card-footer text-center">
+                  <a href="https://reelyactive.github.io/pareto-anywhere-apps/ambient-context/?demo=default"
+                     target="_blank" class="btn btn-sm btn-primary"
+                     role="button">
+                    <i class="fas fa-external-link-alt"></i> Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="../../../images/integrations-apps-devices-observer.png"
+                     class="card-img-top" alt="/devices-observer">
+                <div class="card-body">
+                  <h5 class="card-title"> Devices Observer </h5>
+                  <p class="card-text"> Observe, filter & find radio-identifiable devices and associate relevant metadata. </p>
+                </div>
+                <div class="card-footer text-center">
+                  <a href="https://reelyactive.github.io/pareto-anywhere-apps/devices-observer/?demo=default"
+                     target="_blank" class="btn btn-sm btn-primary"
+                     role="button">
+                    <i class="fas fa-external-link-alt"></i> Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="../../../images/integrations-apps-live-directory.png"
+                     class="card-img-top" alt="/live-directory">
+                <div class="card-body">
+                  <h5 class="card-title"> Live Directory </h5>
+                  <p class="card-text"> Display occupants who are present <small class="text-body-secondary">(and opt-in!)</small> as well as any emojis they share. </p>
+                </div>
+                <div class="card-footer text-center">
+                  <a href="https://reelyactive.github.io/pareto-anywhere-apps/live-directory/?demo=default"
+                     target="_blank" class="btn btn-sm btn-primary"
+                     role="button">
+                    <i class="fas fa-external-link-alt"></i> Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center text-muted display-6 animate-breathing">
+            &vellip;
+          </div>
+          <!----- Developers ----->
+          <div class="card hover-shadow rounded my-5">
+            <div class="row g-0">
+              <div class="col-lg-6 align-self-center">
+                <img src="../../../images/reelyactive-developers.png"
+                     class="img-fluid p-2">
+              </div>
+              <div class="col-lg-6 align-self-center">
+                <div class="card-body">
+                  <h4 class="card-title"> Developers, developers, developers! </h4>
+                  <p class="card-text"> <em>Enough reading.</em>  Dive into the client-side code! </p>
+                  <div class="d-grid">
+                    <a href="https://github.com/reelyactive/pareto-anywhere-apps/"
+                       target="_blank" class="btn btn-primary" role="button">
+                      <i class="fab fa-github"></i>/pareto-anywhere-apps
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center text-muted display-6 animate-breathing">
+            &vellip;
+          </div>
           <!-- Overview -->
-          <p class="lead mt-5"> <span class="text-primary fw-bold">Pareto Anywhere Apps</span> present real-time data in your web browser. </p>
+          <p class="lead mt-5"> <span class="text-primary fw-bold">Pareto Anywhere Apps</span> are bundled with <span class="fw-bold text-body-emphasis">Pareto Anywhere</span>. </p>
           <div class="row d-flex align-items-center mb-5">
             <div class="col-md-6">
               <p class="lead mb-2"> <span class="fw-bold text-body-emphasis">Pareto Anywhere</span> IoT middleware affords you the freedom to choose: </p>
@@ -482,164 +580,6 @@
                     <div class="carousel-caption text-success d-none d-md-block position-absolute bottom-0">
                       <h5 class="mb-0"> &laquo; Choose any &laquo; </h5>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Hyperlocal Context Explorer -->
-          <div class="card hover-shadow rounded mb-3">
-            <div class="row g-0">
-              <div class="col-4 col-md-3 align-self-center">
-                <img src="../../../images/integrations-apps-hlc-explorer.png"
-                     class="img-fluid" alt="Hyperlocal Context Explorer">
-              </div>
-              <div class="col-8 col-md-9 align-self-center">
-                <div class="card-body">
-                  <h4 class="card-title"> Hyperlocal Context Explorer </h4>
-                  <p class="card-text"> Explore the digital representation of <em class="text-secondary">who/what</em> is <em class="text-secondary">where/how</em> as an interactive graph. </p>
-                  <a href="https://reelyactive.github.io/pareto-anywhere-apps/hlc-explorer/?demo=default&updates=periodic"
-                     class="btn btn-sm btn-outline-primary" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> Demo
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- CAPSpaces Demo -->
-          <div class="card hover-shadow rounded mb-3">
-            <div class="row g-0">
-              <div class="col-4 col-md-3 align-self-center">
-                <img src="../../../images/integrations-apps-capspaces-demo.png"
-                     class="img-fluid" alt="CAPSpaces Demo">
-              </div>
-              <div class="col-8 col-md-9 align-self-center">
-                <div class="card-body">
-                  <h4 class="card-title"> CAPSpaces Demo </h4>
-                  <p class="card-text"> Observe <em class="text-secondary">how</em> relevant ambient data evolves in any context-aware physical space. </p>
-                  <a href="https://reelyactive.github.io/pareto-anywhere-apps/capspaces-demo/?demo=default"
-                     class="btn btn-sm btn-outline-primary" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> Demo
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Live Directory -->
-          <div class="card hover-shadow rounded mb-3">
-            <div class="row g-0">
-              <div class="col-4 col-md-3 align-self-center">
-                <img src="../../../images/integrations-apps-live-directory.jpg"
-                     class="img-fluid" alt="Live Directory">
-              </div>
-              <div class="col-8 col-md-9 align-self-center">
-                <div class="card-body">
-                  <h4 class="card-title"> Live Directory </h4>
-                  <p class="card-text"> Discover <em class="text-secondary">who</em> is present and <em class="text-secondary">how</em> emoji are being shared. </p>
-                  <a href="https://reelyactive.github.io/pareto-anywhere-apps/live-directory/?demo=default"
-                     class="btn btn-sm btn-outline-primary" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> Demo
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Occupancy Observer -->
-          <div class="card hover-shadow rounded mb-3">
-            <div class="row g-0">
-              <div class="col-4 col-md-3 align-self-center">
-                <img src="../../../images/integrations-apps-occupancy-observer.png"
-                     class="img-fluid" alt="Occupancy Observer">
-              </div>
-              <div class="col-8 col-md-9 align-self-center">
-                <div class="card-body">
-                  <h4 class="card-title"> Occupancy Observer </h4>
-                  <p class="card-text"> Observe the occupancy of a space based on <em class="text-secondary">how</em> motion is sensed. </p>
-                  <a href="https://reelyactive.github.io/pareto-anywhere-apps/occupancy-observer/?demo=default"
-                     class="btn btn-sm btn-outline-primary" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> Demo
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Hello Sniffypedia! -->
-          <div class="card hover-shadow rounded mb-3">
-            <div class="row g-0">
-              <div class="col-4 col-md-3 align-self-center">
-                <img src="../../../images/integrations-apps-hello-sniffypedia.png"
-                     class="img-fluid" alt="Hello Sniffypedia!">
-              </div>
-              <div class="col-8 col-md-9 align-self-center">
-                <div class="card-body">
-                  <h4 class="card-title"> Hello Sniffypedia! </h4>
-                  <p class="card-text"> Identify <em class="text-secondary">what</em> ambient devices are present using our Sniffypedia index. </p>
-                  <a href="https://reelyactive.github.io/pareto-anywhere-apps/hello-sniffypedia/?demo=default"
-                     class="btn btn-sm btn-outline-primary" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> Demo
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Hello dynamb! -->
-          <div class="card hover-shadow rounded mb-3">
-            <div class="row g-0">
-              <div class="col-4 col-md-3 align-self-center">
-                <img src="../../../images/integrations-apps-hello-dynamb.png"
-                     class="img-fluid" alt="Hello dynamb!">
-              </div>
-              <div class="col-8 col-md-9 align-self-center">
-                <div class="card-body">
-                  <h4 class="card-title"> Hello dynamb! </h4>
-                  <p class="card-text"> Discover <em class="text-secondary">how</em> the dynamic ambient data in a space changes in real-time. </p>
-                  <a href="https://reelyactive.github.io/pareto-anywhere-apps/hello-dynamb/?demo=default"
-                     class="btn btn-sm btn-outline-primary" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> Demo
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Hello beaver! -->
-          <div class="card hover-shadow rounded mb-3">
-            <div class="row g-0">
-              <div class="col-4 col-md-3 align-self-center">
-                <img src="../../../images/integrations-apps-hello-beaver.png"
-                     class="img-fluid" alt="Hello beaver!">
-              </div>
-              <div class="col-8 col-md-9 align-self-center">
-                <div class="card-body">
-                  <h4 class="card-title"> Hello beaver! </h4>
-                  <p class="card-text"> Observe <em class="text-secondary">what</em> is <em class="text-secondary">where</em> in a table, using our beaver.js client-side software. </p>
-                  <a href="https://reelyactive.github.io/pareto-anywhere-apps/hello-beaver/?demo=default"
-                     class="btn btn-sm btn-outline-primary" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> Demo
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="text-center text-muted display-6 animate-breathing">
-            &vellip;
-          </div>
-          <!----- Developers ----->
-          <div class="card hover-shadow rounded my-4">
-            <div class="row g-0">
-              <div class="col-lg-6 align-self-center">
-                <img src="../../../images/reelyactive-developers.png"
-                     class="img-fluid p-2">
-              </div>
-              <div class="col-lg-6 align-self-center">
-                <div class="card-body">
-                  <h4 class="card-title"> Developers, developers, developers! </h4>
-                  <p class="card-text"> <em>Enough reading.</em>  Run these apps live on a <i class="fab fa-raspberry-pi"></i> Pi! </p>
-                  <div class="d-grid">
-                    <a href="https://reelyactive.github.io/diy/capspaces-pi/"
-                       target="_blank" class="btn btn-primary" role="button">
-                      <i class="fas fa-external-link-alt"></i>
-                      reelyactive.github.io/diy/capspaces-pi
-                    </a>
                   </div>
                 </div>
               </div>
