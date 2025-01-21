@@ -217,6 +217,19 @@
         "url": "https://shop.espruino.com/banglejs2" }
     ]
   },
+  "espruino-joltjs": {
+    "vendor": "Espruino",
+    "model": "Jolt.js",
+    "technologies": [ "ble" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ ],
+    "links": [
+      { "title": "Development Guide",
+        "url": "https://reelyactive.github.io/diy/joltjs-dev/" },
+      { "title": "Buy from Espruino",
+        "url": "https://shop.espruino.com/joltjs" }
+    ]
+  },
   "bbc-microbit": {
     "vendor": "BBC",
     "model": "micro:bit",
@@ -250,6 +263,17 @@
         "url": "https://reelyactive.github.io/gatt-interfaces/sensorworks-bluvib/" },
       { "title": "Product Page",
         "url": "https://www.sensor-works.com/products/" }
+    ]
+  },
+  "ssd-hibouair": {
+    "vendor": "SSD",
+    "model": "HibouAir",
+    "technologies": [ "ble" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "carbonDioxideConcentration, illuminance, pressure, relativeHumidity, soundPressure, temperature, volatileOrganicCompoundsConcentration" ],
+    "links": [
+      { "title": "Product Page",
+        "url": "https://hibouair.com/" }
     ]
   },
   "laird-bt710": {
