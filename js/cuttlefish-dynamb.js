@@ -1,5 +1,5 @@
 /**
- * Copyright reelyActive 2021
+ * Copyright reelyActive 2021-2025
  * We believe in an open Internet of Things
  */
 
@@ -11,7 +11,11 @@ let cuttlefishDynamb = (function() {
       'Unknown',
       'EUI-64',
       'EUI-48',
-      'RND-48'
+      'RND-48',
+      'TID-96',
+      'EPC-96',
+      'UUID-128',
+      'EURID-32'
   ];
   const AXIS_NAMES = [ 'x', 'y', 'z' ];
   const MS_IN_YEAR = 31536000000;
@@ -24,12 +28,24 @@ let cuttlefishDynamb = (function() {
   const STANDARD_DATA_PROPERTIES = {
       acceleration: { icon: "fas fa-rocket", suffix: "g",
                       transform: "progressXYZ" },
+      ammoniaConcentration: { icon: "fas fa-skull-crossbones",
+                              suffix: " NH\u2083", transform: "ppm" },
+      amperage: { icon: "fas fa-arrow-circle-up", suffix: " A",
+                  transform: "toFixed(2)" },
+      amperages: { icon: "fas fa-arrow-circle-up", suffix: " A",
+                   transform: "toFixedArray(2)" },
       angleOfRotation: { icon: "fas fa-redo", transform: "rotationDegrees" },
       batteryPercentage: { icon: "fas fa-battery-half", suffix: " %",
                            transform: "progressPercentage" },
       batteryVoltage: { icon: "fas fa-battery-half", suffix: " V",
                         transform: "toFixed(2)" },
-      deviceId: { icon: "fas fa-wifi", suffix: "", transform: "text" },
+      carbonDioxideConcentration: { icon: "fas fa-cloud", suffix: " CO\u2082",
+                                    transform: "ppm" },
+      carbonMonoxideConcentration: { icon: "fas fa-skull-crossbones",
+                                     suffix: " CO", transform: "ppm" },
+      deviceId: { icon: "fas fa-wifi", suffix: "", transform: "monospace" },
+      distance: { icon: "fas fa-expand-alt", suffix: " m",
+                  transform: "toFixed(2)" },
       elevation: { icon: "fas fa-layer-group", suffix: " m",
                    transform: "toFixed(2)" },
       heading: { icon: "fas fa-compass", transform: "rotationDegrees" },
@@ -43,31 +59,64 @@ let cuttlefishDynamb = (function() {
                          transform: "booleanArray" },
       isContactDetected: { icon: "fas fa-compress-alt", suffix: "",
                            transform: "booleanArray" },
+      isHealthy: { icon: "fas fa-check-circle", suffix: "",
+                   transform: "health" },
+      isLiquidDetected: { icon: "fas fa-tint", suffix: "",
+                          transform: "booleanArray" },
       isMotionDetected: { icon: "fas fa-walking", suffix: "",
                           transform: "booleanArray" },
+      levelPercentage: { icon: "fas fa-tachometer-alt", suffix: " %",
+                         transform: "progressPercentage" },
       magneticField: { icon: "fas fa-magnet", suffix: " G",
                        transform: "progressXYZ" },
+      methaneConcentration: { icon: "fas fa-cloud", suffix: " CH\u2084",
+                              transform: "ppm" },
       nearest: { icon: "fas fa-people-arrows", suffix: "dBm",
                  transform: "tableNearest" },
+      nitrogenDioxideConcentration: { icon: "fas fa-skull-crossbones",
+                                      suffix: " NO\u2082", transform: "ppm" },
+      numberOfOccupants: { icon: "fas fa-user-friends", suffix: " occupants",
+                           transform: "toFixed(0)" },
+      passageCounts: { icon: "fas fa-exchange-alt", suffix: " passages",
+                       transform: "passages" },
+      pH: { icon: "fas fa-water", suffix: " pH", transform: "toFixed(2)" },
+      "pm1.0": { icon: "fas fa-virus", suffix: "1.0", transform: "pm" },
+      "pm2.5": { icon: "fas fa-virus", suffix: "2.5", transform: "pm" },
+      "pm10": { icon: "fas fa-virus", suffix: "10", transform: "pm" },
       position: { icon: "fas fa-map-pin", suffix: "", transform: "position" },
       pressure: { icon: "fas fa-cloud", suffix: " Pa",
                   transform: "toFixed(0)" },
+      pressures: { icon: "fas fa-cloud", suffix: " Pa",
+                   transform: "toFixedArray(0)" },
       relativeHumidity: { icon: "fas fa-water", suffix: " %",
                           transform: "progressPercentage" },
+      soundPressure: { icon: "fas fa-volume-up", suffix: " dB",
+                       transform: "toFixed(0)" },
       speed: { icon: "fas fa-tachometer-alt", suffix: " m/s",
                transform: "toFixed(2)" },
       temperature: { icon: "fas fa-thermometer-half", suffix: " \u2103",
                      transform: "toFixed(2)" },
+      temperatures: { icon: "fas fa-thermometer-half", suffix: " \u2103",
+                      transform: "toFixedArray(2)" },
       timestamp: { icon: "fas fa-clock", suffix: "", transform: "timeOfDay" },
       txCount: { icon: "fas fa-satellite-dish", transform: "localeString",
                  suffix: " Tx" },
       unicodeCodePoints: { icon: "fas fa-language", suffix: "",
                           transform: "unicodeCodePoints" },
-      uptime: { icon: "fas fa-stopwatch", transform: "elapsedTime" }
+      uptime: { icon: "fas fa-stopwatch", transform: "elapsedTime" },
+      velocityOverall: { icon: "fas fa-tachometer-alt", suffix: " m/s",
+                         transform: "progressXYZ" },
+      volatileOrganicCompoundsConcentration: { icon: "fas fa-cloud",
+                                               suffix: " VOC",
+                                               transform: "ppm" },
+      voltage: { icon: "fas fa-bolt", suffix: " V", transform: "toFixed(2)" },
+      voltages: { icon: "fas fa-bolt", suffix: " V",
+                  transform: "toFixedArray(2)" }
   };
 
   // Render a dynamb
   function render(dynamb, target, options) {
+    options = options || {};
     let tbody = createElement('tbody');
     let table = createElement('table', 'table', tbody);
 
@@ -80,14 +129,17 @@ let cuttlefishDynamb = (function() {
       table.appendChild(caption);
     }
     if(dynamb.hasOwnProperty('deviceId') &&
-       dynamb.hasOwnProperty('deviceIdType')) {
+       dynamb.hasOwnProperty('deviceIdType') && !options.hideDeviceId) {
       let deviceId = dynamb.deviceId + ' / ' +
                      IDENTIFIER_TYPES[dynamb.deviceIdType];
       let tr = renderAsRow('deviceId', deviceId);
+      tr.setAttribute('class', 'table-active');
       tbody.appendChild(tr);
     }
 
-    for(const property in dynamb) {
+    let sorted = Object.keys(dynamb).sort((a, b) => a.localeCompare(b));
+
+    sorted.forEach((property) => {
       if((property !== 'timestamp') && (property !== 'deviceId') &&
          (property !== 'deviceIdType')) {
         let tr = renderAsRow(property, dynamb[property]);
@@ -96,7 +148,7 @@ let cuttlefishDynamb = (function() {
           tbody.appendChild(tr);
         }
       }
-    }
+    });
 
     if(target) {
       target.replaceChildren(table);
@@ -163,22 +215,38 @@ let cuttlefishDynamb = (function() {
     suffix = suffix || '';
 
     switch(transform) {
+      case 'monospace':
+        return createElement('span', 'font-monospace', data + suffix);
       case 'booleanArray':
         return renderBooleanArray(data);
       case 'elapsedTime':
         return renderElapsedTime(data);
+      case 'health':
+        return renderHealth(data);
       case 'unicodeCodePoints':
         return renderUnicodeCodePoints(data);
+      case 'passages':
+        return renderPassages(data, suffix);
       case 'position':
         return renderPosition(data);
+      case 'pm':
+        return renderParticulateMatter(data, suffix);
+      case 'ppm':
+        return renderPpm(data, suffix);
       case 'progressPercentage':
         return renderProgress(data, 100, 0, '%');
       case 'progressXYZ':
         return renderProgressXYZ(data, suffix);
       case 'rotationDegrees':
         return renderRotationDegrees(data);
+      case 'toFixed(0)':
+        return data.toFixed(0) + suffix;
       case 'toFixed(2)':
         return data.toFixed(2) + suffix;
+      case 'toFixedArray(0)':
+        return renderNumberArray(data, 0, suffix);
+      case 'toFixedArray(2)':
+        return renderNumberArray(data, 2, suffix);
       case 'localeString':
         return data.toLocaleString() + suffix;
       case 'tableNearest':
@@ -238,6 +306,29 @@ let cuttlefishDynamb = (function() {
     return representation;
   }
 
+  // Render health status
+  function renderHealth(data) {
+    let icon = createElement('i', 'fas fa-heartbeat');
+    let buttonClass= data ? 'btn btn-sm btn-success' : 'btn btn-sm btn-danger';
+
+    return createElement('button', buttonClass, icon);
+  }
+
+  // Render an array of numbers
+  function renderNumberArray(values, precision, suffix) {
+    let lis = [];
+
+    for(const value of values) {
+      let displayValue = Number.isFinite(value) ? value.toFixed(precision) :
+                                                  '\u2014';
+      let itemClass = Number.isFinite(value) ? 'list-inline-item' :
+                                               'list-inline-item text-muted';
+      lis.push(createElement('li', itemClass, displayValue + suffix));
+    }
+
+    return createElement('ul', 'list-inline mb-0', lis);
+  }
+
   // Render an array of Unicode code points
   function renderUnicodeCodePoints(codePoints) {
     let characters = "";
@@ -247,6 +338,31 @@ let cuttlefishDynamb = (function() {
     }
 
     return createElement('span', 'display-1', characters);
+  }
+
+  // Render a passageXs object
+  function renderPassages(passages, suffix) {
+    let lis = [];
+
+    if(Array.isArray(passages)) {
+      if(passages.length === 2) {
+        let entries = [ createElement('i', 'fas fa-sign-in-alt text-muted'),
+                        '\u00a0' + passages[0] ];
+        let exits = [ createElement('i', 'fas fa-sign-out-alt text-muted'),
+                      '\u00a0' + passages[1] ];
+        lis.push(createElement('li', 'list-inline-item', entries));
+        lis.push(createElement('li', 'list-inline-item', exits));
+      }
+      else if(passages.length === 1) {
+        lis.push(createElement('li', 'list-inline-item', passages[0]));
+      }
+    }
+
+    if(lis.length > 0) {
+      lis.push(createElement('li', 'list-inline-item', suffix));
+    }
+
+    return createElement('ul', 'list-inline mb-0', lis);
   }
 
   // Render a 2D or 3D position
@@ -261,13 +377,28 @@ let cuttlefishDynamb = (function() {
     return list;
   }
 
+  // Render a PM concentration
+  function renderParticulateMatter(data, suffix) {
+    let text = data + ' \u03bcg/m\u00b3 PM';
+    let sub = createElement('sub', null, suffix);
+
+    return createElement('span', null, [ text, sub ]);
+  }
+
+  // Render a ppm concentration
+  function renderPpm(data, suffix) {
+    return data + ' ppm' + suffix;
+  }
+
   // Render a progress bar
   function renderProgress(value, maxValue, decimalDigits, suffix) {
     decimalDigits = decimalDigits || 0;
     suffix = suffix || '';
 
     let isPositive = (value >= 0);
-    let valueString = value.toFixed(decimalDigits) + suffix;
+    let valueString = (decimalDigits >= 0) ? value.toFixed(decimalDigits) :
+                                             value.toPrecision(-decimalDigits);
+    valueString += suffix;
     let widthPercentage = (100 * Math.abs(value) / maxValue).toFixed(0) + '%';
     let progressBar = createElement('div', 'progress-bar', valueString);
     let progressClass = isPositive ? 'progress' : 'progress flex-row-reverse';
@@ -283,22 +414,28 @@ let cuttlefishDynamb = (function() {
     suffix = suffix || '';
 
     let maxValue = Math.max(Math.max(...data), Math.abs(Math.min(...data)));
+    let isNegativeValues = data.some((value) => value < 0);
+    let isPositiveValues = data.some((value) => value >= 0);
     let magnitude = 0;
     let tbody = createElement('tbody', 'align-middle');
     let table = createElement('table', 'table table-borderless', tbody);
 
     data.forEach(function(value, index) {
-      let progressNeg = renderProgress(Math.min(value, 0), maxValue, 2, suffix);
-      let progressPos = renderProgress(Math.max(value, 0), maxValue, 2, suffix);
+      let progressNeg = renderProgress(Math.min(value,0), maxValue, -2, suffix);
+      let progressPos = renderProgress(Math.max(value,0), maxValue, -2, suffix);
       let tdNeg = createElement('td', null, progressNeg);
       let th = createElement('th', 'text-center small', AXIS_NAMES[index]);
       let tdPos = createElement('td', null, progressPos);
-      let tr = createElement('tr', null, [ tdNeg, th, tdPos ]);
+      let elements = [];
+      if(isNegativeValues) { elements.push(tdNeg); }
+      elements.push(th);
+      if(isPositiveValues) { elements.push(tdPos); }
+      let tr = createElement('tr', null, elements);
       tbody.appendChild(tr);
       magnitude += (value * value);
     });
 
-    magnitude = Math.sqrt(magnitude).toFixed(2);
+    magnitude = Math.sqrt(magnitude).toPrecision(2);
     let caption = createElement('caption', null, magnitude + suffix);
     table.appendChild(caption);
 
