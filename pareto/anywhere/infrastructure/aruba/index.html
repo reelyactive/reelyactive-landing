@@ -492,40 +492,80 @@
               </div>
             </div>
           </div>
-          <h3 class="text-center mt-5"> One infrastructure, two integration options </h3>
-          <div class="card-group mt-3">
-            <div class="card hover-shadow">
-              <h4 class="card-header text-center bg-dark text-white border-0">
-                Pareto Anywhere
-              </h4>
-              <div class="card-body">
-                <p class="card-text"> Select the <b class="text-success">WebSocket</b> transport option to forward data to a <b class="text-body-emphasis">Pareto Anywhere</b> instance running on-prem or in your cloud. </p>
+          <h3 class="text-center mt-5 mb-4"> One infrastructure, many integration options </h3>
+          <div class="card hover-shadow mb-3">
+            <div class="row g-0">
+              <div class="col-md-6">
+                <h4 class="card-header text-center bg-dark text-white border-0">
+                  with IoT Operations
+                  <span class="badge rounded-pill text-bg-success">AOS 10</span>
+                </h4>
+                <div class="card-body">
+                  <p class="card-text"> Select the <b class="text-success">WebSocket</b> IoT Transport option to forward data to a <b class="text-body-emphasis">Pareto Anywhere</b> instance running on-prem or in your cloud. </p>
+                  <p class="card-text small text-body-secondary"> A containerised instance of Pareto Anywhere for IoT Operations is in development. </p>
+                  <p class="card-text text-center">
+                    <a href="https://reelyactive.github.io/diy/aruba-iotops-config/"
+                       target="_blank" class="btn btn-primary" role="button">
+                      <i class="fas fa-external-link-alt"></i> Tutorial
+                    </a>
+                  </p>
+                </div>
               </div>
-              <div class="card-footer text-center bg-transparent">
-                <a href="https://reelyactive.github.io/diy/aruba-instant-config/"
-                   target="_blank" class="btn btn-outline-primary"
-                   role="button">
-                  <i class="fas fa-external-link-alt"></i> Tutorial
-                </a>
+              <div class="col-md-6">
+                <img src="../../../../images/infrastructure-aruba-iot-operations.png"
+                     class="img-fluid rounded-end"
+                     alt="Pareto Anywhere with HPE Aruba APs (AOS 10)">
               </div>
             </div>
-            <div class="card hover-shadow">
-              <h4 class="card-header text-center bg-dark text-white border-0">
-                Pareto Anywhere for Azure
-              </h4>
-              <div class="card-body">
-                <p class="card-text"> Select the <b class="text-success">IoT Transport</b> option to easily and securely forward data to Azure IoT Hub, from which <b class="text-body-emphasis">Pareto Anywhere for Azure</b> will consume the real-time data, running as a stateless Azure Function. </p>
+          </div>
+          <div class="card hover-shadow mb-3">
+            <div class="row g-0">
+              <div class="col-md-6">
+                <h4 class="card-header text-center bg-dark text-white border-0">
+                  with IoT Transport
+                  <span class="badge rounded-pill text-bg-success">AOS 8</span>
+                </h4>
+                <div class="card-body">
+                  <p class="card-text"> Select the <b class="text-success">WebSocket</b> IoT Transport option to forward data to a <b class="text-body-emphasis">Pareto Anywhere</b> instance running on-prem or in your cloud. </p>
+                  <p class="card-text text-center">
+                    <a href="https://reelyactive.github.io/diy/aruba-instant-config/"
+                       target="_blank" class="btn btn-primary" role="button">
+                      <i class="fas fa-external-link-alt"></i> Tutorial
+                    </a>
+                  </p>
+                </div>
               </div>
-              <div class="card-footer text-center bg-transparent">
-                <a href="../../integrations/azure/#content"
-                   class="btn btn-outline-primary" role="button">
-                  Learn more
-                </a>
-                <a href="https://reelyactive.github.io/diy/pareto-anywhere-azure-aruba/"
-                   target="_blank" class="btn btn-outline-primary"
-                   role="button">
-                  <i class="fas fa-external-link-alt"></i> Tutorial
-                </a>
+              <div class="col-md-6">
+                <img src="../../../../images/infrastructure-aruba-iot-transport.png"
+                     class="img-fluid rounded-end"
+                     alt="Pareto Anywhere with HPE Aruba APs (AOS 8)">
+              </div>
+            </div>
+          </div>
+          <div class="card hover-shadow mb-3">
+            <div class="row g-0">
+              <div class="col-md-6">
+                <h4 class="card-header text-center bg-dark text-white border-0">
+                  Pareto Anywhere for Azure
+                </h4>
+                <div class="card-body">
+                  <p class="card-text"> Select the <b class="text-success">Aruba IoT Transport for Azure</b> option to easily and securely forward data to Azure IoT Hub, from which <b class="text-body-emphasis">Pareto Anywhere for Azure</b> will consume the real-time data, running as a stateless Azure Function. </p>
+                  <p class="card-text text-center">
+                    <a href="https://reelyactive.github.io/diy/pareto-anywhere-azure-aruba/"
+                       target="_blank" class="btn btn-primary" role="button">
+                      <i class="fas fa-external-link-alt"></i> Tutorial
+                    </a>
+                    <a href="../../integrations/azure/#content"
+                       class="btn btn-outline-primary" role="button">
+                      Azure Integration
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <img src="../../../../images/infrastructure-aruba-azure.png"
+                     class="img-fluid rounded-end"
+                     alt="Pareto Anywhere for Azure with HPE Aruba APs">
               </div>
             </div>
           </div>
@@ -536,7 +576,7 @@
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
           <div class="row d-flex align-items-center">
             <div class="col-md-6 col-xxl-4">
-              <a href="https://www.arubanetworks.com/partners/technology-partners/partner-finder/partner/?q=/assets/pso/PSO_reelyActive.pdf&atp=reelyactive" target="_blank">
+              <a href="https://www.hpe.com/us/en/networking/technology-partner-programs.html/search/reelyActive" target="_blank">
                 <img src="../../../../images/infrastructure-partner-aruba.jpg"
                      class="img-fluid rounded-3 my-3">
               </a>
@@ -544,7 +584,7 @@
             <div class="col-md-6 col-xxl-8">
               <h3 class="mt-4"> IoT Partnership </h3>
               <p> <b>reelyActive</b> is a HPE Aruba Networking technology partner. </p>
-              <a href="https://www.arubanetworks.com/partners/technology-partners/partner-finder/partner/?q=/assets/pso/PSO_reelyActive.pdf&atp=reelyactive"
+              <a href="https://www.hpe.com/us/en/networking/technology-partner-programs.html/search/reelyActive"
                  target="_blank" class="btn btn-light mb-4">
                 <i class="fas fa-external-link-alt"></i>
                 Partner Solution Overview
@@ -565,11 +605,12 @@
               <div class="col-lg-6 align-self-center">
                 <div class="card-body">
                   <h4 class="card-title"> Developers, developers, developers! </h4>
-                  <p class="card-text"> <em>Enough reading.</em>  Configure an Aruba Instant AP! </p>
+                  <p class="card-text"> Our cheatsheet details the underlying data structures. </p>
                   <div class="d-grid">
-                    <a href="https://reelyactive.github.io/diy/aruba-instant-config/"
+                    <a href="https://reelyactive.github.io/diy/cheatsheet/"
                        target="_blank" class="btn btn-primary" role="button">
-                      <i class="fab fa-github"></i> /diy/aruba-instant-config
+                      <i class="fas fa-external-link-alt"></i>
+                      reelyactive.github.io/diy/cheatsheet
                     </a>
                   </div>
                 </div>
