@@ -14,11 +14,24 @@
         "url": "https://github.com/reelyactive/barnowl-aruba/" }
     ]
   },
+  "rfcontrols-rfcos": {
+    "vendor": "RF Controls",
+    "model": "RFC OS",
+    "technologies": [ "rain" ],
+    "links": [
+      { "title": "Overview",
+        "url": "https://www.reelyactive.com/pareto/anywhere/infrastructure/rfcontrols/" },
+      { "title": "barnowl-rfcontrols",
+        "url": "https://github.com/reelyactive/barnowl-rfcontrols/" }
+    ]
+  },
   "impinj-r700": {
     "vendor": "Impinj",
     "model": "R700",
     "technologies": [ "rain" ],
     "links": [
+      { "title": "Overview",
+        "url": "https://www.reelyactive.com/pareto/anywhere/infrastructure/impinj/" },
       { "title": "Configuration Guide",
         "url": "https://reelyactive.github.io/diy/impinj-r700-config/" },
       { "title": "barnowl-impinj",
@@ -82,15 +95,6 @@
         "url": "https://www.minewstore.com/product/mg4-smart-rechargeable-gateway/" }
     ]
   },
-  "rfcontrols-rfcos": {
-    "vendor": "RF Controls",
-    "model": "RFC OS",
-    "technologies": [ "rain" ],
-    "links": [
-      { "title": "barnowl-rfcontrols",
-        "url": "https://github.com/reelyactive/barnowl-rfcontrols/" }
-    ]
-  },
   "csl-cs463": {
     "vendor": "CSL",
     "model": "CS463",
@@ -105,7 +109,7 @@
   "raspberrypi-3b": {
     "vendor": "Raspberry Pi",
     "model": "3B",
-    "technologies": [ "ble" ],
+    "technologies": [ "ble", "enocean" ],
     "links": [
       { "title": "Pareto Anywhere Guide",
         "url": "https://reelyactive.github.io/diy/pareto-anywhere-pi/" }
@@ -114,7 +118,16 @@
   "raspberrypi-4": {
     "vendor": "Raspberry Pi",
     "model": "4",
-    "technologies": [ "ble" ],
+    "technologies": [ "ble", "enocean" ],
+    "links": [
+      { "title": "Pareto Anywhere Guide",
+        "url": "https://reelyactive.github.io/diy/pareto-anywhere-pi/" }
+    ]
+  },
+  "raspberrypi-5": {
+    "vendor": "Raspberry Pi",
+    "model": "5",
+    "technologies": [ "ble", "enocean" ],
     "links": [
       { "title": "Pareto Anywhere Guide",
         "url": "https://reelyactive.github.io/diy/pareto-anywhere-pi/" }
@@ -158,7 +171,7 @@
   "personalcomputer": {
     "vendor": "Various",
     "model": "PC",
-    "technologies": [ "ble" ],
+    "technologies": [ "ble", "enocean" ],
     "links": [
       { "title": "Pareto Anywhere Guide",
         "url": "https://reelyactive.github.io/diy/pareto-anywhere-pc/" },
