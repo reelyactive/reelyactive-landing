@@ -65,6 +65,7 @@ https://www.reelyactive.com/pareto/anywhere/integrations/azure/
 https://www.reelyactive.com/pareto/anywhere/integrations/elastic-stack/
 https://www.reelyactive.com/pareto/anywhere/integrations/mqtt/
 https://www.reelyactive.com/pareto/anywhere/integrations/node-red/
+https://www.reelyactive.com/pareto/anywhere/integrations/opc-ua/
 https://www.reelyactive.com/partners/
 https://www.reelyactive.com/press/
 https://www.reelyactive.com/pricing/
