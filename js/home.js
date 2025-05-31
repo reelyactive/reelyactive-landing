@@ -1,87 +1,39 @@
 // Constants
-const MIDDLEWARE_DIFFERENTIATIONS = [ 'privacy-preserving',
-                                      'vendor-agnostic', 'technology-agnostic',
-                                      'application-agnostic' ];
-const HEADLINE_BOLD_IDS = [ 'headlineWho', 'headlineWhat', 'headlineWhere',
-                            'headlineHow' ];
-const EXAMPLES = [ 'equipment condition status with Entergy.',
-                   'workplace occupancy with Desjardins.',
-                   'workplace stress and performance factors with USC.',
-                   'museum visitor journeys with MCQ.',
-                   'operational efficiency with the US Army.' ];
-
-const HEADLINE_BOLD_UPDATE_MILLISECONDS = 1800;
-const MIDDLEWARE_DIFFERENTIATION_UPDATE_MILLISECONDS = 1800;
-const EXAMPLE_TYPING_MILLISECONDS = 3600;
-const EXAMPLE_HOLD_MILLISECONDS = 2400;
-
-
-// DOM elements
-let middlewareDifferentiation =
-                           document.querySelector('#middlewareDifferentiation');
-let exampleText = document.querySelector('#exampleText');
+const QA_ELEMENTS = [ '#Q1', '#A1', '#Q2', '#A2', '#Q3', '#A3', '#Q4', '#A4' ];
+const QA_UPDATE_MILLISECONDS = 1600;
 
 
 // Other variables
-let currentHeadlineBoldIndex = 0;
-let currentDifferentiationIndex = 0;
-let currentExampleIndex = 0;
-let currentExampleCharacter = -1;
-
-// Start the text rotations
-updateHeadlineBold();
-updateMiddlewareDifferentiation();
-updateExample();
+let qaIndex = 0;
 
 
-// Update the headline bold element periodically
-function updateHeadlineBold() {
-  HEADLINE_BOLD_IDS.forEach((id, index) => {
-    let element = document.getElementById(id);
-    if(index === currentHeadlineBoldIndex) {
-      element.setAttribute('class', 'fw-bold');
-    }
-    else {
-      element.setAttribute('class', '');
-    }
-  });
-  currentHeadlineBoldIndex = (currentHeadlineBoldIndex + 1) %
-                             HEADLINE_BOLD_IDS.length;
-  setTimeout(updateHeadlineBold,
-             HEADLINE_BOLD_UPDATE_MILLISECONDS)
-}
+// Update the QA table
+function updateQA() {
+  let isQuestion = ((qaIndex % 2) === 0);
 
-// Update the middleware differentiation periodically
-function updateMiddlewareDifferentiation() {
-  middlewareDifferentiation.textContent =
-                       MIDDLEWARE_DIFFERENTIATIONS[currentDifferentiationIndex];
-  currentDifferentiationIndex = (currentDifferentiationIndex + 1) %
-                                MIDDLEWARE_DIFFERENTIATIONS.length;
-  setTimeout(updateMiddlewareDifferentiation,
-             MIDDLEWARE_DIFFERENTIATION_UPDATE_MILLISECONDS);
-}
+  if(isQuestion) {
+    let currentQuestion = document.querySelector(QA_ELEMENTS[qaIndex]);
+    let previousQuestion = document.querySelector(
+          QA_ELEMENTS[(qaIndex - 2 + QA_ELEMENTS.length) % QA_ELEMENTS.length]);
+    let previousAnswer = document.querySelector(
+          QA_ELEMENTS[(qaIndex - 1 + QA_ELEMENTS.length) % QA_ELEMENTS.length]);
 
-// Update the example one character at a time
-function updateExample() {
-  let example = EXAMPLES[currentExampleIndex];
-  let nextCharacterMilliseconds = Math.round(EXAMPLE_TYPING_MILLISECONDS /
-                                             (example.length + 1));
-  let isNewExample = (currentExampleCharacter === -1);
-  let isExampleComplete = (currentExampleCharacter >= (example.length - 1));
-
-  if(isNewExample) {
-    exampleText.textContent = '';
-  }
-
-  if(isExampleComplete) {
-    currentExampleIndex = (currentExampleIndex + 1) % EXAMPLES.length;
-    currentExampleCharacter = -1;
-
-    return setTimeout(updateExample, EXAMPLE_HOLD_MILLISECONDS);
+    currentQuestion.setAttribute('class', 'text-end text-body-emphasis');
+    previousQuestion.setAttribute('class', 'text-end text-body-tertiary');
+    previousAnswer.setAttribute('class', 'text-start text-body-tertiary');
   }
   else {
-    exampleText.textContent += example[++currentExampleCharacter];
+    let currentQuestion = document.querySelector(QA_ELEMENTS[qaIndex - 1]);
+    let currentAnswer = document.querySelector(QA_ELEMENTS[qaIndex]);
+
+    currentQuestion.setAttribute('class', 'text-end text-body');
+    currentAnswer.setAttribute('class', 'text-start text-body-emphasis');
   }
 
-  setTimeout(updateExample, nextCharacterMilliseconds);
+  qaIndex = (qaIndex + 1) % QA_ELEMENTS.length;
+  setTimeout(updateQA, QA_UPDATE_MILLISECONDS);
 }
+
+
+// Begin periodic updates
+updateQA();
