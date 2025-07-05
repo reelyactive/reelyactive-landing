@@ -492,6 +492,214 @@
               </div>
             </div>
           </div>
+          <!-- IoT data made usable -->
+          <h2 class="text-body-secondary text-center mt-5">
+            <strong class="text-ambient">IoT data</strong>
+            made
+            <strong class="text-secondary">usable</strong>
+          </h2>
+          <p class="lead text-center"> Readily put <span class="text-body-emphasis">Minew sensor</span> data to <span class="text-primary fw-bold">good use</span>. </p>
+          <ul class="nav nav-tabs mt-3" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="msp01tab"
+                      data-bs-toggle="tab" data-bs-target="#msp01content"
+                      type="button" role="tab" aria-controls="msp01tab"
+                      aria-selected="true"> MSP01 </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="mst01tab" data-bs-toggle="tab"
+                      data-bs-target="#mst01content" type="button" role="tab"
+                      aria-controls="mst01tab"
+                      aria-selected="false"> MST01 </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="msr01tab" data-bs-toggle="tab"
+                      data-bs-target="#msr01content" type="button" role="tab"
+                      aria-controls="msr01tab"
+                      aria-selected="false"> MSR01 </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="msa01tab" data-bs-toggle="tab"
+                      data-bs-target="#msa01content" type="button" role="tab"
+                      aria-controls="msa01tab"
+                      aria-selected="false"> MSA01 </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="msl01tab" data-bs-toggle="tab"
+                      data-bs-target="#msl01content" type="button" role="tab"
+                      aria-controls="msl01tab"
+                      aria-selected="false"> MSL01 </button>
+            </li>
+          </ul>
+          <div class="tab-content border-light-subtle tab-content-border">
+            <div class="tab-pane fade show active" id="msp01content"
+                 role="tabpanel" aria-labelledby="msp01tab">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <p class="lead mt-2">
+                    <i class="fas fa-user-check text-secondary"></i>
+                    Human-readable:
+                  </p>
+                  <div id="msp01cuttlefish"></div>
+                </div>
+                <div class="d-none d-md-block col-md-6">
+                  <p class="lead mt-2">
+                    <i class="fas fa-code text-secondary"></i>
+                    Machine-readable:
+                  </p>
+                  <pre id="msp01json" class="text-body-secondary"></pre>
+                </div>
+              </div>
+              <p class="lead text-center">
+                <span class="fw-bold text-body-emphasis">MSP01:</span>
+                PIR (passive infrared) sensor
+              </p>
+              <div class="d-flex justify-content-center gap-4 mt-3">
+                <div class="align-self-center">
+                  Buy: &nbsp;
+                  <a href="https://www.minewstore.com/product/msp01-bluetooth-pir-sensor"
+                     target="_blank" class="btn btn-sm btn-outline-secondary"
+                     role="button">
+                    <i class="fas fa-shopping-cart"></i> Minew Store </a>
+                </div>
+                <div class="align-self-center">
+                  Configure: &nbsp;
+                  <a href="https://reelyactive.github.io/diy/minew-msp01-config/"
+                     target="_blank" class="btn btn-sm btn-outline-primary">
+                    <i class="fab fa-github"></i>/diy/msp01-config
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="mst01content" role="tabpanel"
+                 aria-labelledby="mst01tab">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <p class="lead mt-2">
+                    <i class="fas fa-user-check text-secondary"></i>
+                    Human-readable:
+                  </p>
+                  <div id="mst01cuttlefish"></div>
+                </div>
+                <div class="d-none d-md-block col-md-6">
+                  <p class="lead mt-2">
+                    <i class="fas fa-code text-secondary"></i>
+                    Machine-readable:
+                  </p>
+                  <pre id="mst01json" class="text-body-secondary"></pre>
+                </div>
+              </div>
+              <p class="lead text-center">
+                <span class="fw-bold text-body-emphasis">MST01:</span>
+                Industrial temperature/humidity sensor
+              </p>
+              <div class="d-flex justify-content-center gap-4 mt-3">
+                <div class="align-self-center">
+                  Buy: &nbsp;
+                  <a href="https://www.minewstore.com/product/mst01-industrial-temperature-and-humidity-sensor"
+                     target="_blank" class="btn btn-sm btn-outline-secondary"
+                     role="button">
+                    <i class="fas fa-shopping-cart"></i> Minew Store </a>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="msr01content" role="tabpanel"
+                 aria-labelledby="msr01tab">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <p class="lead mt-2">
+                    <i class="fas fa-user-check text-secondary"></i>
+                    Human-readable:
+                  </p>
+                  <div id="msr01cuttlefish"></div>
+                </div>
+                <div class="d-none d-md-block col-md-6">
+                  <p class="lead mt-2">
+                    <i class="fas fa-code text-secondary"></i>
+                    Machine-readable:
+                  </p>
+                  <pre id="msr01json" class="text-body-secondary"></pre>
+                </div>
+              </div>
+              <p class="lead text-center">
+                <span class="fw-bold text-body-emphasis">MSR01:</span>
+                Millimeter wave radar sensor
+              </p>
+              <div class="d-flex justify-content-center gap-4 mt-3">
+                <div class="align-self-center">
+                  Buy: &nbsp;
+                  <a href="https://www.minewstore.com/product/msr01-millimeter-wave-radar-sensor"
+                     target="_blank" class="btn btn-sm btn-outline-secondary"
+                     role="button">
+                    <i class="fas fa-shopping-cart"></i> Minew Store </a>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="msa01content" role="tabpanel"
+                 aria-labelledby="msa01tab">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <p class="lead mt-2">
+                    <i class="fas fa-user-check text-secondary"></i>
+                    Human-readable:
+                  </p>
+                  <div id="msa01cuttlefish"></div>
+                </div>
+                <div class="d-none d-md-block col-md-6">
+                  <p class="lead mt-2">
+                    <i class="fas fa-code text-secondary"></i>
+                    Machine-readable:
+                  </p>
+                  <pre id="msa01json" class="text-body-secondary"></pre>
+                </div>
+              </div>
+              <p class="lead text-center">
+                <span class="fw-bold text-body-emphasis">MSA01:</span>
+                Ambient light sensor
+              </p>
+              <div class="d-flex justify-content-center gap-4 mt-3">
+                <div class="align-self-center">
+                  Buy: &nbsp;
+                  <a href="https://www.minewstore.com/product/msa01-ambient-light-sensor"
+                     target="_blank" class="btn btn-sm btn-outline-secondary"
+                     role="button">
+                    <i class="fas fa-shopping-cart"></i> Minew Store </a>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="msl01content" role="tabpanel"
+                 aria-labelledby="msl01tab">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <p class="lead mt-2">
+                    <i class="fas fa-user-check text-secondary"></i>
+                    Human-readable:
+                  </p>
+                  <div id="msl01cuttlefish"></div>
+                </div>
+                <div class="d-none d-md-block col-md-6">
+                  <p class="lead mt-2">
+                    <i class="fas fa-code text-secondary"></i>
+                    Machine-readable:
+                  </p>
+                  <pre id="msl01json" class="text-body-secondary"></pre>
+                </div>
+              </div>
+              <p class="lead text-center">
+                <span class="fw-bold text-body-emphasis">MSL01:</span>
+                Water leak sensor
+              </p>
+              <div class="d-flex justify-content-center gap-4 mt-3">
+                <div class="align-self-center">
+                  Buy: &nbsp;
+                  <a href="https://www.minewstore.com/product/msl01-wireless-water-leak-sensor"
+                     target="_blank" class="btn btn-sm btn-outline-secondary"
+                     role="button">
+                    <i class="fas fa-shopping-cart"></i> Minew Store </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- Minew Technology Partner -->
@@ -666,5 +874,7 @@
     <!-- Optional JavaScript -->
     <script defer src="../../../../js/fontawesome-reelyactive.min.js"></script>
     <script src="../../../../js/bootstrappyactive.bundle.min.js"></script>
+    <script src="../../../../js/cuttlefish-dynamb.js"></script>
+    <script src="../../../../js/devices-minew.js"></script>
   </body>
 </html>
