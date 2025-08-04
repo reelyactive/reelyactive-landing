@@ -95,6 +95,17 @@
         "url": "https://www.minewstore.com/product/mg4-smart-rechargeable-gateway/" }
     ]
   },
+  "minew-mg7": {
+    "vendor": "Minew",
+    "model": "MG7",
+    "technologies": [ "ble" ],
+    "links": [
+      { "title": "barnowl-minew",
+        "url": "https://github.com/reelyactive/barnowl-minew/" },
+      { "title": "Buy from Minew",
+        "url": "https://www.minewstore.com/product/mg7-mini-ethernet-nova-gateway" }
+    ]
+  },
   "csl-cs463": {
     "vendor": "CSL",
     "model": "CS463",
