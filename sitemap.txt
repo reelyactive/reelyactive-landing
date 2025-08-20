@@ -64,6 +64,7 @@ https://www.reelyactive.com/pareto/anywhere/infrastructure/rfcontrols/
 https://www.reelyactive.com/pareto/anywhere/integrations/
 https://www.reelyactive.com/pareto/anywhere/integrations/azure/
 https://www.reelyactive.com/pareto/anywhere/integrations/elastic-stack/
+https://www.reelyactive.com/pareto/anywhere/integrations/mobiusflow/
 https://www.reelyactive.com/pareto/anywhere/integrations/mqtt/
 https://www.reelyactive.com/pareto/anywhere/integrations/node-red/
 https://www.reelyactive.com/pareto/anywhere/integrations/opc-ua/
