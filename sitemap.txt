@@ -68,6 +68,7 @@ https://www.reelyactive.com/pareto/anywhere/integrations/mobiusflow/
 https://www.reelyactive.com/pareto/anywhere/integrations/mqtt/
 https://www.reelyactive.com/pareto/anywhere/integrations/node-red/
 https://www.reelyactive.com/pareto/anywhere/integrations/opc-ua/
+https://www.reelyactive.com/pareto/anywhere/integrations/postgresql/
 https://www.reelyactive.com/partners/
 https://www.reelyactive.com/press/
 https://www.reelyactive.com/pricing/
