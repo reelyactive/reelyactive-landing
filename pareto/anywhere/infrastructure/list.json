@@ -27,7 +27,7 @@
   },
   "impinj-r700": {
     "vendor": "Impinj",
-    "model": "R700",
+    "model": "R7x0",
     "technologies": [ "rain" ],
     "links": [
       { "title": "Overview",
@@ -104,6 +104,26 @@
         "url": "https://github.com/reelyactive/barnowl-minew/" },
       { "title": "Buy from Minew",
         "url": "https://www.minewstore.com/product/mg7-mini-ethernet-nova-gateway" }
+    ]
+  },
+  "zebra-fx9600": {
+    "vendor": "Zebra",
+    "model": "FX9600",
+    "technologies": [ "rain" ],
+    "links": [
+      { "title": "Configuration Guide",
+        "url": "https://reelyactive.github.io/diy/zebra-fx9600-config/" },
+      { "title": "barnowl-zebra",
+        "url": "https://github.com/reelyactive/barnowl-zebra/" }
+    ]
+  },
+  "zebra-fx7500": {
+    "vendor": "Zebra",
+    "model": "FX7500",
+    "technologies": [ "rain" ],
+    "links": [
+      { "title": "barnowl-zebra",
+        "url": "https://github.com/reelyactive/barnowl-zebra/" }
     ]
   },
   "csl-cs463": {
