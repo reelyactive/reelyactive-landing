@@ -9,6 +9,10 @@ let mst01cuttlefish = document.querySelector('#mst01cuttlefish');
 let mst01json = document.querySelector('#mst01json');
 let msr01cuttlefish = document.querySelector('#msr01cuttlefish');
 let msr01json = document.querySelector('#msr01json');
+let msd01cuttlefish = document.querySelector('#msd01cuttlefish');
+let msd01json = document.querySelector('#msd01json');
+let mse01cuttlefish = document.querySelector('#mse01cuttlefish');
+let mse01json = document.querySelector('#mse01json');
 let msa01cuttlefish = document.querySelector('#msa01cuttlefish');
 let msa01json = document.querySelector('#msa01json');
 let msl01cuttlefish = document.querySelector('#msl01cuttlefish');
@@ -39,6 +43,24 @@ let msr01dynamb = {
     deviceIdType: 3,
     numberOfOccupants: 7,
     passageCounts: [ 123, 456 ],
+    timestamp: Date.now()
+};
+let msd01dynamb = {
+    deviceId: "c30000085d01",
+    deviceIdType: 3,
+    isContactDetected: [ true ],
+    isMotionDetected: [ false ],
+    distance: 1.00,
+    timestamp: Date.now()
+};
+let mse01dynamb = {
+    deviceId: "c30000085e01",
+    deviceIdType: 3,
+    isButtonPressed: [ false, false ],
+    isContactDetected: [ true ],
+    isMotionDetected: [ false ],
+    levelPercentage: 33,
+    txCount: 1,
     timestamp: Date.now()
 };
 let msa01dynamb = {
@@ -86,6 +108,25 @@ function updateMSR01() {
   msr01dynamb.timestamp = Date.now();
 }
 
+// Update the MSD01
+function updateMSD01() {
+  msd01dynamb.distance += Math.round(10 * (Math.random() - 0.5)) / 100;
+  msd01dynamb.isContactDetected[0] = (Math.random() > 0.1);
+  msd01dynamb.isMotionDetected[0] = (Math.random() > 0.7);
+  msd01dynamb.timestamp = Date.now();
+}
+
+// Update the MSE01
+function updateMSE01() {
+  mse01dynamb.isButtonPressed[0] = (Math.random() > 0.8);
+  mse01dynamb.isButtonPressed[1] = (Math.random() > 0.9);
+  mse01dynamb.isContactDetected[0] = (Math.random() > 0.1);
+  mse01dynamb.isMotionDetected[0] = (Math.random() > 0.7);
+  mse01dynamb.levelPercentage += Math.round((Math.random() - 0.5) * 2);
+  mse01dynamb.txCount = ++mse01dynamb.txCount % 256;
+  mse01dynamb.timestamp = Date.now();
+}
+
 // Update the MSA01
 function updateMSA01() {
   msa01dynamb.illuminance += Math.round((Math.random() - 0.5) * 10);
@@ -105,16 +146,22 @@ function update() {
   updateMSP01();
   updateMST01();
   updateMSR01();
+  updateMSD01();
+  updateMSE01();
   updateMSA01();
   updateMSL01();
   cuttlefishDynamb.render(msp01dynamb, msp01cuttlefish, {});
   cuttlefishDynamb.render(mst01dynamb, mst01cuttlefish, {});
   cuttlefishDynamb.render(msr01dynamb, msr01cuttlefish, {});
+  cuttlefishDynamb.render(msd01dynamb, msd01cuttlefish, {});
+  cuttlefishDynamb.render(mse01dynamb, mse01cuttlefish, {});
   cuttlefishDynamb.render(msa01dynamb, msa01cuttlefish, {});
   cuttlefishDynamb.render(msl01dynamb, msl01cuttlefish, {});
   msp01json.textContent = JSON.stringify(msp01dynamb, null, 2);
   mst01json.textContent = JSON.stringify(mst01dynamb, null, 2);
   msr01json.textContent = JSON.stringify(msr01dynamb, null, 2);
+  msd01json.textContent = JSON.stringify(msd01dynamb, null, 2);
+  mse01json.textContent = JSON.stringify(mse01dynamb, null, 2);
   msa01json.textContent = JSON.stringify(msa01dynamb, null, 2);
   msl01json.textContent = JSON.stringify(msl01dynamb, null, 2);
   setTimeout(update, UPDATE_MILLISECONDS);
