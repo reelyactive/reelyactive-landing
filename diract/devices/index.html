@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
-          content="Embedded real-time interaction detection.">
+          content="User-programmable Bluetooth Low Energy beacons which can run DirAct embedded open source software for real-time interaction detection.">
     <link rel="stylesheet" href="../../style/bootstrappyactive.min.css">
     <script type="module" src="../../js/color-modes.js"></script>
     <title> DirAct Devices </title>
@@ -15,7 +15,7 @@
       "@context": "https://schema.org", 
       "@type": "WebPage",
       "name": "DirAct Devices",
-      "description": "Embedded real-time interaction detection.",
+      "description": "User-programmable Bluetooth Low Energy beacons which can run DirAct embedded open source software for real-time interaction detection.",
       "image": "https://www.reelyactive.com/images/reelyactive-logo-square.png",
       "creator": {
         "@type": "Organization",
@@ -385,21 +385,28 @@
       </div>
     </nav>
 
-    <!----- Herowl ----->
+    <!----- Herowl++ ----->
     <div class="herowl">
-      <div class="col-xs-12 col-sm-10 col-lg-6 offset-lg-4 col-xl-6
-                  offset-xl-2">
-        <div class="card">
-          <img src="../../images/diract-logo.png"
-               class="card-img-top mx-auto pt-3 d-block w-50" alt="DirAct">
-          <div class="card-body">
-            <h5 class="card-text"> Embedded Devices </h5>
+      <div class="col-xs-12 col-sm-10 col-lg-10 col-xl-8">
+        <div class="card shadow">
+          <div class="row flex-lg-row-reverse align-items-center g-0">
+            <div class="col-lg-6">
+              <img src="../../images/diract-overview.png"
+                   alt="DirAct Devices"
+                   class="d-block mx-lg-auto img-fluid rounded" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+              <div class="card-body text-start">
+                <h1 class="display-4 fw-bold lh-1 mb-3"> DirAct Devices </h1>
+                <p class="lead"> User-programmable <i class="fab fa-bluetooth"></i> Bluetooth beacons that run DirAct. </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                  <a href="#content" class="btn btn-primary btn-lg px-4 me-md-2"
+                     type="button"> Tell me more </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <a href="#content">
-          <img src="../../images/barnarrow-down.png" alt="Learn More"
-               class="mx-auto d-block barnarrow animate-breathing">
-        </a>
       </div>
     </div>
 
@@ -411,7 +418,7 @@
       </a>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
-          <div class="row row-cols-2 row-cols-xxl-3 g-4 my-4"
+          <div class="row row-cols-2 row-cols-xxl-3 g-4 mt-4"
                id="devicecards">
             <!-- Puck.js -->
             <div class="col" id="puckjs">
@@ -590,7 +597,7 @@
               </div>
             </div>
             <!-- Phenomena VPX -->
-            <div class="col" id="phenomena-vpx">
+            <div class="col" id="phenomena-vpx" hidden>
               <div class="card hover-shadow">
                 <img src="../../images/devices-phenomena-vpx.jpg"
                      class="card-img-top" alt="Phenomena VPX">
@@ -635,6 +642,27 @@
                 </div>
                 <div class="card-footer text-muted small">
                   For interactive entertainment.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!----- Developers ----->
+          <div class="card hover-shadow rounded my-5">
+            <div class="row g-0">
+              <div class="col-lg-6 align-self-center">
+                <img src="../../images/reelyactive-developers.png"
+                     class="img-fluid p-2">
+              </div>
+              <div class="col-lg-6 align-self-center">
+                <div class="card-body">
+                  <h4 class="card-title"> Developers, developers, developers! </h4>
+                  <p class="card-text"> <em>Enough reading.</em>  Dive into our <i class="fab fa-github"></i> GitHub! </p>
+                  <div class="d-grid">
+                    <a href="https://github.com/reelyactive/diract"
+                       target="_blank" class="btn btn-primary" role="button">
+                      <i class="fab fa-github"></i>/reelyactive/diract
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
