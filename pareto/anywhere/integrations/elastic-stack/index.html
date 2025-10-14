@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
-          content="Realise the potential of physical/digital convergence using the search, analysis & visualisation stack with which you're already familiar.">
+          content="Elasticsearch & Kibana open source data storage and analysis integration with reelyActive's Pareto Anywhere open source IoT middleware.">
     <link rel="stylesheet" href="../../../../style/bootstrappyactive.min.css">
     <link rel="stylesheet" href="../../../../style/heroes.css">
     <script type="module" src="../../../../js/color-modes.js"></script>
@@ -16,8 +16,8 @@
       "@context": "https://schema.org", 
       "@type": "WebPage",
       "name": "Elastic Stack & Pareto Anywhere",
-      "description": "Realise the potential of physical/digital convergence using the search, analysis & visualisation stack with which you're already familiar.",
-      "image": "https://www.reelyactive.com/images/integrations-elastic-occupancy-analytics-canvas.png",
+      "description": "Elasticsearch & Kibana open source data storage and analysis integration with reelyActive's Pareto Anywhere open source IoT middleware.",
+      "image": "https://www.reelyactive.com/images/integrations-elastic-funnel.png",
       "creator": {
         "@type": "Organization",
         "url": "https://www.reelyactive.com"
@@ -430,14 +430,94 @@
       <!-- Tagline -->
       <div class="row justify-content-center bg-dark text-white text-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
-          <h2 class="my-5"> Realise the potential of <span class="text-ambient">physical/digital convergence</span> using the <span class="text-primary">Elastic Stack</span> with which you're <em>already</em> familiar. </h2>
+          <h2 class="my-5"> <span class="text-primary">Store, search & analyse</span> your <span class="text-secondary">IoT data</span> with freedom and ease, using the <span class="text-ambient">wireless sensors</span> and <span class="text-success">connectivity infrastructure</span> of your choice. </h2>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
-          <!-- Architecture -->
-          <img src="../../../../images/integrations-elastic-stack-architecture.png"
-               class="img-fluid my-5" alt="Elastic Stack & Pareto Anywhere">
+          <!-- Overview -->
+          <p class="lead mt-5"> The <b class="text-primary">Elastic Stack</b> makes it easy to store, search and visualise data with dynamic dashboards using the real-time IoT data output from <span class="fw-bold text-body-emphasis">Pareto Anywhere</span>. </p>
+          <div class="row d-flex align-items-center mb-5">
+            <div class="col-md-6">
+              <p class="lead mb-2"> <span class="fw-bold text-body-emphasis">Pareto Anywhere</span> middleware affords you the freedom to choose: </p>
+              <ul class="mb-2">
+                <li> any <b class="text-ambient">wireless sensors & devices</b>, </li>
+                <li> any <b class="text-success">connectivity infrastructure</b>, </li>
+              </ul>
+              <p> processing and relaying the data between the two, in a <span class="text-secondary">standard format</span> that makes sense. </p>
+              <div class="d-flex justify-content-center">
+                <div class="btn-group">
+                  <a href="../../#content" role="button"
+                     class="btn btn-dark"> Pareto Anywhere </a>
+                  <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden"> Toggle Dropdown </span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <a href="../../devices/#content"
+                         class="dropdown-item text-ambient fw-bold">
+                        Ambient Devices
+                      </a>
+                    </li>
+                    <li>
+                      <a href="../../infrastructure/#content"
+                         class="dropdown-item text-success fw-bold">
+                        Ambient Infrastructure
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div id="middlewareCarousel" data-bs-ride="carousel"
+                   class="carousel slide carousel-fade my-4">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="2400">
+                    <img src="../../../../images/devices-funnel.png"
+                         class="d-block w-100" alt="">
+                    <div class="carousel-caption text-ambient d-none d-md-block position-absolute bottom-0">
+                      <h5 class="mb-0"> &laquo; Choose any &laquo; </h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2400">
+                    <img src="../../../../images/infrastructure-funnel.png"
+                         class="d-block w-100" alt="">
+                    <div class="carousel-caption text-success d-none d-md-block position-absolute bottom-0">
+                      <h5 class="mb-0"> &laquo; Choose any &laquo; </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Elastic Stack integration -->
+      <div class="row justify-content-center bg-primary bg-gradient text-center my-5">
+        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+          <div class="row d-flex align-items-center">
+            <div class="col-md-6 col-xxl-4">
+              <a href="https://reelyactive.github.io/diy/kibana/"
+                 target="_blank">
+                <img src="../../../../images/integrations-elastic-stack-canvas-parc.png"
+                     class="img-fluid rounded-3 my-5">
+              </a>
+            </div>
+            <div class="col-md-6 col-xxl-8">
+              <h3 class="mt-2"> Elastic is fantastic </h3>
+              <p> <i class="fas fa-chart-line"></i> Kibana + <i class="fas fa-database"></i> Elasticsearch + Pareto Anywhere:<br>a fantastic open source IoT stack. </p>
+              <a href="https://reelyactive.github.io/diy/kibana/"
+                 target="_blank" class="btn btn-light mb-2">
+                <i class="fas fa-external-link-alt"></i> Kibana integration
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center text-center">
+        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
           <!-- Use cases -->
           <h2 class="mt-5"> A window into every use case </h2>
           <p> Kibana's user-friendly interface enables anyone to search and discover what's <em>really</em> happening in their physical spaces, and to communicate and share this information through intuitive visualisations. </p>
@@ -584,63 +664,6 @@
           </div>
         </div>
       </div>
-      <!-- For enterprise/developers -->
-      <div class="row justify-content-center bg-body-tertiary">
-        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
-          <div class="row my-5">
-            <div class="col-md-6 mb-4">
-              <h2 class="text-uppercase text-center">
-                <i class="fas fa-user-tie text-muted"></i>
-                For Enterprise
-              </h2>
-              <p> Our <b>Breakthrough</b> package typically combines an Elasticsearch Service instance with Pareto Anywhere, making it the ideal starting point for most enterprise clients: </p>
-              <p class="text-center">
-                <a href="../../../../breakthrough/#content"
-                   class="btn btn-outline-primary"> Breakthrough </a>
-              </p>
-            </div>
-            <div class="col-md-6">
-              <h2 class="text-uppercase text-center">
-                <i class="fas fa-user-cog text-muted"></i>
-                For Integrators
-              </h2>
-              <p> Pareto Anywhere is open source and the integration with the Elastic Stack is documented and developer-friendly. </p>
-              <p> Integrators enjoy unconstrained access to our expertise and support via our <b>Beyond Integration</b> subscription: </p>
-              <p class="text-center">
-                <a href="../../beyond/#content"
-                   class="btn btn-outline-primary"> Beyond Integration </a>
-                <a href="https://reelyactive.github.io/diy/kibana/"
-                   class="btn btn-outline-primary">
-                  <i class="fas fa-external-link-alt"></i> Developer docs
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Parc -->
-      <div class="row justify-content-center bg-primary text-white">
-        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
-          <h3 class="text-uppercase text-center mt-5">
-            The Elastic Stack @ Parc
-          </h3>
-          <div class="row my-5">
-            <div class="col-md-6 mb-4">
-              <p> We innovate with the Elastic Stack every day at our <b>reelyActive Parc</b> living lab and would be pleased to share with you a virtual self-tour through Kibana dashboards.  Contact us for the login credentials. </p>
-              <p class="text-center">
-                <a href="../../../../parc/#content"
-                   class="btn btn-outline-light"> reelyActive Parc </a>
-                <a href="../../../../contact/#content"
-                   class="btn btn-outline-light"> Contact us </a>
-              </p>
-            </div>
-            <div class="col-md-6">
-              <img src="../../../../images/integrations-elastic-stack-canvas-parc.png"
-                   class="img-fluid hover-shadow" alt="reelyActive Parc Kibana Canvas">
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
           <h2 class="mt-5"> Extending search to physical spaces </h2>
@@ -668,20 +691,20 @@
                   <h4 class="card-title"> Presented at ElasticON </h4>
                   <p class="card-text"> "Analysing occupancy and interactions in Kibana during a pandemic and beyond" <br> <small class="text-muted"> October 5th, 2021 at ElasticON Global </small> </p>
                   <p class="card-text text-center">
-                    <a href="https://www.elastic.co/elasticon/archive/2021/global/analysing-occupancy-and-interactions-using-kibana-in-a-pandemic-and-beyond"
+                    <a href="https://youtu.be/GI5VhzEdbHE"
                        class="btn btn-outline-primary" target="_blank">
-                      <i class="fas fa-external-link-alt"></i> Watch
+                      <i class="fab fa-youtube"></i> Watch
                     </a>
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="text-center text-muted display-6 animate-breathing mt-4">
-            &vellip;
+          <div class="ratio ratio-16x9 my-5">
+            <iframe src="https://www.youtube.com/embed/sbNRKep8-Ow?rel=0&controls=0&showinfo=0&modestbranding" title="Perspectives opérationnelles de Kibana: cas d'étude d'un hôpital" allowfullscreen></iframe>
           </div>
           <!----- Developers ----->
-          <div class="card hover-shadow rounded my-4">
+          <div class="card hover-shadow rounded my-5">
             <div class="row g-0">
               <div class="col-lg-6 align-self-center">
                 <img src="../../../../images/reelyactive-developers.png"
@@ -690,30 +713,107 @@
               <div class="col-lg-6 align-self-center">
                 <div class="card-body">
                   <h4 class="card-title"> Developers, developers, developers! </h4>
-                  <p class="card-text"> <em>Enough reading.</em>  Deploy the Elastic Stack! </p>
+                  <p class="card-text"> <em>Enough reading.</em>  Deploy the Elastic stack! </p>
                   <div class="d-grid">
                     <a href="https://reelyactive.github.io/diy/elastic-cloud-deployment/"
                        target="_blank" class="btn btn-primary" role="button">
-                      <i class="fas fa-external-link-alt"></i>
-                      reelyactive.github.io/diy/elastic-cloud-deployment
+                      <i class="fab fa-github"></i>/diy/elastic-cloud-deployment
                     </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="text-center text-muted display-6 animate-breathing">
-            &vellip;
-          </div>
-          <div class="row my-5">
-            <div class="col-md-6 col-xxl-8 align-middle">
-              <p class="d-xxl-none"> The Elastic Stack is among the many software platforms compatible with Pareto Anywhere. </p>
-              <p class="d-none d-xxl-block lead"> The Elastic Stack is among the many software platforms compatible with Pareto Anywhere. </p>
+          <!-- Free and Beyond -->
+          <div class="card-group my-5">
+            <div class="card border-0 rounded-3 hover-shadow">
+              <div class="card-body text-center">
+                <h2 class="card-title text-uppercase"> Free as can be </h2>
+                <p class="card-text"> <b class="text-body-emphasis">Pareto Anywhere</b> is open source and <em>free</em>: </p>
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <i class="fas fa-check text-success"></i>&nbsp;
+                    Free of cost &nbsp;
+                  </li>
+                  <li class="list-inline-item">
+                    <i class="fas fa-check text-success"></i>&nbsp;
+                    Freedom from lock-in &nbsp;
+                  </li>
+                  <li class="list-inline-item">
+                    <i class="fas fa-check text-success"></i>&nbsp;
+                    Free of artifical constraints
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer text-center bg-transparent">
+                <a href="../../../../open-source/#content" role="button"
+                   class="btn btn-success"> Learn more </a>
+              </div>
             </div>
-            <div class="col-md-6 col-xxl-4 d-grid gap-1">
-              <a href="../"
-                 class="btn btn-primary"> Software Integrations </a>
-              <a href="../../" class="btn btn-dark"> Pareto Anywhere </a>
+            <div class="card border-0 rounded-3 hover-shadow">
+              <div class="card-body">
+                <h2 class="card-title text-uppercase text-center"> Even better Beyond </h2>
+                <p class="card-text text-center"> <i class="fas fa-rocket text-muted"></i> <em>Go faster</em> with expert guidance. </p>
+                <p class="card-text"> Choose our <b class="text-body-emphasis">Beyond</b> annual subscription to leverage our team & expertise as an extension of your own. </p>
+              </div>
+              <div class="card-footer text-center bg-transparent">
+                <a href="../../../../beyond/#content" role="button"
+                   class="btn btn-primary"> Learn more </a>
+              </div>
+            </div>
+          </div>
+          <!-- FAQ -->
+          <div class="accordion accordion-flush mb-5" id="accordionQuestions">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="accordionQuestion1">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#accordionAnswer1"
+                        aria-expanded="false" aria-controls="accordionAnswer1">
+                  <i class="fas fa-question-circle"></i> &nbsp; Why pay for guidance when the product is free?
+                </button>
+              </h2>
+              <div id="accordionAnswer1" class="accordion-collapse collapse"
+                   aria-labelledby="accordionQuestion1"
+                   data-bs-parent="#accordionQuestions">
+                <div class="accordion-body">
+                  <span class="badge bg-primary"> <i class="fas fa-star"></i> &nbsp; Better Outcomes </span> &nbsp; Realise the full potential of <b class="text-body-emphasis">Pareto Anywhere</b> with expert guidance, rather than by trial-and-error.  In our experience, guidance is the key factor to achieving <em>sustainable</em> outcomes through <em>efficient</em> knowledge transfer.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="accordionQuestion2">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#accordionAnswer2"
+                        aria-expanded="false" aria-controls="accordionAnswer2">
+                  <i class="fas fa-question-circle"></i> &nbsp; How does one leverage the reelyActive team?
+                </button>
+              </h2>
+              <div id="accordionAnswer2" class="accordion-collapse collapse"
+                   aria-labelledby="accordionQuestion2"
+                   data-bs-parent="#accordionQuestions">
+                <div class="accordion-body">
+                  <span class="badge bg-primary"> <i class="fas fa-people-arrows"></i> &nbsp; Anytime </span> &nbsp; Our packages include unconstrained access to our team and expertise: <em>take advantage of that!</em>  Reach out to us early and often<em>&mdash;as if we were an extension of your own team&mdash;</em>for timely guidance.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="accordionQuestion3">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#accordionAnswer3"
+                        aria-expanded="false" aria-controls="accordionAnswer3">
+                  <i class="fas fa-question-circle"></i> &nbsp; What expertise is offered?
+                </button>
+              </h2>
+              <div id="accordionAnswer3" class="accordion-collapse collapse"
+                   aria-labelledby="accordionQuestion3"
+                   data-bs-parent="#accordionQuestions">
+                <div class="accordion-body">
+                  <span class="badge bg-primary"> <i class="fas fa-hand-holding-heart"></i> &nbsp; Comprehensive Expertise </span> &nbsp; Our expertise isn't limited to technical implementation: <em>we offer guidance at all stages through to operational &amp; cultural adoption within an organisation.</em>  From wherever you're starting to wherever you're headed, we'll openly share our extensive firsthand experience with you.
+                </div>
+              </div>
             </div>
           </div>
         </div>
