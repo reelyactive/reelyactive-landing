@@ -276,6 +276,112 @@
         "url": "https://hibouair.com/" }
     ]
   },
+  "ruuvi-air": {
+    "vendor": "Ruuvi",
+    "model": "Air",
+    "technologies": [ "ble" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "carbonDioxideConcentration, illuminance, pressure, relativeHumidity, temperature, volatileOrganicCompoundsConcentration" ],
+    "links": [
+      { "title": "Buy from Ruuvi",
+        "url": "https://ruuvi.com/air/" }
+    ]
+  },
+  "ruuvi-tag": {
+    "vendor": "Ruuvi",
+    "model": "Tag",
+    "technologies": [ "ble" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "acceleration, pressure, relativeHumidity, temperature" ],
+    "links": [
+      { "title": "Buy from Ruuvi",
+        "url": "https://ruuvi.com/ruuvitag/" },
+      { "title": "Buy Pro from Ruuvi",
+        "url": "https://ruuvi.com/ruuvitag-pro/" }
+    ]
+  },
+  "ela-id": {
+    "vendor": "ELA",
+    "model": "ID",
+    "technologies": [ "ble" ],
+    "useCases": [ "at", "pt" ],
+    "dynambProperties": [],
+    "links": [
+      { "title": "Buy PUCK from ELA Innovation",
+        "url": "https://elainnovation.com/produit/blue-puck-id/" },
+      { "title": "Buy COIN from ELA Innovation",
+        "url": "https://elainnovation.com/produit/blue-coin-id/" },
+      { "title": "Buy LITE from ELA Innovation",
+        "url": "https://elainnovation.com/produit/blue-lite-id/" },
+      { "title": "Buy SLIM from ELA Innovation",
+        "url": "https://elainnovation.com/produit/blue-slim-id/" },
+      { "title": "Buy AERO from ELA Innovation",
+        "url": "https://elainnovation.com/produit/aero-id/" }
+    ]
+  },
+  "ela-rht": {
+    "vendor": "ELA",
+    "model": "RHT",
+    "technologies": [ "ble" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "relativeHumidity, temperature" ],
+    "links": [
+      { "title": "Buy PUCK from ELA Innovation",
+        "url": "https://elainnovation.com/produit/blue-puck-rht/" }
+    ]
+  },
+  "ela-t": {
+    "vendor": "ELA",
+    "model": "T",
+    "technologies": [ "ble" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "temperature" ],
+    "links": [
+      { "title": "Buy PUCK from ELA Innovation",
+        "url": "https://elainnovation.com/produit/blue-puck-t-en12830/" },
+      { "title": "Buy COIN from ELA Innovation",
+        "url": "https://elainnovation.com/produit/blue-coin-t/" },
+      { "title": "Buy PROBE from ELA Innovation",
+        "url": "https://elainnovation.com/produit/blue-puck-t-probe/" }
+    ]
+  },
+  "ela-pir": {
+    "vendor": "ELA",
+    "model": "PIR",
+    "technologies": [ "ble" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "isMotionDetected" ],
+    "links": [
+      { "title": "Buy PUCK from ELA Innovation",
+        "url": "https://elainnovation.com/produit/blue-puck-pir-capteur-infrarouge/" }
+    ]
+  },
+  "ela-mov": {
+    "vendor": "ELA",
+    "model": "MOV",
+    "technologies": [ "ble" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "acceleration, isMotionDetected" ],
+    "links": [
+      { "title": "Buy PUCK from ELA Innovation",
+        "url": "https://elainnovation.com/produit/blue-puck-mov/" },
+      { "title": "Buy COIN from ELA Innovation",
+        "url": "https://elainnovation.com/produit/blue-coin-mov/" }
+    ]
+  },
+  "ela-mov": {
+    "vendor": "ELA",
+    "model": "MAG",
+    "technologies": [ "ble" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "isContactDetected" ],
+    "links": [
+      { "title": "Buy PUCK from ELA Innovation",
+        "url": "https://elainnovation.com/produit/blue-puck-mag/" },
+      { "title": "Buy COIN from ELA Innovation",
+        "url": "https://elainnovation.com/produit/blue-coin-mag/" }
+    ]
+  },
   "laird-bt710": {
     "vendor": "Laird",
     "model": "BT710",
