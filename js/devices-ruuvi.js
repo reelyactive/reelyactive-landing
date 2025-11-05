@@ -14,10 +14,11 @@ let tagdynamb = {
     deviceId: "4007100007a9",
     deviceIdType: 2,
     acceleration: [ 0.1, -0.1, 0.9 ],
+    isMotionDetectedCycle: 66,
     pressure: 100044,
     relativeHumidity: 52,
     temperature: 21,
-    txCount: 234,
+    txCycle: 234,
     timestamp: Date.now()
 };
 let airdynamb = {
@@ -25,11 +26,12 @@ let airdynamb = {
     deviceIdType: 2,
     carbonDioxideConcentration: 201,
     illuminance: 321,
+    nitrogenOxidesIndex: 99,
     "pm2.5": 11.2,
     pressure: 101102,
     relativeHumidity: 52,
     temperature: 21,
-    txCount: 123,
+    txCycle: 123,
     volatileOrganicCompoundsConcentration: 3,
     timestamp: Date.now()
 };
@@ -44,10 +46,11 @@ function updateTag() {
   tagdynamb.acceleration[0] += (Math.random() - 0.5) / 2;
   tagdynamb.acceleration[1] += (Math.random() - 0.5) / 2;
   tagdynamb.acceleration[2] += (Math.random() - 0.5) / 2;
+  tagdynamb.isMotionDetectedCycle += Math.round(Math.random());
   tagdynamb.pressure += Math.round((Math.random() - 0.5) * 50);
   tagdynamb.relativeHumidity += Math.round((Math.random() - 0.5) * 2);
   tagdynamb.temperature += Math.round((Math.random() - 0.5) * 20) / 10;
-  tagdynamb.txCount = (++tagdynamb.txCount % 256);
+  tagdynamb.txCycle = (++tagdynamb.txCycle % 256);
   tagdynamb.timestamp = Date.now();
 }
 
@@ -57,11 +60,12 @@ function updateAir() {
   airdynamb.carbonDioxideConcentration +=
                                          Math.round((Math.random() - 0.5) * 10);
   airdynamb.illuminance += Math.round((Math.random() - 0.5) * 10);
+  airdynamb.nitrogenOxidesIndex += Math.round((Math.random() - 0.5) * 2);
   airdynamb['pm2.5'] += Math.round((Math.random() - 0.5) * 4) / 100;
   airdynamb.pressure += Math.round((Math.random() - 0.5) * 50);
   tagdynamb.relativeHumidity += Math.round((Math.random() - 0.5) * 2);
   tagdynamb.temperature += Math.round((Math.random() - 0.5) * 20) / 10;
-  airdynamb.txCount = (++airdynamb.txCount % 256);
+  airdynamb.txCycle = (++airdynamb.txCycle % 256);
   airdynamb.volatileOrganicCompoundsConcentration +=
                                    Math.round((Math.random() - 0.5) * 20) / 100;
   airdynamb.timestamp = Date.now();

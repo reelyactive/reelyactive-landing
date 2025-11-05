@@ -524,6 +524,12 @@
                       aria-controls="pirtab"
                       aria-selected="false"> PIR </button>
             </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="ditab" data-bs-toggle="tab"
+                      data-bs-target="#dicontent" type="button" role="tab"
+                      aria-controls="ditab"
+                      aria-selected="false"> DI </button>
+            </li>
           </ul>
           <div class="tab-content border-light-subtle tab-content-border">
             <div class="tab-pane fade show active" id="rhtcontent"
@@ -599,6 +605,25 @@
                     Machine-readable:
                   </p>
                   <pre id="pirjson" class="text-body-secondary"></pre>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="dicontent" role="tabpanel"
+                 aria-labelledby="ditab">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <p class="lead mt-2">
+                    <i class="fas fa-user-check text-secondary"></i>
+                    Human-readable:
+                  </p>
+                  <div id="dicuttlefish"></div>
+                </div>
+                <div class="d-none d-md-block col-md-6">
+                  <p class="lead mt-2">
+                    <i class="fas fa-code text-secondary"></i>
+                    Machine-readable:
+                  </p>
+                  <pre id="dijson" class="text-body-secondary"></pre>
                 </div>
               </div>
             </div>

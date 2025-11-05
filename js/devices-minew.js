@@ -48,9 +48,13 @@ let msr01dynamb = {
 let msd01dynamb = {
     deviceId: "c30000085d01",
     deviceIdType: 3,
-    isContactDetected: [ true ],
-    isMotionDetected: [ false ],
     distance: 1.00,
+    distanceCycle: 1,
+    isContactDetected: [ true ],
+    isContactDetectedCycle: 1,
+    isMotionDetected: [ false ],
+    isOccupancyDetected: [ false ],
+    isOccupancyDetectedCycle: 1,
     timestamp: Date.now()
 };
 let mse01dynamb = {
@@ -60,7 +64,7 @@ let mse01dynamb = {
     isContactDetected: [ true ],
     isMotionDetected: [ false ],
     levelPercentage: 33,
-    txCount: 1,
+    txCycle: 1,
     timestamp: Date.now()
 };
 let msa01dynamb = {
@@ -110,9 +114,18 @@ function updateMSR01() {
 
 // Update the MSD01
 function updateMSD01() {
+  let wasContactDetected = msd01dynamb.isContactDetected[0];
+  let wasOccupancyDetected = msd01dynamb.isOccupancyDetected[0];
   msd01dynamb.distance += Math.round(10 * (Math.random() - 0.5)) / 100;
+  msd01dynamb.distanceCycle = ++msd01dynamb.distanceCycle % 256;
   msd01dynamb.isContactDetected[0] = (Math.random() > 0.1);
   msd01dynamb.isMotionDetected[0] = (Math.random() > 0.7);
+  if(msd01dynamb.isContactDetected[0] !== wasContactDetected) {
+    msd01dynamb.isContactDetectedCycle++;
+  }
+  if(msd01dynamb.isOccupancyDetected[0] !== wasOccupancyDetected) {
+    msd01dynamb.isOccupancyDetectedCycle++;
+  }
   msd01dynamb.timestamp = Date.now();
 }
 
@@ -123,7 +136,7 @@ function updateMSE01() {
   mse01dynamb.isContactDetected[0] = (Math.random() > 0.1);
   mse01dynamb.isMotionDetected[0] = (Math.random() > 0.7);
   mse01dynamb.levelPercentage += Math.round((Math.random() - 0.5) * 2);
-  mse01dynamb.txCount = ++mse01dynamb.txCount % 256;
+  mse01dynamb.txCycle = ++mse01dynamb.txCycle % 256;
   mse01dynamb.timestamp = Date.now();
 }
 
