@@ -382,6 +382,45 @@
         "url": "https://elainnovation.com/produit/blue-coin-mag/" }
     ]
   },
+  "openmv-n6": {
+    "vendor": "OpenMV",
+    "model": "N6",
+    "technologies": [ "ble" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "acceleration", "soundPressure", "temperature" ],
+    "links": [
+      { "title": "Development Guide",
+        "url": "https://reelyactive.github.io/diy/openmv-dev/" },
+      { "title": "Buy from OpenMV",
+        "url": "https://openmv.io/collections/cameras/products/openmv-n6" }
+    ]
+  },
+  "openmv-ae3": {
+    "vendor": "OpenMV",
+    "model": "AE3",
+    "technologies": [ "ble" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "acceleration", "distance", "soundPressure", "temperature" ],
+    "links": [
+      { "title": "Development Guide",
+        "url": "https://reelyactive.github.io/diy/openmv-dev/" },
+      { "title": "Buy from OpenMV",
+        "url": "https://openmv.io/collections/cameras/products/openmv-ae3" }
+    ]
+  },
+  "openmv-rt1062": {
+    "vendor": "OpenMV",
+    "model": "RT1062",
+    "technologies": [ "ble" ],
+    "useCases": [ "es" ],
+    "dynambProperties": [ "acceleration", "temperature" ],
+    "links": [
+      { "title": "Development Guide",
+        "url": "https://reelyactive.github.io/diy/openmv-dev/" },
+      { "title": "Buy from OpenMV",
+        "url": "https://openmv.io/collections/cameras/products/openmv-cam-rt" }
+    ]
+  },
   "laird-bt710": {
     "vendor": "Laird",
     "model": "BT710",

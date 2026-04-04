@@ -58,6 +58,7 @@ https://www.reelyactive.com/pareto/anywhere/devices/enocean-alliance/
 https://www.reelyactive.com/pareto/anywhere/devices/espruino/
 https://www.reelyactive.com/pareto/anywhere/devices/hibouair/
 https://www.reelyactive.com/pareto/anywhere/devices/minew/
+https://www.reelyactive.com/pareto/anywhere/devices/openmv/
 https://www.reelyactive.com/pareto/anywhere/devices/ruuvi/
 https://www.reelyactive.com/pareto/anywhere/infrastructure/
 https://www.reelyactive.com/pareto/anywhere/infrastructure/aruba/
