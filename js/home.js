@@ -1,12 +1,29 @@
 // Constants
+const OL_ELEMENTS = [ '#OL1', '#OL2', '#OL3' ];
 const QA_ELEMENTS = [ '#Q1', '#A1', '#Q2', '#A2', '#Q3', '#A3', '#Q4', '#A4' ];
 const QA_ROWS = [ '#R1', '#R2', '#R3', '#R4' ];
 const QA_LINKS = [ '#L1', '#L2', '#L3', '#L4' ];
+const OL_UPDATE_MILLISECONDS = 800;
 const QA_UPDATE_MILLISECONDS = 1600;
 
 
 // Other variables
+let olIndex = 0;
 let qaIndex = 0;
+
+
+// Update the one-liner elements
+function updateOL() {
+  let currentTerm = document.querySelector(OL_ELEMENTS[olIndex]);
+  let previousTerm = document.querySelector(
+          OL_ELEMENTS[(olIndex - 1 + OL_ELEMENTS.length) % OL_ELEMENTS.length]);
+
+  currentTerm.setAttribute('class', 'text-body-emphasis');
+  previousTerm.setAttribute('class', 'text-body-secondary');
+
+  olIndex = (olIndex + 1) % OL_ELEMENTS.length;
+  setTimeout(updateOL, OL_UPDATE_MILLISECONDS);
+}
 
 
 // Update the QA table
@@ -48,4 +65,5 @@ function updateQA() {
 
 
 // Begin periodic updates
+updateOL();
 updateQA();
