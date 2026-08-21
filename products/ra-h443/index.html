@@ -4,24 +4,20 @@
     <script type="application/ld+json">
     {
       "@context": {
-        "schema": "http://schema.org/"
+        "schema": "https://schema.org/"
       },
       "@graph": [
         {
-          "@id": "product",
           "@type": "schema:Product",
+          "@id": "https://www.reelyactive.com/product/ra-h443/#product",
           "schema:name": "Owl-in-One",
           "schema:manufacturer": {
             "@type": "schema:Organization",
-            "schema:name": "reelyActive",
-            "schema:url": "https://www.reelyactive.com"
+            "@id": "https://www.reelyactive.com/#organization"
           },
           "schema:model": "RA-H443",
           "schema:url": "https://reelyactive.com/products/ra-h443",
-          "schema:image": "https://reelyactive.com/products/ra-h443/480x480.jpg",
-          "schema:sameAs": [
-            "https://shop.reelyactive.com/products/owl-in-one-ble"
-          ]
+          "schema:image": "https://reelyactive.com/products/ra-h443/480x480.jpg"
         }
       ]
     }
