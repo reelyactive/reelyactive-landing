@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+          content="CNIMI RTLS showcase case study.">
+    <link rel="stylesheet" href="../../style/bootstrappyactive.min.css">
+    <script type="module" src="../../js/color-modes.js"></script>
+    <title> CNIMI RTLS Showcase Case Study </title>
+    <!----- Structured, linked metadata (JSON-LD & Schema.org) ----->
+    <script type="application/ld+json">
+    [{
+      "@context": "https://schema.org", 
+      "@type": "WebPage",
+      "@id": "https://www.reelyactive.com/case-studies/cnimi-rtls-showcase/#webpage",
+      "name": "CNIMI RTLS Showcase Case Study",
+      "description": "CNIMI RTLS showcase case study.",
+      "image": "https://www.reelyactive.com/images/images/case-studies-cnimi-rtls-showcase-architecture.png",
+      "creator": {
+        "@type": "Organization",
+        "@id": "https://www.reelyactive.com/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "reelyActive",
+        "item": "https://www.reelyactive.com"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Case Studies",
+        "item": "https://www.reelyactive.com/case-studies/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "CNIMI RTLS Showcase"
+      }]
+    }]
+    </script>
+  </head>
+  <body id="top">
+    <!-- Navigation -->
+    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="https://www.reelyactive.com/">
+          <img src="/images/reelyactive-logo-nav.png" width="165" height="30"
+               alt="reelyActive">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarItems" aria-controls="navbarItems"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarItems">
+          <!-- Left-aligned navigation items -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+          <!-- Right-aligned navigation items -->
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarTechnology"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> Technology </a>
+              <!-- Technology dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarTechnology">
+                <li>
+                  <a href="/technology/#content"
+                     class="dropdown-item fw-bolder"> Our Technology </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a href="/context-aware-physical-spaces/#content"
+                     class="dropdown-item"> Context-aware physical spaces </a>
+                </li>
+                <ul>
+                  <a href="/ambient-data/#content"
+                     class="dropdown-item text-muted"> Ambient Data </a>
+                  <a href="/context/#content"
+                     class="dropdown-item text-muted"> Hyperlocal Context </a>
+                </ul>
+                <li>
+                  <a href="/technology/reel/#content"
+                     class="dropdown-item" > The Reel(ceiver) </a>
+                </li>
+                <li>
+                  <a href="/open-source/#content"
+                     class="dropdown-item"> Open Source </a>
+                </li>
+                <li>
+                  <a href="/parc/#content"
+                     class="dropdown-item"> reelyActive Parc </a>
+                </li>
+                <li>
+                  <a href="/art/#content"
+                     class="dropdown-item"> Art & Technology </a>
+                </li>
+                <li>
+                  <a href="/science/#content"
+                     class="dropdown-item"> Science & Research </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a href="https://reelyactive.github.io" target="_blank"
+                     class="dropdown-item" >
+                    <i class="text-muted fas fa-external-link-alt"></i>
+                    reelyActive Developers
+                    <i class="text-muted fas fa-code animate-breathing"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarProducts"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> Products </a>
+              <!-- Products dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarProducts">
+                <li>
+                  <a href="/products/#content"
+                     class="dropdown-item fw-bolder"> Our Products </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a href="/pareto/anywhere/#content"
+                     class="dropdown-item"> Pareto Anywhere </a>
+                </li>
+                <ul>
+                  <a href="/pareto/anywhere/apps/#content"
+                     class="dropdown-item text-muted"> Apps </a>
+                  <a href="/pareto/anywhere/integrations/#content"
+                     class="dropdown-item text-muted"> Integrations </a>
+                  <a href="/pareto/anywhere/infrastructure/#content"
+                     class="dropdown-item text-muted"> Infrastructure </a>
+                  <a href="/pareto/anywhere/devices/#content"
+                     class="dropdown-item text-muted"> Devices </a>
+                </ul>
+                <li>
+                  <a href="/diract/#content"
+                     class="dropdown-item"> DirAct </a>
+                </li>
+                <ul>
+                  <a href="/diract/devices/#content"
+                     class="dropdown-item text-muted"> Devices </a>
+                </ul>
+                <li>
+                  <a href="/products/gateways/#content"
+                     class="dropdown-item"> Ambient Data Gateways </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a href="/the-briefcase-kit/#content" class="dropdown-item">
+                    The Briefcase Kit
+                    <i class="text-muted fas fa-user-tie animate-breathing"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarBusiness"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> Business </a>
+              <!-- Business dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarBusiness">
+                <li>
+                  <a href="/business/#content"
+                     class="dropdown-item fw-bolder"> Our Business </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a href="/pricing/#content"
+                     class="dropdown-item"> Pricing & Packages </a>
+                </li>
+                <ul>
+                  <a href="/behold/#content"
+                     class="dropdown-item text-muted"> Behold </a>
+                  <a href="/breakthrough/#content"
+                     class="dropdown-item text-muted"> Breakthrough </a>
+                  <a href="/beyond/#content"
+                     class="dropdown-item text-muted"> Beyond </a>
+                </ul>
+                <li>
+                  <a href="/deem/#content"
+                     class="dropdown-item"> DEEM Approach </a>
+                </li>
+                <li>
+                  <a href="/clients/#content"
+                     class="dropdown-item"> Clients </a>
+                </li>
+                <li>
+                  <a href="/partners/#content"
+                     class="dropdown-item"> Partners </a>
+                </li>
+                <li>
+                  <a href="/use-cases/#content"
+                     class="dropdown-item"> Use Cases </a>
+                </li>
+                <ul>
+                  <a href="/use-cases/environmental-sensing/#content"
+                     class="dropdown-item text-muted"> Environmental Sensing</a>
+                  <a href="/use-cases/asset-tracking/#content"
+                     class="dropdown-item text-muted"> Asset Tracking </a>
+                  <a href="/use-cases/personnel-tracking/#content"
+                     class="dropdown-item text-muted"> Personnel Tracking </a>
+                  <a href="/use-cases/interaction-detection/#content"
+                     class="dropdown-item text-muted"> Interaction Detection</a>
+                  <a href="/use-cases/occupancy-analytics/#content"
+                     class="dropdown-item text-muted"> Occupancy Analytics </a>
+                </ul>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a href="/case-studies/#content" class="dropdown-item">
+                    Case Studies
+                    <i class="text-muted fas fa-book-open animate-breathing"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarAboutUs"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false"> About us </a>
+              <!-- About us dropdown menu -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                   aria-labelledby="navbarAboutUs">
+                <li>
+                  <a href="/about/#content"
+                     class="dropdown-item fw-bolder"> "Owl" About Us </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a href="/team/#content"
+                     class="dropdown-item"> Team </a>
+                </li>
+                <li>
+                  <a href="/history/#content"
+                     class="dropdown-item"> History </a>
+                </li>
+                <li>
+                  <a href="/awards/#content"
+                     class="dropdown-item"> Awards </a>
+                </li>
+                <li>
+                  <a href="/press/#content"
+                     class="dropdown-item"> Press </a>
+                </li>
+                <li>
+                  <a href="/brand/#content"
+                     class="dropdown-item"> Brand </a>
+                </li>
+                <li>
+                  <a href="/bibliography/#content"
+                     class="dropdown-item"> Bibliography </a>
+                </li>
+                <li>
+                  <a href="/uni/#content"
+                     class="dropdown-item"> UNI Philosophy </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a href="/directory/#content" class="dropdown-item">
+                    <i class="text-muted fas fa-sitemap"></i> Directory
+                  </a>
+                </li>
+                <li>
+                  <a href="https://blog.reelyactive.com/" target="_blank"
+                     class="dropdown-item">
+                    <i class="text-muted fas fa-external-link-alt"></i> Blog
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a href="/contact/#content" class="dropdown-item">
+                    Contact us
+                    <i class="text-muted fas fa-user-friends animate-breathing"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="/get-started/#content" role="button"
+                 class="btn btn-secondary"> Get Started </a>
+            </li>
+            <!-- Colour theme chooser -->
+            <li class="nav-item dropdown">
+              <button class="btn btn-link nav-link dropdown-toggle"
+                      id="bd-theme" type="button" aria-expanded="false"
+                      data-bs-toggle="dropdown" data-bs-display="static"
+                      aria-label="Toggle theme (auto)">
+                <i class="fas fa-adjust"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                  aria-labelledby="bd-theme-text">
+                <li>
+                  <button type="button" class="dropdown-item"
+                          data-bs-theme-value="light" aria-pressed="false">
+                    <i class="fas fa-sun"></i> Light
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-item"
+                          data-bs-theme-value="dark" aria-pressed="false">
+                    <i class="fas fa-moon"></i> Dark
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-item active"
+                          data-bs-theme-value="auto" aria-pressed="true">
+                    <i class="fas fa-adjust"></i> Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarInfoDropdown"
+                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false">
+                <i class="fas fa-question-circle"></i>
+              </a>
+              <!-- Info about tracking and open source software/licenses -->
+              <ul class="dropdown-menu dropdown-menu-end shadow"
+                  aria-labelledby="navbarInfoDropdown">
+                <li>
+                  <a class="dropdown-item"
+                     href="https://www.reelyactive.com/how-we-observe/#digital">
+                    <i class="fas fa-mouse-pointer"></i>
+                    Behaviour tracking free &nbsp;
+                    <span class="badge bg-success animate-breathing">
+                      <i class="fas fa-user-shield"></i>
+                    </span>
+                  </a>
+                </li>
+                <li class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://getbootstrap.com">
+                    <i class="fab fa-bootstrap"></i>
+                    Bootstrap 5 &nbsp;
+                    <span class="badge bg-light text-dark">
+                      <i class="fab fa-osi"></i> MIT
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://fontawesome.com">
+                    <i class="fab fa-font-awesome"></i>
+                    Font Awesome (Free) &nbsp;
+                    <span class="badge bg-light text-dark">
+                      <i class="fab fa-creative-commons"></i>
+                      <i class="fab fa-osi"></i> MIT
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://github.com/reelyactive/web-style-guide/">
+                    <i class="fas fa-code"></i>
+                    Web Style Guide &nbsp;
+                    <span class="badge bg-light text-dark">
+                      <i class="fab fa-osi"></i> MIT
+                   </span>
+                  </a>
+                </li>
+                <li class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                     href="https://www.reelyactive.com/made-in-montreal/">
+                    <i class="fab fa-canadian-maple-leaf"></i>
+                    Made in Montr&eacute;al &nbsp;
+                    <i class="fas fa-city"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <div id="content" class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+          <div class="row mt-5">
+            <div class="col-8 col-lg-9 col-xxl-10">
+              <h1> CNIMI RTLS Showcase Case Study </h1>
+              <p class="lead"> Living lab of complementary location solutions for manufacturing. </p>
+            </div>
+            <div class="col-4 col-lg-3 col-xxl-2">
+              <img src="../../images/clients-cnimi-logo-square.png"
+                   class="img-fluid" alt="CNIMI Logo">
+            </div>
+          </div>
+          <div class="card hover-shadow mt-5 bg-body-secondary border-0">
+            <div class="card-body pt-4">
+              <h2 class="card-title text-secondary">
+                The TL;DR
+              </h2>
+              <p class="card-text"> The CNIMI, a manufacturing productivity centre of excellence, partnered with reelyActive to create a showcase of real-time location technologies in their state of the art facility.  The unique combination of reelyActive's open source IoT middleware, expertise and impartial guidance enabled the CNIMI to develop and maintain a unified showcase of multiple complementary technologies to advise manufacturers looking to adopt location solutions. </p>
+            </div>
+          </div>
+          <div class="row d-flex align-items-center mt-5">
+            <div class="col-md-8">
+              <h2> <em>Making Sense</em> of Real-Time Location </h2>
+              <p> The real-time location of assets and personnel is a challenge across the industry, and manufacturers will often ask the CNIMI for advice on technical solutions.  <em>Which solution is best?</em>  The answer: <em>it depends</em>.  By creating a living lab of complementary location solutions, the CNIMI is in a much better position <span class="text-body-secondary">(pun intended)</span> to assist manufacturers in a comparative analysis, including testing in a realistic manufacturing environment. </p>
+            </div>
+            <div class="col-md-4 order-md-first">
+              <img src="../../images/case-studies-cnimi-rtls-showcase-motivation.png"
+               class="img-fluid" alt="Motivation">
+            </div>
+          </div>
+          <h2 class="mt-5"> Infrastructure-as-an-Opportunity </h2>
+          <div class="clearfix">
+            <img src="../../images/infrastructure-aruba-opportunity.png"
+                 class="img-fluid col-md-6 float-md-end mb-3 ms-md-3"
+                 alt="Infrastructure-as-an-Opportunity">
+            <p> Opened in 2022, the CNIMI is a modern facility equipped from the outset with real-time location infrastructure, including: </p>
+            <ul>
+              <li> HPE Aruba Networking access points <br> <small class="text-body-secondary">(Bluetooth Low Energy RTLS)</small> </li>
+              <li> Siemens Simatic RTLS <br> <small class="text-body-secondary">(Ultra-Wideband RTLS)</small> </li>
+              <li> RF Controls Smart Antennas <br> <small class="text-body-secondary">(RAIN RFID RTLS)</small> </li>
+            </ul>
+            <p> Additional RTLS-capable infrastructure, including LoRaWAN and 5G, is a recent addition.  This extensive collection of infrastructure presented an opportunity to showcase the complementary technologies side-by-side, especially since reelyActive's Pareto Anywhere open source middleware already supported two of the three hardware vendors out-of-the-box. </p>
+            <p class="text-body-secondary small mb-0"> reelyActive is a <a href="../../pareto/anywhere/infrastructure/aruba/#content">HPE Aruba Networking technology partner</a>, offering seamless integration with their AP infrastructure. </p>
+            <p class="text-body-secondary small"> reelyActive is a <a href="../../pareto/anywhere/infrastructure/rf-controls/#content">RF Controls technology partner</a>, offering seamless integration with their smart antennas. </p>
+          </div>
+          <h2 class="mt-5"> Data Destination: ThingsBoard </h2>
+          <p> In order to compare location solutions on a level playing field, the CNIMI needed to select a platform with which to store and visualise the standardised real-time location data from Pareto Anywhere.  With reelyActive's impartial guidance, after evaluating multiple options, the CNIMI selected ThingsBoard for the following reasons: </p>
+          <ul>
+            <li> its ability to display real-time location on a floorplan </li>
+            <li> its high level of configurability </li>
+            <li> its open source model<sup>*</sup> </li>
+            <li> its ability to run on a local server </li>
+            <li> its manageable learning curve </li>
+          </ul>
+          <p> The CNIMI configured Pareto Anywhere to forward standardised real-time location data to ThingsBoard via MQTT. </p>
+          <p class="small text-end text-body-secondary"> <sup>*</sup> ThingsBoard's licensing model changed from the <em>permissive</em> Apache 2.0 license to the <em>constrained</em> Business Source License in v4.4 (2026). </p>
+          <h2 class="mt-5"> <em>Making Sense</em> of the Solution </h2>
+          <p> The CNIMI had in hand RTLS-capable infrastructure and local computing resources on which to store and present the data.  <em class="text-body-emphasis">All they needed was an integration of these parts into an interoperable solution, which could serve as a platform for future IoT/RTLS initiatives.</em>  And that's where reelyActive came in: </p>
+          <ul>
+            <li> our <a href="../../pareto/anywhere/#content">Pareto Anywhere</a> open source IoT middleware readily "glued" together the parts </li>
+            <li> our <span class="text-body-emphasis">guidance</span> and <span class="text-body-emphasis">expertise</span> expedited the development and deployment timeline </li>
+          </ul>
+          <img src="../../images/case-studies-cnimi-rtls-showcase-architecture.png"
+               class="img-fluid" alt="Solution Architecture">
+          <p class="mt-4"> To complete the solution, reelyActive developed with CNIMI the <a href="https://github.com/reelyactive/barnowl-simatic" target="_blank"><i class="fas fa-external-link-alt"></i> barnowl-simatic</a> module to integrate the Siemens Simatic RTLS with Pareto Anywhere. </p>
+          <h2 class="mt-5"> Beyond the Traditional Partner Relationship </h2>
+          <p> By working closely together since the opening of the CNIMI, a mutually-beneficial partnership has been established with reelyActive gaining access to an ideal test and development environment, and the CNIMI able to not only support, but continuously evolve, their world-class real-time location showcase.  Moreover, as Pareto Anywhere IoT/RTLS middleware is open source and free of cost to use, the result is a partnership motivated by purpose rather than business economics. </p>
+          <div class="card hover-shadow mt-5 bg-body-secondary border-0">
+            <div class="card-body pt-4">
+              <h2 class="card-title text-secondary">
+                Outcomes
+              </h2>
+              <p class="card-text"> Working together, the CNIMI and reelyActive have created one of the truly unique, vendor-neutral, unified RTLS showcases on the planet, for the benefit of regional manufacturers. </p>
+            </div>
+          </div>
+          <ul class="list-inline text-center text-muted mt-5">
+            <li class="list-inline-item"> CNIMI </li>
+            <li class="list-inline-item">
+              <i class="fas fa-map-marked-alt"></i> Qu&eacute;bec
+            </li>
+            <li class="list-inline-item">
+              <i class="fas fa-clock"></i> Launched 2024
+            </li>
+          </ul>
+          <h2 class="text-center mt-5"> Related Case Studies </h2>
+          <div class="row justify-content-center my-4">
+            <div class="col-4 col-xxl-3">
+              <div class="card hover-shadow">
+                <div id="carouselRelated1" class="carousel slide"
+                     data-bs-ride="carousel" data-bs-pause="false">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="1200">
+                      <img src="../../images/clients-entergy-logo-square.png"
+                           class="card-img-top" alt="Entergy">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2400">
+                      <img src="../../images/case-studies-entergy-temperature-sensing-icon.jpg"
+                           class="card-img-top"
+                           alt="Entergy Temperature Sensing">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body text-center">
+                  <a href="../entergy-temperature-sensing/"
+                     class="btn btn-sm btn-outline-primary"> Learn More </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-xxl-3">
+              <div class="card hover-shadow">
+                <div id="carouselRelated2" class="carousel slide"
+                     data-bs-ride="carousel" data-bs-pause="false">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="1200">
+                      <img src="../../images/clients-usc-logo-square.png"
+                           class="card-img-top" alt="USC">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2400">
+                      <img src="../../images/case-studies-usc-tiles-2018-icon.jpg"
+                           class="card-img-top" alt="USC TILES-2018">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body text-center">
+                  <a href="../usc-tiles-2018/"
+                     class="btn btn-sm btn-outline-primary"> Learn More </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-xxl-3">
+              <div class="card hover-shadow">
+                <div id="carouselRelated3" class="carousel slide"
+                     data-bs-ride="carousel" data-bs-pause="false">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="1200">
+                      <img src="../../images/clients-usarmy-logo-square.png"
+                           class="card-img-top" alt="US Army">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2400">
+                      <img src="../../images/case-studies-usarmy-drum-hood-icon.jpg"
+                           class="card-img-top" alt="Fort Drum/Hood">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body text-center">
+                  <a href="../usarmy-drum-hood/"
+                     class="btn btn-sm btn-outline-primary"> Learn More </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!----- Owl-to-Action ----->
+    <div class="owl-to-action">
+      <div class="col-xs-12 col-sm-10 col-lg-6 offset-lg-4 col-xl-6
+                  offset-xl-2 py-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-grid gap-3 d-md-block">
+              <span class="lead align-middle pr-4">
+                Together, let's adapt this to <em>your</em> space &nbsp;
+              </span>
+              <a class="btn btn-secondary" role="button"
+                 href="../../contact/?case-study=CNIMI%20RTLS%20Showcase#content">
+                <i class="fas fa-user-friends"></i> Contact Us
+              </a>
+              <a class="btn btn-outline-primary" role="button"
+                 href="../#content"> See more </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer bg-dark bg-gradient">
+      <a href="./"> CNIMI RTLS Showcase </a>
+      &nbsp; | &nbsp;
+      <a href="https://www.reelyactive.com"> &copy; reelyActive 2026 </a>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <script defer src="../../js/fontawesome-reelyactive.min.js"></script>
+    <script src="../../js/bootstrappyactive.bundle.min.js"></script>
+  </body>
+</html>
